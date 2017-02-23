@@ -137,6 +137,7 @@ function login(username,pass,cpn){
                                             //console.log(result.data.MenuPermission);
                                             localStorage.username = result.saleCode;
                                             localStorage.token = result.accessToken;
+                                            localStorage.branch = result.branchName;
 
                                             if(localStorage.username=="56163"){
                                                 $("#page_setting").show();

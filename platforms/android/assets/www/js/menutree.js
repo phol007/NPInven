@@ -4,8 +4,8 @@ function tree(){
         menu += `<nav role='navigation'>
                  <label style="width: 100%; text-align: center;"><img src="images/people.png" width="30%" style="border-radius:100%; border:5px solid gray;"></label>
                  <label style="width: 100%; text-align: left; padding-left:10%; vertical-align: middle;">
-                   <div style="width: 30%; float: left; text-align: right; padding-right: 5%;"><b>รหัส : </b></div><div style="width: 65%; float: left;">`+localStorage.username+`</div><br style="clear: both;">
-
+                   <div style="width: 30%; float: left; text-align: right; padding-right: 5%;"><b>รหัส : </b></div><div style="width: 65%; float: left;">`+localStorage.username+`</div>
+                    <br style="margin:0;">
                  </label>
                  <ul><hr class="type">
                    <li><a href="javascript:listreorder()">ระบบ Reorder</a></li>
@@ -17,7 +17,9 @@ function tree(){
                    if(localStorage.username=="56163"){
                    menu += `<li><a href="#setting">Setting</a></li>`;
                    }
-                   menu += `<li><a href="javascript:logout();">LogOut</a></li>
+                   menu += `<li><a href="javascript:logout();">LogOut</a>
+                           <i style="width:100%; text-align:center; color:#f5f5f0; font-size:10px;" id="api_server"></i>
+                   </li>
                    </ul>
                </nav> `;
 
@@ -25,6 +27,7 @@ function tree(){
                 for(var i = 0; i < menulist.length; i++){
                     menulist[i].innerHTML = menu;
                 }
+    document.getElementById("api_server").innerHTML = localStorage.api_url_server;
  /* $.ajax({
               url: localStorage.url_menu_tree_user,
               //data: '{"userID":"'+login.username.value+'","pwd":"'+login.pwd.value+'"}',

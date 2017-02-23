@@ -92,6 +92,6 @@ function switch_url(){
             localStorage.api_url_server = "http://api.nopadol.com:8080/";
             break;
     }
-
+    document.getElementById("api_server").innerHTML = localStorage.api_url_server;
     console.log("Now!! api name "+localStorage.api_url_server);
 }
