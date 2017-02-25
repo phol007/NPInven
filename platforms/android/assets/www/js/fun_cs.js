@@ -414,7 +414,7 @@ function like_item(){
                     }else{
                        $.each(result.itemMasterList, function(key,val){
                            itemlist += `<label style='width:100%; font-size:12px; border-bottom:1px dashed gray;'
-                                        onclick="Select_item(`+val['itemCode'].trim()+`)">
+                                        onclick="Select_item('`+val['itemCode'].trim()+`')">
                                            <div class="ui-grid-b">
                                                  <div class="ui-block-a" style="width:35%;">`+
                                                    val['itemCode'].trim()+
