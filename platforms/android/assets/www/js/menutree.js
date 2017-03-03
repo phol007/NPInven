@@ -8,7 +8,7 @@ function tree(){
                     <br style="margin:0;">
                  </label>
                  <ul><hr class="type">
-                   <li><a href="javascript:listreorder()">ระบบ Reorder</a></li>
+                   <li><a href="javascript:alert('ยังไม่เปิดให้บริการ')">ระบบ Reorder</a></li>
                    <li><a href="javascript:sec_wh()">ระบบ นับสต๊อก</a></li>
                    <li><a href="#transfer_normal">ระบบ โอนสินค้า</a></li>
                    <li><a href="javascript:rewh()">ระบบ เช็คสต๊อก</a></li>
@@ -18,7 +18,7 @@ function tree(){
                    menu += `<li><a href="#setting">Setting</a></li>`;
                    }
                    menu += `<li><a href="javascript:logout();">LogOut</a>
-                           <i style="width:100%; text-align:center; color:#f5f5f0; font-size:10px;" id="api_server"></i>
+                           <i style="width:100%; text-align:center; color:#f5f5f0; font-size:10px;" class="api_server"></i>
                    </li>
                    </ul>
                </nav> `;
@@ -27,7 +27,10 @@ function tree(){
                 for(var i = 0; i < menulist.length; i++){
                     menulist[i].innerHTML = menu;
                 }
-    document.getElementById("api_server").innerHTML = localStorage.api_url_server;
+    var api =  document.getElementsByClassName('api_server');
+                    for(var i = 0; i < api.length; i++){
+                        api[i].innerHTML = localStorage.api_url_server;
+                    }
  /* $.ajax({
               url: localStorage.url_menu_tree_user,
               //data: '{"userID":"'+login.username.value+'","pwd":"'+login.pwd.value+'"}',

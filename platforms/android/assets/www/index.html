@@ -76,7 +76,7 @@
     <div data-role="main" class="ui-content" id="main">
         <h1 class="title">Main</h1>
         <div class="row">
-            <div class="col-xs-6 col-md-6"><a href="#" onclick="listreorder();" data-transition="slidefade">
+            <div class="col-xs-6 col-md-6"><a href="#" onclick="alert('ยังไม่เปิดให้บริการ')" data-transition="slidefade">
                 <div><img src="images/pr2.png" class="main_menu"><br><b>Reorder(1)</b></div>
             </a></div>
             <div class="col-xs-6 col-md-6"><a href="javascript:sec_wh()" data-transition="slidefade">
@@ -1653,6 +1653,8 @@
             <label><b>ชื่อสินค้า :</b> <span id="CTitemname"></span>
                 <input type="hidden" name="itemname" readonly id="itemsName">
             </label>
+            <label><b>คลัง :</b> <span id="CTwhcode"></span>
+            </label>
             <label>
                 <div ><b>จำนวน :</b></div>
                 <div for="counts" style="width:50%; float:left;"><input type="number" name="count" id="counts" autofocus></div>
@@ -2637,7 +2639,7 @@
             <input type="text" name="api9" id="api9">
             <input type="hidden" id="api9_s" value="NPInventoryWs/V1/pr/prDetail">
 
-            <label for="api10">api insertPR</label>
+            <label for="api10">api insertPR</label>r5
             <input type="text" name="api10" id="api10">
             <input type="hidden" id="api10_s" value="NPInventoryWs/V1/pr/insertPR">
 
@@ -2647,6 +2649,7 @@
 
             <label for="api12">api search item pr</label>
             <input type="text" name="api12" id="api12">
+            <input type="hidden" id="api12_s" value="NPInventoryWs/V2/inven/searchItem">
             <input type="hidden" id="api12_s" value="NPInventoryWs/V2/inven/searchItem">
 
             <label for="api15">api list receive</label>

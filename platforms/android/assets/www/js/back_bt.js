@@ -11,7 +11,8 @@ document.addEventListener("keydown", function(event) {
             }
         }else if($.mobile.activePage.is("#pagetwo")){
             switch(event.keyCode){
-                case 49 :listreorder();
+                case 49 ://listreorder();
+                        alert('ยังไม่เปิดให้บริการ');
                         break;
                 case 50 :sec_wh();
                         break;

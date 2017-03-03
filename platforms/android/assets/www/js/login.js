@@ -106,6 +106,7 @@ function login(username,pass,cpn){
                             if(cpn=="np"){
                                 cpn_type = 1;
                                 localStorage.profit = "s01";
+                                localStorage.branch = "S01";
                                // localStorage.api_url_server = "http://api.nopadol.com:8080/";
                                 console.log("http://api.nopadol.com:8080/");
                             }else if(cpn=="nava"){
@@ -117,10 +118,11 @@ function login(username,pass,cpn){
                             } else if(cpn=="s02"){
                                 cpn_type = 1;
                                 localStorage.profit = "s02";
+                                localStorage.branch = "S02";
                               //  localStorage.api_url_server = "http://npfaham.webhop.info:8080/";
                                // console.log("http://npexpert.webhop.info:8088/");
                             }
-                            console.log('{"companyCode":"np","appCode":"NpInventory","saleCode":"'+username+'","password":"'+pass+'"}');
+                            console.log('{"companyCode":"'+cpn+'","appCode":"NpInventory","saleCode":"'+username+'","password":"'+pass+'"}');
                             $.ajax({
                                        // url: localStorage.api_url_server_nava+localStorage.api_url_login,
                                         url: localStorage.api_url_server+"NPDataCenterWs/center/login",
@@ -137,7 +139,7 @@ function login(username,pass,cpn){
                                             //console.log(result.data.MenuPermission);
                                             localStorage.username = result.saleCode;
                                             localStorage.token = result.accessToken;
-                                            localStorage.branch = result.branchName;
+
 
                                             if(localStorage.username=="56163"){
                                                 $("#page_setting").show();

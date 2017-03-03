@@ -304,7 +304,7 @@ $.ajax({
 
 
                                                     },
-                                                    error: function (error){.
+                                                    error: function (error){
                                                     switch_url();
                                                     submit_transfer_damage();
                                                     }

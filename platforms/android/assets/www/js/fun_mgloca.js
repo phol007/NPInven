@@ -38,7 +38,7 @@ function searchMGItem(barcode){
         setTimeout(function(){
         $.ajax({
                url: localStorage.api_url_server+"NPInventoryWs/V2/inven/searchScanBarCodeLogs",
-               data: '{"accessToken":"'+localStorage.token+'","searchItem": "'+barcode+'"}',
+               data: '{"accessToken":"'+localStorage.token+'","searchItem": "'+barcode+'","branch":"'+localStorage.branch+'"}',
                contentType: "application/json; charset=utf-8",
                dataType: "json",
                type: "POST",

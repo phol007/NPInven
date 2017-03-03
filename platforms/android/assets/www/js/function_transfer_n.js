@@ -7,14 +7,57 @@ $.ajax({
                           type: "POST",
                           cache: false,
                           success: function(whnormal){
-                          console.log("whnormal "+JSON.stringify(whnormal));
-                          var counts = whnormal.data.length;
+                      //    console.log("whnormal "+JSON.stringify(whnormal));
+                      //    var counts = whnormal.data.length;
 
 
-                          var wh_normal_up= "<select id='whnormal_up' class='whselect' data-role='none' onchange='select_shelfnormalup(this)'>";
-                          var wh_normal_down= "<select id='whnormal_down' class='whselect' data-role='none'  onchange='select_shelfnormaldown(this)'>";
+
+                          var wh_normal_up = "<select id='whnormal_up' class='whselect' data-role='none' onchange='select_shelfnormalup(this)'>";
+                          var wh_normal_down = "<select id='whnormal_down' class='whselect' data-role='none'  onchange='select_shelfnormaldown(this)'>";
                             var loname = "";
-                          for(var i = 0;i<counts;i++){
+
+                          if(localStorage.branch == "S01"){
+                            $.each( whnormal.data , function(key, val) {
+                                  var n = val['code'].includes("1");
+                                  if(n==true){
+                                      if(val['location'] == null){
+                                          loname = "-";
+                                      }else{
+                                          loname = val['location'];
+                                      }
+
+                                      var d = val['code'].includes("-A");
+                                      if(d==true){
+                                        wh_normal_up += "<option value='"+val['code']+"' selected='selected'>"+val['code']+" "+val['name']+"</option>";
+                                        wh_normal_down += "<option value='"+val['code']+"' selected='selected'>"+val['code']+" "+val['name']+"</option>";
+                                      }else{
+                                          wh_normal_up += "<option value='"+val['code']+"'>"+val['code']+" "+val['name']+"</option>";
+                                          wh_normal_down += "<option value='"+val['code']+"'>"+val['code']+" "+val['code']+"</option>";
+                                      }
+                                  }
+                             });
+                          }else
+                          if(localStorage.branch == "S02"){
+                            $.each( whnormal.data , function(key, val) {
+                                  var n = val['code'].includes("2");
+                                  if(n==true){
+                                      if(val['location'] == null){
+                                          loname = "-";
+                                      }else{
+                                          loname = val['location'];
+                                      }
+                                      var d = val['code'].includes("-A");
+                                      if(d==true){
+                                        wh_normal_up += "<option value='"+val['code']+"' selected='selected'>"+val['code']+" "+val['name']+"</option>";
+                                        wh_normal_down += "<option value='"+val['code']+"' selected='selected'>"+val['code']+" "+val['name']+"</option>";
+                                      }else{
+                                        wh_normal_up += "<option value='"+val['code']+"'>"+val['code']+" "+val['name']+"</option>";
+                                        wh_normal_down += "<option value='"+val['code']+"'>"+val['code']+" "+val['code']+"</option>";
+                                      }
+                                  }
+                             });
+                          }
+                          /*for(var i = 0;i<counts;i++){
 
                             if(whnormal.data[i].location == null){
                                 loname = "-";
@@ -25,9 +68,10 @@ $.ajax({
 
                           wh_normal_down += "<option value='"+whnormal.data[i].code+"'>"+whnormal.data[i].code+" "+whnormal.data[i].name+"</option>";
 
-                          }
+                          }*/
                           wh_normal_up += "</select>";
                           wh_normal_down += "</select>";
+                          //console.log(wh_normal_up);
                           document.getElementById("wh_normaleup").innerHTML = wh_normal_up;
                           document.getElementById("wh_normaledown").innerHTML = wh_normal_down;
 

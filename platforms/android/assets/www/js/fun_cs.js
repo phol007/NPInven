@@ -20,9 +20,10 @@ $(document).ready(function(){
 
 function sec_wh(){
  var select_wh = "";
+ console.log('{"accessToken":"'+localStorage.token+'","search":"","branch":"'+localStorage.branch+'"}');
               $.ajax({
                       url: localStorage.api_url_server+"NPInventoryWs/V2/is/searchWH",
-                      data: '{"accessToken":"'+localStorage.token+'","search":""}',
+                      data: '{"accessToken":"'+localStorage.token+'","search":"","branch":"'+localStorage.branch+'"}',
                       contentType: "application/json; charset=utf-8",
                       dataType: "json",
                       type: "POST",
@@ -155,7 +156,7 @@ function searchWHis(barcode){
    // document.activeElement.blur();
         $.ajax({
                url: localStorage.api_url_server+""+localStorage.api_url_searchwh_is,
-               data: '{"accessToken":"'+localStorage.token+'","search":"'+barcode+'"}',
+               data: '{"accessToken":"'+localStorage.token+'","search":"'+barcode+'","branch":"'+localStorage.branch+'"}',
                contentType: "application/json; charset=utf-8",
                dataType: "json",
                type: "POST",
@@ -163,7 +164,7 @@ function searchWHis(barcode){
                success: function(result){
                       console.log(JSON.stringify(result.data));
                       console.log(localStorage.api_url_server+""+localStorage.api_url_searchwh_is);
-                      console.log('{"accessToken":"'+localStorage.token+'","search":"'+barcode+'"}');
+                      console.log('{"accessToken":"'+localStorage.token+'","search":"'+barcode+'","branch":"'+localStorage.branch+'"}');
                       if(JSON.stringify(result.data)==="[]"||JSON.stringify(result.data)==="null"){
                            alertify.alert("ไม่มีข้อมูลคลังสินค้าของ "+barcode);
                            closeload();
@@ -184,10 +185,10 @@ function searchWHis(barcode){
 
                            });
                           console.log("gendocNo inspect "+localStorage.api_url_server+localStorage.api_url_gendocno);
-                          console.log("payload genDN inspect "+'{"accessToken":"'+localStorage.token+'","type":"3","search":"'+localStorage.username+'"}')
+                          console.log("payload genDN inspect "+'{"accessToken":"'+localStorage.token+'","type":"3","search":"'+localStorage.username+'","branch":"'+localStorage.branch+'"}')
                           $.ajax({
                                  url: localStorage.api_url_server+""+localStorage.api_url_gendocno,
-                                 data: '{"accessToken":"'+localStorage.token+'","type":"3","search":"'+localStorage.username+'"}',
+                                 data: '{"accessToken":"'+localStorage.token+'","type":"3","search":"'+localStorage.username+'","branch":"'+localStorage.branch+'"}',
                                  contentType: "application/json; charset=utf-8",
                                  dataType: "json",
                                  type: "POST",
@@ -298,20 +299,20 @@ function searchItem(itemCode){
 
     var DocNo = document.getElementById("valdocIS").value;
     var shel = document.getElementById("shel").value;
-    console.log('{"barcode":"'+itemCode+'","docno":"'+DocNo+'","type":"3","shelfcode":"'+shel+'"}');
+    console.log('{"barcode":"'+itemCode+'","docno":"'+DocNo+'","type":"3","shelfcode":"'+shel+'","branch":"'+localStorage.branch+'"}');
     setTimeout(function(){
     $.ajax({
            url: localStorage.api_url_server+""+localStorage.api_url_search_item_pr,
-           data: '{"accessToken":"'+localStorage.token+'","barcode":"'+itemCode+'","docno":"'+DocNo+'","type":"3","shelfcode":"'+shel+'"}',
+           data: '{"accessToken":"'+localStorage.token+'","barcode":"'+itemCode+'","docno":"'+DocNo+'","type":"3","shelfcode":"'+shel+'","branch":"'+localStorage.branch+'"}',
            contentType: "application/json; charset=utf-8",
            dataType: "json",
            type: "POST",
            cache: false,
            success: function(result){
-                 console.log(JSON.stringify(result.listBarcode));
+                 console.log(JSON.stringify(result.itemcode));
                  console.log(localStorage.api_url_server+""+localStorage.api_url_search_item_pr);
 
-                 if(JSON.stringify(result.listBarcode)==="[]"){
+                 if(JSON.stringify(result.itemcode)==="[]"){
                      alertify.alert("บาร์โค้ด "+itemCode+" ไม่มีอยู่ในทะเบียนสินค้า");
                      //closeload();
                  }else{
@@ -321,9 +322,10 @@ function searchItem(itemCode){
                      var cntitem = "";
                      var units = "";
                      var old_cnt = "";
+                     var whCode = "";
 
-                     if(result.listBarcode==null){
-                         console.log("data listbarcode : null");
+                     if(result.itemcode==null){
+                         console.log("data itemcode : null");
                          $.each(result.listISBarcode, function(key, val) {
                              itemcode = val['itemcode'];
                              itemName = val['itemname'];
@@ -342,29 +344,41 @@ function searchItem(itemCode){
                              console.log(old_cnt);
                          });
                      }else{
-                         $.each(result.listBarcode, function(key, val) {
-                         itemcode = val['itemcode'];
-                         itemName = val['itemname'];
-                         range = val['range'];
-                         if(val['qty']==0){
+                       //  $.each(result.listBarcode, function(key, val) {
+                         itemcode = result.itemcode;
+                         itemName = result.itemname;
+                         range = result.range;
+                         if(result.qty==0){
                             cntitem = "";
                             old_cnt = "-";
                          }else{
-                            cntitem = val['qty'];
-                            old_cnt = val['qty'];
+                            cntitem = result.qty;
+                            old_cnt = result.qty;
                          }
-                            units = val['unitcode'];
-                            apcode = val['apCode'];
-                            apname = val['apName'];
-                         });
+                            units = result.unitcode;
+                            apcode = result.apCode;
+                            apname = result.apName;
+                        // });
                          console.log(cntitem);
                          console.log(old_cnt);
+                         var ra = 1;
+                         var ch = 0;
+                         $.each(result.listWH,function(k,v){
+                            ch = ra%2;
+                            if(ch!=0){
+                                whCode += v['whcode'];
+                            }else{
+                                whCode += ", "+v['whcode'];
+                            }
+                            ra++;
+                         });
                      }
                      $.mobile.changePage("#countitem",{transition: 'slidefade',reverse: true});
 
                      document.getElementById("CTitemno").innerHTML = itemcode;
                      document.getElementById("CTitemname").innerHTML = itemName;
                      document.getElementById("CTunit").innerHTML = units;
+                     document.getElementById("CTwhcode").innerHTML = whCode;
                      document.getElementById("barcodetext").innerHTML = itemCode;
                      document.getElementById("itemNo").value = itemcode;
                      document.getElementById("itemsName").value = itemName;

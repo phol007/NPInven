@@ -58,7 +58,7 @@ var app = {
                              selected1 += `<select name="company1" class="bt-cmp" style="width:100%; height:50px;" data-role="none">`;
                             // selected2 += `<select name="company2" class="bt-cmp" style="width:100%; height:50px;" data-role="none">`;
                              $.each(result.listData, function(key, val) {
-                                var n = val['code'].includes("nava")
+                                var n = val['code'].includes("nava");
                                 if(n!=true){
                                     selected1 += `<option value="`+val['code']+`">`+val['name']+`</option>`;
                                 }
@@ -92,6 +92,9 @@ function switch_url(){
             localStorage.api_url_server = "http://api.nopadol.com:8080/";
             break;
     }
-    document.getElementById("api_server").innerHTML = localStorage.api_url_server;
+    var api =  document.getElementsByClassName('api_server');
+        for(var i = 0; i < api.length; i++){
+            api[i].innerHTML = localStorage.api_url_server;
+        }
     console.log("Now!! api name "+localStorage.api_url_server);
 }
