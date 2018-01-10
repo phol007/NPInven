@@ -30,11 +30,11 @@ function sec_wh(){
                       cache: false,
                       success: function(result){
                           console.log(JSON.stringify(result.data));
-                               select_wh += `<select name="wh" class="bt-cmp" style="width:100%; height:50px;" data-role="none">`;
+                               select_wh += '<select name="wh" class="bt-cmp" style="width:100%; height:50px;" data-role="none">';
                                $.each(result.data, function(key, val) {
-                                      select_wh += `<option value="`+val['whCode']+`">คลัง `+val['whCode']+`</option>`;
+                                      select_wh += '<option value="'+val['whCode']+'">คลัง '+val['whCode']+'</option>';
                                });
-                               select_wh += `</select>`;
+                               select_wh += '</select>';
                                document.getElementById("wh_list").innerHTML = select_wh;
                                $.mobile.changePage('#stock',{transition: 'slidefade'});
                       },
@@ -63,11 +63,11 @@ function sec_sh(){
                       cache: false,
                       success: function(result){
                          // console.log(JSON.stringify(result.data));
-                               select_sh += `<select name="sh" class="bt-cmp" style="width:100%; height:50px;" data-role="none">`;
+                               select_sh += '<select name="sh" class="bt-cmp" style="width:100%; height:50px;" data-role="none">';
                                $.each(result.data, function(key, val) {
-                                      select_sh += `<option value="`+val['shelfCode']+`">ชั้นเก็บ `+val['shelfName']+`</option>`;
+                                      select_sh += '<option value="'+val['shelfCode']+'">ชั้นเก็บ '+val['shelfName']+'</option>';
                                });
-                               select_sh += `</select>`;
+                               select_sh += '</select>';
                                document.getElementById("shel").innerHTML = select_sh;
                                $.mobile.changePage('#shelves',{transition: 'slidefade'});
                       },
@@ -424,24 +424,21 @@ function like_item(){
                success: function(result){
                     console.log(JSON.stringify(result.itemMasterList));
                     if(JSON.stringify(result.itemMasterList)=="[]"){
-                       itemlist = `<label style='width:100%; color:red;'> ** ไม่มีข้อมูลที่ค้นหา ** </label>`;
+                       itemlist = '<label style="width:100%; color:red;"> ** ไม่มีข้อมูลที่ค้นหา ** </label>';
                     }else{
                        $.each(result.itemMasterList, function(key,val){
-                           itemlist += `<label style='width:100%; font-size:12px; border-bottom:1px dashed gray;'
-                                        onclick="Select_item('`+val['itemCode'].trim()+`')">
-                                           <div class="ui-grid-b">
-                                                 <div class="ui-block-a" style="width:35%;">`+
-                                                   val['itemCode'].trim()+
-                                                 `</div>
-                                                 <div class="ui-block-b" style="width:40%;">`
-                                                    +val['itemName'].trim()+
-                                                 `</div>
-                                                 <div class="ui-block-c" style="width:25%; text-align:center;">`
-                                                    +val['unitCode'].trim()+
-                                                  `</div>
-                                               </div>
-                                             </div>
-                                        </label>`;
+                           itemlist += '<label style="width:100%; font-size:12px; border-bottom:1px dashed gray;"';
+                           itemlist += 'onclick="Select_item("'+val["itemCode"].trim()+'")">';
+                           itemlist += '<div class="ui-grid-b">';
+                           itemlist += '<div class="ui-block-a" style="width:35%;">';
+                           itemlist += 'val["itemCode"].trim()';
+                           itemlist += '</div>';
+                           itemlist += '<div class="ui-block-b" style="width:40%;">';
+                           itemlist += 'val["itemName"].trim()';
+                           itemlist += '</div>';
+                           itemlist += '<div class="ui-block-c" style="width:25%; text-align:center;">';
+                           itemlist += 'val["unitCode"].trim()';
+                           itemlist += '</div></div></div></label>';
                        });
                     }
 
@@ -742,7 +739,7 @@ function isList(){
                                       str1=sitemno;
                                     }
 
-                                        detail += `<label class="csdelete" csdelete-id="`+DocNo+`/`+wh+`/`+val['shelfCode']+`/`+val['itemCode']+`/`+val['unitCode']+`" csdelete-detail-id="`+val['itemCode']+`" id="`+val['itemCode']+`" style="text-align:center; border-bottom:1px gray dashed;">`;
+                                        detail += '<label class="csdelete" csdelete-id="'+DocNo+'/'+wh+'/'+val['shelfCode']+'/'+val['itemCode']+'/'+val['unitCode']+'" csdelete-detail-id="'+val['itemCode']+'" id="'+val['itemCode']+'" style="text-align:center; border-bottom:1px gray dashed;">';
                                              detail += '<div class="ui-grid-d">';
                                               detail += '<div class="ui-block-a">';
                                                      detail += str1;
@@ -771,9 +768,7 @@ function isList(){
                     document.getElementById("stupdate").value = 0;
                     localStorage.enter = null;
                 }else{
-                    detail = `<label style="border-bottom:1px dashed black; padding:2%; color:red; text-align:center">
-                                          <h5>** ยังไม่มีข้อมูลสินค้าที่นับในใบนับนี้ **</h5>
-                              </label>`;
+                    detail = '<label style="border-bottom:1px dashed black; padding:2%; color:red; text-align:center"><h5>** ยังไม่มีข้อมูลสินค้าที่นับในใบนับนี้ **</h5></label>';
                     document.getElementById("stupdate").value = 1;
                     localStorage.enter = null;
                 }
@@ -957,7 +952,7 @@ function csDeletitem(DocNo,wh,sh,itemCode,unitCode){
 
 function clear_manual(){
      var declear = "";
-     declear += `<label style='width:100%; color:red; text-align:center;'> ** รายการสินค้าที่ค้นหาได้ ** </label>`;
+     declear += '<label style="width:100%; color:red; text-align:center;"> ** รายการสินค้าที่ค้นหาได้ ** </label>';
      document.getElementById("manual_searchItem").value = "";
      document.getElementById("like_itemlist").innerHTML = declear;
 }

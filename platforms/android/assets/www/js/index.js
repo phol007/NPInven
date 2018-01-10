@@ -55,17 +55,19 @@ var app = {
                     cache: false,
                     success: function(result){
                         console.log(JSON.stringify(result.listData));
-                             selected1 += `<select name="company1" class="bt-cmp" style="width:100%; height:50px;" data-role="none">`;
+                             selected1 += '<select name="company1" class="bt-cmp" style="width:100%; height:50px;" data-role="none">';
                             // selected2 += `<select name="company2" class="bt-cmp" style="width:100%; height:50px;" data-role="none">`;
                              $.each(result.listData, function(key, val) {
-                                var n = val['code'].includes("nava");
-                                if(n!=true){
-                                    selected1 += `<option value="`+val['code']+`">`+val['name']+`</option>`;
+//                                var str = val['code'];
+//                                var n = str.inclueds("nava");
+                                if(val['code']!="nava" && val['code']!="navatest"){
+                                //if(n < 0){
+                                    selected1 += '<option value="'+val['code']+'">'+val['name']+'</option>';
                                 }
 
                                // selected2 += `<option value="`+val['code']+`">`+val['name']+`</option>`;
                              });
-                             selected1 += `</select>`;
+                             selected1 += '</select>';
                             // selected2 += `</select>`;
                              document.getElementById("cmp1").innerHTML = selected1;
                             // document.getElementById("cmp2").innerHTML = selected2;

@@ -339,14 +339,14 @@ window.addEventListener('native.onscanbarcode', function (schitem) {
                                                                 itemdetail += '<div class="ui-block-a" style="width:35%; text-align:right;">';
                                                                 itemdetail += 'ชั้นเก็บ : </div>';
                                                                 itemdetail += '<div class="ui-block-b" style="text-align:left; padding-left:2%;">';
-                                                                itemdetail += ''+val['shelfCode']+'</div>';
+                                                                itemdetail += val['shelfCode']+'</div>';
                                                                 itemdetail += '</div>';
 
                                                                 itemdetail += '<div class="ui-grid-a" style="padding-bottom:5%;">';
                                                                 itemdetail += '<div class="ui-block-a" style="width:35%; text-align:right;">';
                                                                 itemdetail += 'ยอดคงเหลือ : </div>';
                                                                 itemdetail += '<div class="ui-block-b" style="text-align:left; padding-left:2%;">';
-                                                                itemdetail += ''+val['qty']+' '+val['stkunitcode']+'</div>';
+                                                                itemdetail += val['qty']+' '+val['stkunitcode']+'</div>';
                                                                 itemdetail += '</div>';
 
                                                                 itemdetail += '<div class="ui-grid-a" style="padding-bottom:5%;">';
@@ -458,11 +458,11 @@ function rewh(){
                                  cache: false,
                                  success: function(result){
                                     // console.log(JSON.stringify(result.data));
-                                          item_wh += `<select name="itemPro_wh" class="bt-cmp" style="width:100%; height:50px;" data-role="none">`;
+                                          item_wh += '<select name="itemPro_wh" class="bt-cmp" style="width:100%; height:50px;" data-role="none">';
                                           $.each(result.data, function(key, val) {
-                                                 item_wh += `<option value="`+val['whCode']+`">คลัง `+val['whCode']+`</option>`;
+                                                 item_wh += '<option value="'+val['whCode']+'">คลัง '+val['whCode']+'</option>';
                                           });
-                                          item_wh += `</select>`;
+                                          item_wh += '</select>';
                                           document.getElementById("itemprofile_whCode").innerHTML = item_wh;
                                           document.getElementById("valwh").value = "";*/
                                           document.getElementById("bt-item").style.textAlign = "center";
@@ -511,24 +511,19 @@ function like_itemProfile(){
                        success: function(result){
                             console.log(JSON.stringify(result.itemMasterList));
                             if(JSON.stringify(result.itemMasterList)=="[]"){
-                               itemlist = `<label style='width:100%; color:red;'> ** ไม่มีข้อมูลที่ค้นหา ** </label>`;
+                               itemlist = '<label style="width:100%; color:red;"> ** ไม่มีข้อมูลที่ค้นหา ** </label>';
                             }else{
                                $.each(result.itemMasterList, function(key,val){
-                                   itemlist += `<label style='width:100%; font-size:12px; border-bottom:1px dashed gray;'
-                                                onclick="itemProfile('`+val['itemCode'].trim()+`')">
-                                                   <div class="ui-grid-b">
-                                                         <div class="ui-block-a" style="width:35%;">`
-                                                           +val['itemCode'].trim()+
-                                                         `</div>
-                                                         <div class="ui-block-b" style="width:40%;">`
-                                                            +val['itemName'].trim()+
-                                                         `</div>
-                                                         <div class="ui-block-c" style="width:25%; text-align:center;">`
-                                                            +val['unitCode'].trim()+
-                                                          `</div>
-                                                       </div>
-                                                     </div>
-                                                </label>`;
+                                   itemlist += '<label style="width:100%; font-size:12px; border-bottom:1px dashed gray;"';
+                                   itemlist += 'onclick="itemProfile("'+val['itemCode'].trim()+'")">';
+                                   itemlist += '<div class="ui-grid-b">';
+                                   itemlist += '<div class="ui-block-a" style="width:35%;">';
+                                   itemlist += val['itemCode'].trim()+'</div>';
+                                   itemlist += '<div class="ui-block-b" style="width:40%;">';
+                                   itemlist += val['itemName'].trim()+'</div>';
+                                   itemlist += '<div class="ui-block-c" style="width:25%; text-align:center;">';
+                                   itemlist += val['unitCode'].trim();
+                                   itemlist += '</div></div></div></label>';
                                });
                             }
 

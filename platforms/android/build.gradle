@@ -24,6 +24,10 @@ apply plugin: 'android'
 buildscript {
     repositories {
         mavenCentral()
+        maven {
+            url 'https://maven.google.com/'
+            name 'Google'
+        }
     }
 
     // Switch the Android Gradle plugin version requirement depending on the
@@ -31,13 +35,17 @@ buildscript {
     // http://tools.android.com/tech-docs/new-build-system/version-compatibility
     // and https://issues.apache.org/jira/browse/CB-8143
     dependencies {
-        classpath 'com.android.tools.build:gradle:2.1.2'
+        classpath 'com.android.tools.build:gradle:3.0.1'
     }
    }
 
 // Allow plugins to declare Maven dependencies via build-extras.gradle.
 repositories {
     mavenCentral()
+    maven {
+        url 'https://maven.google.com/'
+        name 'Google'
+    }
 }
 
 task wrapper(type: Wrapper) {
@@ -174,8 +182,11 @@ android {
       abortOnError false;
     }
 
-    compileSdkVersion 'Google Inc.:Google APIs:23'
-    buildToolsVersion '23.0.1'
+    // compileSdkVersion 23
+    compileSdkVersion 27
+    buildToolsVersion '27.0.3'
+    defaultPublishConfig "release"
+    publishNonDefault true
 
     if (Boolean.valueOf(cdvBuildMultipleApks)) {
         productFlavors {
@@ -239,9 +250,10 @@ android {
 dependencies {
     compile fileTree(include: '*.jar', dir: 'libs')
     // SUB-PROJECT DEPENDENCIES START
-    debugCompile project(path: 'CordovaLib', configuration: 'debug')
-    releaseCompile project(path: 'CordovaLib', configuration: 'release')
+    // debugCompile project(path: 'CordovaLib', configuration: 'debug')
+    //releaseCompile project(path: 'CordovaLib', configuration: 'release')
     // SUB-PROJECT DEPENDENCIES END
+    compile project(':CordovaLib')
 }
 
 def promptForReleaseKeyPassword() {

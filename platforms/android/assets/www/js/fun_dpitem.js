@@ -13,11 +13,11 @@ loading();
                       cache: false,
                       success: function(result){
                          // console.log(JSON.stringify(result.data));
-                               select_wh += `<select name="wh" class="bt-cmp" style="width:100%; height:50px;" data-role="none">`;
+                               select_wh += '<select name="wh" class="bt-cmp" style="width:100%; height:50px;" data-role="none">';
                                $.each(result.data, function(key, val) {
-                                      select_wh += `<option value="`+val['whCode']+`">คลัง `+val['whCode']+`</option>`;
+                                      select_wh += '<option value="'+val['whCode']+'">คลัง '+val['whCode']+'</option>';
                                });
-                               select_wh += `</select>`;
+                               select_wh += '</select>';
                                document.getElementById("Up_wh_list").innerHTML = select_wh;
                                $.mobile.changePage('#Update_stock',{transition: 'slidefade'});
                       },
@@ -119,7 +119,7 @@ function searchWHup(barcode){
                             }
                           document.getElementById("up_itemwh").value = whCode;
                           document.getElementById("up_searchLocal").value = "";
-                          document.getElementById("like_locallist").innerHTML = `<label style='width:100%; color:red; text-align:center;'> ** รายการที่เก็บสินค้าที่ค้นหาได้ ** </label>`;
+                          document.getElementById("like_locallist").innerHTML = '<label style="width:100%; color:red; text-align:center;"> ** รายการที่เก็บสินค้าที่ค้นหาได้ ** </label>';
                        //   sec_sh();
                           $.mobile.changePage('#new_location',{transition: 'slidefade'});
                       //    closeload();
@@ -149,11 +149,11 @@ function sec_sh(){
                       cache: false,
                       success: function(result){
                          // console.log(JSON.stringify(result.data));
-                               select_sh += `<select name="sh" class="bt-cmp" style="width:100%; height:50px;" data-role="none">`;
+                               select_sh += '<select name="sh" class="bt-cmp" style="width:100%; height:50px;" data-role="none">';
                                $.each(result.data, function(key, val) {
-                                      select_sh += `<option value="`+val['shelfCode']+`">ชั้นเก็บ `+val['shelfName']+`</option>`;
+                                      select_sh += '<option value="'+val['shelfCode']+'">ชั้นเก็บ '+val['shelfName']+'</option>';
                                });
-                               select_sh += `</select>`;
+                               select_sh += '</select>';
                                document.getElementById("up_shel").innerHTML = select_sh;
                                $.mobile.changePage('#new_location',{transition: 'slidefade'});
                       },
@@ -343,28 +343,23 @@ function like_upitem(){
                     console.log(JSON.stringify(result.listItemLocation));
                     if(JSON.stringify(result.listItemLocation)=="[]"){
                    //    alert("fun like up");
-                       itemlist = `<label style='width:100%; color:red; text-align:center;'> ** ไม่มีข้อมูลที่ค้นหา ** </label>`;
+                       itemlist = '<label style="width:100%; color:red; text-align:center;"> ** ไม่มีข้อมูลที่ค้นหา ** </label>';
                     }else{
                        itemlist = "";
                        $.each(result.listItemLocation, function(key,val){
                            if(val['itemCode']==""){
-                           itemlist = `<label style='width:100%; color:red; text-align:center;'> ** ไม่มีข้อมูลที่ค้นหา ** </label>`;
+                           itemlist = '<label style="width:100%; color:red; text-align:center;"> ** ไม่มีข้อมูลที่ค้นหา ** </label>';
                            }else{
 
-                           itemlist += `<label style='width:100%; font-size:14px; border-bottom:1px dashed gray;'
-                                        onclick="search_upitem('`+val['itemCode'].trim()+`')">
-                                           <div class="ui-grid-b">
-                                                 <div class="ui-block-a" style="width:35%; padding:2%; word-wrap:break-word;">`
-                                                   +val['itemCode'].trim()+
-                                                 `</div>
-                                                 <div class="ui-block-b" style="width:40%; word-wrap:break-word;">`
-                                                    +val['itemName'].trim()+
-                                                 `</div>
-                                                 <div class="ui-block-c" style="width:25%; text-align:center; word-wrap:break-word;">`
-                                                    +val['unitCode'].trim()+
-                                                  `</div>
-                                             </div>
-                                        </label>`;
+                           itemlist += '<label style="width:100%; font-size:14px; border-bottom:1px dashed gray;"';
+                           itemlist += 'onclick="search_upitem("'+val['itemCode'].trim()+'")">';
+                           itemlist += '<div class="ui-grid-b">';
+                           itemlist += '<div class="ui-block-a" style="width:35%; padding:2%; word-wrap:break-word;">';
+                           itemlist += val['itemCode'].trim()+'</div>';
+                           itemlist += '<div class="ui-block-b" style="width:40%; word-wrap:break-word;">';
+                           itemlist += val['itemName'].trim()+'</div>';
+                           itemlist += '<div class="ui-block-c" style="width:25%; text-align:center; word-wrap:break-word;">';
+                           itemlist += val['unitCode'].trim()+'</div></div></label>';
                            }
                        });
                     }
@@ -398,24 +393,20 @@ function like_uplocal(){
                     console.log(JSON.stringify(result.locationList));
                     if(JSON.stringify(result.locationList)=="[]"){
                    //    alert("fun like up");
-                       locallist = `<label style='width:100%; color:red; text-align:center;'> ** ไม่มีข้อมูลที่ค้นหา ** </label>`;
+                       locallist = '<label style="width:100%; color:red; text-align:center;"> ** ไม่มีข้อมูลที่ค้นหา ** </label>';
                     }else{
                        locallist = "";
                        $.each(result.locationList, function(key,val){
                            if(val['locationCode']==""){
-                           locallist = `<label style='width:100%; color:red; text-align:center;'> ** ไม่มีข้อมูลที่ค้นหา ** </label>`;
+                           locallist = '<label style="width:100%; color:red; text-align:center;"> ** ไม่มีข้อมูลที่ค้นหา ** </label>';
                            }else{
-                           locallist += `<label style='width:100%; font-size:14px; border-bottom:1px dashed gray;'
-                                        onclick="searchLCup('`+val['locationCode'].trim()+`')">
-                                           <div class="ui-grid-a">
-                                                 <div class="ui-block-a" style="padding:2% 0% 2% 5%;">`+
-                                                   val['locationCode'].trim()+
-                                                 `</div>
-                                                 <div class="ui-block-b" style="padding:2% 0% 2% 5%;">`
-                                                    +val['locationName'].trim()+
-                                                 `</div>
-                                             </div>
-                                        </label>`;
+                           locallist += '<label style="width:100%; font-size:14px; border-bottom:1px dashed gray;"';
+                           locallist += 'onclick="searchLCup("'+val['locationCode'].trim()+'")">';
+                           locallist += '<div class="ui-grid-a">';
+                           locallist += '<div class="ui-block-a" style="padding:2% 0% 2% 5%;">';
+                           locallist += val['locationCode'].trim()+'</div>';
+                           locallist += '<div class="ui-block-b" style="padding:2% 0% 2% 5%;">';
+                           locallist += val['locationName'].trim()+'</div></div></label>';
                            }
                        });
                     }
@@ -471,30 +462,25 @@ function summary_list(){
     console.log(JSON.stringify(loca_item));
     var data = "";
     $.each(loca_item, function(key,val){
-        data += `<div class="ui-grid-b" id="`+val['item_code']+`" style="text-align:center; border-bottom:1px gray dashed; font-size:12px;">
-                   <div class="ui-block-a" style="word-wrap:break-word;">
-                    `+val['item_code']+`
-                   </div>
-                   <div class="ui-block-b" style="word-wrap:break-word; text-align:left;">
-                    `+val['item_name']+`
-                   </div>
-                   <div class="ui-block-c" style="word-wrap:break-word;">
-                    `+val['unit']+`
-                   </div>
-                 </div>`;
+        data += '<div class="ui-grid-b" id="'+val['item_code']+'" style="text-align:center; border-bottom:1px gray dashed; font-size:12px;">';
+        data += '<div class="ui-block-a" style="word-wrap:break-word;">';
+        data += val['item_code'];
+        data += '</div><div class="ui-block-b" style="word-wrap:break-word; text-align:left;">';
+        data += val['item_name']+'</div><div class="ui-block-c" style="word-wrap:break-word;">';
+        data += val['unit']+'</div></div>';
     });
     document.getElementById("up_itemlist").innerHTML = data;
 }
 
 function bt_loca(){
     document.getElementById("up_searchLocal").value = "";
-    document.getElementById("like_locallist").innerHTML = `<label style='width:100%; color:red; text-align:center;'> ** รายการที่เก็บสินค้าที่ค้นหาได้ ** </label>`;
+    document.getElementById("like_locallist").innerHTML = '<label style="width:100%; color:red; text-align:center;"> ** รายการที่เก็บสินค้าที่ค้นหาได้ ** </label>';
     $.mobile.changePage("#new_location",{transition: 'slidefade',reverse: true});
 }
 
 function searchUpitem(){
     document.getElementById("up_searchItem").value = "";
-    document.getElementById("like_upitemlist").innerHTML = `<label style='width:100%; color:red; text-align:center;'> ** รายการสินค้าที่ค้นหาได้ ** </label>`;
+    document.getElementById("like_upitemlist").innerHTML = '<label style="width:100%; color:red; text-align:center;"> ** รายการสินค้าที่ค้นหาได้ ** </label>';
     $.mobile.changePage("#search_upitem",{transition: 'slidefade',reverse: true});
 }
 
