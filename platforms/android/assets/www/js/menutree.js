@@ -8,7 +8,9 @@ function tree(){
         menu += '   <br style="margin:0;">';
         menu += '</label>';
         menu += '<ul><hr class="type">';
-            menu += '<li><a href="javascript:alert(\'ยังไม่เปิดให้บริการ\')">ระบบ Reorder</a></li>';
+
+            menu += '<li><a href="#listreorder">ระบบ Reorder</a></li>';
+            //menu += '<li><a href="javascript:alert(\'ยังไม่เปิดให้บริการ\')">ระบบ Reorder</a></li>';
             menu += '<li><a href="javascript:sec_wh()">ระบบ นับสต๊อก</a></li>';
             menu += '<li><a href="#transfer_normal">ระบบ โอนสินค้า</a></li>';
             menu += '<li><a href="javascript:rewh()">ระบบ เช็คสต๊อก</a></li>';

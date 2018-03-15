@@ -1,34 +1,41 @@
 package io.ionic.keyboard;
 
-import android.content.BroadcastReceiver;
-import android.content.Context;
-import android.content.Intent;
-import android.content.IntentFilter;
-import android.graphics.Point;
-import android.graphics.Rect;
-import android.os.Build;
-import android.util.DisplayMetrics;
-import android.view.Display;
-import android.view.View;
-import android.view.ViewTreeObserver.OnGlobalLayoutListener;
-import android.view.inputmethod.InputMethodManager;
-import android.widget.Toast;
+        import org.apache.cordova.CallbackContext;
+        import org.apache.cordova.CordovaInterface;
+        import org.apache.cordova.CordovaPlugin;
+        import org.apache.cordova.CordovaWebView;
+        import org.apache.cordova.LOG;
+        import org.apache.cordova.PluginResult;
+        import org.apache.cordova.PluginResult.Status;
+        import org.json.JSONArray;
+        import org.json.JSONException;
 
-import org.apache.cordova.CallbackContext;
-import org.apache.cordova.CordovaInterface;
-import org.apache.cordova.CordovaPlugin;
-import org.apache.cordova.CordovaWebView;
-import org.apache.cordova.LOG;
-import org.apache.cordova.PluginResult;
-import org.json.JSONArray;
-import org.json.JSONException;
+        import android.content.BroadcastReceiver;
+        import android.content.Context;
+        import android.content.Intent;
+        import android.content.IntentFilter;
+        import android.graphics.Rect;
+        import android.util.DisplayMetrics;
+        import android.view.View;
+        import android.view.ViewTreeObserver.OnGlobalLayoutListener;
+        import android.view.inputmethod.InputMethodManager;
 
 // import additionally required classes for calculating screen height
+        import android.view.Display;
+        import android.graphics.Point;
+        import android.os.Build;
+        import android.widget.Toast;
 
 public class IonicKeyboard extends CordovaPlugin {
+
     private BroadcastReceiver receiver;
     private BroadcastReceiver receiver2;
+    private BroadcastReceiver receiver3;
+    private BroadcastReceiver receiver4;
+
     public void initialize(CordovaInterface cordova, CordovaWebView webView) {
+        super.initialize(cordova, webView);
+
         final CordovaWebView appView = webView;
 
         IntentFilter filter = new IntentFilter("android.intent.action.SCANRESULT");
@@ -42,7 +49,6 @@ public class IonicKeyboard extends CordovaPlugin {
             }
         };
         cordova.getActivity().registerReceiver(receiver, filter);
-        super.initialize(cordova, webView);
 
         IntentFilter filter2 = new IntentFilter("scan.rcv.message");
         receiver2 = new BroadcastReceiver() {
@@ -60,6 +66,30 @@ public class IonicKeyboard extends CordovaPlugin {
             }
         };
         cordova.getActivity().registerReceiver(receiver2, filter2);
+
+        IntentFilter filter3 = new IntentFilter("com.zkc.scancode");
+        receiver3 = new BroadcastReceiver() {
+            @Override
+            public void onReceive(Context context, Intent intent) {
+                //do something based on the intent's action
+                final String scanResult = intent.getStringExtra("code");
+                LOG.e("DEBUG", "com.zkc.scancode: " + scanResult);
+                appView.sendJavascript("cordova.fireWindowEvent('native.onscanbarcode', { 'scanResult':'" + scanResult + "'});");
+            }
+        };
+        cordova.getActivity().registerReceiver(receiver3, filter3);
+
+        IntentFilter filter4 = new IntentFilter("com.jb.action.GET_SCANDATA");
+        receiver4 = new BroadcastReceiver() {
+            @Override
+            public void onReceive(Context context, Intent intent) {
+                //do something based on the intent's action
+                final String scanResult = intent.getStringExtra("data");
+                LOG.e("DEBUG", "com.jb.action.GET_SCANDATA: " + scanResult);
+                appView.sendJavascript("cordova.fireWindowEvent('native.onscanbarcode', { 'scanResult':'" + scanResult + "'});");
+            }
+        };
+        cordova.getActivity().registerReceiver(receiver4, filter4);
 
         Toast.makeText(cordova.getActivity().getApplicationContext(), "Ready to Scan", Toast.LENGTH_LONG).show();
     }
@@ -94,7 +124,7 @@ public class IonicKeyboard extends CordovaPlugin {
         if ("init".equals(action)) {
             cordova.getThreadPool().execute(new Runnable() {
                 public void run() {
-                	//calculate density-independent pixels (dp)
+                    //calculate density-independent pixels (dp)
                     //http://developer.android.com/guide/practices/screens_support.html
                     DisplayMetrics dm = new DisplayMetrics();
                     cordova.getActivity().getWindowManager().getDefaultDisplay().getMetrics(dm);
@@ -139,13 +169,13 @@ public class IonicKeyboard extends CordovaPlugin {
                                 callbackContext.sendPluginResult(result);
                             }
                             else if ( pixelHeightDiff != previousHeightDiff && ( previousHeightDiff - pixelHeightDiff ) > 100 ){
-                            	String msg = "H";
+                                String msg = "H";
                                 result = new PluginResult(PluginResult.Status.OK, msg);
                                 result.setKeepCallback(true);
                                 callbackContext.sendPluginResult(result);
                             }
                             previousHeightDiff = pixelHeightDiff;
-                         }
+                        }
                     };
 
                     rootView.getViewTreeObserver().addOnGlobalLayoutListener(list);
@@ -163,5 +193,3 @@ public class IonicKeyboard extends CordovaPlugin {
 
 
 }
-
-

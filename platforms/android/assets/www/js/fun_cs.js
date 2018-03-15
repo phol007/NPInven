@@ -291,8 +291,10 @@ function searchSHis(shelfCode){
 }
 
 function Select_item(itemCode){
+//    alert(true)
     loading();
-    searchItem(itemCode);
+    var itc = String(itemCode);
+    searchItem(itc);
 }
 
 function searchItem(itemCode){
@@ -428,16 +430,17 @@ function like_item(){
                     }else{
                        $.each(result.itemMasterList, function(key,val){
                            itemlist += '<label style="width:100%; font-size:12px; border-bottom:1px dashed gray;"';
-                           itemlist += 'onclick="Select_item("'+val["itemCode"].trim()+'")">';
-                           itemlist += '<div class="ui-grid-b">';
+                           itemlist += 'onclick="Select_item(';
+                           itemlist += val["itemCode"].trim();
+                           itemlist += ')"><div class="ui-grid-b">';
                            itemlist += '<div class="ui-block-a" style="width:35%;">';
-                           itemlist += 'val["itemCode"].trim()';
+                           itemlist += val["itemCode"].trim();
                            itemlist += '</div>';
                            itemlist += '<div class="ui-block-b" style="width:40%;">';
-                           itemlist += 'val["itemName"].trim()';
+                           itemlist += val["itemName"].trim();
                            itemlist += '</div>';
                            itemlist += '<div class="ui-block-c" style="width:25%; text-align:center;">';
-                           itemlist += 'val["unitCode"].trim()';
+                           itemlist += val["unitCode"].trim();
                            itemlist += '</div></div></div></label>';
                        });
                     }

@@ -6,7 +6,7 @@ loading();
  var select_wh = "";
               $.ajax({
                       url: localStorage.api_url_server+"NPInventoryWs/V2/is/searchWH",
-                      data: '{"accessToken":"'+localStorage.token+'","search":""}',
+                      data: '{"accessToken":"'+localStorage.token+'","search":"","branch":"'+localStorage.branch+'"}',
                       contentType: "application/json; charset=utf-8",
                       dataType: "json",
                       type: "POST",
@@ -82,7 +82,7 @@ function searchWHup(barcode){
    // document.activeElement.blur();
         $.ajax({
                url: localStorage.api_url_server+""+localStorage.api_url_searchwh_is,
-               data: '{"accessToken":"'+localStorage.token+'","search":"'+barcode+'"}',
+               data: '{"accessToken":"'+localStorage.token+'","search":"'+barcode+'","branch":"'+localStorage.branch+'"}',
                contentType: "application/json; charset=utf-8",
                dataType: "json",
                type: "POST",
@@ -90,7 +90,7 @@ function searchWHup(barcode){
                success: function(result){
                       console.log(JSON.stringify(result.data));
                       console.log(localStorage.api_url_server+""+localStorage.api_url_searchwh_is);
-                      console.log('{"accessToken":"'+localStorage.token+'","search":"'+barcode+'"}');
+                      console.log('{"accessToken":"'+localStorage.token+'","search":"'+barcode+'","branch":"'+localStorage.branch+'"}');
                       if(JSON.stringify(result.data)==="[]"||JSON.stringify(result.data)==="null"){
                            alertify.alert("ไม่มีข้อมูลคลังสินค้าของ "+barcode);
                            closeload();
