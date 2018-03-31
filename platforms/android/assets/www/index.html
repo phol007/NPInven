@@ -43,12 +43,12 @@
                 <img src="images/inventory-logo.png" class="logo">
                 </label>
                 <label class="username">
-                    <input name="username" type="text"
+                    <input name="username" type="text" value=""
                            class="validate[required,custom[onlyLetter],length[0,100]] feedback-input"
                            placeholder="Username" id="username" data-role="none"/>
                 </label>
                 <label class="password">
-                    <input name="passwd" type="password"
+                    <input name="passwd" type="password" value=""
                            class="validate[required,custom[password],length[0,100]] feedback-input"
                            id="passwd" placeholder="Password" data-role="none"/>
                 </label>
@@ -103,6 +103,10 @@
         <div class="row" id="page_setting">
             <div class="col-xs-6 col-md-6"><a href="#setting" data-transition="slidefade">
                 <div><img src="images/setting.png" class="main_menu"><br><b>setting</b></div>
+            </a></div>
+
+            <div class="col-xs-6 col-md-6"><a href="javascript:typeprint()" data-transition="slidefade">
+                <div><img src="images/label.png" class="main_menu"><br><b>ขอพิมป้าย(8)</b></div>
             </a></div>
         </div>
     </div>
@@ -1316,7 +1320,7 @@
 
 
         <hr>
-        <div id="prldetail">** ไม่มีข้อมูล **</div>
+        <div id="prldetail">** ไม่มีข้อมูล **</div>้
 
     </div>
 
@@ -1420,7 +1424,7 @@
         <a href="#myPanel_additem"  data-role="none"><img src="images/grid.png" class="open_panel"></a>
     </div>
     <div  data-role="main" class="ui-content" id="main">
-
+ju
         <div id="itemdetail" style="display:none;">
             <input type="hidden" id="DocNo" name="docno">
             <input type="hidden" name="Noitem" placeholder="รหัสสินค้า" style="color:#000;" id="noitems">
@@ -2048,6 +2052,7 @@
                     <div class="ui-block-b" style="width:68%; padding-left:2%; text-align:left;">
                         <span id="MGunit"></span>
                     </div>
+
                 </div>
             </label>
             <label>
@@ -2070,7 +2075,9 @@
                 </div>
             </label>
             <label>
+
                 <div id="mg_locationist"></div>
+
             </label>
     </div>
 
@@ -2295,10 +2302,10 @@
     </div>
 </div>
 <!--////////////////////////////////////////////////////////////historyDetail////////////////////////////////////////////////////////////////-->
-<!--////////////////////////////////////////////////////////////newreorder////////////////////////////////////////////////////////////////-->
+<!--////////////////////////////////////////////////////////////newreorder tttt////////////////////////////////////////////////////////////////-->
 
 <div data-role="page" id="newreorder">
-    <div data-role="none" class="header">
+ QQ   <div data-role="none" class="header">
         <a href="#myPanel_newreorder" data-role="none"><img src="images/grid.png" class="open_panel"></a>
     </div>
 
@@ -2573,6 +2580,42 @@
     </div>
 </div>
 <!--////////////////////////////////////////////////////////////newlabelRequest////////////////////////////////////////////////////////////////-->
+
+<!--//////////////////////////////////////////////////////////// printpage ////////////////////////////////////////////////////////////////-->
+<div data-role="page" id="printpage">
+    <div data-role="none" class="header" >
+        <a href="#myPanel_printpage"  data-role="none"><img src="images/grid.png" class="open_panel"></a>
+    </div>
+    <div  data-role="main" class="ui-content" id="main">
+        <label style="font-size:24px; margin-bottom:0;"><img src="images/label.png" width="20"><b> ระบบพิมป้าย</b></label><hr>
+        <div class="row">
+            <div class="col-md-6 col-xs-6"><div id="type_print"></div></div>
+                <div class="col-md-6 col-xs-6"><div id="size_page"></div></div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 col-xs-6"><input type="text" name="idprice" id="idprice" class="form-control" placeholder="รหัสสินค้า"></div>
+            <div class="col-md-6 col-xs-6"><input type="text" name="nameprice" id="nameprice" class="form-control" placeholder="ชื่อ"></div>
+        </div>
+        <div class="row">
+        <div class="col-md-6 col-xs-6"><input type="text" name="idprice" id="amountprice" class="form-control" placeholder="จำนวนที่ต้องการ"></div>
+        </div>
+
+
+    </div>
+    <div data-role="footer" class="footer">
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#pagetwo" class="ui-btn-active ui-state-persist" id="footer-nav" data-icon="home" data-transition="slidefade" data-direction="reverse">หน้าหลัก</a></li>
+                <li onclick="focus_search_item()"><a href="#receive_search" class="ui-btn-active ui-state-persist" data-icon="search" id="footer-nav" data-transition="pop">ค้นหาสินค้า</a></li>
+            </ul>
+        </div>
+    </div>
+    <div data-role="panel" id="myPanel_printpage" data-display="overlay">
+        <h2>Overlay Panel</h2><hr>
+        <div id="tree" class="tree"></div>
+    </div>
+</div>
+<!--//////////////////////////////////////////////////////////// printpage ////////////////////////////////////////////////////////////////-->
 
 <!--//////////////////////////////////////////////////////////////// setting ////////////////////////////////////////////////////////////////-->
 <div data-role="page" id="setting">

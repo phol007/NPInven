@@ -18,7 +18,7 @@ window.addEventListener('native.onscanbarcode', function (schitem) {
 });
             function itemProfile(bcitem){
                                        // var valwh = document.getElementById("valwh").value;
-                                       // console.log(valwh);
+                                        console.log('barcodez   '+bcitem);
                                         var tiwh = "";
                                         var itemdetail = "";
 
@@ -37,6 +37,7 @@ window.addEventListener('native.onscanbarcode', function (schitem) {
                                                    console.log(localStorage.api_url_server+""+localStorage.api_url_profile_it);
                                                    console.log(JSON.stringify(result));
                                                    if(result.itemProfileList.length==0){
+//                                                       console.log('ตัวปัญหา result'+JSON.stringify(result));
                                                        alertify.alert("บาร์โค้ด "+bcitem+" ไม่มีข้อมูลทะเบียน");
                                                        closeload();
                                                        $("#bt-item").show();
@@ -186,9 +187,21 @@ window.addEventListener('native.onscanbarcode', function (schitem) {
                                                         }
 
                                                    // console.log(whCode);
+
+
+
+
+//                                                        itemdetail += '<div class="ui-grid-a" style="padding-bottom:5%;">';
+//                                                        itemdetail += '<div class="ui-block-a" style="width:35%; font-weight: bold;">';
+//                                                        itemdetail += 'รหัสสินค้า :</div>';
+//                                                        itemdetail += '<div class="ui-block-b" style="text-align:left; padding-left:2%; width:65%;">';
+//                                                        itemdetail += itemCode+'</div>';
+//                                                        itemdetail += '</div>';
+
+
                                                         itemdetail += '<div class="ui-grid-a" style="padding-bottom:5%;">';
                                                         itemdetail += '<div class="ui-block-a" style="width:35%; font-weight: bold;">';
-                                                        itemdetail += 'รหัสบาร์โค้ด :</div>';
+                                                        itemdetail += 'บาร์โค้ด :</div>';
                                                         itemdetail += '<div class="ui-block-b" style="text-align:left; padding-left:2%; width:65%;">';
                                                         itemdetail += bcCode+'</div>';
                                                         itemdetail += '</div>';
@@ -209,166 +222,200 @@ window.addEventListener('native.onscanbarcode', function (schitem) {
 
                                                         itemdetail += '<div class="ui-grid-a" style="padding-bottom:5%;">';
                                                         itemdetail += '<div class="ui-block-a" style="width:35%; font-weight: bold;">';
-                                                        itemdetail += 'ราคา :</div>';
-                                                        itemdetail += '<div class="ui-block-b" style="text-align:left; padding-left:2%; width:65%;">';
-                                                        itemdetail += price+'</div>';
-                                                        itemdetail += '</div>';
-
-                                                        itemdetail += '<div class="ui-grid-a" style="padding-bottom:5%;">';
-                                                        itemdetail += '<div class="ui-block-a" style="width:35%; font-weight: bold;">';
-                                                        itemdetail += 'หน่วยนับ :</div>';
-                                                        itemdetail += '<div class="ui-block-b" style="text-align:left; padding-left:2%; width:65%;">';
-                                                        itemdetail += unitCode+'</div>';
-                                                        itemdetail += '</div>';
-
-                                                        itemdetail += '<div class="ui-grid-a" style="padding-bottom:5%;">';
-                                                        itemdetail += '<div class="ui-block-a" style="width:35%; font-weight: bold;">';
                                                         itemdetail += 'ยี่ห้อ :</div>';
                                                         itemdetail += '<div class="ui-block-b" style="text-align:left; padding-left:2%; width:65%;">';
                                                         itemdetail += brandCode+' '+brandName+'</div>';
                                                         itemdetail += '</div>';
 
-                                                        itemdetail += '<div class="ui-grid-a" style="padding-bottom:2%;">';
+                                                        itemdetail += '<div class="ui-grid-c" style="padding-bottom:5%;">';
                                                         itemdetail += '<div class="ui-block-a" style="width:35%; font-weight: bold;">';
+                                                        itemdetail += 'หน่วยนับ :</div>';
+                                                        itemdetail += '<div class="ui-block-b" style="text-align:left; padding-left:2%; width:15%;">';
+                                                        itemdetail += unitCode+'</div>';
+                                                        itemdetail += '<div class="ui-block-c" style="width:25%; font-weight: bold;">';
                                                         itemdetail += 'เกรด :</div>';
-                                                        itemdetail += '<div class="ui-block-b" style="text-align:left; padding-left:2%; width:65%;">';
+                                                        itemdetail += '<div class="ui-block-d" style="text-align:left; padding-left:2%; width:20%;">';
                                                         itemdetail += rang+'</div>';
                                                         itemdetail += '</div>';
 
-                                                        itemdetail += '<div class="ui-grid-a" style="padding-bottom:2%;">';
+                                                        itemdetail += '<div class="ui-grid-c" style="padding-bottom:5%;">';
                                                         itemdetail += '<div class="ui-block-a" style="width:35%; font-weight: bold;">';
-                                                        itemdetail += 'เจ้าหนี้ : </div>';
-                                                        itemdetail += '<div class="ui-block-b" style="text-align:left; padding-left:2%;">';
-                                                        itemdetail += ''+vendorCode+' '+vendorName+'</div>';
+                                                        itemdetail += 'ราคา :</div>';
+                                                        itemdetail += '<div class="ui-block-b" style="text-align:left; padding-left:2%; width:15%;">';
+                                                        itemdetail += price+'</div>';
+                                                        itemdetail += '<div class="ui-grid-c" style="padding-bottom:5%;"></div>';
+
+
+                                                        itemdetail += '<div class="ui-grid-d" style="border-top:1px solid black; border-bottom:1px solid black; padding:2% 0; width:100%;">';
+                                                        itemdetail += '<div class="ui-block-a" style="text-align:center; width:5%; text-align:center;">';
                                                         itemdetail += '</div>';
+                                                        itemdetail += '<div class="ui-block-b" style="word-wrap:break-word; width:20%; text-align:center;"><b>คลัง</b></div>';
+                                                        itemdetail += '<div class="ui-block-c" style="word-wrap:break-word; width:29%; text-align:center;"><b>ชั้นเก็บ</b></div>';
+                                                        itemdetail += '<div class="ui-block-d" style="word-wrap:break-word; width:33%; text-align:center;"><b>ยอดคงเหลือ</b></div></div>'
 
-                                                        itemdetail += '<div class="ui-grid-a" style="padding-bottom:2%;">';
-                                                        itemdetail += '<div class="ui-block-a" style="width:35%; font-weight: bold;">';
-                                                        itemdetail += 'ขายล่าสุด : </div>';
-                                                        itemdetail += '<div class="ui-block-b" style="text-align:left; padding-left:2%;">';
-                                                        itemdetail += ''+qtyIV+' '+unitCodeIV+' (คลัง : '+whCodeIV+')</div>';
-                                                        itemdetail += '</div>';
 
-                                                        itemdetail += '<div class="ui-grid-a" style="padding-bottom:2%;">';
-                                                        itemdetail += '<div class="ui-block-a" style="width:35%; font-weight: bold;">';
-                                                        itemdetail += 'วันที่ : </div>';
-                                                        itemdetail += '<div class="ui-block-b" style="text-align:left; padding-left:2%;">';
-                                                        var dateIV = "";
-                                                                if(dateIV == null){
-                                                                    dateIV = "";
-                                                                }else{
-                                                                    dateIV = docdateIV.split("-");
-                                                                    var day = dateIV[2];
-                                                                    var month = dateIV[1];
-                                                                    var year = (parseInt(dateIV[0])+543);
+//                                                        itemdetail += '<div class="ui-grid-a" style="padding-bottom:5%;">';
+//                                                        itemdetail += '<div class="ui-block-a" style="width:35%; font-weight: bold;">';
+//                                                        itemdetail += 'ราคา :</div>';
+//                                                        itemdetail += '<div class="ui-block-b" style="text-align:left; padding-left:2%; width:65%;">';
+//                                                        itemdetail += price+'</div>';
+//                                                        itemdetail += '</div>';
 
-                                                                    dateIV = day+"/"+month+"/"+year;
-                                                                }
 
-                                                        itemdetail += ''+dateIV+'</div>';
-                                                        itemdetail += '</div>';
 
-                                                        itemdetail += '<div class="ui-grid-a" style="padding-bottom:2%;">';
-                                                        itemdetail += '<div class="ui-block-a" style="width:35%; font-weight: bold;">';
-                                                        itemdetail += 'รับล่าสุด : </div>';
-                                                        itemdetail += '<div class="ui-block-b" style="text-align:left; padding-left:2%;">';
-                                                        itemdetail += ''+qtyRV+' '+unitCodeRV+' (คลัง : '+whCodeRV+')</div>';
-                                                        itemdetail += '</div>';
 
-                                                        itemdetail += '<div class="ui-grid-a" style="padding-bottom:2%;">';
-                                                        itemdetail += '<div class="ui-block-a" style="width:35%; font-weight: bold;">';
-                                                        itemdetail += 'วันที่ : </div>';
-                                                        itemdetail += '<div class="ui-block-b" style="text-align:left; padding-left:2%;">';
-                                                        var dateRV = "";
-                                                                if(dateRV == null){
-                                                                    dateRV = "";
-                                                                }else{
-                                                                    dateRV = docdateRV.split("-");
-                                                                    var day = dateRV[2];
-                                                                    var month = dateRV[1];
-                                                                    var year = (parseInt(dateRV[0])+543);
 
-                                                                    dateRV = day+"/"+month+"/"+year;
-                                                                }
 
-                                                        itemdetail += ''+dateRV+'</div>';
-                                                        itemdetail += '</div>';
 
-                                                        itemdetail += '<div class="ui-grid-a" style="padding-bottom:2%;">';
-                                                        itemdetail += '<div class="ui-block-a" style="width:35%; font-weight: bold;">';
-                                                        itemdetail += 'โอนล่าสุด : </div>';
-                                                        itemdetail += '<div class="ui-block-b" style="text-align:left; padding-left:2%;">';
-                                                        itemdetail += ''+qtyTF+' '+unitCodeTF+' (คลัง : '+whCodeTF+')</div>';
-                                                        itemdetail += '</div>';
+//                                                        itemdetail += '<div class="ui-grid-a" style="padding-bottom:2%;">';
+//                                                        itemdetail += '<div class="ui-block-a" style="width:35%; font-weight: bold;">';
+//                                                        itemdetail += 'เจ้าหนี้ : </div>';
+//                                                        itemdetail += '<div class="ui-block-b" style="text-align:left; padding-left:2%;">';
+//                                                        itemdetail += ''+vendorCode+' '+vendorName+'</div>';
+//                                                        itemdetail += '</div>';
+//
+//                                                        itemdetail += '<div class="ui-grid-a" style="padding-bottom:2%;">';
+//                                                        itemdetail += '<div class="ui-block-a" style="width:35%; font-weight: bold;">';
+//                                                        itemdetail += 'ขายล่าสุด : </div>';
+//                                                        itemdetail += '<div class="ui-block-b" style="text-align:left; padding-left:2%;">';
+//                                                        itemdetail += ''+qtyIV+' '+unitCodeIV+' (คลัง : '+whCodeIV+')</div>';
+//                                                        itemdetail += '</div>';
+//
+//                                                        itemdetail += '<div class="ui-grid-a" style="padding-bottom:2%;">';
+//                                                        itemdetail += '<div class="ui-block-a" style="width:35%; font-weight: bold;">';
+//                                                        itemdetail += 'วันที่ : </div>';
+//                                                        itemdetail += '<div class="ui-block-b" style="text-align:left; padding-left:2%;">';
+//                                                        var dateIV = "";
+//                                                                if(dateIV == null){
+//                                                                    dateIV = "";
+//                                                                }else{
+//                                                                    dateIV = docdateIV.split("-");
+//                                                                    var day = dateIV[2];
+//                                                                    var month = dateIV[1];
+//                                                                    var year = (parseInt(dateIV[0])+543);
+//
+//                                                                    dateIV = day+"/"+month+"/"+year;
+//                                                                }
+//
+//                                                        itemdetail += ''+dateIV+'</div>';
+//                                                        itemdetail += '</div>';
 
-                                                        itemdetail += '<div class="ui-grid-a" style="padding-bottom:2%;">';
-                                                        itemdetail += '<div class="ui-block-a" style="width:35%; font-weight: bold;">';
-                                                        itemdetail += 'วันที่ : </div>';
-                                                        itemdetail += '<div class="ui-block-b" style="text-align:left; padding-left:2%;">';
-                                                        var dateTF = "";
-                                                                if(dateTF == null){
-                                                                    dateTF = "";
-                                                                }else{
-                                                                    dateTF = docdateTF.split("-");
-                                                                    var day = dateTF[2];
-                                                                    var month = dateTF[1];
-                                                                    var year = (parseInt(dateTF[0])+543);
+//                                                        itemdetail += '<div class="ui-grid-a" style="padding-bottom:2%;">';
+//                                                        itemdetail += '<div class="ui-block-a" style="width:35%; font-weight: bold;">';
+//                                                        itemdetail += 'รับล่าสุด : </div>';
+//                                                        itemdetail += '<div class="ui-block-b" style="text-align:left; padding-left:2%;">';
+//                                                        itemdetail += ''+qtyRV+' '+unitCodeRV+' (คลัง : '+whCodeRV+')</div>';
+//                                                        itemdetail += '</div>';
 
-                                                                    dateTF = day+"/"+month+"/"+year;
-                                                                }
+//                                                        itemdetail += '<div class="ui-grid-a" style="padding-bottom:2%;">';
+//                                                        itemdetail += '<div class="ui-block-a" style="width:35%; font-weight: bold;">';
+//                                                        itemdetail += 'วันที่ : </div>';
+//                                                        itemdetail += '<div class="ui-block-b" style="text-align:left; padding-left:2%;">';
+//                                                        var dateRV = "";
+//                                                                if(dateRV == null){
+//                                                                    dateRV = "";
+//                                                                }else{
+//                                                                    dateRV = docdateRV.split("-");
+//                                                                    var day = dateRV[2];
+//                                                                    var month = dateRV[1];
+//                                                                    var year = (parseInt(dateRV[0])+543);
+//
+//                                                                    dateRV = day+"/"+month+"/"+year;
+//                                                                }
+//
+//                                                        itemdetail += ''+dateRV+'</div>';
+//                                                        itemdetail += '</div>';
 
-                                                        itemdetail += ''+dateTF+'</div>';
-                                                        itemdetail += '</div>';
+//                                                        itemdetail += '<div class="ui-grid-a" style="padding-bottom:2%;">';
+//                                                        itemdetail += '<div class="ui-block-a" style="width:35%; font-weight: bold;">';
+//                                                        itemdetail += 'โอนล่าสุด : </div>';
+//                                                        itemdetail += '<div class="ui-block-b" style="text-align:left; padding-left:2%;">';
+//                                                        itemdetail += ''+qtyTF+' '+unitCodeTF+' (คลัง : '+whCodeTF+')</div>';
+//                                                        itemdetail += '</div>';
+
+//                                                        itemdetail += '<div class="ui-grid-a" style="padding-bottom:2%;">';
+//                                                        itemdetail += '<div class="ui-block-a" style="width:35%; font-weight: bold;">';
+//                                                        itemdetail += 'วันที่ : </div>';
+//                                                        itemdetail += '<div class="ui-block-b" style="text-align:left; padding-left:2%;">';
+//                                                        var dateTF = "";
+//                                                                if(dateTF == null){
+//                                                                    dateTF = "";
+//                                                                }else{
+//                                                                    dateTF = docdateTF.split("-");
+//                                                                    var day = dateTF[2];
+//                                                                    var month = dateTF[1];
+//                                                                    var year = (parseInt(dateTF[0])+543);
+//
+//                                                                    dateTF = day+"/"+month+"/"+year;
+//                                                                }
+//
+//                                                        itemdetail += ''+dateTF+'</div>';
+//                                                        itemdetail += '</div>';
 
                                                         var x = 1;
                                                         $.each(js, function(key, val) {
-                                                        console.log(x);
+//                                                        console.log('ค่า x นะ  '+x);
+                                                        console.log(JSON.stringify(val))
 
-                                                        itemdetail += '<label id="'+x+'">'; /***** หา label id จาก a href     */////
+//                                                        itemdetail += '<label id="'+x+'">'; /***** หา label id จาก a href     */////
 
-                                                        itemdetail += '<a href="#" class="open"><div class="ui-grid-a" style="padding-top:5%; border-top:1px dashed gray;">';
-                                                        itemdetail += '<div class="ui-block-a" style="width:35%; font-weight: bold;">';
-                                                        itemdetail += 'คลัง :</div>';
-                                                        itemdetail += '<div class="ui-block-b" style="text-align:left; padding-left:2%; width:65%;">';
-                                                        itemdetail += ' '+val['whCode']+'</div></div></a>';
+                                                        itemdetail += '<div class="ui-grid-b" style="padding-bottom:5%;">';
+                                                        itemdetail += '<div class="ui-block-a" style="width:18%;">';
+                                                        itemdetail += ''+val['whCode']+'</div>';
+                                                        itemdetail += '<div class="ui-block-b" style="width:35%;text-align:center;">';
+                                                        itemdetail += val['shelfCode']+'</div>';
+                                                        itemdetail += '<div class="ui-block-c" style="width:40%; text-align:center;">';
+                                                        itemdetail += val['qty']+' '+val['stkunitcode']+'</div>';
+                                                        itemdetail += '</div>';
 
 
-                                                        itemdetail += '<div class="box" style="display:none; padding-top:2%;">';
 
-                                                                itemdetail += '<div class="ui-grid-a" style="padding-bottom:5%;">';
-                                                                itemdetail += '<div class="ui-block-a" style="width:35%; text-align:right;">';
-                                                                itemdetail += 'ชั้นเก็บ : </div>';
-                                                                itemdetail += '<div class="ui-block-b" style="text-align:left; padding-left:2%;">';
-                                                                itemdetail += val['shelfCode']+'</div>';
-                                                                itemdetail += '</div>';
 
-                                                                itemdetail += '<div class="ui-grid-a" style="padding-bottom:5%;">';
-                                                                itemdetail += '<div class="ui-block-a" style="width:35%; text-align:right;">';
-                                                                itemdetail += 'ยอดคงเหลือ : </div>';
-                                                                itemdetail += '<div class="ui-block-b" style="text-align:left; padding-left:2%;">';
-                                                                itemdetail += val['qty']+' '+val['stkunitcode']+'</div>';
-                                                                itemdetail += '</div>';
 
-                                                                itemdetail += '<div class="ui-grid-a" style="padding-bottom:5%;">';
-                                                                itemdetail += '<div class="ui-block-a" style="width:35%; text-align:right;">';
-                                                                itemdetail += 'วันที่รับล่าสุด : </div>';
-                                                                itemdetail += '<div class="ui-block-b" style="text-align:left; padding-left:2%;">';
-                                                                var date = "";
-                                                                if(date == null){
-                                                                    date = "";
-                                                                }else{
-                                                                    date = val['docdate'].split("-");
-                                                                    var day = date[2];
-                                                                    var month = date[1];
-                                                                    var year = (parseInt(date[0])+543);
 
-                                                                    date = day+"/"+month+"/"+year;
-                                                                }
-
-                                                                itemdetail += ''+date+'</div>';
-                                                                itemdetail += '</div>';
-
-                                                        itemdetail += '</div></label>';
+//                                                        itemdetail += '<a href="#" class="open"><div class="ui-grid-a" style="padding-top:5%; border-top:1px dashed gray;">';
+//                                                        itemdetail += '<div class="ui-block-a" style="width:35%; font-weight: bold;">';
+//                                                        itemdetail += 'คลัง :</div>';
+//                                                        itemdetail += '<div class="ui-block-b" style="text-align:left; padding-left:2%; width:65%;">';
+//                                                        itemdetail += ' '+val['whCode']+'</div></div></a>';
+//
+//
+//                                                        itemdetail += '<div class="box" style="display:none; padding-top:2%;">';
+//
+//                                                                itemdetail += '<div class="ui-grid-a" style="padding-bottom:5%;">';
+//                                                                itemdetail += '<div class="ui-block-a" style="width:35%; text-align:right;">';
+//                                                                itemdetail += 'ชั้นเก็บ : </div>';
+//                                                                itemdetail += '<div class="ui-block-b" style="text-align:left; padding-left:2%;">';
+//                                                                itemdetail += val['shelfCode']+'</div>';
+//                                                                itemdetail += '</div>';
+//
+//                                                                itemdetail += '<div class="ui-grid-a" style="padding-bottom:5%;">';
+//                                                                itemdetail += '<div class="ui-block-a" style="width:35%; text-align:right;">';
+//                                                                itemdetail += 'ยอดคงเหลือ : </div>';
+//                                                                itemdetail += '<div class="ui-block-b" style="text-align:left; padding-left:2%;">';
+//                                                                itemdetail += val['qty']+' '+val['stkunitcode']+'</div>';
+//                                                                itemdetail += '</div>';
+//
+//                                                                itemdetail += '<div class="ui-grid-a" style="padding-bottom:5%;">';
+//                                                                itemdetail += '<div class="ui-block-a" style="width:35%; text-align:right;">';
+//                                                                itemdetail += 'วันที่รับล่าสุด : </div>';
+//                                                                itemdetail += '<div class="ui-block-b" style="text-align:left; padding-left:2%;">';
+//                                                                var date = "";
+//                                                                if(date == null){
+//                                                                    date = "";
+//                                                                }else{
+//                                                                    date = val['docdate'].split("-");
+//                                                                    var day = date[2];
+//                                                                    var month = date[1];
+//                                                                    var year = (parseInt(date[0])+543);
+//
+//                                                                    date = day+"/"+month+"/"+year;
+//                                                                }
+//
+//                                                                itemdetail += ''+date+'</div>';
+//                                                                itemdetail += '</div>';
+//
+//                                                        itemdetail += '</div></label>';
                                                         x++;
                                                         });
 
@@ -501,22 +548,24 @@ function like_itemProfile(){
     document.getElementById("scan_itemprofile").innerHTML = '<img src="images/loadingitem.gif">';
     if(itemdata!=""){
         var itemlist = "";
-            $.ajax({
-                       url: localStorage.api_url_server+"NPInventoryWs/V2/inven/searchItemMaster",
+            $.ajax({  url: localStorage.api_url_server+"NPInventoryWs/V2/inven/searchItemMaster",
                        data: '{"accessToken":"'+localStorage.token+'","search":"'+itemdata+'"}',
                        contentType: "application/json; charset=utf-8",
                        dataType: "json",
                        type: "POST",
                        cache: false,
                        success: function(result){
+                       console.log("token search idz    "+'"accessToken":"'+localStorage.token+'","search":"'+itemdata+'"');
+                       console.log('api searchh '+localStorage.api_url_server+"NPInventoryWs/V2/inven/searchItemMaster");
                             console.log(JSON.stringify(result.itemMasterList));
                             if(JSON.stringify(result.itemMasterList)=="[]"){
                                itemlist = '<label style="width:100%; color:red;"> ** ไม่มีข้อมูลที่ค้นหา ** </label>';
                             }else{
                                $.each(result.itemMasterList, function(key,val){
                                    itemlist += '<label style="width:100%; font-size:12px; border-bottom:1px dashed gray;"';
-                                   itemlist += 'onclick="itemProfile("'+val['itemCode'].trim()+'")">';
-                                   itemlist += '<div class="ui-grid-b">';
+                                   itemlist += 'onclick="itemProfile(';
+                                   itemlist += val["itemCode"].trim();
+                                   itemlist += ')"><div class="ui-grid-b">';
                                    itemlist += '<div class="ui-block-a" style="width:35%;">';
                                    itemlist += val['itemCode'].trim()+'</div>';
                                    itemlist += '<div class="ui-block-b" style="width:40%;">';

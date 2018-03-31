@@ -350,7 +350,6 @@ function like_upitem(){
                            if(val['itemCode']==""){
                            itemlist = '<label style="width:100%; color:red; text-align:center;"> ** ไม่มีข้อมูลที่ค้นหา ** </label>';
                            }else{
-
                            itemlist += '<label style="width:100%; font-size:14px; border-bottom:1px dashed gray;"';
                            itemlist += 'onclick="search_upitem("'+val['itemCode'].trim()+'")">';
                            itemlist += '<div class="ui-grid-b">';

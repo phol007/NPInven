@@ -1,69 +1,23 @@
-# Hello World PhoneGap Template [![bitHound Score][bithound-img]][bithound-url]
+# สรุป Requirements 
 
-A PhoneGap Hello World template
-
-## Usage
-
-#### PhoneGap CLI
-
-The hello-world template is the default when you create a new application using the [phonegap-cli][phonegap-cli-url].
-
-    phonegap create my-app
-
-Create an app using this template specifically:
-
-    phonegap create my-app --template hello-world
-
-To see a list of other available PhoneGap templates:
-
-    phonegap template list
-
-## [config.xml][config-xml]
-
-#### android-minSdkVersion (Android only)
-
-Minimum SDK version supported on the target device. Maximum version is blank by default.
-
-This template sets the minimum to `14`.
-
-    <preference name="android-minSdkVersion" value="14" />
-
-#### &lt;access ...&gt; (All)
-
-This template defaults to wide open access.
-
-    <access origin="*" />
-
-It is strongly encouraged that you restrict access to external resources in your application before releasing to production.
-
-For more information on whitelist configuration, see the [Cordova Whitelist Guide][cordova-whitelist-guide] and the [Cordova Whitelist Plugin documentation][cordova-plugin-whitelist]
-
-## [www/index.html][index-html]
-
-#### Content Security Policy (CSP)
-
-The default CSP is similarly open:
-
-    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" />
-
-Much like the access tag above, you are strongly encouraged to use a more restrictive CSP in production.
-
-A good starting point declaration might be:
-
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: 'unsafe-inline' https://ssl.gstatic.com; style-src 'self' 'unsafe-inline'; media-src *" />
-
-For more information on the Content Security Policy, see the [section on CSP in the Cordova Whitelist Plugin documentation][cordova-plugin-whitelist-csp].
-
-Another good resource for generating a good CSP declaration is [CSP is Awesome][csp-is-awesome]
+system : NpInven
+Module : Reorder,นับสต๊อกสินค้า,โอนสินค้า,เช็คสต๊อกสินค้า,จัดการที่เก็บสินค้า
+		เพิ่มที่เก็บสินค้า,จัดโปรโมชั่น และขอพิมป้าย
+ Objective : เพื่อสามารถจัดการข้อมูลสต๊อกสินค้า,ที่เก็บสินค้า,โปรโมชั่น,ข้อพิมป้าย,โอนสินค้าและจัดการที่เก็บสินค้า 
+		
+Requirements : ข้อมูลและรายละเอียดสต๊อกสินค้า,ที่จัดเก็บสินค้า้,โปรโมชั่นและขอพิมป้าย
+# Process Description 
+Input data flows : 
+Output data flows : NpInven ช่วยสนับสนุนการทำงาน
+# Description Process
+1. ระบบเก่ายังเป็นเอกสารและไม่มีฐานข้อมูลในดาต้าเบส ซึ่งยากต่อการเข้าถึงข้อมูล,เรียกใช้ และ เพิ่มข้อมูล โดยแอพพลิเคชั่นช่วยจัดการเก็บข้อมูลให้เป็นระบบ 
+2. ซึ่งในแอพพลิเคชั่น จะมีระบบการนับสต๊อกสินค้า ระบบโอนสินค้า ระบบเช็คสต๊อก ระบบจัดการที่เก็บสินค้า ระบบโปรโมชั่น และระบบพิมพ์ป้าย ตามที่ผู้ใช้ต้องการ
+3. ระบบนับสต๊อก จะช่วยในการนับสต๊อกได้อย่างรวดเร็ว และ จัดเก็บข้อมูลไว้ในฐานข้อมูล เพื่อสามารถเรียกดูข้อมูลได้สะดวก 
+4. ระบบโอนสินค้า จะช่วยการโอนสินค้าได้รวดเร็วและสะดวก
+5. ระบบเช็คสต๊อก จะช่วยให้ผู้ใช้ตรวจสอบสินค้า และทราบข้อมูลสินค้าได้อย่างรวดเร็ว
+6. ระบบจัดการที่เก็บสินค้า จะช่วยให้ผู้ใช้สามารถทราบว่าสินค้าที่จัดเก็บอยู่ไหน
+7. ระบบโปรโมชั่น ผู้ใช้สามารถดูรายละเอียดของโปรโมชั่นได้ และเพิ่มโปรโมชั่นได้
+8. ขอพิมพ์ป้าย ผู้ใช้สามารถพิมพ์ป้าย ตามจำนวนต้องการของผู้ใช้
 
 
-[phonegap-cli-url]: http://github.com/phonegap/phonegap-cli
-[cordova-app]: http://github.com/apache/cordova-app-hello-world
-[bithound-img]: https://www.bithound.io/github/phonegap/phonegap-app-hello-world/badges/score.svg
-[bithound-url]: https://www.bithound.io/github/phonegap/phonegap-app-hello-world
-[config-xml]: https://github.com/phonegap/phonegap-template-hello-world/blob/master/config.xml
-[index-html]: https://github.com/phonegap/phonegap-template-hello-world/blob/master/www/index.html
-[cordova-whitelist-guide]: https://cordova.apache.org/docs/en/dev/guide/appdev/whitelist/index.html
-[cordova-plugin-whitelist]: http://cordova.apache.org/docs/en/latest/reference/cordova-plugin-whitelist
-[cordova-plugin-whitelist-csp]: http://cordova.apache.org/docs/en/latest/reference/cordova-plugin-whitelist#content-security-policy
-[csp-is-awesome]: http://cspisawesome.com
+

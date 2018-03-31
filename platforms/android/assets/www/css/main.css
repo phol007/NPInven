@@ -360,9 +360,9 @@ hr.hr {
   user-select: none;
 }
 .new_label{
-    float:left;
+    float:center;
     width:50%;
-    border:1px solid red;
+    border: none;
 }
 .detail_lebelRequest{
     border:1px solid red;

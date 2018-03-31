@@ -51,6 +51,27 @@ function search_wh(){
     searchWHis($('select[name="wh"] :selected').attr('value'));
 }
 
+function typeprint(){
+         var typeprint = "";
+          typeprint += '<select name="print" class="bt-cmp" style="width:100%; height:50px;" data-role="none">';
+          typeprint += '<option value="พิเศษ">พิเศษ</option>';
+          typeprint += '<option value="ธรรมดา">ธรรมดา</option>';
+          typeprint += '</select>';
+
+       document.getElementById("type_print").innerHTML = typeprint;
+
+          var sizepage = "";
+           sizepage += '<select name="size" class="bt-cmp" style="width:100%; height:50px;" data-role="none">';
+           sizepage += '<option value="P1 21 ดวง/หน้า">P1 21 ดวง/หน้า</option>';
+           sizepage += '<option value="P2 3 ดวง/หน้า">P2 3 ดวง/หน้า</option>';
+           sizepage += '<option value="P3 2 ดวง/หน้า">P3 2 ดวง/หน้า</option>';
+           sizepage += '<option value="P4 A4">P4 A4</option>';
+
+       document.getElementById("size_page").innerHTML = sizepage;
+
+       $.mobile.changePage('#printpage',{transition: 'slidefade'});
+}
+
 function sec_sh(){
  var stockWH = document.getElementById("whvalue").value;
  var select_sh = "";
@@ -298,7 +319,7 @@ function Select_item(itemCode){
 }
 
 function searchItem(itemCode){
-
+//    console.log('testมาถึงละ  '+itemCode)
     var DocNo = document.getElementById("valdocIS").value;
     var shel = document.getElementById("shel").value;
     console.log('{"barcode":"'+itemCode+'","docno":"'+DocNo+'","type":"3","shelfcode":"'+shel+'","branch":"'+localStorage.branch+'"}');
@@ -316,7 +337,7 @@ function searchItem(itemCode){
 
                  if(JSON.stringify(result.itemcode)==="[]"){
                      alertify.alert("บาร์โค้ด "+itemCode+" ไม่มีอยู่ในทะเบียนสินค้า");
-                     //closeload();
+//                     closeload();
                  }else{
                      var itemcode = "";
                      var itemName = "";
@@ -325,9 +346,15 @@ function searchItem(itemCode){
                      var units = "";
                      var old_cnt = "";
                      var whCode = "";
-
+//                     console.log('checkนี้นะListISBarcode '+result.listISBarcode)
                      if(result.itemcode==null){
-                         console.log("data itemcode : null");
+//                       console.log('logz    '+JSON.stringify(result))
+//                       console.log("data itemcode : null");
+                           if(result.listISBarcode == null){
+                           console.log('ถึงแ้ล้วอิอิ');
+                           alertify.error("ไม่มีรหัสบาร์โค้ดนี้ในระบบ");
+                           closeload();
+                           }
                          $.each(result.listISBarcode, function(key, val) {
                              itemcode = val['itemcode'];
                              itemName = val['itemname'];
@@ -342,8 +369,10 @@ function searchItem(itemCode){
                              units = val['unitcode'];
                              apcode = val['apCode'];
                              apname = val['apName'];
+
                              console.log(cntitem);
                              console.log(old_cnt);
+
                          });
                      }else{
                        //  $.each(result.listBarcode, function(key, val) {
@@ -413,7 +442,7 @@ function counts_focus(){
         $('#counts').focus();
     });
 }
-function like_item(){
+function like_item(){ ///ปัญหา
     var itemdata = document.getElementById("manual_searchItem").value;
     var itemlist = "";
     $.ajax({
@@ -424,9 +453,10 @@ function like_item(){
                type: "POST",
                cache: false,
                success: function(result){
+
                     console.log(JSON.stringify(result.itemMasterList));
                     if(JSON.stringify(result.itemMasterList)=="[]"){
-                       itemlist = '<label style="width:100%; color:red;"> ** ไม่มีข้อมูลที่ค้นหา ** </label>';
+                       itemlist = '<label style="width:100%; color:blue;"> ** ไม่มีข้อมูลที่ค้นหา ** </label>';
                     }else{
                        $.each(result.itemMasterList, function(key,val){
                            itemlist += '<label style="width:100%; font-size:12px; border-bottom:1px dashed gray;"';

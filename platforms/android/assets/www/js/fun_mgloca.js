@@ -60,19 +60,23 @@ function searchMGItem(barcode){
                                 if(val['rowOrder']=="0"){
                                     locadata = '<div class="ui-grid-solo"><div class="ui-block-a" style="text-align:center; color:red">** ไม่มีข้อมูลที่เก็บสินค้า **</div></div>';
                                 }else{
+                                    console.log('val1k   '+JSON.stringify(val))
+//                                  console.log('listScanBarcode'+JSON.stringify(result.listScanBarcode))
                                     var date = val['scanDateTime'].split("-");
                                     var scanDateTime = date[2]+"/"+date[1]+"/"+(parseInt(date[0])+543);
-                                    locadata += '<div class="ui-grid-d" style="width:100%; font-size:16px; padding:2% 0; border-bottom:1px dashed #000;">';
-                                        locadata += '<div class="ui-block-a" style="text-align:center; width:5%;">';
-                                           locadata += '<input type="checkbox" name="del" class="del" value="'+val['rowOrder']+'" data-role="none">';
-                                        locadata += '</div><div class="ui-block-b" style="text-align:center; width:20%;">';
-                                        locadata += val['whCode']+'</div>';
-                                        locadata += '<div class="ui-block-c" style="word-wrap:break-word; text-align:center; width:30%;" onclick="new_loca("'+val['shelfCode']+'',''+val['rowOrder']+'")">';
+                                    console.log(scanDateTime)
+
+                                        locadata += '<input type="checkbox" name="del" class="del" value="'+val['rowOrder']+'" data-role="none">';
+                                        locadata += +"      "+val['whCode']+"       ";
+                                        locadata += val['userScanName']+'  ';
+                                        locadata += val['scanDateTime']+'  ';
+
+                                        locadata += '<div onclick="new_loca("'+val['shelfCode']+'',''+val['rowOrder']+'")">';
                                         locadata += val['shelfCode']+'</div>';
-                                        locadata += '<div class="ui-block-d" style="word-wrap:break-word; width:30%;" onclick="new_loca("'+val['shelfCode']+'',''+val['rowOrder']+'")">';
-                                        locadata += scanDateTime+'</div>';
-                                        locadata += '<div class="ui-block-e" style="text-align:center; width:15%;">';
-                                        locadata += '<img src="images/bin_loca.png" onclick="delete_location('+val['rowOrder']+',"'+val['shelfCode']+'")"></div></div>';
+                                        locadata += '<div onclick="new_loca("'+val['shelfCode']+'',''+val['rowOrder']+'")">';
+
+
+                                        locadata += '<img src="images/bin_loca.png" onclick="delete_location('+val["rowOrder"]+',"'+val["shelfCode"]+'")">';
                                 }
                               });
 
@@ -140,7 +144,7 @@ function like_mgitem(){
                      itemlist = '<label style="width:100%; color:red; text-align:center;"> ** ไม่มีข้อมูลที่ค้นหา ** </label>';
                   }else{
                      itemlist += '<label style="width:100%; font-size:14px; border-bottom:1px dashed gray;"';
-                     itemlist += 'onclick="searchMGItem("'+val['itemCode']+'")"><div class="ui-grid-b">';
+                     itemlist += 'onclick="searchMGItem('+val["itemCode"]+')"><div class="ui-grid-b">';
                      itemlist += '<div class="ui-block-a" style="width:35%; padding:2%; word-wrap:break-word;">';
                      itemlist += val['itemCode'].trim()+'</div>';
                      itemlist += '<div class="ui-block-b" style="width:40%; word-wrap:break-word;">';
