@@ -23,73 +23,24 @@
 ![image](https://github.com/phol007/NPInven/blob/master/Screenshot_2018-04-02-10-15-24.png?raw=true)
 
 **API Login**
-```
-Url: http://venus.nopadol.com:9001/path
-	Path : /projectcard?access_token=&keyword= (ค้นหาตามIDของโครงการ)
-Path : /projectcards?access_token=&keyword= (ค้นหาโครงการแสดง Top 20 ของKeywordนั้น ๆ)
-	method : Get  
-	method: Get
-	response 200 : {
-		"status":"success",
-		“data”:[
+```	
+Url: http://app.nopadol.com:8080/path
+Path : /NPDataCenterWs/center/login
+data : {"companyCode":"np","appCode":"NpInventory","saleCode":"ไอดีผู้ใช้","password":"พาสเวิร์ด"}
+	method : post
 	{
-        "id": 2,
-        "project_code": "PJ002",
-        "project_name": "คอนโดกาดขะจาว",
-        "ar_code": "100157",
-        "ar_name": "บจก.เชียงใหม่คอนสตรัคชั่น (สำนักงานใหญ่)",
-        "contact": "คุณคะแนน  สุภา",
-        "contact_tel": "081-8813355",
-        "project_address": "58 กาดขะจาว",
-        "project_datestart": "2018-01-15T00:00:00Z",
-        "project_dateend": "2018-01-01T00:00:00Z",
-        "project_time": "1ปี",
-        "project_amount": 100000,
-        "project_grade": "A",
-        "project_type_name": "ถนน",
-        "credit_limit": 5000000,
-        "credit_balance": 5000000,
-        "credit_amount": 0,
-        "sale_code": "34022",
-        "sale_name": "กัญญณัฐ มธุระเมธานนท์",
-        "CreatorCode": "หฟ",
-        "create_datetime": "2018-01-15T00:00:00Z",
-        "editor_code": "sa",
-        "edit_datetime": "2018-01-15T00:00:00Z",
-        "subs": [
-            {
-                "id": 2,
-                "project_id": 2,
-                "project_code": "PJ002",
-                "doc_type": 2,
-                "doc_type_name": "SO",
-                "doc_no": "S01-ROV6101-0001",
-                "doc_date": "2018-01-11T00:00:00Z",
-                "department_code": "D0001",
-                "department_name": "ปูน",
-                "amount": 224000,
-                "netamount": 200000,
-                "sumofcost": 10000,
-                "profit": 10000
-            },
-            {
-                "id": 3,
-                "project_id": 2,
-                "project_code": "PJ002",
-                "doc_type": 1,
-                "doc_type_name": "QT",
-                "doc_no": "S01-BHV6101-0002",
-                "doc_date": "2018-01-15T00:00:00Z",
-                "department_code": "D0002",
-                "department_name": "หลังคา",
-                "amount": 3000000,
-                "netamount": 3000000,
-                "sumofcost": 270000,
-                "profit": 30000
-            }
-        ]
-    }
-]
+    "resp": {
+        "isSuccess": 1,
+        "processName": "Gen Access Token",
+        "processDesc": "Successful"
+    },
+    "userID": "56163",
+    "saleCode": "56163",
+    "accessToken": "22d3b3c2-abe3-41e1-9909-7a10f750a1f1",
+    "accessDatetime": "2018-04-03 12:59:53.972",
+    "dataBaseName": "bcnp",
+    "serverName": "192.168.0.7",
+    "branchName": "S01"
 }
 ```
 

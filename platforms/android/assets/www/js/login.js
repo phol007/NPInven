@@ -132,6 +132,7 @@ function login(username,pass,cpn){
                                         type: "POST",
                                         cache: false,
                                         success: function(result){
+
                                         console.log(result);
                                            console.log(JSON.stringify(result.resp.isSuccess));
                                            if(result.resp.isSuccess==1){

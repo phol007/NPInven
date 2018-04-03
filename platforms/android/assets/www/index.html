@@ -27,9 +27,9 @@
     <div id="deviceready" class="blink">
         <p class="event listening">Connecting to Device</p>
         <p class="event received" style="display:none">Device is Ready</p>
-
     </div>
 </div>
+
 <!--////////////////////////////////////////////////////////////page one ////////////////////////////////////////////////////////////////-->
 <div data-role="page" id="pageone">
     <div data-role="none" class="header">
@@ -47,6 +47,7 @@
                            class="validate[required,custom[onlyLetter],length[0,100]] feedback-input"
                            placeholder="Username" id="username" data-role="none"/>
                 </label>
+
                 <label class="password">
                     <input name="passwd" type="password" value=""
                            class="validate[required,custom[password],length[0,100]] feedback-input"
@@ -54,11 +55,13 @@
                 </label>
                 <label>
                     <div id="cmp1"></div>
-                </label><p></p>
+                </label>
+                <p></p>
                 <label class="submit">
                     <input type="submit" class="button-green" value="login" data-role="none" onclick="cnklogin()"/>
                     <div class="ease"></div>
                 </label>
+
             </div>
         </div>
     </div>
