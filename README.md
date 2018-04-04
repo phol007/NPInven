@@ -250,7 +250,7 @@ method : post
 }
 
 ```
-*** API ค้นหาคลังชั้นเก็บ ***
+** API ค้นหาคลังชั้นเก็บ **
 ```	
 Url: http://app.nopadol.com:8080/path
 Path : /NPInventoryWs/V2/is/searchShelf
@@ -276,7 +276,7 @@ method : post
 
 ```
 
-*** API ค้นหารหัสสินค้าด้วยการพิมพ์ ***
+** API ค้นหารหัสสินค้าด้วยการพิมพ์ **
 ```	
 Url: http://app.nopadol.com:8080/path
 Path : /NPInventoryWs/V2/inven/searchItemMaster
@@ -300,8 +300,7 @@ method : post
 }
 
 ```
-
-*** API ค้นหารหัสสินค้าด้วยการแสกน barcode ***
+** API ค้นหารหัสสินค้าด้วยการแสกน barcode **
 ```	
 Url: http://app.nopadol.com:8080/path
 Path : /NPInventoryWs/V2/inven/searchItem
@@ -334,204 +333,605 @@ method : post
 }
 
 ```
-# Menu ระบบ Reorder
-**API ค้นหา Reorder** /
-* รหัส:
-* วันที่ทำ:
-* ชื่อคนจัดทำ:
+** API เพิ่มการนับสต๊อก (แทนที่)**
+``` 
+Url: http://app.nopadol.com:8080/path
+Path : /NPInventoryWs/V2/is/insertIS
+data : {"accessToken":"30d00974-1855-427c-9199-20d724042d44","docNo":"S01-IS6104-0004","user":"56163","itemCode":"5001006","unitcode":"แกลลอน","whCode":"S1-A","shelfCode":"-","qty":"10"}
+method : post
+    {
+    "resp": {
+        "isSuccess": 1,
+        "processName": "Update Item PR",
+        "processDesc": "Successful",
+        "data": null
+    },
+    "accessToken": null,
+    "docNo": null,
+    "user": null,
+    "itemCode": null,
+    "unitcode": null,
+    "whCode": null,
+    "shelfCode": null,
+    "qty": 0
+}
 
-**API รายละเอียด Reorder** /
-* รหัส:
-* วันที่ทำ:
-* รหัสคนจัดทำ:
-* ชื่อคนจัดทำ:
+```
+** API เพิ่มการนับสต๊อก (เพิ่มต่อ)**
+``` 
+Url: http://app.nopadol.com:8080/Path
+Path : /NPInventoryWs/V2/is/insertIS
+data : {"accessToken":"834994b0-914e-488d-9962-dc09f99d723a","docNo":"S01-IS6104-0004","user":"56163","itemCode":"5001006","unitcode":"แกลลอน","whCode":"S1-A","shelfCode":"-","qty":"20"}
+method : post
+    {
+    "resp": {
+        "isSuccess": 1,
+        "processName": "Update Item PR",
+        "processDesc": "Successful",
+        "data": null
+    },
+    "accessToken": null,
+    "docNo": null,
+    "user": null,
+    "itemCode": null,
+    "unitcode": null,
+    "whCode": null,
+    "shelfCode": null,
+    "qty": 0
+}
 
+```
+** API แสดงข้อมูลการนับสต๊อก(ในตาราง) **
+``` 
+Url: http://app.nopadol.com:8080/Path
+Path : /NPInventoryWs/V2/is/isList
+data : {"accessToken":"858c1a01-1844-4d83-bcb2-953014082bc4","docNo":"S01-IS6104-0004"}
+method : post
+    {
+    "resp": {
+        "isSuccess": 1,
+        "processName": "Search Ispact",
+        "processDesc": "Successful",
+        "data": null
+    },
+    "listData": [
+        {
+            "docNo": "S01-IS6104-0004",
+            "docDate": "2018-04-04",
+            "itemCode": "1002094",
+            "itemName": "รองพื้นปูนเก่า ดูลักษ์ มาชีล กล.",
+            "unitCode": "แกลลอน",
+            "whCode": "S1-A",
+            "shelfCode": "-",
+            "stkQty": 7,
+            "inspectQty": 5,
+            "diffQty": 2
+        },
+        {
+            "docNo": "S01-IS6104-0004",
+            "docDate": "2018-04-04",
+            "itemCode": "5001006",
+            "itemName": "น้ำมันซักแห้ง ปลาเบ็ด กล.",
+            "unitCode": "แกลลอน",
+            "whCode": "S1-A",
+            "shelfCode": "-",
+            "stkQty": 47,
+            "inspectQty": 20,
+            "diffQty": 27
+        },
+        {
+            "docNo": "S01-IS6104-0004",
+            "docDate": "2018-04-04",
+            "itemCode": "5000015",
+            "itemName": "กอฮอล์ เวฟโก้ ปิ๊ป",
+            "unitCode": "ปิ๊ป",
+            "whCode": "S1-A",
+            "shelfCode": "-",
+            "stkQty": 11,
+            "inspectQty": 1,
+            "diffQty": 10
+        }
+    ]
+}
 
-**API ค้นหา สินค้า** /
-* รหัสสินค้า:
-* ชื่อสินค้า:
-* ราคา:
-* หน่วยนับ:
-* จุดซื้อ:
-* ต่ำสุด:
-* สูงสุด:
-* คงเหลือ:
-* PO:
-* ขาย-3M:
-* ความถี่-3M:
-* จำนวนซื้อล่าสุด:
-* เก็บในคลัง:
-* เหลือ:
-* ที่เก็บ:
+```
+** API บันทึกข้อมูลการนับสต๊อก(จากตาราง) **
+``` 
+Url: http://app.nopadol.com:8080/Path
+Path : /NPInventoryWs/V2/is/confirmIS
+data : {"accessToken":"63641f9c-6236-4763-adf0-d0ef28a84f71","docNo":"S01-IS6104-0005","user":"56163","isCancel":"0"}
+method : post
+   {
+    "resp": {
+        "isSuccess": 0,
+        "processName": "Update IS",
+        "processDesc": "Successful",
+        "data": null
+    },
+    "accessToken": null,
+    "docNo": null,
+    "user": null,
+    "isCancel": 0
+}
 
-**API save Reorder** /
-* รหัสสินค้า:
-* ชื่อสินค้า:
-* ราคา:
-* หน่วยนับ:
-* จุดซื้อ:
-* ต่ำสุด:
-* สูงสุด:
-* คงเหลือ:
-* PO:
-* นับได้:
-* ขาย-3M:
-* ความถี่-3M:
-* จำนวนซื้อล่าสุด:
-* ต้องการ:
+```
+# Menu ระบบ โอนสินค้า
+**API แสดงข้อมูลก่อนโอนสินค้า  (เลือกคลังต้นทาง,เลือกคลังปลายทาง)**
+``` 
+Url: http://app.nopadol.com:8080/path
+Path : /NPReceiveWs/trn/v2/searchwarehouse
+data : {"accessToken":"2ddeac71-0002-41b6-98bb-28da7d8ab360","type":"0","search":""}
+method : post
+{
+    "response": {
+        "isSuccess": 1,
+        "processName": "Search WareHouse",
+        "processDesc": "Successful"
+    },
+    "data": [
+        {
+            "code": "080",
+            "name": "นอกสถานที่/โฮมโชว์/แฟร์/ท้ายวังชั่วคราว",
+            "location": null
+        },
+        {
+            "code": "099",
+            "name": "ซื้อมาขายไป",
+            "location": null
+        },
+        {
+            "code": "ISP1",
+            "name": "Inspection S01",
+            "location": null
+        },
+        {
+            "code": "ISP2",
+            "name": "Inspection S02",
+            "location": null
+        },
+        {
+            "code": "MAKE-KAFE",
+            "name": "ร้านกาแฟ",
+            "location": null
+        },
+        {
+            "code": "S00",
+            "name": "ซื้อมาขายไป",
+            "location": null
+        },
+        {
+            "code": "S01",
+            "name": "สำนักงานใหญ่",
+            "location": null
+        },
+        {
+            "code": "S02",
+            "name": "สาขาสันกำแพง",
+            "location": null
+        },
+        {
+            "code": "S0-PASS",
+            "name": "คลัง Pass ส่ง",
+            "location": null
+        },
+        {....}
+    ]
+}
+    
+```
 
-# Menu โปรโมชั่น
-**API ค้นหาคลังสินค้า** /
-* รหัสคลัง:
-* ชื่อคลัง:
-
-**API รายละเอียดสต๊อกสินค้า**
-* รหัสคลัง:
-* ชื่อคลัง:
-* รหัสสินค้า:
-* ชื่อสินค้า:
-* ชื่อเก็บ:
-* นับได้:
-* สถานะ:
-
-**API ค้นหาชั้นเก็บ** /
-* รหัสชั้นเก็บ:
-* ชื่อชั้นเก็บ:
-
-**API นับสินค้า**
-* ชั้นเก็บ:
-* รหัสบาร์โค้ด:
-* รหัสสินค้า:
-* ชื่อสินค้า:
-* คลัง:
-* จำนวน:
-* หน่วยนับ:
-
-# Menu โอนสินค้า
-**API แสดงใบโอนสินค้า**
-* รหัส:
-* ประเภทการโอนสินค้า:
-
-**API รายละเอียดใบโอนสินค้า**
-* เลขที่เอกสาร:
-* วันที่ทำเอกสาร:
-* มูลค่ารวม:
-* หมายเหตุ:
-* ผู้ยืนยัน:
-* ชื่อสินค้า:
-* จำนวน:
-* จากคลัง:
-* เข้าคลัง/ชั้นเก็บ:
-
-**API โอนสินค้า**
-* เลือกคลังต้นทาง:
-* เลือกชั้นเก็บต้นทาง:
-* เลือกคลังปลายทาง:
-* เลือกชั้นเก็บปลายทาง:
-
-# Menu ระบบตรวจสอบสินค้า
-**API ค้นหาสินค้า**
-* รหัสสินค้า:
-* ชื่อสินค้า:
-
-**API รายละเอียดสินค้า**
-* รหัสบาร์โค้ด:
-* รหัสสินค้า:
-* ชื่อ:
-* ยี่ห้อ:
-* หน่วยนับ:
-* เกรด:
-* ราคาปกติ:
-* รหัสคลัง:
-* ชั้นเก็บ:
-* ยอดคงเหลือ:
-
-# Menu จัดการที่เก็บสินค้า
-**API ค้นหาสินค้า**
-* รหัสสินค้า:
-* ชื่อสินค้า:
-* หน่วยนับ:
-
-**API รายละเอียดที่เก็บสินค้า**
-* บาร์โค้ด:
-* รหัสสินค้า:
-* ชื่อสินค้า:
-* หน่วยนับ:
-* รหัสคลัง:
-* ชื่อที่เก็บ:
-* วันที่สร้าง:
-
-**API ลบที่จัดเก็บของสินค้า**
-* รหัสสินค้า:
-
-# Menu ระบบเพิ่มที่เก็บ
+**API แสดงข้อมูลก่อนโอนสินค้า  (เลือกชั้นเก็บต้นทาง,เลือกชั้นเก็บปลายทาง)**
+``` 
+Url: http://app.nopadol.com:8080/path
+Path : /NPReceiveWs/trn/v2/searchshelf
+data : {"accessToken":"0c7b96a4-8418-4128-84e3-f35a27031dde","refCode":"S1-C","search":""}
+method : post
+{
+    "response": {
+        "isSuccess": 1,
+        "processName": "Search Shelf",
+        "processDesc": "Successful"
+    },
+    "data": [
+        {
+            "code": "-",
+            "name": "S1-C(Back Stock)",
+            "location": "S1-C(Back Stock)"
+        }
+    ]
+}
+    
+```
+**API แสดงใบโอนสินค้า(กดปุ่มแสดงใบโอนสินค้า)**
+``` 
+Url: http://app.nopadol.com:8080/path
+Path : /NPReceiveWs/trn/v2/search
+data : {"accessToken":"41d501bc-6757-42a0-8edc-3a8ac8ed0245","type":"1","search":""}
+method : post
+{
+    "response": {
+        "isSuccess": 1,
+        "processName": "Search StockTransfer",
+        "processDesc": "Successful"
+    },
+    "data": [
+        {
+            "docNo": "S01-TH6104-0040",
+            "isConfirm": 0,
+            "docDate": "2018-04-04 00:00:00.0",
+            "myDescription": "Mobile-App//โอนสินค้าเพื่อสต๊อก//",
+            "isCancel": 0,
+            "isCompleteSave": 1,
+            "sumOfAmount": 2590,
+            "refDocNo": "",
+            "docType": 6,
+            "sumOfQty": 1
+        },
+        {
+            "docNo": "S01-TH6104-0039",
+            "isConfirm": 0,
+            "docDate": "2018-04-04 00:00:00.0",
+            "myDescription": "Mobile-App//โอนสินค้าเพื่อขาย//",
+            "isCancel": 0,
+            "isCompleteSave": 1,
+            "sumOfAmount": 760,
+            "refDocNo": "",
+            "docType": 6,
+            "sumOfQty": 1
+        },
+        {
+            "docNo": "S01-TH6104-0038",
+            "isConfirm": 0,
+            "docDate": "2018-04-04 00:00:00.0",
+            "myDescription": "Mobile-App//โอนสินค้าเพื่อขาย//",
+            "isCancel": 0,
+            "isCompleteSave": 1,
+            "sumOfAmount": 8900,
+            "refDocNo": "",
+            "docType": 6,
+            "sumOfQty": 1
+        },
+        {
+            "docNo": "S01-TH6104-0037",
+            "isConfirm": 0,
+            "docDate": "2018-04-04 00:00:00.0",
+            "myDescription": "Mobile-App//โอนสินค้าเพื่อสต๊อก//",
+            "isCancel": 0,
+            "isCompleteSave": 1,
+            "sumOfAmount": 10900,
+            "refDocNo": "",
+            "docType": 6,
+            "sumOfQty": 5
+        },
+        {
+            "docNo": "S01-TH6104-0036",
+            "isConfirm": 0,
+            "docDate": "2018-04-04 00:00:00.0",
+            "myDescription": "Mobile-App////ยกเลิกเอกสาร",
+            "isCancel": 0,
+            "isCompleteSave": 1,
+            "sumOfAmount": 1720,
+            "refDocNo": "",
+            "docType": 6,
+            "sumOfQty": 0
+        },
+        { ....}
+    ]
+}
+    
+```
+**API รายละเอียดใบโอนสินค้า()**
+``` 
+Url: http://app.nopadol.com:8080/path
+Path : /NPReceiveWs/trn/v2/searchdetails
+data : {"accessToken":"ea6f6196-55bd-4d0a-8aed-ea90da48a819","type":"1","search":"S01-TH6104-0041"}
+method : post
+{
+    "response": {
+        "isSuccess": 1,
+        "processName": "Search StockTransferDetails",
+        "processDesc": "Successful"
+    },
+    "docNo": "S01-TH6104-0041",
+    "isConfirm": 0,
+    "docDate": "2018-04-04 00:00:00.0",
+    "myDescription": "Mobile-App//โอนสินค้าเพื่อขาย//",
+    "isCancel": 0,
+    "isCompleteSave": 1,
+    "sumOfAmount": 1190,
+    "refDocNo": "",
+    "docType": 0,
+    "confirmCode": "38041",
+    "confirmName": "รติรัตน์ แสงเมือง",
+    "data": [
+        {
+            "itemCode": "9179393",
+            "itemName": "อ่างล้างจาน 1 หลุม  Linea ViVa 1 B Teka",
+            "fromWH": "S1-B",
+            "fromShelf": "-",
+            "toWH": "S1-A",
+            "toShelf": "-",
+            "qty": 1,
+            "unitCode": "ใบ",
+            "barCode": "8858944202026",
+            "refNo": "",
+            "amount": 1190,
+            "price": 1190,
+            "sumOfCost": 786.4488,
+            "lineNumber": 0,
+            "isCancel": 0,
+            "pickCode": "61022",
+            "pickName": "ปัทมา  เต็มราษี"
+        }
+    ],
+    "sumOfQty": 1
+}    
+```
+**API ลบใบแสดงโอนสินค้า(กดค้าง)**
+``` 
+Url: http://app.nopadol.com:8080/path
+Path : /NPReceiveWs/trn/v2/cancel
+data : {"accessToken":"4f3b6bc9-0e0b-4ad9-b1bb-5d5633921b27","docNo":"S01-TH6104-0022","refNo":"","userID":"56163"}
+method : post
+ {
+    "isSuccess": 1,
+    "processName": "Cancel StockTransfer",
+    "processDesc": "Successful"
+}
+```
+**API ค้นหารหัสพนักงาน (ตอนกดโอนสินค้า)**
+``` 
+Url: http://app.nopadol.com:8080/path
+Path : /NPReceiveWs/trn/v2/searchsale
+data : {"accessToken":"88e4db4c-be15-495e-ab9e-b00281b34f10","type":"0","search":"56163"}
+method : post
+ {
+    "response": {
+        "isSuccess": 1,
+        "processName": "Search Sale",
+        "processDesc": "Successful"
+    },
+    "listData": [
+        {
+            "code": "56163",
+            "name": "เอกชัย  จันต๊ะไพร"
+        }
+    ]
+}
+```
+# Menu ระบบ ตรวจสอบสินค้า
+**API ค้นหาสินค้า (จากรหัสและชื่อสินค้า)**
+``` 
+Url: http://app.nopadol.com:8080/path
+Path : /NPInventoryWs/V2/inven/searchItemMaster
+data : {"accessToken":"c77a9fd6-134b-482e-af56-5de3cb61003e","search":"5001006"}
+method : post
+ {
+    "resp": {
+        "isSuccess": 1,
+        "processName": "Search ItemMaster",
+        "processDesc": "Successful",
+        "data": null
+    },
+    "itemMasterList": [
+        {
+            "itemCode": "5001006",
+            "itemName": "น้ำมันซักแห้ง ปลาเบ็ด กล.",
+            "barCode": "5001006",
+            "unitCode": "แกลลอน"
+        }
+    ]
+}
+```
+**API ค้นหารายละเอียดสินค้า** /
+``` 
+Url: http://app.nopadol.com:8080/path
+Path : /NPInventoryWs/V2/it/itemProfile
+data : {"accessToken":"c77a9fd6-134b-482e-af56-5de3cb61003e","whCode":"S01","itemCode":"5001006"}
+method : post
+ {
+    "resp": {
+        "isSuccess": 1,
+        "processName": "Search ItemProfile",
+        "processDesc": "Successful",
+        "data": null
+    },
+    "barCode": "5001006",
+    "itemCode": "5001006",
+    "itemName": "น้ำมันซักแห้ง ปลาเบ็ด กล.",
+    "unitCode": "แกลลอน",
+    "brandCode": "335",
+    "brandName": "ไซโก้",
+    "rang": "C",
+    "price": 130,
+    "buyUnitcode": "แกลลอน",
+    "saleUnitcode": "แกลลอน",
+    "averageCost": 0,
+    "qtyIV": 3,
+    "unitCodeIV": "แกลลอน",
+    "whCodeIV": "S1-A",
+    "docdateIV": "2018-04-04",
+    "qtyRV": 60,
+    "unitCodeRV": "แกลลอน",
+    "whCodeRV": "S1-A",
+    "docdateRV": "2018-02-12",
+    "qtyTF": 30,
+    "unitCodeTF": "แกลลอน",
+    "whCodeTF": "S1-A",
+    "docdateTF": "2017-06-04",
+    "vendorCode": "023324083",
+    "vendorName": "บริษัท ที เค เอส เคมิคอล (ประเทศไทย) จำกัด",
+    "itemProfileList": [
+        {
+            "whCode": "S1-A",
+            "shelfCode": "-",
+            "stkunitcode": "แกลลอน",
+            "qty": 47,
+            "docdate": "2018-04-04"
+        }
+    ]
+}
+```
+# Menu ระบบ จัดการที่เก็บสินค้า
+**API รายละเอียดสินค้า และที่เก็บ**
+``` 
+Url: http://app.nopadol.com:8080/path
+Path : /NPInventoryWs/V2/inven/searchScanBarCodeLogs
+data : {"accessToken":"6a78cd58-c6b9-48a5-871e-99c40cde624f","searchItem": "5001006","branch":"S01"}
+method : post
+ {
+    "resp": {
+        "isSuccess": 1,
+        "processName": "Search ScanBarCodeLogs",
+        "processDesc": "Successful",
+        "data": null
+    },
+    "itemCode": "5001006",
+    "itemName": "น้ำมันซักแห้ง ปลาเบ็ด กล.",
+    "unitCode": "แกลลอน",
+    "listScanBarcode": [
+        {
+            "rowOrder": 363448,
+            "whCode": "S1-A      ",
+            "zoneCode": "-",
+            "shelfCode": "A32051",
+            "scanDateTime": "2017-11-24",
+            "userScan": "55044",
+            "userScanName": "ทัศนีย์ โรจน์สิงห์"
+        },
+        {
+            "rowOrder": 354392,
+            "whCode": "S1-B      ",
+            "zoneCode": "-",
+            "shelfCode": "B54041",
+            "scanDateTime": "2017-02-22",
+            "userScan": "stayust",
+            "userScanName": "ศตายุ สุรินต๊ะ"
+        },
+        {
+            "rowOrder": 299176,
+            "whCode": "S1-B      ",
+            "zoneCode": "-",
+            "shelfCode": "B64011",
+            "scanDateTime": "2017-01-13",
+            "userScan": "stayust",
+            "userScanName": "ศตายุ สุรินต๊ะ"
+        },
+        {
+            "rowOrder": 299171,
+            "whCode": "S1-B      ",
+            "zoneCode": "-",
+            "shelfCode": "B54021",
+            "scanDateTime": "2017-01-13",
+            "userScan": "stayust",
+            "userScanName": "ศตายุ สุรินต๊ะ"
+        }
+    ]
+}
+```
+**API ลบที่เก็บสินค้า**
+``` 
+Url: http://app.nopadol.com:8080/path
+Path : /NPInventoryWs/V2/inven/DeleteItemLocation
+data : {"accessToken":"dfaea2a1-ce8d-4b7d-8a32-82cd45d6d63c","itemCode":"5001006","rowOrder":"undefined"}
+method : post
+ 
+```
+**API ค้นหาชื่อรหัสสินค้า หรือชื่อสินค้า(ในตาราง)**
+``` 
+Url: http://app.nopadol.com:8080/path
+Path : /NPInventoryWs/V2/inven/searchLikeItem
+data : {"accessToken":"4a6dcc80-7e37-4621-af6d-e9f5abc917b9","searchItem":"5001006"}
+method : post
+ {
+    "resp": {
+        "isSuccess": 1,
+        "processName": "Search Itme ",
+        "processDesc": "Successful",
+        "data": null
+    },
+    "listLikeItem": [
+        {
+            "itemCode": "5001006",
+            "itemName": "น้ำมันซักแห้ง ปลาเบ็ด กล.",
+            "unitCode": "แกลลอน"
+        }
+    ]
+}
+```
+# Menu ระบบ เพิ่มที่เก็บสินค้า
 **API ค้นหาคลังสินค้า**
-* รหัสคลังสินค้า:
-* ชื่อสินค้า:
+``` 
+Url: http://app.nopadol.com:8080/path
+Path : /NPInventoryWs/V2/is/searchWH
+data : {"accessToken":"5dcfe2c7-4d58-494a-9e01-38e83ef28d41","search":"","branch":"S01"}
+method : post
+    {
+    "resp": null,
+    "data": [
+        {
+            "whCode": "S1-A",
+            "whName": "สนญ.โชว์รูม",
+            "location": "สนญ.โชว์รูม"
+        },
+        {
+            "whCode": "S1-B",
+            "whName": "สนญ.Drivethru",
+            "location": "สนญ.Drivethru"
+        },
+        {
+            "whCode": "S1-C",
+            "whName": "สนญ.สินค้าสต๊อก",
+            "location": "สนญ.สินค้าสต๊อก"
+        },
+        {
+            "whCode": "S1-CD",
+            "whName": "คลังสินเชื่อ",
+            "location": "คลังสินเชื่อ"
+        },
+        {
+            "whCode": "S1-DEM",
+            "whName": "สำนักงานใหญ่-Demo",
+            "location": "สำนักงานใหญ่-Demo"
+        },
+        {
+            "whCode": "S1-DMG",
+            "whName": "สำนักงานใหญ่",
+            "location": "สำนักงานใหญ่"
+        },
+        {.....}
+    ]
+}
 
-**API ค้นหาที่เก็บ**
-* รหัสคลัง:
-* ชื่อคลัง:
-* รหัสที่เก็บ:
-* ชื่อที่เก็บ:
-* รหัสสินค้า:
-* ชื่อสินค้า:
-* หน่วยนับ:
+```
+**API ค้นหาที่เก็บ (ตาราง)**
+``` 
+Url: http://app.nopadol.com:8080
+Path : /NPInventoryWs/V2/inven/searchShelfLocation 
+data : {"accessToken":"8b282d3d-0fa0-4483-bac6-dbe61b41b6ff","searchWH":"S1-A","searchLocation":"1"}
+method : post
+    {
+    "resp": {
+        "isSuccess": 1,
+        "processName": "Search Location",
+        "processDesc": "Successful",
+        "data": null
+    },
+    "whCode": "S1-A",
+    "locationList": [
+        {
+            "locationCode": "A01011",
+            "locationName": "A01011"
+        },
+        {
+            "locationCode": "A01012",
+            "locationName": "A01012"
+        },
+        {
+            "locationCode": "A01021",
+            "locationName": "A01021"
+        }
+    ]
+}
 
-# Menu โปรโมชั่น
-**API ค้นหาโปรโมชั่น**
-
-**API ลบโปรโมชั่น**
-
-**API รายละเอียดโปรโมชั่น**
-* DocNo:
-* วันที่ขอโปรโมชั่น:
-* เลขที่โปรโมชั่น:
-
-**API แสดงรายละเอียดสินค้า**
-* ลำดับ:
-* ชื่อสินค้า:	
-* ราคาปกติ:
-* ราคาโปร:
-
-**API เลือกโปรโมชั่น**
-* เลือกรายการโปรโมชั่น:
-* เลือกประเภทโปรโมชั่น:
-* เลือก Section:
-
-**API ค้นหาสินค้า**
-* รหัสสินค้า:
-* ชื่อสินค้า:
-
-**API จัดโปรโมชั่นสินค้า**
-* รหัสสินค้า:
-* ชื่อสินค้า:
-* ราคาปกติ:
-* หน่วยนับ:
-* สมาชิก (ลด 3%):
-* IsBrochure:
-* ค่าคอมเงินสด:
-* ค่าคอมสินเชื่อ:
-* ชื่อแคมเปญ:
-* เริ่มโปรโมชั่น:
-* จบโปรโมชั่น:
-
-# Menu ขอพิมพ์ป้าย
- **API ขอพิมพ์ป้าย**
-* เลือก ธรรมดา หรือ พิเศษ:
-* ขนาด(P1 21ดวง/หน้า,P2 3ดวง/หน้า,P3 2ดวง/หน้า,P4 A4) :
-* รหัสสินค้า:
-* ชื่อสินค้า:
-* จำนวนที่ต้องการพิม:
-
- **API ค้นหายี่ห้อ:**
-* ค้นหายี่ห้อ:
-* รหัสสินค้า:
-* แสดงชื่อสินค้า:
-
- **API ค้นหายี่ห้อ:**
-* รหัสสินค้า:
-* ชื่อสินค้า:
-* ประเภทกระดาษ:
-* จำนวน:
-* หน่วยนับ:
+```
