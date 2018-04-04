@@ -41,34 +41,313 @@ data : {"companyCode":"np","appCode":"NpInventory","saleCode":"ไอดีผ�
     "dataBaseName": "bcnp",
     "serverName": "192.168.0.7",
     "branchName": "S01"
-}
+} 
+
 ```
 
 # Menu ระบบ Reorder
 **API ค้นหา Reorder**
-* รหัส:
-* วันที่ทำ:
-* ชื่อคนจัดทำ:
+```	
+Url: http://app.nopadol.com:8080/path
+Path : /ReOrderWS/reorder/search_reorder
+data : {"access_token":"4816fdb1-098b-431b-8389-8550e4bcf94c","profit_code":"s01","search":"S01-PRH6103-000"}
+ 
+	method : post
+	{
+    "success": true,
+    "error": false,
+    "message": "",
+    "list_reorder": [
+        {
+            "doc_no": "S01-PRH6103-00002",
+            "doc_date": "2018-03-15 00:00:00.0",
+            "work_man": "กัญญารัตน์  ฟูสกุล"
+        },
+        {
+            "doc_no": "S01-PRH6103-00003",
+            "doc_date": "2018-03-15 00:00:00.0",
+            "work_man": "กัญญารัตน์  ฟูสกุล"
+        }
+    ]
+}
 
-# Menu ระบบ Reorder
-**API ค้นหา Reorder**
-* รหัส:
-* วันที่ทำ:
-* ชื่อคนจัดทำ:
-
+```
 **API รายละเอียด Reorder**
+```	
+Url: http://app.nopadol.com:8080/path
+Path : /ReOrderWS/reorder/reorder_details
+data : {"access_token":"032246af-33c6-41f5-9609-3935b3a51b77","profit_code":"s01","search":"S01-PRH6103-00002"}
+method : post
+	{
+    "resp": {
+        "success": true,
+        "error": false,
+        "message": ""
+    },
+    "doc_no": "S01-PRH6103-00002",
+    "doc_date": "2018-03-15 00:00:00.0",
+    "user_code": "59087",
+    "person_code": "59087",
+    "person_name": "กัญญารัตน์  ฟูสกุล",
+    "is_cancel": 0,
+    "is_confirm": 0,
+    "item": [
+        {
+            "item_code": "5211522",
+            "item_name": "TOA  201 ROOFSEAL (กันน้ำรั่วซึมหลังคาสีเทาเข้ม)  ถัง",
+            "item_qty": 20,
+            "item_count": 5,
+            "suggest_qty": 0,
+            "unit_code": "ถัง",
+            "line_number": 0
+        },
+        {
+            "item_code": "5211521",
+            "item_name": "TOA  201 ROOFSEAL (กันน้ำรั่วซึมหลังคาสีเทา)  ถัง",
+            "item_qty": 20,
+            "item_count": 3,
+            "suggest_qty": 0,
+            "unit_code": "ถัง",
+            "line_number": 1
+        },
+        {
+            "item_code": "5211523",
+            "item_name": "TOA  201 ROOFSEAL (กันน้ำรั่วซึมหลังคาสีเขียว)  ถัง",
+            "item_qty": 20,
+            "item_count": 4,
+            "suggest_qty": 0,
+            "unit_code": "ถัง",
+            "line_number": 2
+        },
+        {
+            "item_code": "5211526",
+            "item_name": "TOA 201 ROOFSEAL (กันน้ำรั่วซึมหลังคาสีเทาเข้ม) กล.",
+            "item_qty": 20,
+            "item_count": 20,
+            "suggest_qty": 0,
+            "unit_code": "แกลลอน",
+            "line_number": 3
+        },
+        {....},
+    ]
+}
+
+```
+**API ค้นหา สินค้า**
+```	
+Url: http://app.nopadol.com:8080/path
+Path : /ReOrderWS/reorder/itemdetails
+data : {"access_token":"ddb748f7-1816-428f-ab43-943aef3f637f","profit_code":"S01","search":"5001006"}
+method : post
+{
+    "success": false,
+    "error": true,
+    "message": "The result set is closed.",
+    "item_code": "5001006",
+    "item_name": "น้ำมันซักแห้ง ปลาเบ็ด กล.",
+    "item_price": 130,
+    "item_unit_code": "แกลลอน",
+    "item_barcode": "5001006",
+    "rq_status": 0,
+    "order_point": 0,
+    "stock_min": 0,
+    "stock_max": 0,
+    "item_Status": "2.สต๊อกขาย",
+    "item_get_status": 1,
+    "po_remain_in": 0,
+    "sum_cashsale_3month": 4.3333,
+    "freq_3month": 4,
+    "red_dot": 0,
+    "my_grade": "",
+    "expert_team": "CAT3      ",
+    "pr_no": "S01-PRH6103-00002",
+    "ap_no": "",
+    "po_no": "",
+    "pr_date": "2018-04-03 00:00:00.0",
+    "ap_date": "1900-01-01 00:00:00.0",
+    "po_date": "1900-01-01 00:00:00.0",
+    "po_lead_date": "1900-01-01 00:00:00.0",
+    "pr_qty": 2,
+    "ap_qty": 0,
+    "po_qty": 0,
+    "pr_remain": 2,
+    "ap_remain": 0,
+    "po_remain": 0,
+    "pr_line": 11,
+    "pr_item_unit": "แกลลอน",
+    "stockQty": 50,
+    "listStk": [
+        {
+            "whCode": "S1-A",
+            "shelfCode": "-",
+            "qty": 50
+        }
+    ],
+    "lishShelfID": [
+        {
+            "shelfID": "A32051"
+        }
+    ]
+}
+	
+
+```
+**API save item** 
+```	
+Url: http://app.nopadol.com:8080/path
+Path : ReOrderWS/reorder/insert_item
+data : {"access_token":"5dcfe2c7-4d58-494a-9e01-38e83ef28d41","doc_no":"S01-PRH6103-00002","doc_date":"3-4-2018","user_code":"56163","item":[{"item_code":"4047212","unit_code":"บาน","item_qty":"0","item_count":"3","line_number":"11"}]}
+method : post
+	{
+    "success": true,
+    "error": false,
+    "message": ""
+}
+
+```
+# Menu ระบบ นับสต๊อกสินค้า
+**API ค้นหาคลังสินค้า**
+```	
+Url: http://app.nopadol.com:8080/path
+Path : /NPInventoryWs/V2/is/searchWH
+data : {"accessToken":"5dcfe2c7-4d58-494a-9e01-38e83ef28d41","search":"","branch":"S01"}
+method : post
+	{
+    "resp": null,
+    "data": [
+        {
+            "whCode": "S1-A",
+            "whName": "สนญ.โชว์รูม",
+            "location": "สนญ.โชว์รูม"
+        },
+        {
+            "whCode": "S1-B",
+            "whName": "สนญ.Drivethru",
+            "location": "สนญ.Drivethru"
+        },
+        {
+            "whCode": "S1-C",
+            "whName": "สนญ.สินค้าสต๊อก",
+            "location": "สนญ.สินค้าสต๊อก"
+        },
+        {
+            "whCode": "S1-CD",
+            "whName": "คลังสินเชื่อ",
+            "location": "คลังสินเชื่อ"
+        },
+        {
+            "whCode": "S1-DEM",
+            "whName": "สำนักงานใหญ่-Demo",
+            "location": "สำนักงานใหญ่-Demo"
+        },
+        {
+            "whCode": "S1-DMG",
+            "whName": "สำนักงานใหญ่",
+            "location": "สำนักงานใหญ่"
+        },
+        {.....}
+    ]
+}
+
+```
+*** API ค้นหาคลังชั้นเก็บ ***
+```	
+Url: http://app.nopadol.com:8080/path
+Path : /NPInventoryWs/V2/is/searchShelf
+data : {"accessToken":"2ea4dbb5-f7ac-461e-862b-715402dc0a64","searchWH":"S1-A","searchShelf":""}
+method : post
+	{
+    "response": null,
+    "data": [
+        {
+            "shelfCode": "-",
+            "shelfName": "S1-A(StoreSale)",
+            "whCode": "S1-A",
+            "location": "S1-A(StoreSale)"
+        },
+        {
+            "shelfCode": "AVL",
+            "shelfName": "แก้ปัญหาขายผิดคลัง",
+            "whCode": "S1-A",
+            "location": "แก้ปัญหาขายผิดคลัง"
+        }
+    ]
+}
+
+```
+
+*** API ค้นหารหัสสินค้าด้วยการพิมพ์ ***
+```	
+Url: http://app.nopadol.com:8080/path
+Path : /NPInventoryWs/V2/inven/searchItemMaster
+data : {"accessToken":"4434a0df-3c6b-4d0c-ba18-a42db5db4022","search":"1513001"}
+method : post
+	{
+    "resp": {
+        "isSuccess": 1,
+        "processName": "Search ItemMaster",
+        "processDesc": "Successful",
+        "data": null
+    },
+    "itemMasterList": [
+        {
+            "itemCode": "1513001",
+            "itemName": "อะเดปเตอร์(Adapter) T5 14 w. Lakisa(แพ๊คคู่)",
+            "barCode": "1513001",
+            "unitCode": "อัน"
+        }
+    ]
+}
+
+```
+
+*** API ค้นหารหัสสินค้าด้วยการแสกน barcode ***
+```	
+Url: http://app.nopadol.com:8080/path
+Path : /NPInventoryWs/V2/inven/searchItem
+data : {"accessToken":"fbc64a33-8cc9-4fa6-85cc-781fe5224530","barcode":"1002094","docno":"undefined","type":"3","shelfcode":"undefined","branch":"S01"}
+method : post
+	{
+    "resp": {
+        "isSuccess": 1,
+        "processName": "Search Item",
+        "processDesc": "Successful",
+        "data": null
+    },
+    "itemcode": "1002094",
+    "itemname": "รองพื้นปูนเก่า ดูลักษ์ มาชีล กล.",
+    "range": "C",
+    "unitcode": "แกลลอน",
+    "qty": 0,
+    "apCode": "5744380",
+    "apName": "บริษัท อั๊คโซ่ โนเบล เพ้นท์ส (ประเทศไทย) จำกัด (มีหักบัญชีนพดลพานิช)",
+    "shelfcode": "-",
+    "listWH": [
+        {
+            "whcode": "S1-A",
+            "stkqty": 7
+        }
+    ],
+    "listPRBarcode": null,
+    "listISBarcode": null,
+    "vCount": 0
+}
+
+```
+# Menu ระบบ Reorder
+**API ค้นหา Reorder** /
+* รหัส:
+* วันที่ทำ:
+* ชื่อคนจัดทำ:
+
+**API รายละเอียด Reorder** /
 * รหัส:
 * วันที่ทำ:
 * รหัสคนจัดทำ:
 * ชื่อคนจัดทำ:
 
-**API รายละเอียด สินค้า**
-* รหัสสินค้า:
-* ประเภทสินค้า:
-* ชื่อสินค้า:
-* จำนวนสินค้า:
 
-**API ค้นหา สินค้า**
+**API ค้นหา สินค้า** /
 * รหัสสินค้า:
 * ชื่อสินค้า:
 * ราคา:
@@ -85,7 +364,7 @@ data : {"companyCode":"np","appCode":"NpInventory","saleCode":"ไอดีผ�
 * เหลือ:
 * ที่เก็บ:
 
-**API เพิ่ม Reorder**
+**API save Reorder** /
 * รหัสสินค้า:
 * ชื่อสินค้า:
 * ราคา:
@@ -102,7 +381,7 @@ data : {"companyCode":"np","appCode":"NpInventory","saleCode":"ไอดีผ�
 * ต้องการ:
 
 # Menu โปรโมชั่น
-**API ค้นหาคลังสินค้า**
+**API ค้นหาคลังสินค้า** /
 * รหัสคลัง:
 * ชื่อคลัง:
 
@@ -115,7 +394,7 @@ data : {"companyCode":"np","appCode":"NpInventory","saleCode":"ไอดีผ�
 * นับได้:
 * สถานะ:
 
-**API ค้นหาชั้นเก็บ**
+**API ค้นหาชั้นเก็บ** /
 * รหัสชั้นเก็บ:
 * ชื่อชั้นเก็บ:
 
