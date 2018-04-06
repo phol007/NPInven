@@ -35,6 +35,7 @@ switch(page){
 function searchMGItem(barcode){
         loading();
         console.log('{"accessToken":"'+localStorage.token+'","searchItem": "'+barcode+'"}');
+        console.log('รายละเอียดที่เก็บสินค้า '+localStorage.api_url_server+"NPInventoryWs/V2/inven/searchScanBarCodeLogs"+' '+'{"accessToken":"'+localStorage.token+'","searchItem": "'+barcode+'","branch":"'+localStorage.branch+'"}');
         setTimeout(function(){
         $.ajax({
                url: localStorage.api_url_server+"NPInventoryWs/V2/inven/searchScanBarCodeLogs",
@@ -125,6 +126,7 @@ function like_mgitem(){
     var detail = "<label style='text-align:center; width:100%;'><img src='images/ajax_loader.gif' width='10%'></label>";
     document.getElementById("like_mgitemlist").innerHTML = detail;
     if(itemCode!=""){
+    console.log("ค้นหาชื่อรหัสสินค้า หรือชื่อสินค้า"+localStorage.api_url_server+"NPInventoryWs/V2/inven/searchLikeItem"+' '+'{"accessToken":"'+localStorage.token+'","searchItem":"'+itemCode+'"}');
     $.ajax({
             url: localStorage.api_url_server+"NPInventoryWs/V2/inven/searchLikeItem",
             data: '{"accessToken":"'+localStorage.token+'","searchItem":"'+itemCode+'"}',

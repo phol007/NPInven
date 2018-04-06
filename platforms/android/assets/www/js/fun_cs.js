@@ -515,7 +515,6 @@ function savestock(){
                  if(citem == ""||noitem == ""){
                  //alert("กรุณากรอกข้อมูลให้ครบด้วย !!");
                  }else{
-                 console.log('result:[{"docNo":"'+DocNo+'","user":"'+userID+'","itemCode":"'+noitem+'","unitcode":"'+uitem+'","whCode":"'+wh+'","shelfCode":"'+sv+'","qty":"'+citem+'"}]');
                   document.addEventListener("keydown", function(event) {
                      event.returnValue = true;
                   });
@@ -574,7 +573,7 @@ function savestock(){
                 if(citem == ""||noitem == ""){
                 //alert("กรุณากรอกข้อมูลให้ครบด้วย !!");
                 }else{
-                console.log('result:[{"docNo":"'+DocNo+'","user":"'+userID+'","itemCode":"'+noitem+'","unitcode":"'+uitem+'","whCode":"'+wh+'","shelfCode":"'+sv+'","qty":"'+citem+'"}]');
+                console.log('เพิ่มการนับสต๊อก บวกต่อ'+localStorage.api_url_server+"NPInventoryWs/V2/is/insertIS"+'{"accessToken":"'+localStorage.token+'","docNo":"'+DocNo+'","user":"'+userID+'","itemCode":"'+noitem+'","unitcode":"'+uitem+'","whCode":"'+wh+'","shelfCode":"'+sv+'","qty":"'+citem+'"}');
                  document.addEventListener("keydown", function(event) {
                     event.returnValue = true;
                  });
@@ -694,6 +693,7 @@ function savedata(){
     setTimeout(function(){
          var DocNo = document.getElementById("valdocIS").value;
             var UserID = localStorage.username;
+            console.log('บันทึกข้อมูลการนับสต๊อก ถึงแย้ว '+localStorage.api_url_server+""+localStorage.api_url_confirm_is+'{"accessToken":"'+localStorage.token+'","docNo":"'+DocNo+'","user":"'+UserID+'","isCancel":"0"}');
             console.log('Update IS :{"DocNo":"'+DocNo+'","userID":"'+UserID+'","isCancel":"0"}');
             $.ajax({
                 url: localStorage.api_url_server+""+localStorage.api_url_confirm_is,
@@ -741,6 +741,7 @@ function isList(){
     loading();
     setTimeout(function(){
     var DocNo = document.getElementById("valdocIS").value;
+    console.log('แสดงข้อมูลการนับสต๊อก(ในตาราง)  e'+localStorage.api_url_server+"NPInventoryWs/V2/is/isList"+'{"accessToken":"'+localStorage.token+'","docNo":"'+DocNo+'"}');
     $.ajax({
             url: localStorage.api_url_server+"NPInventoryWs/V2/is/isList",
             data: '{"accessToken":"'+localStorage.token+'","docNo":"'+DocNo+'"}',

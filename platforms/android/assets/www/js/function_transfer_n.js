@@ -1,4 +1,5 @@
 function wh_normal(){
+console.log('แสดงข้อมูลก่อนโอนสินค้า เลือกคลังต้นทาง  '+localStorage.api_url_server+""+localStorage.api_url_searchwh_tf+'{"accessToken":"'+localStorage.token+'","type":"0","search":""}');
 $.ajax({
                           url: localStorage.api_url_server+""+localStorage.api_url_searchwh_tf,
                           data: '{"accessToken":"'+localStorage.token+'","type":"0","search":""}',
@@ -113,6 +114,7 @@ sh_normal_down(snormal_down);
 }
 //======================================================================== show sh normal up ===============================================================
 function sh_normal_up(whcode_upn){
+console.log('เลือกชั้นเก็บต้นทาง'+localStorage.api_url_server+""+localStorage.api_url_searchshelf_tf+'{"accessToken":"'+localStorage.token+'","refCode":"'+whcode_upn+'","search":""}')
 $.ajax({
                           url: localStorage.api_url_server+""+localStorage.api_url_searchshelf_tf,
                           data: '{"accessToken":"'+localStorage.token+'","refCode":"'+whcode_upn+'","search":""}',
@@ -143,6 +145,7 @@ $.ajax({
 }
 //======================================================================== show sh normal down ===============================================================
 function sh_normal_down(whcode_downn){
+console.log('เลือกชั้นเก็บปลายทาง '+localStorage.api_url_server+""+localStorage.api_url_searchshelf_tf+'{"accessToken":"'+localStorage.token+'","refCode":"'+whcode_downn+'","search":""}')
 $.ajax({
                           url: localStorage.api_url_server+""+localStorage.api_url_searchshelf_tf,
                           data: '{"accessToken":"'+localStorage.token+'","refCode":"'+whcode_downn+'","search":""}',
@@ -506,6 +509,7 @@ bar_p = document.getElementById('person').value;
 }
 //alert(bar_p);
 //alert(localStorage.api_url_server+" , "+barcode +" , "+localStorage.token);
+console.log('ค้นหารหัสพนักงาน ตอนกดโอนสินค้า'+localStorage.api_url_server+"NPReceiveWs/trn/v2/searchsale"+' '+'{"accessToken":"'+localStorage.token+'","type":"0","search":"'+bar_p+'"}');
 $.ajax({
                           url: localStorage.api_url_server+"NPReceiveWs/trn/v2/searchsale",
                           data: '{"accessToken":"'+localStorage.token+'","type":"0","search":"'+bar_p+'"}',

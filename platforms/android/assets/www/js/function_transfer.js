@@ -1113,7 +1113,7 @@ $.ajax({
 }
 //================================================================================cancel=====================================================================================
 function cancel_transfer(transferNo,refNo){
-
+console.log('ลบใบแสดงโอนสินค้า ee'+localStorage.api_url_server+""+localStorage.api_url_cancel_tf+'{"accessToken":"'+localStorage.token+'","docNo":"'+transferNo+'","refNo":"'+refNo+'","userID":"'+localStorage.username+'"}');
 if (confirm('ต้องการยกเลิกใบโอนสินค้าหรือไม่ ??')) {
 
 $.ajax({

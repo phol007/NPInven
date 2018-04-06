@@ -172,6 +172,7 @@ function sec_sh(){
 
 function searchLCup(localCode){
     loading();
+    console.log('tttt'+localCode);
     var stockWH = document.getElementById("up_itemwh").value;
     console.log(localStorage.api_url_server+"NPInventoryWs/V2/inven/searchShelfLocation");
     console.log('{"accessToken":"'+localStorage.token+'","searchWH":"'+stockWH+'","searchLocation":"'+localCode+'"}');
@@ -245,7 +246,6 @@ function search_upitem(itemCode){
     console.log('{"accessToken":"'+localStorage.token+'","searchWH":"'+upwh+'","searchLocation":"'+vlocal+'","searchItem":"'+itemCode+'"}');
     setTimeout(function(){
     var isset = false;
-
     $.ajax({
            url: localStorage.api_url_server+"NPInventoryWs/V2/inven/searchItemLocation",
            data: '{"accessToken":"'+localStorage.token+'","searchWH":"'+upwh+'","searchLocation":"'+vlocal+'","searchItem":"'+itemCode+'","type":"1"}',
@@ -331,7 +331,7 @@ function like_upitem(){
     var vitem = document.getElementById("up_searchItem").value;
     var itemlist = "<label style='width:100%; color:red; text-align:center;'><img src='images/ajax_loader.gif' width='20%'></label>";
     if(vitem != ""){
-    console.log('{"accessToken":"'+localStorage.token+'","searchWH":"'+upwh+'","searchLocation":"'+local+'","searchItem":"'+vitem+'","type":"0"}');
+    console.log('กรอกรหัสสินค้า แสดงในตาราง'+localStorage.api_url_server+"NPInventoryWs/V2/inven/searchItemLocation"+' '+'{"accessToken":"'+localStorage.token+'","searchWH":"'+upwh+'","searchLocation":"'+local+'","searchItem":"'+vitem+'","type":"0"}');
     $.ajax({
                url: localStorage.api_url_server+"NPInventoryWs/V2/inven/searchItemLocation",
                data: '{"accessToken":"'+localStorage.token+'","searchWH":"'+upwh+'","searchLocation":"'+local+'","searchItem":"'+vitem+'","type":"0"}',
@@ -350,8 +350,10 @@ function like_upitem(){
                            if(val['itemCode']==""){
                            itemlist = '<label style="width:100%; color:red; text-align:center;"> ** ไม่มีข้อมูลที่ค้นหา ** </label>';
                            }else{
+                           var itemCode = val['itemCode'].trim();
+
                            itemlist += '<label style="width:100%; font-size:14px; border-bottom:1px dashed gray;"';
-                           itemlist += 'onclick="search_upitem("'+val['itemCode'].trim()+'")">';
+                           itemlist += 'onclick="search_upitem(\''+itemCode+'\')">';
                            itemlist += '<div class="ui-grid-b">';
                            itemlist += '<div class="ui-block-a" style="width:35%; padding:2%; word-wrap:break-word;">';
                            itemlist += val['itemCode'].trim()+'</div>';
@@ -381,6 +383,7 @@ function like_uplocal(){
     var vlocal = document.getElementById("up_searchLocal").value;
     var locallist = "<label style='width:100%; color:red; text-align:center;'><img src='images/ajax_loader.gif' width='20%'></label>";
     if(vlocal!=""){
+    console.log('ค้นหาที่เก็บ อิอิ'+localStorage.api_url_server+"NPInventoryWs/V2/inven/searchShelfLocation"+' '+'{"accessToken":"'+localStorage.token+'","searchWH":"'+upwh+'","searchLocation":"'+vlocal+'"}');
     $.ajax({
                url: localStorage.api_url_server+"NPInventoryWs/V2/inven/searchShelfLocation",
                data: '{"accessToken":"'+localStorage.token+'","searchWH":"'+upwh+'","searchLocation":"'+vlocal+'"}',
@@ -399,8 +402,10 @@ function like_uplocal(){
                            if(val['locationCode']==""){
                            locallist = '<label style="width:100%; color:red; text-align:center;"> ** ไม่มีข้อมูลที่ค้นหา ** </label>';
                            }else{
+                           var code = val["locationCode"].trim();
+
                            locallist += '<label style="width:100%; font-size:14px; border-bottom:1px dashed gray;"';
-                           locallist += 'onclick="searchLCup("'+val['locationCode'].trim()+'")">';
+                           locallist += 'onclick="searchLCup(\''+code+'\')">';
                            locallist += '<div class="ui-grid-a">';
                            locallist += '<div class="ui-block-a" style="padding:2% 0% 2% 5%;">';
                            locallist += val['locationCode'].trim()+'</div>';
@@ -432,7 +437,6 @@ function add_location(){
     var itemCode = document.getElementById("UP_itemNo").value;
     var itemName = document.getElementById("UP_itemsName").value;
     var unitCode = document.getElementById("UP_unit").value;
-    console.log('{"accessToken":"'+localStorage.token+'","itemCode":"'+itemCode+'","unitCode":"'+unitCode+'","whCode":"'+wh+'","shelfCode":"'+loca+'","user":"'+user+'"}');
     $.ajax({
                    url: localStorage.api_url_server+"NPInventoryWs/V2/inven/insertItemLocation",
                    data: '{"accessToken":"'+localStorage.token+'","itemCode":"'+itemCode+'","unitCode":"'+unitCode+'","whCode":"'+wh+'","shelfCode":"'+loca+'","user":"'+user+'"}',

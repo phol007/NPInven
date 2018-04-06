@@ -24,7 +24,7 @@ window.addEventListener('native.onscanbarcode', function (schitem) {
 
                                         loading();
                                         console.log('{"accessToken":"'+localStorage.token+'","whCode":"'+localStorage.branch+'","itemCode":"'+bcitem+'"}');
-
+                                        console.log('ค้นหารายละเอียดสินค้า จจ'+localStorage.api_url_server+""+localStorage.api_url_profile_it+' '+'{"accessToken":"'+localStorage.token+'","whCode":"'+localStorage.branch+'","itemCode":"'+bcitem+'"}');
                                         $.ajax({
                                                 url: localStorage.api_url_server+""+localStorage.api_url_profile_it,
                                                 data: '{"accessToken":"'+localStorage.token+'","whCode":"'+localStorage.branch+'","itemCode":"'+bcitem+'"}',
@@ -564,7 +564,7 @@ function like_itemProfile(){
                                $.each(result.itemMasterList, function(key,val){
                                    itemlist += '<label style="width:100%; font-size:12px; border-bottom:1px dashed gray;"';
                                    itemlist += 'onclick="itemProfile(';
-                                   itemlist += val["itemCode"].trim();
+                                   itemlist += val['itemCode'].trim();
                                    itemlist += ')"><div class="ui-grid-b">';
                                    itemlist += '<div class="ui-block-a" style="width:35%;">';
                                    itemlist += val['itemCode'].trim()+'</div>';
