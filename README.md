@@ -519,7 +519,6 @@ method : post
 }
     
 ```
-
 **API แสดงข้อมูลก่อนโอนสินค้า  (เลือกชั้นเก็บต้นทาง,เลือกชั้นเก็บปลายทาง)**
 ``` 
 Url: http://app.nopadol.com:8080/path
@@ -723,7 +722,7 @@ method : post
     ]
 }
 ```
-**API ค้นหารายละเอียดสินค้า** /
+**API ค้นหารายละเอียดสินค้า**
 ``` 
 Url: http://app.nopadol.com:8080/path
 Path : /NPInventoryWs/V2/it/itemProfile
@@ -959,7 +958,6 @@ method : post
 }
 
 ```
-http://app.nopadol.com:8080/NPInventoryWs/V2/inven/insertItemLocation {"accessToken":"6695c6a0-839f-410e-8ad0-692afc8d649a","itemCode":"5001006","unitCode":"แกลลอน","whCode":"S1-A","shelfCode":"A01021","user":"56163"}
 **แสดงข้อมูลสินค้า (ตาราง)**
 ``` 
 Url: http://app.nopadol.com:8080/
