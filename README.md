@@ -927,11 +927,58 @@ method : post
             "locationCode": "A01012",
             "locationName": "A01012"
         },
-        {
+        {   
             "locationCode": "A01021",
             "locationName": "A01021"
         }
     ]
+}
+
+```
+**แสดงข้อมูลสินค้า (ตาราง)**
+``` 
+Url: http://app.nopadol.com:8080/
+Path : /NPInventoryWs/V2/inven/searchItemLocation
+data : {"accessToken":"1c73992c-32eb-4651-9784-88aa56dce3ee","searchWH":"S1-A","searchLocation":"A01021","searchItem":"A","type":"0"}
+method : post
+    {
+    "resp": {
+        "isSuccess": 1,
+        "processName": "Search Itme Location",
+        "processDesc": "Successful",
+        "data": null
+    },
+    "listItemLocation": [
+        {
+            "itemCode": "115.93.00484",
+            "itemName": "[P]มือจับ HAFELE C160mm. สีสแตนเลสสตีล  115.93.004",
+            "unitCode": "อัน",
+            "isStatus": 0
+        }
+    ]
+}
+
+```
+http://app.nopadol.com:8080/NPInventoryWs/V2/inven/insertItemLocation {"accessToken":"6695c6a0-839f-410e-8ad0-692afc8d649a","itemCode":"5001006","unitCode":"แกลลอน","whCode":"S1-A","shelfCode":"A01021","user":"56163"}
+**แสดงข้อมูลสินค้า (ตาราง)**
+``` 
+Url: http://app.nopadol.com:8080/
+Path : /NPInventoryWs/V2/inven/insertItemLocation
+data : {"accessToken":"6695c6a0-839f-410e-8ad0-692afc8d649a","itemCode":"5001006","unitCode":"แกลลอน","whCode":"S1-A","shelfCode":"A01021","user":"56163"}
+method : post
+    {
+    "resp": {
+        "isSuccess": 1,
+        "processName": "Insert Item",
+        "processDesc": "Successful",
+        "data": null
+    },
+    "accessToken": null,
+    "itemCode": null,
+    "unitCode": null,
+    "whCode": null,
+    "shelfCode": null,
+    "user": null
 }
 
 ```
