@@ -956,25 +956,73 @@ method : post
 }
 
 ```
-**แสดงข้อมูลสินค้า (ตาราง)**
+# Menu ระบบ ขอพิมพ์ป้ายราคา
+**GO API แสดงรายการขอพิมพ์ป้ายค้างพิมพ์ของแต่ละผู้ใช้งาน**
+**Label History**
 ``` 
-Url: http://app.nopadol.com:8080/
-Path : /NPInventoryWs/V2/inven/insertItemLocation
-data : {"accessToken":"6695c6a0-839f-410e-8ad0-692afc8d649a","itemCode":"5001006","unitCode":"แกลลอน","whCode":"S1-A","shelfCode":"A01021","user":"56163"}
-method : post
-    {
-    "resp": {
-        "isSuccess": 1,
-        "processName": "Insert Item",
-        "processDesc": "Successful",
-        "data": null
-    },
-    "accessToken": null,
-    "itemCode": null,
-    "unitCode": null,
-    "whCode": null,
-    "shelfCode": null,
-    "user": null
+Url: http://venus.nopadol.com:9002/
+Path : labels?access_token=aaa&keyword=56163 (ค้นหาตามUserIDของพนักงาน)
+method : get
+    response 200 : {
+		"status":"success",
+		“data”:[
+		 {
+            "item_code": "2200707",
+            "bar_code": "2200707",
+            "item_name": "(P) สิ่วเจาะไม้ 1\"",
+            "unit_code": "อัน",
+            "price": 50,
+            "qty": 1,
+            "label_type": "P1F2",
+            "lab_size": "P1",
+            "lab_from": "F2",
+            "label_type_name": "ป้ายราคาพิเศษ  21 ดวง/หน้า",
+            "creator_code": "56163",
+            "create_datetime": "2018-03-31T00:00:00Z"
+        },
+        {
+            "item_code": "4047212",
+            "bar_code": "4047212",
+            "item_name": "ประตู PVC BATHIC  70*200 BC 2 สีครีม เจาะลูกบิด (เคลือบ)",
+            "unit_code": "บาน",
+            "price": 1300,
+            "qty": 1,
+            "label_type": "P1F1",
+            "lab_size": "P1",
+            "lab_from": "F1",
+            "label_type_name": "ป้ายธรรมดา 21 ดวง/หน้า",
+            "creator_code": "56163",
+            "create_datetime": "2018-04-02T00:00:00Z"
+        },
+        {
+            "item_code": "5001006",
+            "bar_code": "5001006",
+            "item_name": "น้ำมันซักแห้ง ปลาเบ็ด กล.",
+            "unit_code": "แกลลอน",
+            "price": 130,
+            "qty": 3,
+            "label_type": "P1F1",
+            "lab_size": "P1",
+            "lab_from": "F1",
+            "label_type_name": "ป้ายธรรมดา 21 ดวง/หน้า",
+            "creator_code": "56163",
+            "create_datetime": "2018-04-05T00:00:00Z"
+        },
+        {
+            "item_code": "1002094",
+            "bar_code": "1002094",
+            "item_name": "รองพื้นปูนเก่า ดูลักษ์ มาชีล กล.",
+            "unit_code": "แกลลอน",
+            "price": 460,
+            "qty": 3,
+            "label_type": "P1F1",
+            "lab_size": "P1",
+            "lab_from": "F1",
+            "label_type_name": "ป้ายธรรมดา 21 ดวง/หน้า",
+            "creator_code": "56163",
+            "create_datetime": "2018-04-06T00:00:00Z"
+        }
+    ]
 }
 
 ```
