@@ -1025,4 +1025,25 @@ method : get
     ]
 }
 
+**GO API แสดงรายการขอพิมพ์ป้ายค้างพิมพ์ของแต่ละผู้ใช้งาน**
+**Label History**
+``` 
+Url: http://venus.nopadol.com:9002/
+Path : label
+method : post
+  payload :{
+           "ItemCode":"2200707"
+	   ,"BarCode":"2200707"
+	   ,"Qty":1
+	   ,"Price":45
+	   ,"LabelType":"P1F2"
+	   ,"CreatorCode":"56163"
+	   ,"unitcode":"อัน"
+        }
+  response 200 : {
+	   "status":"success"
+   	    "data": "Completed Insert"
+}
+
+
 ```
