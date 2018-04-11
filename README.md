@@ -1024,7 +1024,7 @@ method : get
         }
     ]
 }
-
+```
 **GO API แสดงรายการขอพิมพ์ป้ายค้างพิมพ์ของแต่ละผู้ใช้งาน**
 **Label History**
 ``` 
@@ -1044,6 +1044,4 @@ method : post
 	   "status":"success"
    	    "data": "Completed Insert"
 }
-
-
 ```
