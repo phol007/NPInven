@@ -4,7 +4,7 @@ window.addEventListener('native.onscanbarcode', function (schitem) {
        //alert(pr.scanResult);
       // console.log(schitem.scanResult);
        localStorage.barcode = schitem.scanResult;
-
+//        alert(schitem.scanResult);
        if(page == ""){
          page = $.mobile.activePage.attr('id');
        }
@@ -14,6 +14,13 @@ window.addEventListener('native.onscanbarcode', function (schitem) {
         switch(page){
                     case "searchitem" : itemProfile(localStorage.barcode);
                                     break;
+                    case "printpage" : typeprint(localStorage.barcode),
+                                       searchproduct(localStorage.barcode);
+                                    break;
+
+
+//                    case "printpage" : searchdetail_typeprint(localStorage.barcode);
+//                                    break;
                     }
 });
             function itemProfile(bcitem){

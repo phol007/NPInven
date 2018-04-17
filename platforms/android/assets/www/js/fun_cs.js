@@ -52,24 +52,161 @@ function search_wh(){
 }
 
 function typeprint(){
+            document.getElementById('idproduct').value = '';
+            document.getElementById('nameproduct').value = '';
+            document.getElementById('amountprice').value = '';
+            document.getElementById('itemcodea').value = '';
+            document.getElementById('itembarcodea').value = '';
+            document.getElementById('itempricea').value = '';
+            document.getElementById('itemunitcodea').value = '';
+
          var typeprint = "";
-          typeprint += '<select name="print" class="bt-cmp" style="width:100%; height:50px;" data-role="none">';
-          typeprint += '<option value="พิเศษ">พิเศษ</option>';
-          typeprint += '<option value="ธรรมดา">ธรรมดา</option>';
+          typeprint += '<select name="print" id="selectexnormal" class="bt-cmp" style="width:100%; height:50px;" data-role="none">';
+          typeprint += '<option value="F2">พิเศษ</option>';
+          typeprint += '<option value="F1">ธรรมดา</option>';
           typeprint += '</select>';
-
        document.getElementById("type_print").innerHTML = typeprint;
-
           var sizepage = "";
-           sizepage += '<select name="size" class="bt-cmp" style="width:100%; height:50px;" data-role="none">';
-           sizepage += '<option value="P1 21 ดวง/หน้า">P1 21 ดวง/หน้า</option>';
-           sizepage += '<option value="P2 3 ดวง/หน้า">P2 3 ดวง/หน้า</option>';
-           sizepage += '<option value="P3 2 ดวง/หน้า">P3 2 ดวง/หน้า</option>';
-           sizepage += '<option value="P4 A4">P4 A4</option>';
-
+           sizepage += '<select name="size" id="selectsize" class="bt-cmp" style="width:100%; height:50px;" data-role="none">';
+           sizepage += '<option value="P1">P1 21 ดวง/หน้า</option>';
+           sizepage += '<option value="P2">P2 3 ดวง/หน้า</option>';
+           sizepage += '<option value="P3">P3 2 ดวง/หน้า</option>';
+           sizepage += '<option value="P4">P4 A4</option>';
        document.getElementById("size_page").innerHTML = sizepage;
 
-       $.mobile.changePage('#printpage',{transition: 'slidefade'});
+     var listprint = "";
+        console.log("listprint "+"http://venus.nopadol.com:9002/"+"labels?access_token=aaa&keyword="+" username :"+localStorage.username);
+                 loading();
+                  $.ajax({
+                          url: "http://venus.nopadol.com:9002/"+"labels?access_token=aaa&keyword="+localStorage.username,
+                          contentType: "application/json; charset=utf-8",
+                          dataType: "json",
+                          type: "GET",
+                          cache: false,
+                          success: function(result){
+//                              console.log('data '+JSON.stringify(result.data));
+                                        listprint  +=   '<div class="ui-grid-d" style="border-top:1px solid black; border-bottom:1px solid black; padding:2% 0; width:100%;">';
+                                    	listprint  += '<div class="ui-block-a" style="font-size: 12px; width:21%;"><b>รหัสสินค้า</b></div>';
+                                    	listprint  += '<div class="ui-block-b" style="font-size: 12px; width:17.6%;"><b>พิมพ์</b></div>';
+                                    	listprint  += '<div class="ui-block-c" style="font-size: 12px; width:28%;"><b>ชื่อสินค้า</b></div>';
+                                    	listprint  += '<div class="ui-block-d" style="font-size: 12px; width:17.6%;"><b>กระดาษ</b></div>';
+                                    	listprint  += '<div class="ui-block-e" style="font-size: 12px; width:15.6%;"><b>หน่วยนับ</b></div>';
+                                        listprint  += '</div>';
+
+                                   $.each(result.data, function(key, val) {
+                                        listprint += '<div class="ui-grid-d" class="csdelete" csdelete-id="'+val['item_code']+'/'+val['bar_code']+'/'+val['qty']+'/'+val['price']+'/'+val['LabelType']+'/'+val['creator_code']+'/'+val['unit_code']+'" csdelete-detail-id="'+val['item_code']+'" id="'+val['item_code']+'" style="padding-bottom:4%; padding-top:1%">';
+                                        listprint += '<div class="ui-block-a" style="font-size: 12px; width:20%;" >';
+                                        listprint += val['item_code']+'</div>';
+                                        listprint += '<div class="ui-block-d" style="font-size: 12px; width:10%;  text-align: center;" >';
+                                        listprint += val['qty']+'</div>';
+                                        listprint += '<div class="ui-block-b" style="font-size: 12px; width:36%;" >';
+                                        listprint += val['item_name']+'</div>';
+                                        listprint += '<div class="ui-block-c" style="font-size: 12px; width:15%; text-align: center;" >';
+                                        listprint += val['label_type']+'</div>';
+                                        listprint += '<div class="ui-block-e" style="font-size: 12px; width:18%; text-align: center;" >';
+                                        listprint += val['unit_code']+'</div>';
+                                        listprint += '</div>';
+                                   });
+                                   document.getElementById("detailprint").innerHTML = listprint;
+                                  $.mobile.changePage('#printpage',{transition: 'slidefade'});
+                                  closeload();
+                          },
+                          error: function (err){
+                              console.log(JSON.stringify(err));
+                             // alertify.alert("การเชื่อมต่อฐานข้อมูลมีปัญหา กรุณาตรวจสอบการเชื่อมต่ออินเตอร์เน็ตของท่าน");
+
+
+                            //  $load.popup("close");
+                          }
+                  });
+
+}
+
+function searchproduct(bcitem){
+loading();
+    $.ajax({
+                              url: localStorage.api_url_server+"ReOrderWS/reorder/itemdetails",
+                              data: '{"access_token":"'+localStorage.token+'","profit_code":"'+localStorage.profit+'","search":"'+bcitem+'"}',
+                              contentType: "application/json; charset=utf-8",
+                              dataType: "json",
+                              type: "POST",
+                              cache: false,
+                              success: function(result){
+                              console.log('api เปลี่ยน'+JSON.stringify(result));
+//                              console.log('ดูนอก '+ JSON.stringify(result.listLikeItem));
+//                              console.log('แรก '+ JSON.stringify(result.listLikeItem[0].itemName));
+                                document.getElementById('idproduct').value = result.item_code;
+                                document.getElementById('nameproduct').value = result.item_name;
+
+                                //hidden
+                                document.getElementById('itemcodea').value = result.item_code;
+                                document.getElementById('itembarcodea').value = result.item_barcode;
+                                document.getElementById('itempricea').value = result.item_price;
+                                document.getElementById('itemunitcodea').value = result.item_unit_code;
+                                //hidden
+
+                                document.getElementById('amountprice').value = '';
+                                document.getElementById('amountprice').focus();
+                                closeload();
+                              },
+                              error: function (err){
+                                  console.log(JSON.stringify(err));
+                                 // alertify.alert("การเชื่อมต่อฐานข้อมูลมีปัญหา กรุณาตรวจสอบการเชื่อมต่ออินเตอร์เน็ตของท่าน");
+                                switch_url();
+
+                                //  $load.popup("close");
+                              }
+                      });
+}
+function insertlabel(){
+//hidden
+var itemcode = document.getElementById('itemcodea').value;
+var itembarcode = document.getElementById('itembarcodea').value;
+var itemprice = document.getElementById('itempricea').value;
+var itemunitcode = document.getElementById('itemunitcodea').value;
+//hidden
+var nameproduct = document.getElementById('nameproduct').value;
+var extranormal = document.getElementById('selectexnormal').value;
+var typesize = document.getElementById('selectsize').value;
+var BarCode = document.getElementById('idproduct').value;
+var amount = document.getElementById('amountprice').value;
+
+var outputselect = typesize.trim()+extranormal.trim();
+
+if(amount&&BarCode&&nameproduct != ''){
+    alertify.set({ labels: {
+        cancel : "ยกเลิก",
+        ok     : "บันทึก"
+    } });
+//alert(outputselect);
+//alert('hidden'+itemcode+' '+itembarcode+' '+itemprice+' '+itemunitcode+'    value'+' n'+nameproduct+' '+extranormal+' '+typesize+' '+BarCode+' '+amount);
+alertify.confirm("ต้องการขอพิมป้าย รหัส "+BarCode+"  หรือไม่ ?", function (e) {
+                                                if (e) {
+                              $.ajax({
+                              url: "http://venus.nopadol.com:9002/label",
+                              data: '{"ItemCode":"'+itemcode+'","BarCode":"'+BarCode+'","Qty":'+amount+',"Price":'+itemprice+',"LabelType":"'+outputselect+'","CreatorCode":"'+localStorage.username+'","unitcode":"'+itemunitcode+'"}',
+                              contentType: "application/json; charset=utf-8",
+                              dataType: "json",
+                              type: "POST",
+                              cache: false,
+                              success: function(result){
+                              console.log((result));
+                              alertify.success('บันทึกเสร็จเรียบร้อย');
+                                    typeprint();
+                              },
+                              error: function (err){
+                                  console.log(err);
+
+                              }
+                                       });
+                                                }else{
+
+                                                }
+                                            });
+}else{
+alertify.error('กรุณากรอกข้อมูลให้ครบ');
+}
+
 }
 
 function sec_sh(){

@@ -43,13 +43,13 @@
                 <img src="images/inventory-logo.png" class="logo">
                 </label>
                 <label class="username">
-                    <input name="username" type="text" value=""
+                    <input name="username" type="text" value="56163"
                            class="validate[required,custom[onlyLetter],length[0,100]] feedback-input"
                            placeholder="Username" id="username" data-role="none"/>
                 </label>
 
                 <label class="password">
-                    <input name="passwd" type="password" value=""
+                    <input name="passwd" type="password" value="Liverbee24"
                            class="validate[required,custom[password],length[0,100]] feedback-input"
                            id="passwd" placeholder="Password" data-role="none"/>
                 </label>
@@ -2596,20 +2596,25 @@ ju
                 <div class="col-md-6 col-xs-6"><div id="size_page"></div></div>
         </div>
         <div class="row">
-            <div class="col-md-6 col-xs-6"><input type="text" name="idprice" id="idprice" class="form-control" placeholder="รหัสสินค้า"></div>
-            <div class="col-md-6 col-xs-6"><input type="text" name="nameprice" id="nameprice" class="form-control" placeholder="ชื่อ"></div>
+            <div class="col-md-6 col-xs-6"><input type="text" name="idprice" readonly id="idproduct" class="form-control" placeholder="รหัสสินค้า"></div>
+            <div class="col-md-6 col-xs-6"><input type="text" name="nameprice" readonly id="nameproduct" class="form-control" placeholder="ชื่อ"></div>
         </div>
         <div class="row">
-        <div class="col-md-6 col-xs-6"><input type="text" name="idprice" id="amountprice" class="form-control" placeholder="จำนวนที่ต้องการ"></div>
+        <div class="col-md-6 col-xs-6"><input type="number" name="idprice" id="amountprice" class="form-control" placeholder="จำนวนที่ต้องการ"></div>
         </div>
+        <input type="hidden" id="itemcodea" >
+        <input type="hidden" id="itembarcodea" >
+        <input type="hidden" id="itempricea" >
+        <input type="hidden" id="itemunitcodea" >
 
+        <div id="detailprint"></div>
 
     </div>
     <div data-role="footer" class="footer">
         <div data-role="navbar">
             <ul>
                 <li><a href="#pagetwo" class="ui-btn-active ui-state-persist" id="footer-nav" data-icon="home" data-transition="slidefade" data-direction="reverse">หน้าหลัก</a></li>
-                <li onclick="focus_search_item()"><a href="#receive_search" class="ui-btn-active ui-state-persist" data-icon="search" id="footer-nav" data-transition="pop">ค้นหาสินค้า</a></li>
+                <li><a href="javascript:insertlabel()" class="ui-btn-active ui-state-persist" data-icon="plus" id="footer-nav" data-transition="slidefade">บันทึกข้อมูล</a></li>
             </ul>
         </div>
     </div>
