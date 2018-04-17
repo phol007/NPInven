@@ -2590,7 +2590,7 @@ ju
         <a href="#myPanel_printpage"  data-role="none"><img src="images/grid.png" class="open_panel"></a>
     </div>
     <div  data-role="main" class="ui-content" id="main">
-        <label style="font-size:24px; margin-bottom:0;"><img src="images/label.png" width="20"><b> ระบบพิมป้าย</b></label><hr>
+        <label style="font-size:24px; margin-bottom:0;"><img src="images/label.png" width="20"><b> ระบบพิมป้าย </b></label><hr>
         <div class="row">
             <div class="col-md-6 col-xs-6"><div id="type_print"></div></div>
                 <div class="col-md-6 col-xs-6"><div id="size_page"></div></div>
@@ -2601,6 +2601,7 @@ ju
         </div>
         <div class="row">
         <div class="col-md-6 col-xs-6"><input type="number"  name="idprice" id="amountprice" class="form-control" placeholder="จำนวนที่ต้องการ"></div>
+            <div class="col-md-6 col-xs-6"><button onclick="gosearchitem()" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-search">สินค้า</button></div>
         </div>
         <input type="hidden" id="itemcodea" >
         <input type="hidden" id="itembarcodea" >
@@ -2624,6 +2625,48 @@ ju
     </div>
 </div>
 <!--//////////////////////////////////////////////////////////// printpage ////////////////////////////////////////////////////////////////-->
+
+<!--////////////////////////////////////////////////////////////print searchitem ////////////////////////////////////////////////////////////////-->
+<div data-role="page" id="printpage_searchitem">
+    <div data-role="none" class="header">
+        <a href="#myPanel_mg_loca"  data-role="none"><img src="images/grid.png" class="open_panel"></a>
+    </div>
+
+    <div  data-role="main" class="ui-content" id="main">
+        <label style="font-size:24px;"><img src="images/Productdocument.png" width="32"><b> ค้นหาสินค้า</b></label>
+        <label id="shelves1" style="padding:2%; width:100%; margin-left:0;">
+            <!--<img src="images/barcoder-icon.png" width="60%" style="margin:0% 0% 0% 5%;">-->
+            <input type="text" id="pr_searchItem" placeholder="กรอกรหัสสินค้าหรือชื่อสินค้า.." onkeyup="finditem()" style="margin:2% 5% 2% 5%;">
+            <div style="width:100%; height:250px; border:1px solid #dddcd1; background-color:#fff; border-radius:10px; margin-bottom:3%; padding: 1%;">
+                <label style='width:100%; border-bottom:1px black solid; font-size:12px;'>
+                    <div style="width:35%; padding:1%; float:left;"><b>รหัส</b></div>
+                    <div style="width:40%; padding:1%; float:left;"><b>ชื่อ</b></div>
+                    <div style="width:25%; padding:1%; float:left;"><b>หน่วยนับ</b></div>
+                    <br style="clear:both;">
+                </label>
+                <div  style="overflow: auto; width:100%; height:200px; text-align:left;">
+                    <div id="pr_item">
+                        <label style='width:100%; color:red; text-align:center;'> ** ไม่มีการค้นหา ** </label>
+                    </div>
+                </div>
+
+            </div>
+            </label>
+    </div>
+
+    <div data-role="footer" class="footer">
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#printpage" class="ui-btn-active ui-state-persist" data-icon="delete" id="footer-nav" data-transition="slidefade" data-direction="reverse">ยกเลิก</a></li>
+            </ul>
+        </div>
+    </div>
+    <div data-role="panel" id="myPanel_mg_loca" style="padding:0;" data-display="overlay">
+        <div id="tree" class="tree"></div>
+    </div>
+</div>
+
+<!--//////////////////////////////////////////////////////////// print searchitem ////////////////////////////////////////////////////////////////-->
 
 <!--//////////////////////////////////////////////////////////////// setting ////////////////////////////////////////////////////////////////-->
 <div data-role="page" id="setting">

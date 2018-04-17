@@ -50,6 +50,79 @@ function sec_wh(){
 function search_wh(){
     searchWHis($('select[name="wh"] :selected').attr('value'));
 }
+function gosearchitem(){
+$.mobile.changePage('#printpage_searchitem',{transition: 'slidefade'});
+}
+
+function finditem(){
+var searchitem = document.getElementById('pr_searchItem').value
+
+    $.ajax({
+            url: localStorage.api_url_server+"NPInventoryWs/V2/inven/searchLikeItem",
+            data: '{"accessToken":"'+localStorage.token+'","searchItem":"'+searchitem+'"}',
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            type: "POST",
+            cache: false,
+            success: function(result){
+            console.log('data '+JSON.stringify(result));
+                    itemlist = '';
+                    $.each(result.listLikeItem, function(key,val){
+                     itemlist += '<label style="width:100%; font-size:14px; border-bottom:1px dashed gray;"';
+                     itemlist += 'onclick="detailitem(\''+val["itemCode"]+'\')"><div class="ui-grid-b">';
+                     itemlist += '<div class="ui-block-a" style="width:35%; padding:2%; word-wrap:break-word;">';
+                     itemlist += val['itemCode']+'</div>';
+                     itemlist += '<div class="ui-block-b" style="width:40%; word-wrap:break-word;">';
+                     itemlist += val['itemName']+'</div>';
+                     itemlist += '<div class="ui-block-c" style="width:25%; text-align:center; word-wrap:break-word;">';
+                     itemlist += val['unitCode']+'</div></div></label>';
+                      });
+                      document.getElementById("pr_item").innerHTML = itemlist;
+                  },
+            error: function(err){
+               alertify.error('ข้อมูลผิดพลาด');
+             }
+           });
+}
+
+function detailitem(bcitem){
+    $.mobile.changePage('#printpage',{transition: 'slidefade'});
+    loading();
+        $.ajax({
+                                  url: localStorage.api_url_server+"ReOrderWS/reorder/itemdetails",
+                                  data: '{"access_token":"'+localStorage.token+'","profit_code":"'+localStorage.profit+'","search":"'+bcitem+'"}',
+                                  contentType: "application/json; charset=utf-8",
+                                  dataType: "json",
+                                  type: "POST",
+                                  cache: false,
+                                  success: function(result){
+//                                alert(JSON.stringify(result));
+                                  console.log('api เปลี่ยน'+JSON.stringify(result));
+    //                              console.log('ดูนอก '+ JSON.stringify(result.listLikeItem));
+    //                              console.log('แรก '+ JSON.stringify(result.listLikeItem[0].itemName));
+                                    document.getElementById('idproduct').value = result.item_code;
+                                    document.getElementById('nameproduct').value = result.item_name;
+
+                                    //hidden
+                                    document.getElementById('itemcodea').value = result.item_code;
+                                    document.getElementById('itembarcodea').value = result.item_barcode;
+                                    document.getElementById('itempricea').value = result.item_price;
+                                    document.getElementById('itemunitcodea').value = result.item_unit_code;
+                                    //hidden
+
+                                    document.getElementById('amountprice').value = '';
+                                    document.getElementById('amountprice').focus();
+                                   closeload();
+                                  },
+                                  error: function (err){
+                                      console.log(JSON.stringify(err));
+                                     // alertify.alert("การเชื่อมต่อฐานข้อมูลมีปัญหา กรุณาตรวจสอบการเชื่อมต่ออินเตอร์เน็ตของท่าน");
+                                    switch_url();
+
+                                    //  $load.popup("close");
+                                  }
+                          });
+}
 
 
 function typeprint(){
@@ -161,6 +234,7 @@ loading();
                               }
                       });
 }
+
 var input = document.getElementById("amountprice");
 input.addEventListener("keyup", function(event) {
     event.preventDefault();
@@ -841,7 +915,7 @@ function savedata(){
     setTimeout(function(){
          var DocNo = document.getElementById("valdocIS").value;
             var UserID = localStorage.username;
-            console.log('บันทึกข้อมูลการนับสต๊อก ถึงแย้ว '+localStorage.api_url_server+""+localStorage.api_url_confirm_is+'{"accessToken":"'+localStorage.token+'","docNo":"'+DocNo+'","user":"'+UserID+'","isCancel":"0"}');
+            console.log('บันทึกข้อมูลการนับสต๊อก  '+localStorage.api_url_server+""+localStorage.api_url_confirm_is+'{"accessToken":"'+localStorage.token+'","docNo":"'+DocNo+'","user":"'+UserID+'","isCancel":"0"}');
             console.log('Update IS :{"DocNo":"'+DocNo+'","userID":"'+UserID+'","isCancel":"0"}');
             $.ajax({
                 url: localStorage.api_url_server+""+localStorage.api_url_confirm_is,
@@ -1089,7 +1163,13 @@ $(document).on('taphold', '.csdeletecpr', function() {
 
 function csDeletprint(ItemCode,BarCode,Qty,Price,LabelType,CreatorCode,unitcode){
 //alert(ItemCode+'/'+BarCode+'/'+Qty+'/'+Price+'/'+LabelType+'/'+CreatorCode+'/'+unitcode);
-
+if(Price == 'undefined'){
+var Price = 1;
+}
+alertify.set({ labels: {
+        ok     : "บันทึก",
+        cancel : "ยกเลิก"
+    } });
 alertify.confirm("ต้องการลบ รหัส "+ItemCode+"  หรือไม่ ?", function (e) {
                                                 if (e) {
                               $.ajax({
@@ -1101,7 +1181,7 @@ alertify.confirm("ต้องการลบ รหัส "+ItemCode+"  หร�
                               cache: false,
                               success: function(result){
                               console.log((result));
-                              alertify.success('ลบเรียบร้อย');
+                              alertify.error('ลบเรียบร้อย');
                                     typeprint();
                               },
                               error: function (err){

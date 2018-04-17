@@ -17,6 +17,9 @@ window.addEventListener('native.onscanbarcode', function (schitem) {
                     case "printpage" : typeprint(localStorage.barcode),
                                        searchproduct(localStorage.barcode);
                                     break;
+                    case "printpage_searchitem" : detailitem(localStorage.barcode);
+                                    break;
+
 
 
 //                    case "printpage" : searchdetail_typeprint(localStorage.barcode);
