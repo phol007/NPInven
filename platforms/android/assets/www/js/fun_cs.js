@@ -51,14 +51,15 @@ function search_wh(){
     searchWHis($('select[name="wh"] :selected').attr('value'));
 }
 
+
 function typeprint(){
-            document.getElementById('idproduct').value = '';
-            document.getElementById('nameproduct').value = '';
-            document.getElementById('amountprice').value = '';
-            document.getElementById('itemcodea').value = '';
-            document.getElementById('itembarcodea').value = '';
-            document.getElementById('itempricea').value = '';
-            document.getElementById('itemunitcodea').value = '';
+         document.getElementById('idproduct').value = '';
+         document.getElementById('nameproduct').value = '';
+         document.getElementById('amountprice').value = '';
+         document.getElementById('itemcodea').value = '';
+         document.getElementById('itembarcodea').value = '';
+         document.getElementById('itempricea').value = '';
+         document.getElementById('itemunitcodea').value = '';
 
          var typeprint = "";
           typeprint += '<select name="print" id="selectexnormal" class="bt-cmp" style="width:100%; height:50px;" data-role="none">';
@@ -94,7 +95,8 @@ function typeprint(){
                                         listprint  += '</div>';
 
                                    $.each(result.data, function(key, val) {
-                                        listprint += '<div class="ui-grid-d" class="csdelete" csdelete-id="'+val['item_code']+'/'+val['bar_code']+'/'+val['qty']+'/'+val['price']+'/'+val['LabelType']+'/'+val['creator_code']+'/'+val['unit_code']+'" csdelete-detail-id="'+val['item_code']+'" id="'+val['item_code']+'" style="padding-bottom:4%; padding-top:1%">';
+                                        listprint += '<label class="csdeletecpr" csdelete-id="'+val['item_code']+'/'+val['bar_code']+'/'+val['qty']+'/'+val['price']+'/'+val['label_type']+'/'+val['creator_code']+'/'+val['unit_code']+'" csdelete-detail-id="'+val['item_code']+'" id="'+val['item_code']+'" style="text-align:center; border-bottom:1px gray dashed;">';
+                                        listprint += '<div class="ui-grid-d" style="padding-bottom:4%; padding-top:1%">';
                                         listprint += '<div class="ui-block-a" style="font-size: 12px; width:20%;" >';
                                         listprint += val['item_code']+'</div>';
                                         listprint += '<div class="ui-block-d" style="font-size: 12px; width:10%;  text-align: center;" >';
@@ -105,7 +107,7 @@ function typeprint(){
                                         listprint += val['label_type']+'</div>';
                                         listprint += '<div class="ui-block-e" style="font-size: 12px; width:18%; text-align: center;" >';
                                         listprint += val['unit_code']+'</div>';
-                                        listprint += '</div>';
+                                        listprint += '</div></label>';
                                    });
                                    document.getElementById("detailprint").innerHTML = listprint;
                                   $.mobile.changePage('#printpage',{transition: 'slidefade'});
@@ -132,6 +134,7 @@ loading();
                               type: "POST",
                               cache: false,
                               success: function(result){
+                              closeload();
                               console.log('api เปลี่ยน'+JSON.stringify(result));
 //                              console.log('ดูนอก '+ JSON.stringify(result.listLikeItem));
 //                              console.log('แรก '+ JSON.stringify(result.listLikeItem[0].itemName));
@@ -147,7 +150,7 @@ loading();
 
                                 document.getElementById('amountprice').value = '';
                                 document.getElementById('amountprice').focus();
-                                closeload();
+
                               },
                               error: function (err){
                                   console.log(JSON.stringify(err));
@@ -158,6 +161,14 @@ loading();
                               }
                       });
 }
+var input = document.getElementById("amountprice");
+input.addEventListener("keyup", function(event) {
+    event.preventDefault();
+    if (event.keyCode === 13) {
+        insertlabel();
+    }
+});
+
 function insertlabel(){
 //hidden
 var itemcode = document.getElementById('itemcodea').value;
@@ -1042,6 +1053,69 @@ function c_s(){
         }
     });
 }
+//////////                     cancel print                  //////////////
+$(document).on('taphold', '.csdeletecpr', function() {
+      console.log("this hold");
+      var link_name = $(this).attr('csdelete-id');
+      console.log(link_name);
+      var link_data = $(this).attr('csdelete-detail-id');
+      var link_id = $(this).attr('id');
+      var data = link_name.split("/");
+      var $csd = $("<div/>").popup({
+        dismissible: true,
+        //theme: "a",
+        transition: "pop",
+        arrow: "b",
+        positionTo: '#'+link_id
+        }).on("popupafterclose", function () {
+    //remove the popup when closing
+    $(this).remove();
+    }).css({
+   'padding': '10%',
+   'color': 'white',
+   'background': '#63b8ff'
+   });
+    console.log(link_name);
+    console.log('#'+link_id);
+    $("<a>", {
+    text: "Delete",
+    href: "#",
+    onclick: "csDeletprint('"+data[0]+"','"+data[1]+"', '"+data[2]+"','"+data[3]+"','"+data[4]+"','"+data[5]+"','"+data[6]+"');"
+    }).appendTo($csd);
+
+    $csd.popup('open').enhanceWithin();
+
+    });
+
+function csDeletprint(ItemCode,BarCode,Qty,Price,LabelType,CreatorCode,unitcode){
+//alert(ItemCode+'/'+BarCode+'/'+Qty+'/'+Price+'/'+LabelType+'/'+CreatorCode+'/'+unitcode);
+
+alertify.confirm("ต้องการลบ รหัส "+ItemCode+"  หรือไม่ ?", function (e) {
+                                                if (e) {
+                              $.ajax({
+                              url: "http://venus.nopadol.com:9002/labelcancel",
+                              data: '{"ItemCode":"'+ItemCode+'","BarCode":"'+BarCode+'","Qty":'+Qty+',"Price":'+Price+',"LabelType":"'+LabelType+'","CreatorCode":"'+CreatorCode+'","unitcode":"'+unitcode+'"}',
+                              contentType: "application/json; charset=utf-8",
+                              dataType: "json",
+                              type: "POST",
+                              cache: false,
+                              success: function(result){
+                              console.log((result));
+                              alertify.success('ลบเรียบร้อย');
+                                    typeprint();
+                              },
+                              error: function (err){
+                                  console.log(err);
+
+                              }
+                                       });
+                                                }else{
+
+                                                }
+                                            });
+}
+
+////..................................................//////
 
 
 ////////////////////////////////////////////////////////////

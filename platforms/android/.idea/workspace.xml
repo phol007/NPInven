@@ -7,24 +7,32 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="43971b06-a339-41b4-96fa-898a969182ae" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/__local_aars____home_it10n_Rnpinven_test_NPInven_platforms_android_libs_com_google_zxing_client_android_captureactivity_jar_unspecified_jar.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/__local_aars____home_it10n_backupnut_NPINVENz_NPInven_platforms_android_libs_com_google_zxing_client_android_captureactivity_jar_unspecified_jar.xml" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/fileHashes/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/4.1/fileHashes/fileHashes.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/fileHashes/fileHashes.lock" afterPath="$PROJECT_DIR$/.gradle/4.1/fileHashes/fileHashes.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/javaCompile/javaCompile.lock" afterPath="$PROJECT_DIR$/.gradle/4.1/javaCompile/javaCompile.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/javaCompile/taskHistory.bin" afterPath="$PROJECT_DIR$/.gradle/4.1/javaCompile/taskHistory.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/javaCompile/taskJars.bin" afterPath="$PROJECT_DIR$/.gradle/4.1/javaCompile/taskJars.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/taskHistory/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/4.1/taskHistory/fileSnapshots.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/taskHistory/taskHistory.bin" afterPath="$PROJECT_DIR$/.gradle/4.1/taskHistory/taskHistory.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/taskHistory/taskHistory.lock" afterPath="$PROJECT_DIR$/.gradle/4.1/taskHistory/taskHistory.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CordovaLib/build/generated/mockable-android-23.v3.jar" afterPath="$PROJECT_DIR$/CordovaLib/build/generated/mockable-android-23.v3.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CordovaLib/build/intermediates/incremental/debug-mergeJniLibs/merge-state" afterPath="$PROJECT_DIR$/CordovaLib/build/intermediates/incremental/debug-mergeJniLibs/merge-state" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CordovaLib/CordovaLib.iml" afterPath="$PROJECT_DIR$/CordovaLib/CordovaLib.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CordovaLib/build/intermediates/incremental/mergeDebugAndroidTestResources/compile-file-map.properties" afterPath="$PROJECT_DIR$/CordovaLib/build/intermediates/incremental/mergeDebugAndroidTestResources/compile-file-map.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CordovaLib/build/intermediates/incremental/mergeDebugAndroidTestResources/merger.xml" afterPath="$PROJECT_DIR$/CordovaLib/build/intermediates/incremental/mergeDebugAndroidTestResources/merger.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CordovaLib/build/intermediates/incremental/mergeDebugAssets/merger.xml" afterPath="$PROJECT_DIR$/CordovaLib/build/intermediates/incremental/mergeDebugAssets/merger.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CordovaLib/build/intermediates/incremental/mergeDebugJniLibFolders/merger.xml" afterPath="$PROJECT_DIR$/CordovaLib/build/intermediates/incremental/mergeDebugJniLibFolders/merger.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CordovaLib/build/intermediates/incremental/mergeDebugShaders/merger.xml" afterPath="$PROJECT_DIR$/CordovaLib/build/intermediates/incremental/mergeDebugShaders/merger.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CordovaLib/build/intermediates/incremental/packageDebugResources/compile-file-map.properties" afterPath="$PROJECT_DIR$/CordovaLib/build/intermediates/incremental/packageDebugResources/compile-file-map.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CordovaLib/build/intermediates/incremental/packageDebugResources/merger.xml" afterPath="$PROJECT_DIR$/CordovaLib/build/intermediates/incremental/packageDebugResources/merger.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CordovaLib/build/intermediates/transforms/mergeJniLibs/debug/__content__.json" afterPath="$PROJECT_DIR$/CordovaLib/build/intermediates/transforms/mergeJniLibs/debug/__content__.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CordovaLib/build/outputs/logs/manifest-merger-debug-report.txt" afterPath="$PROJECT_DIR$/CordovaLib/build/outputs/logs/manifest-merger-debug-report.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android.iml" afterPath="$PROJECT_DIR$/android.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/www/index.html" afterPath="$PROJECT_DIR$/assets/www/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/www/js/fun_cs.js" afterPath="$PROJECT_DIR$/assets/www/js/fun_cs.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/www/js/fun_dpitem.js" afterPath="$PROJECT_DIR$/assets/www/js/fun_dpitem.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/www/js/fun_mgloca.js" afterPath="$PROJECT_DIR$/assets/www/js/fun_mgloca.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/www/js/fun_searchitem.js" afterPath="$PROJECT_DIR$/assets/www/js/fun_searchitem.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/www/js/function_transfer.js" afterPath="$PROJECT_DIR$/assets/www/js/function_transfer.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/www/js/function_transfer_n.js" afterPath="$PROJECT_DIR$/assets/www/js/function_transfer_n.js" />
     </list>
     <ignored path="android.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -59,30 +67,49 @@
     <favorites_list name="android" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/assets/www/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="267">
+              <caret line="2597" column="25" lean-forward="false" selection-start-line="2597" selection-start-column="25" selection-end-line="2597" selection-end-column="25" />
+              <folding>
+                <element signature="e#1482#1521#0" expanded="true" />
+                <element signature="e#1584#1609#0" expanded="true" />
+                <element signature="e#1634#1672#0" expanded="true" />
+                <element signature="e#66348#66367#0" expanded="true" />
+                <element signature="e#66467#66488#0" expanded="true" />
+                <element signature="e#66564#66586#0" expanded="true" />
+                <element signature="e#88109#88242#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="fun_cs.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/assets/www/js/fun_cs.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="296">
+              <caret line="54" column="21" lean-forward="true" selection-start-line="54" selection-start-column="21" selection-end-line="54" selection-end-column="21" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="fun_searchitem.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/assets/www/js/fun_searchitem.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="280">
+              <caret line="14" column="40" lean-forward="false" selection-start-line="14" selection-start-column="40" selection-end-line="14" selection-end-column="40" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>'onclick=&quot;searchMGItem('+val[&quot;itemCode&quot;]+')&quot;</find>
-      <find>'onclick=&quot;searchMGItem('+val[&quot;itemCode&quot;]+')</find>
-      <find>'onclick=&quot;searchMGItem('+val[&quot;itemCode&quot;]+'</find>
-      <find>'onclick=&quot;searchMGItem('+val[&quot;itemCode&quot;]+</find>
-      <find>'onclick=searchMGItem('+val[&quot;itemCode&quot;]+</find>
-      <find>searchMGItem('+val[&quot;itemCode&quot;]+</find>
-      <find>กรอกที่เก็บสินค้า..</find>
-      <find>เช็คสต๊อก</find>
-      <find>rewh</find>
-      <find>searchitem</find>
-      <find>like_itemProfile</find>
-      <find>de-item</find>
-      <find>ระบบตรวจสอบสินค้า</find>
-      <find>like_uplocal</find>
-      <find>searchMGItem</find>
-      <find>locallist</find>
-      <find>like_locallist</find>
-      <find>summary_list</find>
-      <find>test</find>
-      <find>searchLCup</find>
       <find>like_upitemlist</find>
       <find>กรอกรหัสสินค้าหรือชื่อสินค้า..</find>
       <find />
@@ -93,6 +120,26 @@
       <find>like_upitem</find>
       <find>search_upitem</find>
       <find>กรอกรหัสสินค้าหรือชื่อสินค้า</find>
+      <find>$PROJECT_DIR$/../..</find>
+      <find>itemcodea</find>
+      <find>searchproduct</find>
+      <find>onscanbarcode</find>
+      <find>csdelete-id</find>
+      <find>csdeletec</find>
+      <find>csdelete-detail-id</find>
+      <find>csdelet</find>
+      <find>csDeletprint</find>
+      <find>LabelType</find>
+      <find>unit_code</find>
+      <find>confirm</find>
+      <find>csdelete</find>
+      <find>typeprint</find>
+      <find>รหัสสินค้า</find>
+      <find>เลือกคลังสินค้า</find>
+      <find>insertlabel()</find>
+      <find>wh_list</find>
+      <find>csdeletecpr</find>
+      <find>ระบบนับสต๊อกสินค้า</find>
     </findStrings>
     <replaceStrings>
       <replace>'</replace>
@@ -1932,21 +1979,21 @@
         <option value="$PROJECT_DIR$/assets/www/js/bluetooth_scan.js" />
         <option value="$PROJECT_DIR$/assets/www/js/menutree.js" />
         <option value="$PROJECT_DIR$/assets/www/js/login.js" />
-        <option value="$PROJECT_DIR$/assets/www/js/fun_cs.js" />
         <option value="$PROJECT_DIR$/assets/www/js/function_transfer.js" />
         <option value="$PROJECT_DIR$/assets/www/js/function_transfer_n.js" />
-        <option value="$PROJECT_DIR$/assets/www/js/fun_searchitem.js" />
         <option value="$PROJECT_DIR$/assets/www/js/fun_mgloca.js" />
-        <option value="$PROJECT_DIR$/assets/www/index.html" />
         <option value="$PROJECT_DIR$/assets/www/js/fun_dpitem.js" />
+        <option value="$PROJECT_DIR$/assets/www/js/fun_searchitem.js" />
+        <option value="$PROJECT_DIR$/assets/www/index.html" />
+        <option value="$PROJECT_DIR$/assets/www/js/fun_cs.js" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="65" />
-    <option name="y" value="-4" />
-    <option name="width" value="1301" />
-    <option name="height" value="772" />
+    <option name="x" value="64" />
+    <option name="y" value="-11" />
+    <option name="width" value="1303" />
+    <option name="height" value="780" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -1966,6 +2013,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="AndroidView">
         <subPane>
           <PATH>
@@ -1977,7 +2025,6 @@
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -2041,8 +2088,11 @@
     <property name="device.picker.selection" value="MZOF8P5SCQCQ9PW8" />
     <property name="android.project.structure.last.selected" value="android" />
     <property name="android.project.structure.proportion" value="0.15" />
-    <property name="last_opened_file_path" value="$USER_HOME$/NPInven/platforms/android" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="android.profiler.active" value="true" />
+  </component>
+  <component name="ReadonlyStatusHandler">
+    <option name="SHOW_DIALOG" value="false" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -2127,7 +2177,7 @@
       <option name="ACTIVITY_CLASS" value="" />
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1522987710332" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1523945367734" />
       </method>
     </configuration>
     <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Instrumented Tests">
@@ -2175,7 +2225,7 @@
       </Profilers>
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1522987710332" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1523945367734" />
       </method>
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -2207,6 +2257,27 @@
         </option>
         <option name="vmOptions" />
       </ExternalSystemSettings>
+      <method />
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
       <method />
     </configuration>
     <configuration default="true" type="JarApplication" factoryName="JAR Application">
@@ -2337,7 +2408,7 @@
       <option name="ACTIVITY_CLASS" value="" />
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1522987710333" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1523945367736" />
       </method>
     </configuration>
     <list size="1">
@@ -2483,7 +2554,8 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="65" y="-4" width="1301" height="772" extended-state="6" />
+    <frame x="64" y="-11" width="1303" height="780" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Android Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32935154" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32789558" sideWeight="0.4969743" order="6" side_tool="false" content_ui="tabs" />
@@ -2501,7 +2573,7 @@
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15776892" sideWeight="0.4915254" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4007968" sideWeight="0.4915254" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24940239" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -2889,73 +2961,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/www/js/fun_cs.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-444">
-          <caret line="463" column="62" lean-forward="false" selection-start-line="463" selection-start-column="62" selection-end-line="463" selection-end-column="62" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/www/js/fun_dpitem.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="176">
           <caret line="247" column="22" lean-forward="false" selection-start-line="247" selection-start-column="22" selection-end-line="247" selection-end-column="22" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/www/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="206">
-          <caret line="1888" column="62" lean-forward="false" selection-start-line="1888" selection-start-column="62" selection-end-line="1888" selection-end-column="62" />
-          <folding>
-            <element signature="e#1482#1521#0" expanded="true" />
-            <element signature="e#1584#1609#0" expanded="true" />
-            <element signature="e#1634#1672#0" expanded="true" />
-            <element signature="e#5463#5489#0" expanded="true" />
-            <element signature="e#60783#60800#0" expanded="true" />
-            <element signature="e#64072#64093#0" expanded="true" />
-            <element signature="e#66549#66571#0" expanded="true" />
-            <element signature="e#72731#72777#0" expanded="true" />
-            <element signature="e#73156#73183#0" expanded="true" />
-            <element signature="e#73202#73335#0" expanded="true" />
-            <element signature="e#73360#73426#0" expanded="true" />
-            <element signature="e#73453#73495#0" expanded="true" />
-            <element signature="e#73539#73581#0" expanded="true" />
-            <element signature="e#73625#73667#0" expanded="true" />
-            <element signature="e#73714#73733#0" expanded="true" />
-            <element signature="e#73925#73974#0" expanded="true" />
-            <element signature="e#74100#74121#0" expanded="true" />
-            <element signature="e#74140#74161#0" expanded="true" />
-            <element signature="e#75408#75431#0" expanded="true" />
-            <element signature="e#75536#75563#0" expanded="true" />
-            <element signature="e#78034#78074#0" expanded="true" />
-            <element signature="e#78181#78238#0" expanded="true" />
-            <element signature="e#78437#78470#0" expanded="true" />
-            <element signature="e#83525#83591#0" expanded="true" />
-            <element signature="e#83670#83719#0" expanded="true" />
-            <element signature="e#83852#83873#0" expanded="true" />
-            <element signature="e#88252#88318#0" expanded="true" />
-            <element signature="e#88345#88387#0" expanded="true" />
-            <element signature="e#88431#88473#0" expanded="true" />
-            <element signature="e#88517#88559#0" expanded="true" />
-            <element signature="e#88606#88625#0" expanded="true" />
-            <element signature="e#90412#90439#0" expanded="true" />
-            <element signature="e#92719#92852#0" expanded="true" />
-            <element signature="e#92877#92943#0" expanded="true" />
-            <element signature="e#92970#93012#0" expanded="true" />
-            <element signature="e#93056#93098#0" expanded="true" />
-            <element signature="e#93142#93184#0" expanded="true" />
-            <element signature="e#93231#93250#0" expanded="true" />
-            <element signature="e#93299#93365#0" expanded="true" />
-            <element signature="e#93445#93494#0" expanded="true" />
-            <element signature="e#97045#97100#0" expanded="true" />
-            <element signature="e#100048#100101#0" expanded="true" />
-            <element signature="e#100416#100549#0" expanded="true" />
-            <element signature="e#101091#101140#0" expanded="true" />
-            <element signature="e#123829#123869#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2969,8 +2979,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/www/js/fun_searchitem.js">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="14" column="40" lean-forward="false" selection-start-line="14" selection-start-column="40" selection-end-line="14" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/www/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="267">
+          <caret line="2597" column="25" lean-forward="false" selection-start-line="2597" selection-start-column="25" selection-end-line="2597" selection-end-column="25" />
+          <folding>
+            <element signature="e#1482#1521#0" expanded="true" />
+            <element signature="e#1584#1609#0" expanded="true" />
+            <element signature="e#1634#1672#0" expanded="true" />
+            <element signature="e#66348#66367#0" expanded="true" />
+            <element signature="e#66467#66488#0" expanded="true" />
+            <element signature="e#66564#66586#0" expanded="true" />
+            <element signature="e#88109#88242#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/www/js/fun_cs.js">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="296">
-          <caret line="565" column="34" lean-forward="false" selection-start-line="565" selection-start-column="34" selection-end-line="567" selection-end-column="76" />
+          <caret line="54" column="21" lean-forward="true" selection-start-line="54" selection-start-column="21" selection-end-line="54" selection-end-column="21" />
           <folding />
         </state>
       </provider>
