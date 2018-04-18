@@ -17,6 +17,7 @@ function tree(){
             menu += '<li><a href="javascript:Check_user()">ระบบ จัดการที่เก็บของสินค้า</a></li>';
             menu += '<li><a href="javascript:up_wh()">ระบบ เพิ่มที่เก็บของสินค้า</a></li>';
             menu += '<li><a href="javascript:typeprint()">ระบบ ขอพิมป้าย</a></li>';
+            menu += '<li><a href="javascript:managepromotion()">ระบบ จัดการโปรโมชั่น</a></li>';
                    if(localStorage.username=="56163"){
                    menu += '<li><a href="#setting">Setting</a></li>';
                    }

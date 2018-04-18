@@ -103,14 +103,23 @@
             </a></div>
         </div>
 
-        <div class="row" id="page_setting">
-            <div class="col-xs-6 col-md-6"><a href="#setting" data-transition="slidefade">
-                <div><img src="images/setting.png" class="main_menu"><br><b>setting</b></div>
+        <div class="row">
+            <div class="col-xs-6 col-md-6"><a href="javascript:managepromotion()" data-transition="slidefade">
+                <div><img src="images/Promotion.png" class="main_menu"><br><b>จัดโปรโมชั่น(7)</b></div>
             </a></div>
 
             <div class="col-xs-6 col-md-6"><a href="javascript:typeprint()" data-transition="slidefade">
                 <div><img src="images/label.png" class="main_menu"><br><b>ขอพิมป้าย(8)</b></div>
             </a></div>
+        </div>
+
+
+
+        <div class="row" id="page_setting">
+            <div class="col-xs-6 col-md-6"><a href="#setting" data-transition="slidefade">
+                <div><img src="images/setting.png" class="main_menu"><br><b>setting</b></div>
+            </a></div>
+
         </div>
     </div>
 
@@ -2599,6 +2608,7 @@ ju
             <div class="col-md-6 col-xs-6"><input type="text" name="idprice" readonly id="idproduct" class="form-control" placeholder="รหัสสินค้า"></div>
             <div class="col-md-6 col-xs-6"><input type="text" name="nameprice" readonly id="nameproduct" class="form-control" placeholder="ชื่อ"></div>
         </div>
+
         <div class="row">
         <div class="col-md-6 col-xs-6"><input type="number"  name="idprice" id="amountprice" class="form-control" placeholder="จำนวนที่ต้องการ"></div>
             <div class="col-md-6 col-xs-6"><button onclick="gosearchitem()" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-search">สินค้า</button></div>
@@ -2609,6 +2619,8 @@ ju
         <input type="hidden" id="itemunitcodea" >
 
         <div id="detailprint"></div>
+
+
 
     </div>
     <div data-role="footer" class="footer">
@@ -2667,6 +2679,35 @@ ju
 </div>
 
 <!--//////////////////////////////////////////////////////////// print searchitem ////////////////////////////////////////////////////////////////-->
+
+<!--//////////////////////////////////////////////////////////// manage promotion ////////////////////////////////////////////////////////////////-->
+
+<div data-role="page" id="promotionpage">
+    <div data-role="none" class="header">
+        <a href="#myPanel_listreorder" data-role="none"><img src="images/grid.png" class="open_panel"></a>
+    </div>
+
+    <div data-role="main" class="ui-content" id="main">
+        <h3 class="title" align="center"><b>Promotion Request</b></h3>
+        <input type="text" >
+        <!--<input type="text" id="search_reorder" onkeyup="listreorder();">-->
+        <!--<div id="list_reorder"></div>-->
+    </div>
+
+    <div data-role="footer" class="footer" data-enhance="false">
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#pagetwo" class="ui-btn-active ui-state-persist" data-icon="home" id="footer-nav" data-transition="slidefade" data-direction="reverse">หน้าหลัก</a></li>
+                <li onclick="cc_focus();"><a href="#newreorder" class="ui-btn-active ui-state-persist" data-icon="plus" id="footer-nav" data-transition="slidefade" data-direction="reverse">เพิ่ม</a></li>
+            </ul>
+        </div>
+    </div>
+    <div data-role="panel" id="myPanel_listreorder" style="padding:0;" data-display="overlay">
+        <div id="tree" class="tree"></div>
+    </div>
+</div>
+<!--//////////////////////////////////////////////////////////// manage promotion ////////////////////////////////////////////////////////////////-->
+
 
 <!--//////////////////////////////////////////////////////////////// setting ////////////////////////////////////////////////////////////////-->
 <div data-role="page" id="setting">

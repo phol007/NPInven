@@ -109,6 +109,12 @@ document.addEventListener("keydown", function(event) {
             return false;
        }else if($.mobile.activePage.is('#pagetwo')){
             logout();
+       }else if($.mobile.activePage.is('#printpage_searchitem')){
+            $.mobile.changePage('#printpage',{transition: 'slidefade',reverse: true});
+            return false;
+       }else if($.mobile.activePage.is('#printpage')){
+            $.mobile.changePage('#pagetwo',{transition: 'slidefade',reverse: true});
+            return false;
        }else if($.mobile.activePage.is('#pagepr')){
             $.mobile.changePage('#pagetwo',{transition: 'slidefade',reverse: true});
             return false;

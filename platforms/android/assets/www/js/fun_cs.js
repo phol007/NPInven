@@ -86,6 +86,9 @@ var searchitem = document.getElementById('pr_searchItem').value
 }
 
 function detailitem(bcitem){
+    $("#printpage").bind('pageshow', function() {
+        $('#amountprice').focus();
+    });
     $.mobile.changePage('#printpage',{transition: 'slidefade'});
     loading();
         $.ajax({
@@ -96,6 +99,10 @@ function detailitem(bcitem){
                                   type: "POST",
                                   cache: false,
                                   success: function(result){
+                                     if(result.item_code == null){
+                                     alertify.error('ไม่มีสินค้าในระบบ');
+                                     }
+
 //                                alert(JSON.stringify(result));
                                   console.log('api เปลี่ยน'+JSON.stringify(result));
     //                              console.log('ดูนอก '+ JSON.stringify(result.listLikeItem));
@@ -160,27 +167,29 @@ function typeprint(){
                           success: function(result){
 //                              console.log('data '+JSON.stringify(result.data));
                                         listprint  +=   '<div class="ui-grid-d" style="border-top:1px solid black; border-bottom:1px solid black; padding:2% 0; width:100%;">';
-                                    	listprint  += '<div class="ui-block-a" style="font-size: 12px; width:21%;"><b>รหัสสินค้า</b></div>';
-                                    	listprint  += '<div class="ui-block-b" style="font-size: 12px; width:17.6%;"><b>พิมพ์</b></div>';
-                                    	listprint  += '<div class="ui-block-c" style="font-size: 12px; width:28%;"><b>ชื่อสินค้า</b></div>';
-                                    	listprint  += '<div class="ui-block-d" style="font-size: 12px; width:17.6%;"><b>กระดาษ</b></div>';
-                                    	listprint  += '<div class="ui-block-e" style="font-size: 12px; width:15.6%;"><b>หน่วยนับ</b></div>';
+                                    	listprint  += '<div class="ui-block-a" style="font-size: 12px;"><b>รหัสสินค้า</b></div>';
+                                    	listprint  += '<div class="ui-block-b" style="font-size: 12px;" align="center" ><b>พิมพ์</b></div>';
+                                    	listprint  += '<div class="ui-block-c" style="font-size: 12px;"><b>ชื่อสินค้า</b></div>';
+                                    	listprint  += '<div class="ui-block-d" style="font-size: 12px;"><b>กระดาษ</b></div>';
+                                    	listprint  += '<div class="ui-block-e" style="font-size: 12px;"><b>หน่วยนับ</b></div>';
                                         listprint  += '</div>';
 
                                    $.each(result.data, function(key, val) {
+
                                         listprint += '<label class="csdeletecpr" csdelete-id="'+val['item_code']+'/'+val['bar_code']+'/'+val['qty']+'/'+val['price']+'/'+val['label_type']+'/'+val['creator_code']+'/'+val['unit_code']+'" csdelete-detail-id="'+val['item_code']+'" id="'+val['item_code']+'" style="text-align:center; border-bottom:1px gray dashed;">';
                                         listprint += '<div class="ui-grid-d" style="padding-bottom:4%; padding-top:1%">';
-                                        listprint += '<div class="ui-block-a" style="font-size: 12px; width:20%;" >';
+                                        listprint += '<div class="ui-block-a" style="font-size:12px;word-wrap:break-word;" >';
                                         listprint += val['item_code']+'</div>';
-                                        listprint += '<div class="ui-block-d" style="font-size: 12px; width:10%;  text-align: center;" >';
-                                        listprint += val['qty']+'</div>';
-                                        listprint += '<div class="ui-block-b" style="font-size: 12px; width:36%;" >';
+                                        listprint += '<div class="ui-block-b" style="font-size: 12px;"  align="center"  ><b>';
+                                        listprint += val['qty']+'</b></div>';
+                                        listprint += '<div class="ui-block-c" style="font-size: 12px;" >';
                                         listprint += val['item_name']+'</div>';
-                                        listprint += '<div class="ui-block-c" style="font-size: 12px; width:15%; text-align: center;" >';
+                                        listprint += '<div class="ui-block-d" style="font-size: 12px;" >';
                                         listprint += val['label_type']+'</div>';
-                                        listprint += '<div class="ui-block-e" style="font-size: 12px; width:18%; text-align: center;" >';
+                                        listprint += '<div class="ui-block-e" style="font-size: 12px;"  >';
                                         listprint += val['unit_code']+'</div>';
                                         listprint += '</div></label>';
+
                                    });
                                    document.getElementById("detailprint").innerHTML = listprint;
                                   $.mobile.changePage('#printpage',{transition: 'slidefade'});
@@ -292,6 +301,10 @@ alertify.confirm("ต้องการขอพิมป้าย รหัส 
 alertify.error('กรุณากรอกข้อมูลให้ครบ');
 }
 
+}
+
+function managepromotion(){
+$.mobile.changePage('#promotionpage',{transition: 'slidefade'});
 }
 
 function sec_sh(){
@@ -1146,7 +1159,7 @@ $(document).on('taphold', '.csdeletecpr', function() {
     $(this).remove();
     }).css({
    'padding': '10%',
-   'color': 'white',
+   'color': '#000080',
    'background': '#63b8ff'
    });
     console.log(link_name);

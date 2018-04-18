@@ -13,9 +13,11 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/taskHistory/taskHistory.bin" afterPath="$PROJECT_DIR$/.gradle/4.1/taskHistory/taskHistory.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/taskHistory/taskHistory.lock" afterPath="$PROJECT_DIR$/.gradle/4.1/taskHistory/taskHistory.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/www/css/main.css" afterPath="$PROJECT_DIR$/assets/www/css/main.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/www/index.html" afterPath="$PROJECT_DIR$/assets/www/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/www/js/back_bt.js" afterPath="$PROJECT_DIR$/assets/www/js/back_bt.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/www/js/fun_cs.js" afterPath="$PROJECT_DIR$/assets/www/js/fun_cs.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/www/js/fun_searchitem.js" afterPath="$PROJECT_DIR$/assets/www/js/fun_searchitem.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/www/js/menutree.js" afterPath="$PROJECT_DIR$/assets/www/js/menutree.js" />
     </list>
     <ignored path="android.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -42,7 +44,20 @@
   <component name="ExternalProjectsManager">
     <system id="GRADLE">
       <state>
-        <projects_view />
+        <projects_view>
+          <tree_state>
+            <PATH>
+              <PATH_ELEMENT>
+                <option name="myItemId" value="" />
+                <option name="myItemType" value="com.intellij.openapi.externalSystem.view.ExternalProjectsStructure$RootNode" />
+              </PATH_ELEMENT>
+              <PATH_ELEMENT>
+                <option name="myItemId" value="android" />
+                <option name="myItemType" value="com.intellij.openapi.externalSystem.view.ProjectNode" />
+              </PATH_ELEMENT>
+            </PATH>
+          </tree_state>
+        </projects_view>
       </state>
     </system>
   </component>
@@ -50,67 +65,71 @@
     <favorites_list name="android" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/www/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="526">
-              <caret line="2646" column="67" lean-forward="false" selection-start-line="2646" selection-start-column="67" selection-end-line="2646" selection-end-column="67" />
+            <state relative-caret-position="-14">
+              <caret line="2658" column="43" lean-forward="false" selection-start-line="2658" selection-start-column="43" selection-end-line="2658" selection-end-column="43" />
               <folding>
                 <element signature="e#1482#1521#0" expanded="true" />
                 <element signature="e#1584#1609#0" expanded="true" />
                 <element signature="e#1634#1672#0" expanded="true" />
-                <element signature="e#66348#66367#0" expanded="true" />
-                <element signature="e#66467#66488#0" expanded="true" />
-                <element signature="e#66564#66586#0" expanded="true" />
-                <element signature="e#88109#88242#0" expanded="true" />
-                <element signature="e#92425#92471#0" expanded="true" />
-                <element signature="e#126344#126367#0" expanded="true" />
-                <element signature="e#126474#126520#0" expanded="true" />
-                <element signature="e#126780#126913#0" expanded="true" />
-                <element signature="e#126938#127004#0" expanded="true" />
-                <element signature="e#127031#127073#0" expanded="true" />
-                <element signature="e#127117#127159#0" expanded="true" />
-                <element signature="e#127203#127245#0" expanded="true" />
-                <element signature="e#127292#127311#0" expanded="true" />
-                <element signature="e#127498#127547#0" expanded="true" />
+                <element signature="e#66631#66650#0" expanded="true" />
+                <element signature="e#66750#66771#0" expanded="true" />
+                <element signature="e#66847#66869#0" expanded="true" />
+                <element signature="e#69059#69139#0" expanded="true" />
+                <element signature="e#88392#88525#0" expanded="true" />
+                <element signature="e#92708#92754#0" expanded="true" />
+                <element signature="e#126630#126653#0" expanded="true" />
+                <element signature="e#126760#126806#0" expanded="true" />
+                <element signature="e#127066#127199#0" expanded="true" />
+                <element signature="e#127224#127290#0" expanded="true" />
+                <element signature="e#127317#127359#0" expanded="true" />
+                <element signature="e#127403#127445#0" expanded="true" />
+                <element signature="e#127489#127531#0" expanded="true" />
+                <element signature="e#127578#127597#0" expanded="true" />
+                <element signature="e#127784#127833#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="fun_cs.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="main.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/assets/www/css/main.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="789">
+              <caret line="55" column="9" lean-forward="false" selection-start-line="55" selection-start-column="9" selection-end-line="55" selection-end-column="9" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="reorder.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/assets/www/js/reorder.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-44">
+              <caret line="100" column="59" lean-forward="false" selection-start-line="100" selection-start-column="49" selection-end-line="100" selection-end-column="59" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="fun_cs.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/assets/www/js/fun_cs.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-24">
-              <caret line="68" column="34" lean-forward="false" selection-start-line="68" selection-start-column="34" selection-end-line="68" selection-end-column="34" />
+            <state relative-caret-position="180">
+              <caret line="27" column="32" lean-forward="false" selection-start-line="25" selection-start-column="31" selection-end-line="27" selection-end-column="32" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="fun_mgloca.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assets/www/js/fun_mgloca.js">
+      <file leaf-file-name="back_bt.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/assets/www/js/back_bt.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="416">
-              <caret line="143" column="50" lean-forward="false" selection-start-line="143" selection-start-column="50" selection-end-line="143" selection-end-column="50" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="library.png" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assets/www/images/library.png">
-          <provider selected="true" editor-type-id="images">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="fun_searchitem.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assets/www/js/fun_searchitem.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="286">
-              <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+            <state relative-caret-position="580">
+              <caret line="116" column="25" lean-forward="false" selection-start-line="116" selection-start-column="25" selection-end-line="116" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -120,36 +139,36 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>item</find>
-      <find>itemc</find>
-      <find>itemcode</find>
-      <find>itemcodea</find>
-      <find>javascript</find>
-      <find>ลบ</find>
-      <find>like_mgitemlist</find>
-      <find>ค้นหาสินค้า</find>
-      <find>var price</find>
-      <find>amountprice</find>
-      <find>case &quot;printpage&quot; :                                   searchproduct(localStorage.barcode);                                    break;</find>
-      <find>case &quot;printpage&quot; :                                  searchproduct(localStorage.barcode);                                    break;</find>
-      <find>case &quot;printpage&quot;                                   searchproduct(localStorage.barcode);                                    break;</find>
-      <find>case &quot;printpage&quot;                                  searchproduct(localStorage.barcode);                                    break;</find>
-      <find>&quot;printpage&quot;                                  searchproduct(localStorage.barcode);                                    break;</find>
-      <find>&quot;printpage&quot;                                 searchproduct(localStorage.barcode);                                    break;</find>
-      <find>&quot;printpage&quot;                                searchproduct(localStorage.barcode);                                    break;</find>
-      <find>&quot;printpage&quot;                               searchproduct(localStorage.barcode);                                    break;</find>
-      <find>&quot;printpage&quot;                              searchproduct(localStorage.barcode);                                    break;</find>
-      <find>&quot;printpage&quot;                                 break;</find>
-      <find>&quot;printpage&quot;</find>
-      <find>&quot;printpage&quot;</find>
-      <find>&quot;printpage&quot;</find>
-      <find>&quot;printpage</find>
-      <find>printpage</find>
-      <find>case &quot;printpage&quot; : typeprint(localStorage.barcode),                                       searchproduct(localStorage.barcode);                                    break;</find>
-      <find>printpage</find>
+      <find>color</find>
+      <find>blue</find>
+      <find>csdeletecpr</find>
+      <find>back</find>
+      <find>pageshow</find>
+      <find>'color':</find>
       <find>typeprint</find>
+      <find>cc_focus</find>
+      <find>newreorder</find>
+      <find>t</find>
+      <find>ta</find>
+      <find>tabl</find>
+      <find>).focus();</find>
+      <find>getItemReorder</find>
+      <find>main.css</find>
+      <find>table</find>
+      <find>csdetail</find>
+      <find>d</find>
+      <find>de</find>
+      <find>deta</find>
+      <find>detail</find>
+      <find>detailpr</find>
+      <find>detailpri</find>
+      <find>detailprin</find>
+      <find>detailprint</find>
+      <find>ระบบนับสต๊อกสินค้า</find>
       <find>pr_item</find>
-      <find>searchproduct</find>
+      <find>ค</find>
+      <find>ค้นหาสินค้า</find>
+      <find>stock_show</find>
     </findStrings>
     <replaceStrings>
       <replace>'</replace>
@@ -1978,32 +1997,32 @@
         <option value="$PROJECT_DIR$/assets/www/js/search_vender.js" />
         <option value="$PROJECT_DIR$/assets/www/js/inven.js" />
         <option value="$PROJECT_DIR$/assets/www/js/function_transfer_dmg.js" />
-        <option value="$PROJECT_DIR$/assets/www/js/back_bt.js" />
         <option value="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" />
         <option value="$PROJECT_DIR$/CordovaLib/build.gradle" />
         <option value="$PROJECT_DIR$/build.gradle" />
         <option value="$PROJECT_DIR$/assets/www/js/index.js" />
         <option value="$PROJECT_DIR$/src/io/ionic/keyboard/IonicKeyboard.java" />
         <option value="$PROJECT_DIR$/assets/www/js/reorder.js" />
-        <option value="$PROJECT_DIR$/assets/www/css/main.css" />
         <option value="$PROJECT_DIR$/assets/www/js/bluetooth_scan.js" />
-        <option value="$PROJECT_DIR$/assets/www/js/menutree.js" />
         <option value="$PROJECT_DIR$/assets/www/js/login.js" />
         <option value="$PROJECT_DIR$/assets/www/js/function_transfer.js" />
         <option value="$PROJECT_DIR$/assets/www/js/function_transfer_n.js" />
         <option value="$PROJECT_DIR$/assets/www/js/fun_mgloca.js" />
         <option value="$PROJECT_DIR$/assets/www/js/fun_dpitem.js" />
         <option value="$PROJECT_DIR$/assets/www/js/fun_searchitem.js" />
-        <option value="$PROJECT_DIR$/assets/www/js/fun_cs.js" />
+        <option value="$PROJECT_DIR$/assets/www/js/back_bt.js" />
+        <option value="$PROJECT_DIR$/assets/www/js/menutree.js" />
+        <option value="$PROJECT_DIR$/assets/www/css/main.css" />
         <option value="$PROJECT_DIR$/assets/www/index.html" />
+        <option value="$PROJECT_DIR$/assets/www/js/fun_cs.js" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="64" />
-    <option name="y" value="-11" />
-    <option name="width" value="1303" />
-    <option name="height" value="780" />
+    <option name="x" value="65" />
+    <option name="y" value="-4" />
+    <option name="width" value="1301" />
+    <option name="height" value="772" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -2023,7 +2042,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
+      <pane id="PackagesPane" />
       <pane id="AndroidView">
         <subPane>
           <PATH>
@@ -2034,7 +2053,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -2083,35 +2101,14 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="android" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="android" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="images" />
+              <option name="myItemId" value="css" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -2209,7 +2206,7 @@
       <option name="ACTIVITY_CLASS" value="" />
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1523958830886" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1524045515126" />
       </method>
     </configuration>
     <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Instrumented Tests">
@@ -2257,7 +2254,7 @@
       </Profilers>
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1523958830887" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1524045515126" />
       </method>
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -2440,7 +2437,7 @@
       <option name="ACTIVITY_CLASS" value="" />
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1523958830891" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1524045515131" />
       </method>
     </configuration>
     <list size="1">
@@ -2586,7 +2583,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="64" y="-11" width="1303" height="780" extended-state="6" />
+    <frame x="65" y="-4" width="1301" height="772" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Android Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32935154" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -2605,9 +2602,9 @@
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.06693227" sideWeight="0.4915254" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.0071713147" sideWeight="0.4915254" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32988048" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24940239" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Device File Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -2742,13 +2739,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="456">
           <caret line="195" column="0" lean-forward="false" selection-start-line="195" selection-start-column="0" selection-end-line="195" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/www/css/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="579">
-          <caret line="359" column="20" lean-forward="false" selection-start-line="359" selection-start-column="20" selection-end-line="359" selection-end-column="20" />
         </state>
       </provider>
     </entry>
@@ -2911,13 +2901,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/www/js/menutree.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="20">
-          <caret line="1" column="18" lean-forward="false" selection-start-line="1" selection-start-column="18" selection-end-line="1" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/www/images/loading2.gif">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -2930,24 +2913,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/www/js/back_bt.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="17" column="17" lean-forward="false" selection-start-line="17" selection-start-column="17" selection-end-line="17" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/www/js/bluetooth_scan.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2200">
           <caret line="110" column="64" lean-forward="false" selection-start-line="110" selection-start-column="64" selection-end-line="110" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/www/js/reorder.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="8" column="23" lean-forward="false" selection-start-line="8" selection-start-column="23" selection-end-line="8" selection-end-column="23" />
         </state>
       </provider>
     </entry>
@@ -2990,7 +2959,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="176">
           <caret line="247" column="22" lean-forward="false" selection-start-line="247" selection-start-column="22" selection-end-line="247" selection-end-column="22" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3001,7 +2969,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/www/js/fun_mgloca.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="416">
+        <state relative-caret-position="2860">
           <caret line="143" column="50" lean-forward="false" selection-start-line="143" selection-start-column="50" selection-end-line="143" selection-end-column="50" />
           <folding />
         </state>
@@ -3009,43 +2977,76 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/www/js/fun_searchitem.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
+        <state relative-caret-position="460">
           <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/www/js/fun_cs.js">
+    <entry file="file://$PROJECT_DIR$/assets/www/js/menutree.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-24">
-          <caret line="68" column="34" lean-forward="false" selection-start-line="68" selection-start-column="34" selection-end-line="68" selection-end-column="34" />
+        <state relative-caret-position="-200">
+          <caret line="17" column="87" lean-forward="false" selection-start-line="17" selection-start-column="87" selection-end-line="17" selection-end-column="87" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/www/js/back_bt.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="580">
+          <caret line="116" column="25" lean-forward="false" selection-start-line="116" selection-start-column="25" selection-end-line="116" selection-end-column="25" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/www/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="526">
-          <caret line="2646" column="67" lean-forward="false" selection-start-line="2646" selection-start-column="67" selection-end-line="2646" selection-end-column="67" />
+        <state relative-caret-position="-14">
+          <caret line="2658" column="43" lean-forward="false" selection-start-line="2658" selection-start-column="43" selection-end-line="2658" selection-end-column="43" />
           <folding>
             <element signature="e#1482#1521#0" expanded="true" />
             <element signature="e#1584#1609#0" expanded="true" />
             <element signature="e#1634#1672#0" expanded="true" />
-            <element signature="e#66348#66367#0" expanded="true" />
-            <element signature="e#66467#66488#0" expanded="true" />
-            <element signature="e#66564#66586#0" expanded="true" />
-            <element signature="e#88109#88242#0" expanded="true" />
-            <element signature="e#92425#92471#0" expanded="true" />
-            <element signature="e#126344#126367#0" expanded="true" />
-            <element signature="e#126474#126520#0" expanded="true" />
-            <element signature="e#126780#126913#0" expanded="true" />
-            <element signature="e#126938#127004#0" expanded="true" />
-            <element signature="e#127031#127073#0" expanded="true" />
-            <element signature="e#127117#127159#0" expanded="true" />
-            <element signature="e#127203#127245#0" expanded="true" />
-            <element signature="e#127292#127311#0" expanded="true" />
-            <element signature="e#127498#127547#0" expanded="true" />
+            <element signature="e#66631#66650#0" expanded="true" />
+            <element signature="e#66750#66771#0" expanded="true" />
+            <element signature="e#66847#66869#0" expanded="true" />
+            <element signature="e#69059#69139#0" expanded="true" />
+            <element signature="e#88392#88525#0" expanded="true" />
+            <element signature="e#92708#92754#0" expanded="true" />
+            <element signature="e#126630#126653#0" expanded="true" />
+            <element signature="e#126760#126806#0" expanded="true" />
+            <element signature="e#127066#127199#0" expanded="true" />
+            <element signature="e#127224#127290#0" expanded="true" />
+            <element signature="e#127317#127359#0" expanded="true" />
+            <element signature="e#127403#127445#0" expanded="true" />
+            <element signature="e#127489#127531#0" expanded="true" />
+            <element signature="e#127578#127597#0" expanded="true" />
+            <element signature="e#127784#127833#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/www/css/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="789">
+          <caret line="55" column="9" lean-forward="false" selection-start-line="55" selection-start-column="9" selection-end-line="55" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/www/js/reorder.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-44">
+          <caret line="100" column="59" lean-forward="false" selection-start-line="100" selection-start-column="49" selection-end-line="100" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/www/js/fun_cs.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="27" column="32" lean-forward="false" selection-start-line="25" selection-start-column="31" selection-end-line="27" selection-end-column="32" />
+          <folding />
         </state>
       </provider>
     </entry>
