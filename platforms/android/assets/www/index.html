@@ -210,8 +210,6 @@
         <p style="color:red;text-align:center;">**สแกนสินค้าที่ต้องการโอน**</p>
         <div id="show_hdetail_tf"></div>
         <div id="show_detail_tf"></div>
-
-
     </div>
 
     <div data-role="footer" class="footer" data-enhance="false">
@@ -2600,32 +2598,66 @@ ju
     </div>
     <div  data-role="main" class="ui-content" id="main">
         <label style="font-size:24px; margin-bottom:0;"><img src="images/label.png" width="20"><b> ระบบพิมป้าย </b></label><hr>
-        <div class="row">
-            <div class="col-md-6 col-xs-6">
-            <select name="print" id="selectexnormal" class="bt-cmp" style="width:100%; height:50px;" data-role="none">
-           <option value="F2">พิเศษ</option>
-            <option value="F1">ธรรมดา</option>
-          </select></div>
 
-            <div class="col-md-6 col-xs-6">
-                <select name="print" id="selectsize" class="bt-cmp" style="width:100%; height:50px;" data-role="none">
-                    <option value="P1">P1 21 ดวง/หน้า</option>
-                    <option value="P2">P2 3 ดวง/หน้า</option>
-                    <option value="P3">P3 2 ดวง/หน้า</option>
-                    <option value="P4">P4 A4</option>
-                </select></div>
-                <!--<div class="col-md-6 col-xs-6"><select name="size" id="selectsize" class="bt-cmp" style="width:100%; height:50px;" data-role="none">-->
-                    <!--<option value="P1">P1 21 ดวง/หน้า</option></div>-->
-        </div>
-        <div class="row">
-            <div class="col-md-6 col-xs-6"><input type="text" name="idprice" readonly id="idproduct" class="form-control" placeholder="รหัสสินค้า"></div>
-            <div class="col-md-6 col-xs-6"><input type="text" name="nameprice" readonly id="nameproduct" class="form-control" placeholder="ชื่อ"></div>
-        </div>
+        <label>
+            <div class="ui-grid-a">
+                <div class="ui-block-a" style="width:37%;  text-align:left;">
+                    <select name="print" id="selectexnormal" class="bt-cmp" style="width:100%; height:50px;" data-role="none">
+                        <option value="F2">พิเศษ</option>
+                        <option value="F1">ธรรมดา</option>
+                    </select>
+                </div>
+                <div class="ui-block-b" style="width:63%; padding-left:3%; text-align:left;">
+                    <select name="print" id="selectsize" class="bt-cmp" style="width:100%; height:50px;" data-role="none">
+                        <option value="P1">P1 21 ดวง/หน้า</option>
+                        <option value="P2">P2 3 ดวง/หน้า</option>
+                        <option value="P3">P3 2 ดวง/หน้า</option>
+                        <option value="P4">P4 A4</option>
+                    </select>
+                </div>
+            </div>
+        </label>
 
-        <div class="row">
-        <div class="col-md-6 col-xs-6"><input type="number"  name="idprice" id="amountprice" class="form-control" placeholder="จำนวนที่ต้องการ"></div>
-            <div class="col-md-6 col-xs-6"><button onclick="gosearchitem()" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-search">สินค้า</button></div>
-        </div>
+        <label>
+            <div class="ui-grid-a">
+                <div class="ui-block-a" style="width:25%; text-align:right; padding-top: 5%;">
+                    <b>รหัสสินค้า </b>
+                </div>
+                <div class="ui-block-b" style="width:75%; padding-left:3%; text-align:left;">
+                    <input type="text" name="idprice" readonly id="idproduct" class="form-control" placeholder="รหัสสินค้า">
+                </div>
+            </div>
+        </label>
+
+        <label>
+            <div class="ui-grid-a">
+                <div class="ui-block-a" style="width:25%; text-align:right; padding-top: 5%;">
+                    <b>ชื่อสินค้า </b>
+                </div>
+                <div class="ui-block-b" style="width:75%; padding-left:3%; text-align:left;">
+                    <input type="text" name="nameprice" readonly id="nameproduct" class="form-control" placeholder="ชื่อ">
+                </div>
+            </div>
+        </label>
+
+        <label>
+            <div class="ui-grid-a">
+                <div class="ui-block-a" style="width:25%; text-align:right; padding-top: 5%;">
+                    <b>พิมพ์ </b>
+                </div>
+                <div class="ui-block-b" style="width:75%; padding-left:3%; text-align:left;">
+                    <input type="number"  name="idprice" id="amountprice" class="form-control" placeholder="จำนวนที่ต้องการพิมพ์">
+                </div>
+            </div>
+        </label>
+
+        <label>
+            <div class="ui-grid-a">
+                <div class="ui-block-a" style="width:100%; text-align:center;">
+                    <button onclick="gosearchitem()" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-search">ค้นหาสินค้า</button>
+                </div>
+            </div>
+        </label>
         <input type="hidden" id="itemcodea" >
         <input type="hidden" id="itembarcodea" >
         <input type="hidden" id="itempricea" >
