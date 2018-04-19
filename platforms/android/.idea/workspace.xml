@@ -13,9 +13,7 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/taskHistory/taskHistory.bin" afterPath="$PROJECT_DIR$/.gradle/4.1/taskHistory/taskHistory.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/taskHistory/taskHistory.lock" afterPath="$PROJECT_DIR$/.gradle/4.1/taskHistory/taskHistory.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/www/css/main.css" afterPath="$PROJECT_DIR$/assets/www/css/main.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/www/index.html" afterPath="$PROJECT_DIR$/assets/www/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/www/js/back_bt.js" afterPath="$PROJECT_DIR$/assets/www/js/back_bt.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/www/js/fun_cs.js" afterPath="$PROJECT_DIR$/assets/www/js/fun_cs.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/www/js/menutree.js" afterPath="$PROJECT_DIR$/assets/www/js/menutree.js" />
     </list>
@@ -66,39 +64,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assets/www/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-14">
-              <caret line="2658" column="43" lean-forward="false" selection-start-line="2658" selection-start-column="43" selection-end-line="2658" selection-end-column="43" />
-              <folding>
-                <element signature="e#1482#1521#0" expanded="true" />
-                <element signature="e#1584#1609#0" expanded="true" />
-                <element signature="e#1634#1672#0" expanded="true" />
-                <element signature="e#66631#66650#0" expanded="true" />
-                <element signature="e#66750#66771#0" expanded="true" />
-                <element signature="e#66847#66869#0" expanded="true" />
-                <element signature="e#69059#69139#0" expanded="true" />
-                <element signature="e#88392#88525#0" expanded="true" />
-                <element signature="e#92708#92754#0" expanded="true" />
-                <element signature="e#126630#126653#0" expanded="true" />
-                <element signature="e#126760#126806#0" expanded="true" />
-                <element signature="e#127066#127199#0" expanded="true" />
-                <element signature="e#127224#127290#0" expanded="true" />
-                <element signature="e#127317#127359#0" expanded="true" />
-                <element signature="e#127403#127445#0" expanded="true" />
-                <element signature="e#127489#127531#0" expanded="true" />
-                <element signature="e#127578#127597#0" expanded="true" />
-                <element signature="e#127784#127833#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="main.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/www/css/main.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="789">
+            <state relative-caret-position="1100">
               <caret line="55" column="9" lean-forward="false" selection-start-line="55" selection-start-column="9" selection-end-line="55" selection-end-column="9" />
               <folding />
             </state>
@@ -108,18 +77,68 @@
       <file leaf-file-name="reorder.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/www/js/reorder.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-44">
+            <state relative-caret-position="20">
               <caret line="100" column="59" lean-forward="false" selection-start-line="100" selection-start-column="49" selection-end-line="100" selection-end-column="59" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="fun_cs.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/assets/www/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="260">
+              <caret line="2595" column="40" lean-forward="true" selection-start-line="2595" selection-start-column="40" selection-end-line="2595" selection-end-column="40" />
+              <folding>
+                <element signature="e#1482#1521#0" expanded="true" />
+                <element signature="e#1584#1609#0" expanded="true" />
+                <element signature="e#1634#1672#0" expanded="true" />
+                <element signature="e#66619#66638#0" expanded="true" />
+                <element signature="e#66738#66759#0" expanded="true" />
+                <element signature="e#66835#66857#0" expanded="true" />
+                <element signature="e#69047#69127#0" expanded="true" />
+                <element signature="e#88380#88513#0" expanded="true" />
+                <element signature="e#92696#92742#0" expanded="true" />
+                <element signature="e#124366#124398#0" expanded="true" />
+                <element signature="e#124648#124680#0" expanded="true" />
+                <element signature="e#126185#126277#0" expanded="true" />
+                <element signature="e#126314#126350#0" expanded="true" />
+                <element signature="e#126411#126447#0" expanded="true" />
+                <element signature="e#126518#126554#0" expanded="true" />
+                <element signature="e#126615#126651#0" expanded="true" />
+                <element signature="e#126708#126744#0" expanded="true" />
+                <element signature="e#126821#126862#0" expanded="true" />
+                <element signature="e#126900#126982#0" expanded="true" />
+                <element signature="e#128291#128314#0" expanded="true" />
+                <element signature="e#128421#128467#0" expanded="true" />
+                <element signature="e#128727#128860#0" expanded="true" />
+                <element signature="e#128885#128951#0" expanded="true" />
+                <element signature="e#128978#129020#0" expanded="true" />
+                <element signature="e#129064#129106#0" expanded="true" />
+                <element signature="e#129150#129192#0" expanded="true" />
+                <element signature="e#129239#129258#0" expanded="true" />
+                <element signature="e#129307#129373#0" expanded="true" />
+                <element signature="e#129445#129494#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="menutree.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/assets/www/js/menutree.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-60">
+              <caret line="18" column="35" lean-forward="false" selection-start-line="18" selection-start-column="35" selection-end-line="18" selection-end-column="35" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="fun_cs.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/www/js/fun_cs.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="27" column="32" lean-forward="false" selection-start-line="25" selection-start-column="31" selection-end-line="27" selection-end-column="32" />
+            <state relative-caret-position="359">
+              <caret line="208" column="0" lean-forward="false" selection-start-line="208" selection-start-column="0" selection-end-line="208" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -128,7 +147,7 @@
       <file leaf-file-name="back_bt.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/www/js/back_bt.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="580">
+            <state relative-caret-position="2320">
               <caret line="116" column="25" lean-forward="false" selection-start-line="116" selection-start-column="25" selection-end-line="116" selection-end-column="25" />
               <folding />
             </state>
@@ -139,8 +158,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>color</find>
-      <find>blue</find>
       <find>csdeletecpr</find>
       <find>back</find>
       <find>pageshow</find>
@@ -163,12 +180,14 @@
       <find>detailpr</find>
       <find>detailpri</find>
       <find>detailprin</find>
-      <find>detailprint</find>
       <find>ระบบนับสต๊อกสินค้า</find>
       <find>pr_item</find>
       <find>ค</find>
       <find>ค้นหาสินค้า</find>
       <find>stock_show</find>
+      <find>detailprint</find>
+      <find>ระบบพิมป้าย</find>
+      <find>printpage</find>
     </findStrings>
     <replaceStrings>
       <replace>'</replace>
@@ -2011,18 +2030,18 @@
         <option value="$PROJECT_DIR$/assets/www/js/fun_dpitem.js" />
         <option value="$PROJECT_DIR$/assets/www/js/fun_searchitem.js" />
         <option value="$PROJECT_DIR$/assets/www/js/back_bt.js" />
-        <option value="$PROJECT_DIR$/assets/www/js/menutree.js" />
         <option value="$PROJECT_DIR$/assets/www/css/main.css" />
-        <option value="$PROJECT_DIR$/assets/www/index.html" />
+        <option value="$PROJECT_DIR$/assets/www/js/menutree.js" />
         <option value="$PROJECT_DIR$/assets/www/js/fun_cs.js" />
+        <option value="$PROJECT_DIR$/assets/www/index.html" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="65" />
-    <option name="y" value="-4" />
-    <option name="width" value="1301" />
-    <option name="height" value="772" />
+    <option name="x" value="64" />
+    <option name="y" value="-11" />
+    <option name="width" value="1303" />
+    <option name="height" value="780" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -2042,7 +2061,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="AndroidView">
         <subPane>
           <PATH>
@@ -2053,6 +2071,9 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -2101,14 +2122,34 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="android" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="android" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="css" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -2206,7 +2247,7 @@
       <option name="ACTIVITY_CLASS" value="" />
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1524045515126" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1524105175158" />
       </method>
     </configuration>
     <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Instrumented Tests">
@@ -2254,7 +2295,7 @@
       </Profilers>
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1524045515126" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1524105175159" />
       </method>
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -2437,7 +2478,7 @@
       <option name="ACTIVITY_CLASS" value="" />
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1524045515131" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1524105175162" />
       </method>
     </configuration>
     <list size="1">
@@ -2583,7 +2624,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="65" y="-4" width="1301" height="772" extended-state="6" />
+    <frame x="64" y="-11" width="1303" height="780" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Android Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32935154" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -2602,7 +2643,7 @@
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.0071713147" sideWeight="0.4915254" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24860558" sideWeight="0.4915254" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32988048" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24940239" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -2971,7 +3012,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2860">
           <caret line="143" column="50" lean-forward="false" selection-start-line="143" selection-start-column="50" selection-end-line="143" selection-end-column="50" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2979,56 +3019,20 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="460">
           <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/www/js/menutree.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-200">
-          <caret line="17" column="87" lean-forward="false" selection-start-line="17" selection-start-column="87" selection-end-line="17" selection-end-column="87" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/www/js/back_bt.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="580">
+        <state relative-caret-position="2320">
           <caret line="116" column="25" lean-forward="false" selection-start-line="116" selection-start-column="25" selection-end-line="116" selection-end-column="25" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/www/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-14">
-          <caret line="2658" column="43" lean-forward="false" selection-start-line="2658" selection-start-column="43" selection-end-line="2658" selection-end-column="43" />
-          <folding>
-            <element signature="e#1482#1521#0" expanded="true" />
-            <element signature="e#1584#1609#0" expanded="true" />
-            <element signature="e#1634#1672#0" expanded="true" />
-            <element signature="e#66631#66650#0" expanded="true" />
-            <element signature="e#66750#66771#0" expanded="true" />
-            <element signature="e#66847#66869#0" expanded="true" />
-            <element signature="e#69059#69139#0" expanded="true" />
-            <element signature="e#88392#88525#0" expanded="true" />
-            <element signature="e#92708#92754#0" expanded="true" />
-            <element signature="e#126630#126653#0" expanded="true" />
-            <element signature="e#126760#126806#0" expanded="true" />
-            <element signature="e#127066#127199#0" expanded="true" />
-            <element signature="e#127224#127290#0" expanded="true" />
-            <element signature="e#127317#127359#0" expanded="true" />
-            <element signature="e#127403#127445#0" expanded="true" />
-            <element signature="e#127489#127531#0" expanded="true" />
-            <element signature="e#127578#127597#0" expanded="true" />
-            <element signature="e#127784#127833#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/www/css/main.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="789">
+        <state relative-caret-position="1100">
           <caret line="55" column="9" lean-forward="false" selection-start-line="55" selection-start-column="9" selection-end-line="55" selection-end-column="9" />
           <folding />
         </state>
@@ -3036,7 +3040,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/www/js/reorder.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-44">
+        <state relative-caret-position="20">
           <caret line="100" column="59" lean-forward="false" selection-start-line="100" selection-start-column="49" selection-end-line="100" selection-end-column="59" />
           <folding />
         </state>
@@ -3044,9 +3048,55 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/www/js/fun_cs.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="27" column="32" lean-forward="false" selection-start-line="25" selection-start-column="31" selection-end-line="27" selection-end-column="32" />
+        <state relative-caret-position="359">
+          <caret line="208" column="0" lean-forward="false" selection-start-line="208" selection-start-column="0" selection-end-line="208" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/www/js/menutree.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-60">
+          <caret line="18" column="35" lean-forward="false" selection-start-line="18" selection-start-column="35" selection-end-line="18" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/www/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="2595" column="40" lean-forward="true" selection-start-line="2595" selection-start-column="40" selection-end-line="2595" selection-end-column="40" />
+          <folding>
+            <element signature="e#1482#1521#0" expanded="true" />
+            <element signature="e#1584#1609#0" expanded="true" />
+            <element signature="e#1634#1672#0" expanded="true" />
+            <element signature="e#66619#66638#0" expanded="true" />
+            <element signature="e#66738#66759#0" expanded="true" />
+            <element signature="e#66835#66857#0" expanded="true" />
+            <element signature="e#69047#69127#0" expanded="true" />
+            <element signature="e#88380#88513#0" expanded="true" />
+            <element signature="e#92696#92742#0" expanded="true" />
+            <element signature="e#124366#124398#0" expanded="true" />
+            <element signature="e#124648#124680#0" expanded="true" />
+            <element signature="e#126185#126277#0" expanded="true" />
+            <element signature="e#126314#126350#0" expanded="true" />
+            <element signature="e#126411#126447#0" expanded="true" />
+            <element signature="e#126518#126554#0" expanded="true" />
+            <element signature="e#126615#126651#0" expanded="true" />
+            <element signature="e#126708#126744#0" expanded="true" />
+            <element signature="e#126821#126862#0" expanded="true" />
+            <element signature="e#126900#126982#0" expanded="true" />
+            <element signature="e#128291#128314#0" expanded="true" />
+            <element signature="e#128421#128467#0" expanded="true" />
+            <element signature="e#128727#128860#0" expanded="true" />
+            <element signature="e#128885#128951#0" expanded="true" />
+            <element signature="e#128978#129020#0" expanded="true" />
+            <element signature="e#129064#129106#0" expanded="true" />
+            <element signature="e#129150#129192#0" expanded="true" />
+            <element signature="e#129239#129258#0" expanded="true" />
+            <element signature="e#129307#129373#0" expanded="true" />
+            <element signature="e#129445#129494#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

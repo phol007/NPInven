@@ -108,7 +108,7 @@
                 <div><img src="images/Promotion.png" class="main_menu"><br><b>จัดโปรโมชั่น(7)</b></div>
             </a></div>
 
-            <div class="col-xs-6 col-md-6"><a href="javascript:typeprint()" data-transition="slidefade">
+            <div class="col-xs-6 col-md-6"><a href="#printpage" data-transition="slidefade">
                 <div><img src="images/label.png" class="main_menu"><br><b>ขอพิมป้าย(8)</b></div>
             </a></div>
         </div>
@@ -2601,8 +2601,21 @@ ju
     <div  data-role="main" class="ui-content" id="main">
         <label style="font-size:24px; margin-bottom:0;"><img src="images/label.png" width="20"><b> ระบบพิมป้าย </b></label><hr>
         <div class="row">
-            <div class="col-md-6 col-xs-6"><div id="type_print"></div></div>
-                <div class="col-md-6 col-xs-6"><div id="size_page"></div></div>
+            <div class="col-md-6 col-xs-6">
+            <select name="print" id="selectexnormal" class="bt-cmp" style="width:100%; height:50px;" data-role="none">
+           <option value="F2">พิเศษ</option>
+            <option value="F1">ธรรมดา</option>
+          </select></div>
+
+            <div class="col-md-6 col-xs-6">
+                <select name="print" id="selectsize" class="bt-cmp" style="width:100%; height:50px;" data-role="none">
+                    <option value="P1">P1 21 ดวง/หน้า</option>
+                    <option value="P2">P2 3 ดวง/หน้า</option>
+                    <option value="P3">P3 2 ดวง/หน้า</option>
+                    <option value="P4">P4 A4</option>
+                </select></div>
+                <!--<div class="col-md-6 col-xs-6"><select name="size" id="selectsize" class="bt-cmp" style="width:100%; height:50px;" data-role="none">-->
+                    <!--<option value="P1">P1 21 ดวง/หน้า</option></div>-->
         </div>
         <div class="row">
             <div class="col-md-6 col-xs-6"><input type="text" name="idprice" readonly id="idproduct" class="form-control" placeholder="รหัสสินค้า"></div>
@@ -2618,7 +2631,17 @@ ju
         <input type="hidden" id="itempricea" >
         <input type="hidden" id="itemunitcodea" >
 
-        <div id="detailprint"></div>
+        <div id="detailprint">
+          <div class="ui-grid-d" style="border-top:1px solid black; border-bottom:1px solid black; padding:2% 0; width:100%;">
+           <div class="ui-block-a" style="font-size: 12px;color: blue;"><b>รหัสสินค้า</b></div>
+            <div class="ui-block-b" style="font-size: 12px;color: blue;" align="center" ><b>พิมพ์</b></div>
+           <div class="ui-block-c" style="font-size: 12px;color: blue;"><b>ชื่อสินค้า</b></div>
+            <div class="ui-block-d" style="font-size: 12px;color: blue;"><b>กระดาษ</b></div>
+            <div class="ui-block-e" style="font-size: 12px;color: blue;"><b>หน่วยนับ</b></div>
+            </div>
+            <div class="ui-grid-a" style="padding-bottom:4%; padding-top:3%">
+            <div class="ui-block-a" style="font-size:25px;word-wrap:break-word;width:100%;color:red;font-weight:bold;" align="center" >ไม่มีข้อมูล</div></div>
+        </div>
 
 
 
@@ -2698,7 +2721,7 @@ ju
         <div data-role="navbar">
             <ul>
                 <li><a href="#pagetwo" class="ui-btn-active ui-state-persist" data-icon="home" id="footer-nav" data-transition="slidefade" data-direction="reverse">หน้าหลัก</a></li>
-                <li onclick="cc_focus();"><a href="#newreorder" class="ui-btn-active ui-state-persist" data-icon="plus" id="footer-nav" data-transition="slidefade" data-direction="reverse">เพิ่ม</a></li>
+                <li><a href="#newreorder" class="ui-btn-active ui-state-persist" data-icon="plus" id="footer-nav" data-transition="slidefade" data-direction="reverse">เพิ่ม</a></li>
             </ul>
         </div>
     </div>

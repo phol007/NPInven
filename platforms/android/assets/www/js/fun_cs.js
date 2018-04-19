@@ -141,19 +141,19 @@ function typeprint(){
          document.getElementById('itempricea').value = '';
          document.getElementById('itemunitcodea').value = '';
 
-         var typeprint = "";
-          typeprint += '<select name="print" id="selectexnormal" class="bt-cmp" style="width:100%; height:50px;" data-role="none">';
-          typeprint += '<option value="F2">พิเศษ</option>';
-          typeprint += '<option value="F1">ธรรมดา</option>';
-          typeprint += '</select>';
-       document.getElementById("type_print").innerHTML = typeprint;
-          var sizepage = "";
-           sizepage += '<select name="size" id="selectsize" class="bt-cmp" style="width:100%; height:50px;" data-role="none">';
-           sizepage += '<option value="P1">P1 21 ดวง/หน้า</option>';
-           sizepage += '<option value="P2">P2 3 ดวง/หน้า</option>';
-           sizepage += '<option value="P3">P3 2 ดวง/หน้า</option>';
-           sizepage += '<option value="P4">P4 A4</option>';
-       document.getElementById("size_page").innerHTML = sizepage;
+//         var typeprint = "";
+//          typeprint += '<select name="print" id="selectexnormal" class="bt-cmp" style="width:100%; height:50px;" data-role="none">';
+//          typeprint += '<option value="F2">พิเศษ</option>';
+//          typeprint += '<option value="F1">ธรรมดา</option>';
+//          typeprint += '</select>';
+//       document.getElementById("type_print").innerHTML = typeprint;
+//          var sizepage = "";
+//           sizepage += '<select name="size" id="selectsize" class="bt-cmp" style="width:100%; height:50px;" data-role="none">';
+//           sizepage += '<option value="P1">P1 21 ดวง/หน้า</option>';
+//           sizepage += '<option value="P2">P2 3 ดวง/หน้า</option>';
+//           sizepage += '<option value="P3">P3 2 ดวง/หน้า</option>';
+//           sizepage += '<option value="P4">P4 A4</option>';
+//       document.getElementById("size_page").innerHTML = sizepage;
 
      var listprint = "";
         console.log("listprint "+"http://venus.nopadol.com:9002/"+"labels?access_token=aaa&keyword="+" username :"+localStorage.username);
@@ -167,11 +167,11 @@ function typeprint(){
                           success: function(result){
 //                              console.log('data '+JSON.stringify(result.data));
                                         listprint  +=   '<div class="ui-grid-d" style="border-top:1px solid black; border-bottom:1px solid black; padding:2% 0; width:100%;">';
-                                    	listprint  += '<div class="ui-block-a" style="font-size: 12px;"><b>รหัสสินค้า</b></div>';
-                                    	listprint  += '<div class="ui-block-b" style="font-size: 12px;" align="center" ><b>พิมพ์</b></div>';
-                                    	listprint  += '<div class="ui-block-c" style="font-size: 12px;"><b>ชื่อสินค้า</b></div>';
-                                    	listprint  += '<div class="ui-block-d" style="font-size: 12px;"><b>กระดาษ</b></div>';
-                                    	listprint  += '<div class="ui-block-e" style="font-size: 12px;"><b>หน่วยนับ</b></div>';
+                                    	listprint  += '<div class="ui-block-a" style="font-size: 12px;color: blue;"><b>รหัสสินค้า</b></div>';
+                                    	listprint  += '<div class="ui-block-b" style="font-size: 12px;color: blue;" align="center" ><b>พิมพ์</b></div>';
+                                    	listprint  += '<div class="ui-block-c" style="font-size: 12px;color: blue;"><b>ชื่อสินค้า</b></div>';
+                                    	listprint  += '<div class="ui-block-d" style="font-size: 12px;color: blue;"><b>กระดาษ</b></div>';
+                                    	listprint  += '<div class="ui-block-e" style="font-size: 12px;color: blue;"><b>หน่วยนับ</b></div>';
                                         listprint  += '</div>';
 
                                    $.each(result.data, function(key, val) {
@@ -196,6 +196,19 @@ function typeprint(){
                                   closeload();
                           },
                           error: function (err){
+
+         listprint +=  '<div class="ui-grid-d" style="border-top:1px solid black; border-bottom:1px solid black; padding:2% 0; width:100%;">';
+         listprint +=  '<div class="ui-block-a" style="font-size: 12px;color: blue;"><b>รหัสสินค้า</b></div>';
+         listprint +=   '<div class="ui-block-b" style="font-size: 12px;color: blue;" align="center" ><b>พิมพ์</b></div>';
+         listprint +=  '<div class="ui-block-c" style="font-size: 12px;color: blue;"><b>ชื่อสินค้า</b></div>';
+         listprint +=   '<div class="ui-block-d" style="font-size: 12px;color: blue;"><b>กระดาษ</b></div>';
+         listprint +=   '<div class="ui-block-e" style="font-size: 12px;color: blue;"><b>หน่วยนับ</b></div>';
+         listprint +=   '</div>';
+         listprint +=   '<div class="ui-grid-a" style="padding-bottom:4%; padding-top:3%">';
+         listprint +=   '<div class="ui-block-a" style="font-size:25px;word-wrap:break-word;width:100%;color:red;font-weight:bold;" align="center" >ไม่มีข้อมูล</div></div>';
+
+                                  document.getElementById("detailprint").innerHTML = listprint;
+                              closeload();
                               console.log(JSON.stringify(err));
                              // alertify.alert("การเชื่อมต่อฐานข้อมูลมีปัญหา กรุณาตรวจสอบการเชื่อมต่ออินเตอร์เน็ตของท่าน");
 
@@ -272,6 +285,7 @@ if(amount&&BarCode&&nameproduct != ''){
         cancel : "ยกเลิก",
         ok     : "บันทึก"
     } });
+    loading();
 //alert(outputselect);
 //alert('hidden'+itemcode+' '+itembarcode+' '+itemprice+' '+itemunitcode+'    value'+' n'+nameproduct+' '+extranormal+' '+typesize+' '+BarCode+' '+amount);
 alertify.confirm("ต้องการขอพิมป้าย รหัส "+BarCode+"  หรือไม่ ?", function (e) {
@@ -284,6 +298,7 @@ alertify.confirm("ต้องการขอพิมป้าย รหัส 
                               type: "POST",
                               cache: false,
                               success: function(result){
+                              closeload();
                               console.log((result));
                               alertify.success('บันทึกเสร็จเรียบร้อย');
                                     typeprint();
