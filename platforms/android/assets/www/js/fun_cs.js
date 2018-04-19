@@ -122,6 +122,7 @@ function detailitem(bcitem){
                                    closeload();
                                   },
                                   error: function (err){
+                                  closeload();
                                       console.log(JSON.stringify(err));
                                      // alertify.alert("การเชื่อมต่อฐานข้อมูลมีปัญหา กรุณาตรวจสอบการเชื่อมต่ออินเตอร์เน็ตของท่าน");
                                     switch_url();
@@ -208,6 +209,7 @@ function typeprint(){
          listprint +=   '<div class="ui-block-a" style="font-size:25px;word-wrap:break-word;width:100%;color:red;font-weight:bold;" align="center" >ไม่มีข้อมูล</div></div>';
 
                                   document.getElementById("detailprint").innerHTML = listprint;
+                                  $.mobile.changePage('#printpage',{transition: 'slidefade'});
                               closeload();
                               console.log(JSON.stringify(err));
                              // alertify.alert("การเชื่อมต่อฐานข้อมูลมีปัญหา กรุณาตรวจสอบการเชื่อมต่ออินเตอร์เน็ตของท่าน");
@@ -220,7 +222,7 @@ function typeprint(){
 }
 
 function searchproduct(bcitem){
-loading();
+
     $.ajax({
                               url: localStorage.api_url_server+"ReOrderWS/reorder/itemdetails",
                               data: '{"access_token":"'+localStorage.token+'","profit_code":"'+localStorage.profit+'","search":"'+bcitem+'"}',
@@ -248,6 +250,7 @@ loading();
 
                               },
                               error: function (err){
+                              closeload();
                                   console.log(JSON.stringify(err));
                                  // alertify.alert("การเชื่อมต่อฐานข้อมูลมีปัญหา กรุณาตรวจสอบการเชื่อมต่ออินเตอร์เน็ตของท่าน");
                                 switch_url();
@@ -285,11 +288,12 @@ if(amount&&BarCode&&nameproduct != ''){
         cancel : "ยกเลิก",
         ok     : "บันทึก"
     } });
-    loading();
+
 //alert(outputselect);
 //alert('hidden'+itemcode+' '+itembarcode+' '+itemprice+' '+itemunitcode+'    value'+' n'+nameproduct+' '+extranormal+' '+typesize+' '+BarCode+' '+amount);
 alertify.confirm("ต้องการขอพิมป้าย รหัส "+BarCode+"  หรือไม่ ?", function (e) {
                                                 if (e) {
+                                                  loading();
                               $.ajax({
                               url: "http://venus.nopadol.com:9002/label",
                               data: '{"ItemCode":"'+itemcode+'","BarCode":"'+BarCode+'","Qty":'+amount+',"Price":'+itemprice+',"LabelType":"'+outputselect+'","CreatorCode":"'+localStorage.username+'","unitcode":"'+itemunitcode+'"}',
