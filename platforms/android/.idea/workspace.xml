@@ -7,12 +7,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="43971b06-a339-41b4-96fa-898a969182ae" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/__local_aars____home_it10n_RRR_NPInven_platforms_android_libs_com_google_zxing_client_android_captureactivity_jar_unspecified_jar.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/__local_aars____home_it10n_Rnpinven_test_NPInven_platforms_android_libs_com_google_zxing_client_android_captureactivity_jar_unspecified_jar.xml" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/fileHashes/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/4.1/fileHashes/fileHashes.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/fileHashes/fileHashes.lock" afterPath="$PROJECT_DIR$/.gradle/4.1/fileHashes/fileHashes.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/javaCompile/javaCompile.lock" afterPath="$PROJECT_DIR$/.gradle/4.1/javaCompile/javaCompile.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/javaCompile/taskHistory.bin" afterPath="$PROJECT_DIR$/.gradle/4.1/javaCompile/taskHistory.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/javaCompile/taskJars.bin" afterPath="$PROJECT_DIR$/.gradle/4.1/javaCompile/taskJars.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/taskHistory/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/4.1/taskHistory/fileSnapshots.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/taskHistory/taskHistory.bin" afterPath="$PROJECT_DIR$/.gradle/4.1/taskHistory/taskHistory.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/taskHistory/taskHistory.lock" afterPath="$PROJECT_DIR$/.gradle/4.1/taskHistory/taskHistory.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CordovaLib/build/intermediates/incremental/debug-mergeJniLibs/merge-state" afterPath="$PROJECT_DIR$/CordovaLib/build/intermediates/incremental/debug-mergeJniLibs/merge-state" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CordovaLib/CordovaLib.iml" afterPath="$PROJECT_DIR$/CordovaLib/CordovaLib.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CordovaLib/build/intermediates/incremental/mergeDebugAndroidTestResources/compile-file-map.properties" afterPath="$PROJECT_DIR$/CordovaLib/build/intermediates/incremental/mergeDebugAndroidTestResources/compile-file-map.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CordovaLib/build/intermediates/incremental/mergeDebugAndroidTestResources/merger.xml" afterPath="$PROJECT_DIR$/CordovaLib/build/intermediates/incremental/mergeDebugAndroidTestResources/merger.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CordovaLib/build/intermediates/incremental/mergeDebugAssets/merger.xml" afterPath="$PROJECT_DIR$/CordovaLib/build/intermediates/incremental/mergeDebugAssets/merger.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CordovaLib/build/intermediates/incremental/mergeDebugJniLibFolders/merger.xml" afterPath="$PROJECT_DIR$/CordovaLib/build/intermediates/incremental/mergeDebugJniLibFolders/merger.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CordovaLib/build/intermediates/incremental/mergeDebugShaders/merger.xml" afterPath="$PROJECT_DIR$/CordovaLib/build/intermediates/incremental/mergeDebugShaders/merger.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CordovaLib/build/intermediates/incremental/packageDebugResources/compile-file-map.properties" afterPath="$PROJECT_DIR$/CordovaLib/build/intermediates/incremental/packageDebugResources/compile-file-map.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CordovaLib/build/intermediates/incremental/packageDebugResources/merger.xml" afterPath="$PROJECT_DIR$/CordovaLib/build/intermediates/incremental/packageDebugResources/merger.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CordovaLib/build/intermediates/transforms/mergeJniLibs/debug/__content__.json" afterPath="$PROJECT_DIR$/CordovaLib/build/intermediates/transforms/mergeJniLibs/debug/__content__.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CordovaLib/build/outputs/logs/manifest-merger-debug-report.txt" afterPath="$PROJECT_DIR$/CordovaLib/build/outputs/logs/manifest-merger-debug-report.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android.iml" afterPath="$PROJECT_DIR$/android.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/www/index.html" afterPath="$PROJECT_DIR$/assets/www/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/www/js/fun_cs.js" afterPath="$PROJECT_DIR$/assets/www/js/fun_cs.js" />
     </list>
@@ -66,7 +83,7 @@
       <file leaf-file-name="main.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/www/css/main.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="579">
+            <state relative-caret-position="1100">
               <caret line="55" column="9" lean-forward="false" selection-start-line="55" selection-start-column="9" selection-end-line="55" selection-end-column="9" />
               <folding />
             </state>
@@ -76,49 +93,49 @@
       <file leaf-file-name="reorder.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/www/js/reorder.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="20">
+            <state relative-caret-position="2000">
               <caret line="100" column="59" lean-forward="false" selection-start-line="100" selection-start-column="49" selection-end-line="100" selection-end-column="59" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/www/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="326">
-              <caret line="2645" column="29" lean-forward="false" selection-start-line="2645" selection-start-column="29" selection-end-line="2645" selection-end-column="29" />
+            <state relative-caret-position="181">
+              <caret line="51" column="64" lean-forward="false" selection-start-line="51" selection-start-column="64" selection-end-line="51" selection-end-column="64" />
               <folding>
                 <element signature="e#1482#1521#0" expanded="true" />
                 <element signature="e#1584#1609#0" expanded="true" />
                 <element signature="e#1634#1672#0" expanded="true" />
-                <element signature="e#66629#66648#0" expanded="true" />
-                <element signature="e#66748#66769#0" expanded="true" />
-                <element signature="e#66845#66867#0" expanded="true" />
-                <element signature="e#69057#69137#0" expanded="true" />
-                <element signature="e#88390#88523#0" expanded="true" />
-                <element signature="e#92706#92752#0" expanded="true" />
-                <element signature="e#124331#124367#0" expanded="true" />
-                <element signature="e#124445#124477#0" expanded="true" />
-                <element signature="e#124706#124758#0" expanded="true" />
-                <element signature="e#124832#124864#0" expanded="true" />
-                <element signature="e#125322#125375#0" expanded="true" />
-                <element signature="e#125479#125531#0" expanded="true" />
-                <element signature="e#125810#125863#0" expanded="true" />
-                <element signature="e#125967#126019#0" expanded="true" />
-                <element signature="e#126296#126349#0" expanded="true" />
-                <element signature="e#126448#126500#0" expanded="true" />
-                <element signature="e#126785#126823#0" expanded="true" />
-                <element signature="e#129455#129478#0" expanded="true" />
-                <element signature="e#129585#129631#0" expanded="true" />
-                <element signature="e#129891#130024#0" expanded="true" />
-                <element signature="e#130049#130115#0" expanded="true" />
-                <element signature="e#130142#130184#0" expanded="true" />
-                <element signature="e#130228#130270#0" expanded="true" />
-                <element signature="e#130314#130356#0" expanded="true" />
-                <element signature="e#130403#130422#0" expanded="true" />
-                <element signature="e#130471#130537#0" expanded="true" />
-                <element signature="e#130609#130658#0" expanded="true" />
+                <element signature="e#66614#66633#0" expanded="true" />
+                <element signature="e#66733#66754#0" expanded="true" />
+                <element signature="e#66830#66852#0" expanded="true" />
+                <element signature="e#69042#69122#0" expanded="true" />
+                <element signature="e#88375#88508#0" expanded="true" />
+                <element signature="e#92691#92737#0" expanded="true" />
+                <element signature="e#124316#124352#0" expanded="true" />
+                <element signature="e#124430#124462#0" expanded="true" />
+                <element signature="e#124691#124743#0" expanded="true" />
+                <element signature="e#124817#124849#0" expanded="true" />
+                <element signature="e#125307#125360#0" expanded="true" />
+                <element signature="e#125464#125516#0" expanded="true" />
+                <element signature="e#125795#125848#0" expanded="true" />
+                <element signature="e#125952#126004#0" expanded="true" />
+                <element signature="e#126281#126334#0" expanded="true" />
+                <element signature="e#126433#126485#0" expanded="true" />
+                <element signature="e#126770#126808#0" expanded="true" />
+                <element signature="e#129440#129463#0" expanded="true" />
+                <element signature="e#129570#129616#0" expanded="true" />
+                <element signature="e#129876#130009#0" expanded="true" />
+                <element signature="e#130034#130100#0" expanded="true" />
+                <element signature="e#130127#130169#0" expanded="true" />
+                <element signature="e#130213#130255#0" expanded="true" />
+                <element signature="e#130299#130341#0" expanded="true" />
+                <element signature="e#130388#130407#0" expanded="true" />
+                <element signature="e#130456#130522#0" expanded="true" />
+                <element signature="e#130594#130643#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -134,11 +151,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="fun_cs.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="fun_cs.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/assets/www/js/fun_cs.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="196">
-              <caret line="192" column="38" lean-forward="false" selection-start-line="192" selection-start-column="38" selection-end-line="192" selection-end-column="38" />
+            <state relative-caret-position="338">
+              <caret line="186" column="122" lean-forward="false" selection-start-line="186" selection-start-column="122" selection-end-line="186" selection-end-column="122" />
               <folding />
             </state>
           </provider>
@@ -158,11 +175,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>).focus();</find>
-      <find>getItemReorder</find>
-      <find>main.css</find>
-      <find>table</find>
-      <find>csdetail</find>
       <find>d</find>
       <find>de</find>
       <find>deta</find>
@@ -181,13 +193,18 @@
       <find>printpage</find>
       <find>focus</find>
       <find>amountprice</find>
-      <find>localStorage.api_url_server</find>
       <find>/label</find>
       <find>server</find>
       <find>บาร์โค้ด</find>
       <find>valida</find>
       <find>&lt;b&gt;</find>
       <find>สินค้า</find>
+      <find>p2</find>
+      <find>5616</find>
+      <find>csdelete</find>
+      <find>ไม่มีสินค้า</find>
+      <find>alert</find>
+      <find>localStorage.api_url_server</find>
     </findStrings>
     <replaceStrings>
       <replace>'</replace>
@@ -2032,16 +2049,16 @@
         <option value="$PROJECT_DIR$/assets/www/js/back_bt.js" />
         <option value="$PROJECT_DIR$/assets/www/css/main.css" />
         <option value="$PROJECT_DIR$/assets/www/js/menutree.js" />
-        <option value="$PROJECT_DIR$/assets/www/js/fun_cs.js" />
         <option value="$PROJECT_DIR$/assets/www/index.html" />
+        <option value="$PROJECT_DIR$/assets/www/js/fun_cs.js" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="64" />
-    <option name="y" value="-11" />
-    <option name="width" value="1303" />
-    <option name="height" value="780" />
+    <option name="x" value="65" />
+    <option name="y" value="-4" />
+    <option name="width" value="1301" />
+    <option name="height" value="772" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -2061,19 +2078,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="android" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
-      <pane id="Scratches" />
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -2102,12 +2106,25 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="AndroidView">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="android" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
     <property name="settings.editor.selected.configurable" value="instant.run" />
-    <property name="device.picker.selection" value="MZOF8P5SCQCQ9PW8" />
+    <property name="device.picker.selection" value="810516110870" />
     <property name="android.project.structure.last.selected" value="android" />
     <property name="android.project.structure.proportion" value="0.15" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -2199,7 +2216,7 @@
       <option name="ACTIVITY_CLASS" value="" />
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1524132400702" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1524198197209" />
       </method>
     </configuration>
     <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Instrumented Tests">
@@ -2247,7 +2264,7 @@
       </Profilers>
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1524132400702" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1524198197209" />
       </method>
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -2430,7 +2447,7 @@
       <option name="ACTIVITY_CLASS" value="" />
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1524132400709" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1524198197211" />
       </method>
     </configuration>
     <list size="1">
@@ -2576,7 +2593,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="64" y="-11" width="1303" height="780" extended-state="6" />
+    <frame x="65" y="-4" width="1301" height="772" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Android Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32935154" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -2595,7 +2612,7 @@
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1250996" sideWeight="0.4915254" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.09641434" sideWeight="0.4915254" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32988048" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24940239" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -2638,13 +2655,13 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27243066" sideWeight="0.49082202" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32935154" sideWeight="0.4969743" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32817337" sideWeight="0.4969743" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32817337" sideWeight="0.4969743" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24940239" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="15" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19123507" sideWeight="0.4915254" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.09641434" sideWeight="0.4915254" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32988048" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
     </layout-to-restore>
@@ -2964,7 +2981,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2860">
           <caret line="143" column="50" lean-forward="false" selection-start-line="143" selection-start-column="50" selection-end-line="143" selection-end-column="50" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2983,6 +2999,61 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/assets/www/css/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1100">
+          <caret line="55" column="9" lean-forward="false" selection-start-line="55" selection-start-column="9" selection-end-line="55" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/www/js/reorder.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2000">
+          <caret line="100" column="59" lean-forward="false" selection-start-line="100" selection-start-column="49" selection-end-line="100" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/www/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="181">
+          <caret line="51" column="64" lean-forward="false" selection-start-line="51" selection-start-column="64" selection-end-line="51" selection-end-column="64" />
+          <folding>
+            <element signature="e#1482#1521#0" expanded="true" />
+            <element signature="e#1584#1609#0" expanded="true" />
+            <element signature="e#1634#1672#0" expanded="true" />
+            <element signature="e#66614#66633#0" expanded="true" />
+            <element signature="e#66733#66754#0" expanded="true" />
+            <element signature="e#66830#66852#0" expanded="true" />
+            <element signature="e#69042#69122#0" expanded="true" />
+            <element signature="e#88375#88508#0" expanded="true" />
+            <element signature="e#92691#92737#0" expanded="true" />
+            <element signature="e#124316#124352#0" expanded="true" />
+            <element signature="e#124430#124462#0" expanded="true" />
+            <element signature="e#124691#124743#0" expanded="true" />
+            <element signature="e#124817#124849#0" expanded="true" />
+            <element signature="e#125307#125360#0" expanded="true" />
+            <element signature="e#125464#125516#0" expanded="true" />
+            <element signature="e#125795#125848#0" expanded="true" />
+            <element signature="e#125952#126004#0" expanded="true" />
+            <element signature="e#126281#126334#0" expanded="true" />
+            <element signature="e#126433#126485#0" expanded="true" />
+            <element signature="e#126770#126808#0" expanded="true" />
+            <element signature="e#129440#129463#0" expanded="true" />
+            <element signature="e#129570#129616#0" expanded="true" />
+            <element signature="e#129876#130009#0" expanded="true" />
+            <element signature="e#130034#130100#0" expanded="true" />
+            <element signature="e#130127#130169#0" expanded="true" />
+            <element signature="e#130213#130255#0" expanded="true" />
+            <element signature="e#130299#130341#0" expanded="true" />
+            <element signature="e#130388#130407#0" expanded="true" />
+            <element signature="e#130456#130522#0" expanded="true" />
+            <element signature="e#130594#130643#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/assets/www/js/menutree.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="440">
@@ -2991,66 +3062,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/www/css/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="579">
-          <caret line="55" column="9" lean-forward="false" selection-start-line="55" selection-start-column="9" selection-end-line="55" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/www/js/reorder.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="20">
-          <caret line="100" column="59" lean-forward="false" selection-start-line="100" selection-start-column="49" selection-end-line="100" selection-end-column="59" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/www/js/fun_cs.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="192" column="38" lean-forward="false" selection-start-line="192" selection-start-column="38" selection-end-line="192" selection-end-column="38" />
+        <state relative-caret-position="338">
+          <caret line="186" column="122" lean-forward="false" selection-start-line="186" selection-start-column="122" selection-end-line="186" selection-end-column="122" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/www/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="326">
-          <caret line="2645" column="29" lean-forward="false" selection-start-line="2645" selection-start-column="29" selection-end-line="2645" selection-end-column="29" />
-          <folding>
-            <element signature="e#1482#1521#0" expanded="true" />
-            <element signature="e#1584#1609#0" expanded="true" />
-            <element signature="e#1634#1672#0" expanded="true" />
-            <element signature="e#66629#66648#0" expanded="true" />
-            <element signature="e#66748#66769#0" expanded="true" />
-            <element signature="e#66845#66867#0" expanded="true" />
-            <element signature="e#69057#69137#0" expanded="true" />
-            <element signature="e#88390#88523#0" expanded="true" />
-            <element signature="e#92706#92752#0" expanded="true" />
-            <element signature="e#124331#124367#0" expanded="true" />
-            <element signature="e#124445#124477#0" expanded="true" />
-            <element signature="e#124706#124758#0" expanded="true" />
-            <element signature="e#124832#124864#0" expanded="true" />
-            <element signature="e#125322#125375#0" expanded="true" />
-            <element signature="e#125479#125531#0" expanded="true" />
-            <element signature="e#125810#125863#0" expanded="true" />
-            <element signature="e#125967#126019#0" expanded="true" />
-            <element signature="e#126296#126349#0" expanded="true" />
-            <element signature="e#126448#126500#0" expanded="true" />
-            <element signature="e#126785#126823#0" expanded="true" />
-            <element signature="e#129455#129478#0" expanded="true" />
-            <element signature="e#129585#129631#0" expanded="true" />
-            <element signature="e#129891#130024#0" expanded="true" />
-            <element signature="e#130049#130115#0" expanded="true" />
-            <element signature="e#130142#130184#0" expanded="true" />
-            <element signature="e#130228#130270#0" expanded="true" />
-            <element signature="e#130314#130356#0" expanded="true" />
-            <element signature="e#130403#130422#0" expanded="true" />
-            <element signature="e#130471#130537#0" expanded="true" />
-            <element signature="e#130609#130658#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>

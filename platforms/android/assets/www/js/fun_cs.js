@@ -99,7 +99,9 @@ function detailitem(bcitem){
                                   type: "POST",
                                   cache: false,
                                   success: function(result){
-                                     if(result.item_code == null){
+//                                  console.log(result);
+
+                                     if(result.error == false ){
                                      alertify.error('ไม่มีสินค้าในระบบ');
                                      }
 
@@ -182,7 +184,7 @@ function typeprint(){
                                         listprint += val['item_code']+'</div>';
                                         listprint += '<div class="ui-block-b" style="font-size: 12px;"  align="center"  ><b>';
                                         listprint += val['qty']+'</b></div>';
-                                        listprint += '<div class="ui-block-c" style="font-size: 12px;" >';
+                                        listprint += '<div class="ui-block-c" style="font-size: 12px;word-wrap:break-word;" >';
                                         listprint += val['item_name']+'</div>';
                                         listprint += '<div class="ui-block-d" style="font-size: 12px;" >';
                                         listprint += val['label_type']+'</div>';
@@ -280,6 +282,7 @@ var BarCode = document.getElementById('idproduct').value;
 var amount = document.getElementById('amountprice').value;
 
 var outputselect = typesize.trim()+extranormal.trim();
+
 
 if(amount&&BarCode&&nameproduct != ''){
     alertify.set({ labels: {
@@ -1195,8 +1198,21 @@ $(document).on('taphold', '.csdeletecpr', function() {
 function csDeletprint(ItemCode,BarCode,Qty,Price,LabelType,CreatorCode,unitcode){
 //alert(ItemCode+'/'+BarCode+'/'+Qty+'/'+Price+'/'+LabelType+'/'+CreatorCode+'/'+unitcode);
 if(Price == 'undefined'){
-var Price = 1;
+var Price = 0;
 }
+if(BarCode == 'undefined'){
+var BarCode = '';
+}
+if(Qty ==  'undefined'){
+var Qty = 0;
+}
+if(LabelType ==  'undefined'){
+var LabelType = '';
+}
+if(unitcode ==  'undefined'){
+var unitcode = '';
+}
+
 alertify.set({ labels: {
         ok     : "บันทึก",
         cancel : "ยกเลิก"
