@@ -2739,11 +2739,11 @@ ju
 
 <div data-role="page" id="promotionpage">
     <div data-role="none" class="header">
-        <a href="#myPanel_listreorder" data-role="none"><img src="images/grid.png" class="open_panel"></a>
+        <a href="#myPanel_promotion" data-role="none"><img src="images/grid.png" class="open_panel"></a>
     </div>
 
     <div data-role="main" class="ui-content" id="main">
-        <h3 class="title" align="center"><b>Promotion Request</b></h3>
+        <h3 class="title" align="center"><img src="images/Promotion.png" width="32"><b>Promotion Request</b></h3>
         <input type="text" id="searchpromotion" onkeyup="managepromotion()" >
         <div id="detailpromotion"></div>
 
@@ -2760,11 +2760,115 @@ ju
             </ul>
         </div>
     </div>
-    <div data-role="panel" id="myPanel_listreorder" style="padding:0;" data-display="overlay">
+    <div data-role="panel" id="myPanel_promotion" style="padding:0;" data-display="overlay">
         <div id="tree" class="tree"></div>
     </div>
 </div>
 <!--//////////////////////////////////////////////////////////// manage promotion ////////////////////////////////////////////////////////////////-->
+
+<!--//////////////////////////////////////////////////////////// detail promotion ////////////////////////////////////////////////////////////////-->
+
+<div data-role="page" id="detailpromotion">
+    <div data-role="none" class="header">
+        <a href="#myPanel_detailpromotion" data-role="none"><img src="images/grid.png" class="open_panel"></a>
+    </div>
+
+    <div data-role="main" class="ui-content" id="main">
+        <h3 class="title" align="center"><img src="images/Promotion.png" width="32"><b>&nbsp;รายละเอียดโปรโมชั่น</b></h3>
+<br>
+        <label>
+            <div class="ui-grid-c">
+                <div class="ui-block-a" style="width:25%;font-size: 12px;color: black;font-weight:bold;"  >
+                    <b>Docno :</b>
+                </div>
+                <div class="ui-block-b" id="docno_id" style="word-wrap:break-word;width:28%;">
+                </div>
+                <div class="ui-block-c"  style="padding-left: 15px;word-wrap:break-word;width:20%;">
+                    <input type="image" onclick="toggledetail()" style="border-radius: 10px; border: 1px solid #F25F5C;" src="images/showmorepromotion.png" alt="Submit" width="25" height="25">
+                </div>
+                <div class="ui-block-d"  style="word-wrap:break-word;width:20%;">
+                    <input type="image" style="border-radius: 10px; border: 1px solid #FFE066;" src="images/editpromotion.png" alt="Submit" width="25" height="25">
+                    <!--<label style="background-color:#F25F5C;"><img src="images/editpromotion.png" width="32"></label>-->
+                </div>
+            </div>
+        </label>
+
+        <label>
+            <div class="ui-grid-a">
+                <div class="ui-block-a" style="font-size: 12px;color: black;font-weight:bold;width:40%;"  >
+                    <b>วันที่ขอโปรโมชั่น :</b>
+                </div>
+                <div class="ui-block-b" id="datepromotion" style="width:60%" >
+
+                </div>
+            </div>
+        </label>
+
+        <label>
+            <div class="ui-grid-a">
+                <div class="ui-block-a" style="font-size: 12px;color: black;font-weight:bold;width:40%;"  >
+                    <b>เลขที่โปรโมชั่น :</b>
+                </div>
+                <div class="ui-block-b" id="pmcode" style="width:60%;">
+
+                </div>
+            </div>
+        </label>
+        <!--hidden-->
+        <div id="toggledetailpro" style="display:none;">
+        <label>
+            <div class="ui-grid-a">
+                <div class="ui-block-a" style="width:31%;font-size: 12px;color: black;font-weight:bold;"  >
+                    <b>ชื่อ section :</b>
+                </div>
+                <div class="ui-block-b" style="width:69%" id="secman">
+
+                </div>
+            </div>
+        </label>
+        <label>
+            <div class="ui-grid-a">
+                <div class="ui-block-a" style="width:31%;font-size: 12px;color: black;font-weight:bold;" >
+                    <b>ผู้ทำเอกสาร :</b>
+                </div>
+                <div class="ui-block-b" style="width:69%" id="creator_code">
+
+                </div>
+            </div>
+        </label>
+        <label>
+            <div class="ui-grid-a">
+                <div class="ui-block-a" style="width:20%;font-size: 12px;color: black;font-weight:bold;">
+                    <b>จาก :</b>
+                </div>
+                <div class="ui-block-b" style="width:80%" id="datestartend">
+
+                </div>
+            </div>
+        </label>
+        </div>
+ <!--hidden-->
+    <div id="detailtable"></div>
+
+
+
+
+
+    </div>
+
+    <div data-role="footer" class="footer" data-enhance="false">
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#pagetwo" class="ui-btn-active ui-state-persist" data-icon="home" id="footer-nav" data-transition="slidefade" data-direction="reverse">หน้าหลัก</a></li>
+                <li><a href="#newreorder" class="ui-btn-active ui-state-persist" data-icon="plus" id="footer-nav" data-transition="slidefade" data-direction="reverse">เพิ่ม</a></li>
+            </ul>
+        </div>
+    </div>
+    <div data-role="panel" id="myPanel_detailpromotion" style="padding:0;" data-display="overlay">
+        <div id="tree" class="tree"></div>
+    </div>
+</div>
+<!--//////////////////////////////////////////////////////////// detail promotion ////////////////////////////////////////////////////////////////-->
 
 
 <!--//////////////////////////////////////////////////////////////// setting ////////////////////////////////////////////////////////////////-->

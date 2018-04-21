@@ -162,7 +162,7 @@ function typeprint(){
         console.log("listprint "+"http://venus.nopadol.com:9002/"+"labels?access_token=aaa&keyword="+" username :"+localStorage.username);
                  loading();
                   $.ajax({
-                          url: "http://venus.nopadol.com:9002/"+"labels?access_token=aaa&keyword="+localStorage.username,
+                          url: "http://venus.nopadol.com:9002/"+"labels?access_token=aaa&keyword="+localStorage.username+"&branch="+localStorage.branch,
                           contentType: "application/json; charset=utf-8",
                           dataType: "json",
                           type: "GET",
@@ -297,7 +297,7 @@ alertify.confirm("ต้องการขอพิมป้าย รหัส 
                                                   loading();
                               $.ajax({
                               url: "http://venus.nopadol.com:9002/label",
-                              data: '{"ItemCode":"'+itemcode+'","BarCode":"'+BarCode+'","Qty":'+amount+',"Price":'+itemprice+',"LabelType":"'+outputselect+'","CreatorCode":"'+localStorage.username+'","unitcode":"'+itemunitcode+'"}',
+                              data: '{"ItemCode":"'+itemcode+'","BarCode":"'+BarCode+'","Qty":'+amount+',"Price":'+itemprice+',"LabelType":"'+outputselect+'","CreatorCode":"'+localStorage.username+'","unitcode":"'+itemunitcode+'","Branch":"'+localStorage.branch+'"}',
                               contentType: "application/json; charset=utf-8",
                               dataType: "json",
                               type: "POST",
@@ -325,9 +325,7 @@ alertify.error('กรุณากรอกข้อมูลให้ครบ'
 }
 
 function managepromotion(){
-
 var searchpromo = document.getElementById("searchpromotion").value;
-
 $.ajax({
                         url: "http://venus.nopadol.com:9002/"+"requests?access_token=aaa&keyword="+searchpromo,
                         contentType: "application/json; charset=utf-8",
@@ -365,8 +363,8 @@ $.ajax({
                         if(colorconfirm == 0){
                         var colorconfirm = '#5ea9ff';
                         }
-                        promotionlist_list += "<a href='#' class='ui-btn' style='font-size:14px;background-color:"+colorconfirm+";' ";
-                        promotionlist_list += 'onclick="reorder_detail(\''+result.data[i].doc_no+'\')"><span style="color:black;">'+result.data[i].doc_no+' '+resultmont+'<br>'+result.data[i].sec_man+' '+result.data[i].pm_code+'</span></a>';
+                        promotionlist_list += "<a href='#' class='ui-btn' style='font-size:13px;background-color:"+colorconfirm+";' ";
+                        promotionlist_list += 'onclick="detail_promotion(\''+result.data[i].doc_no+'\')"><span style="color:black;">'+result.data[i].doc_no+' '+resultmont+'<br>'+result.data[i].sec_man+' '+result.data[i].pm_code+'</span></a>';
                         }
                         document.getElementById("detailpromotion").innerHTML = promotionlist_list;
                         $.mobile.changePage('#promotionpage',{transition: 'slidefade'});
@@ -379,7 +377,148 @@ $.ajax({
                         document.getElementById("detailpromotion").innerHTML = promotionlist_list;
                         }
                         });
+}
+function detail_promotion(docno){
+$.ajax({
+                              url: "http://venus.nopadol.com:9002/"+"requests?access_token=aaa&keyword="+docno,
+                              contentType: "application/json; charset=utf-8",
+                              dataType: "json",
+                              type: "GET",
+                              cache: false,
+                              success: function(result){
+//                       console.log(JSON.stringify(result));
+                         var docdate = result.data[0].doc_date;
+                         var x = docdate.substring(0,10);
+                         var res = x.split("-");
+                         var year = res[0];
+                         var yearfin = parseInt(year) + 543;
+                         var mon = res[1];
+                         switch (mon) {
+                         case '01': var mon = "มกราคม"; break;
+                         case '02': var mon = "กุมภาพันธ์"; break
+                         case '03': var mon = "มีนาคม"; break;
+                         case '04': var mon = "เมษายน"; break;
+                         case '05': var mon = "พฤษภาคม"; break;
+                         case '06': var mon = "มิถุนายน"; break;
+                         case '07': var mon = "กรกฎาคม"; break;
+                         case '08': var mon = "สิงหาคม"; break;
+                         case '09': var mon = "กันยายน"; break;
+                         case '10': var mon = "ตุลาคม"; break;
+                         case '11': var mon = "พฤศจิกายน"; break;
+                         case '12': var mon = "ธันวาคม";
+                         }
+                         var resultmont = res[2]+' '+mon+' '+yearfin;
 
+                               var docno = "";
+                               docno += "<span style='font-size:12px;'>"+result.data[0].doc_no+"</span>"
+                               document.getElementById('docno_id').innerHTML = docno;
+//                              alert(result.data[0].doc_date);
+                               var docdate = "";
+                              docdate += "<span style='font-size:12px;'>"+resultmont+"</span>";
+                              document.getElementById('datepromotion').innerHTML = docdate;
+
+                              var pm_code = "";
+                              pm_code += "<span style='font-size:12px;'>"+result.data[0].pm_code+"</span>"
+                              document.getElementById('pmcode').innerHTML = pm_code;
+
+                              var sec_man = "";
+                              sec_man += "<span style='font-size:12px;'>"+result.data[0].sec_man+"</span>"
+                              document.getElementById('secman').innerHTML = sec_man;
+
+                              var creator_code = "";
+                              creator_code += "<span style='font-size:12px;'>"+result.data[0].creator_code+"</span>"
+                              document.getElementById('creator_code').innerHTML = creator_code;
+
+                              var date2 = result.data[0].subs[0].date_start;
+                              var x = date2.substring(0,10);
+                              var res = x.split("-");
+                              var year = res[0];
+                              var yearfin = parseInt(year) + 543;
+                              var mon = res[1];
+                              switch (mon) {
+                              case '01': var mon = "มกราคม"; break;
+                              case '02': var mon = "กุมภาพันธ์"; break
+                              case '03': var mon = "มีนาคม"; break;
+                              case '04': var mon = "เมษายน"; break;
+                              case '05': var mon = "พฤษภาคม"; break;
+                              case '06': var mon = "มิถุนายน"; break;
+                              case '07': var mon = "กรกฎาคม"; break;
+                              case '08': var mon = "สิงหาคม"; break;
+                              case '09': var mon = "กันยายน"; break;
+                              case '10': var mon = "ตุลาคม"; break;
+                              case '11': var mon = "พฤศจิกายน"; break;
+                              case '12': var mon = "ธันวาคม";
+                              }
+                              var docstar = res[2]+' '+mon+' '+yearfin;
+
+                              var date3 = result.data[0].subs[0].date_end;
+                              var x = date3.substring(0,10);
+                              var res = x.split("-");
+                              var year = res[0];
+                              var yearfin = parseInt(year) + 543;
+                              var mon = res[1];
+                              switch (mon) {
+                              case '01': var mon = "มกราคม"; break;
+                              case '02': var mon = "กุมภาพันธ์"; break
+                              case '03': var mon = "มีนาคม"; break;
+                              case '04': var mon = "เมษายน"; break;
+                              case '05': var mon = "พฤษภาคม"; break;
+                              case '06': var mon = "มิถุนายน"; break;
+                              case '07': var mon = "กรกฎาคม"; break;
+                              case '08': var mon = "สิงหาคม"; break;
+                              case '09': var mon = "กันยายน"; break;
+                              case '10': var mon = "ตุลาคม"; break;
+                              case '11': var mon = "พฤศจิกายน"; break;
+                              case '12': var mon = "ธันวาคม";
+                              }
+                              var docend = res[2]+' '+mon+' '+yearfin;
+
+                              var datestartend = "";
+                              datestartend += "<span style='font-size:12px;'>"+docstar+" ถึง "+docend+"</span>"
+                              document.getElementById('datestartend').innerHTML = datestartend;
+
+                              ///table////////
+                              var tabledetail = "";
+                              tabledetail  +=   '<div class="ui-grid-c" style="border-top:1px solid black; border-bottom:1px solid black; padding:2% 0; width:100%;">';
+                              tabledetail  += '<div class="ui-block-a" style="font-size: 12px;color: blue;font-weight:bold;width:16%"><b>ลำดับ</b></div>';
+                              tabledetail  += '<div class="ui-block-b" style="font-size: 12px;color: blue;font-weight:bold;width:50%" align="cetner"  ><b>ชื่อสินค้า</b></div>';
+                              tabledetail  += '<div class="ui-block-c" style="font-size: 12px;color: blue;font-weight:bold;width:16%" align="center"><b>ปกติ</b></div>';
+                              tabledetail  += '<div class="ui-block-d" style="font-size: 12px;color: blue;font-weight:bold;width:16%" align="center"><b>โปร</b></div>';
+                              tabledetail  += '</div>';
+                              for(var i = 0; i < result.data[0].subs.length; i++){
+//                               tabledetail  += '<h3>'+result.data[0].subs[i].item_name+'</h3>';
+                                        tabledetail += '<label>';
+                                        tabledetail += '<div class="ui-grid-c" style="padding-bottom:4%; padding-top:1%">';
+                                        tabledetail += '<div class="ui-block-a" style="font-size:12px;word-wrap:break-word;width:16%" align="center" >';
+                                        tabledetail += (i+1)+'</div>';
+                                        tabledetail += '<div class="ui-block-b" style="font-size: 12px;width:50%"  >';
+                                        tabledetail += result.data[0].subs[i].item_name+'</div>';
+                                        tabledetail += '<div class="ui-block-c" style="font-size: 12px;word-wrap:break-word;width:16%" align="center">';
+                                        tabledetail += result.data[0].subs[i].price+'</div>';
+                                        tabledetail += '<div class="ui-block-d" style="font-size: 12px;width:16%" align="center" >';
+                                        tabledetail += result.data[0].subs[i].promo_price+'</div>';
+                                        tabledetail += '</div></label>';
+                              }
+
+                              document.getElementById('detailtable').innerHTML = tabledetail;
+                              ////table///
+
+
+                              $.mobile.changePage('#detailpromotion',{transition: 'slidefade'});
+                              },
+                              error: function (err){
+                              closeload();
+                                  console.log(JSON.stringify(err));
+
+                              }
+
+                      });
+
+}
+
+function toggledetail(){
+
+        $("#toggledetailpro").slideToggle("slow");
 
 }
 
@@ -1272,11 +1411,12 @@ alertify.set({ labels: {
         ok     : "บันทึก",
         cancel : "ยกเลิก"
     } });
+//    console.log('{"ItemCode":"'+ItemCode+'","BarCode":"'+BarCode+'","Qty":'+Qty+',"Price":'+Price+',"LabelType":"'+LabelType+'","CreatorCode":"'+CreatorCode+'","unitcode":"'+unitcode+',"Branch":"'+localStorage.branch+'"}');
 alertify.confirm("ต้องการลบ รหัส "+ItemCode+"  หรือไม่ ?", function (e) {
                                                 if (e) {
                               $.ajax({
                               url: "http://venus.nopadol.com:9002/labelcancel",
-                              data: '{"ItemCode":"'+ItemCode+'","BarCode":"'+BarCode+'","Qty":'+Qty+',"Price":'+Price+',"LabelType":"'+LabelType+'","CreatorCode":"'+CreatorCode+'","unitcode":"'+unitcode+'"}',
+                              data: '{"ItemCode":"'+ItemCode+'","BarCode":"'+BarCode+'","Qty":'+Qty+',"Price":'+Price+',"LabelType":"'+LabelType+'","CreatorCode":"'+CreatorCode+'","unitcode":"'+unitcode+'","Branch":"'+localStorage.branch+'"}',
                               contentType: "application/json; charset=utf-8",
                               dataType: "json",
                               type: "POST",

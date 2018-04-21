@@ -573,9 +573,9 @@ function like_itemProfile(){
                             }else{
                                $.each(result.itemMasterList, function(key,val){
                                    itemlist += '<label style="width:100%; font-size:12px; border-bottom:1px dashed gray;"';
-                                   itemlist += 'onclick="itemProfile(';
+                                   itemlist += 'onclick="itemProfile(\'';
                                    itemlist += val['itemCode'].trim();
-                                   itemlist += ')"><div class="ui-grid-b">';
+                                   itemlist += '\')"><div class="ui-grid-b">';
                                    itemlist += '<div class="ui-block-a" style="width:35%;">';
                                    itemlist += val['itemCode'].trim()+'</div>';
                                    itemlist += '<div class="ui-block-b" style="width:40%;">';
