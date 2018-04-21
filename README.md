@@ -961,7 +961,7 @@ method : post
 **Label History**
 ``` 
 Url: http://venus.nopadol.com:9002/
-Path : labels?access_token=aaa&keyword=56163 (ค้นหาตามUserIDของพนักงาน)
+Path : labels?access_token=aaa&keyword=56163&branch=S02 (ค้นหาตามUserIDของพนักงาน)
 method : get
     response 200 : {
 		"status":"success",
@@ -1039,6 +1039,7 @@ method : post
 	   ,"LabelType":"P1F2"
 	   ,"CreatorCode":"56163"
 	   ,"unitcode":"อัน"
+	   ,"Branch":"S02"
         }
   response 200 : {
 	   "status":"success"
@@ -1059,6 +1060,7 @@ method : post
 	   ,"LabelType":"P1F2"
 	   ,"CreatorCode":"56163"
 	   ,"unitcode":"อัน"
+	   ,"Branch":"S02"
         }
   response 200 : {
 	   "status":"success"
