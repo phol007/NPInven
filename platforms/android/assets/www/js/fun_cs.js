@@ -325,7 +325,62 @@ alertify.error('กรุณากรอกข้อมูลให้ครบ'
 }
 
 function managepromotion(){
-$.mobile.changePage('#promotionpage',{transition: 'slidefade'});
+
+var searchpromo = document.getElementById("searchpromotion").value;
+
+$.ajax({
+                        url: "http://venus.nopadol.com:9002/"+"requests?access_token=aaa&keyword="+searchpromo,
+                        contentType: "application/json; charset=utf-8",
+                        dataType: "json",
+                        type: "GET",
+                        cache: false,
+                        success: function(result){
+                        var promotionlist_list = "";
+                        for(var i = 0; i < result.data.length; i++){
+                         var docdate = result.data[i].doc_date;
+                         var x = docdate.substring(0,10);
+                         var res = x.split("-");
+                         var year = res[0];
+                         var yearfin = parseInt(year) + 543;
+                         var mon = res[1];
+                         switch (mon) {
+                         case '01': var mon = "มกราคม"; break;
+                         case '02': var mon = "กุมภาพันธ์"; break
+                         case '03': var mon = "มีนาคม"; break;
+                         case '04': var mon = "เมษายน"; break;
+                         case '05': var mon = "พฤษภาคม"; break;
+                         case '06': var mon = "มิถุนายน"; break;
+                         case '07': var mon = "กรกฎาคม"; break;
+                         case '08': var mon = "สิงหาคม"; break;
+                         case '09': var mon = "กันยายน"; break;
+                         case '10': var mon = "ตุลาคม"; break;
+                         case '11': var mon = "พฤศจิกายน"; break;
+                         case '12': var mon = "ธันวาคม";
+                         }
+                         var resultmont = res[2]+' '+mon+' '+yearfin;
+                        var colorconfirm = result.data[i].is_con_firm;
+                        if(colorconfirm == 2){
+                        var colorconfirm = '#88ff4d';
+                        }
+                        if(colorconfirm == 0){
+                        var colorconfirm = '#5ea9ff';
+                        }
+                        promotionlist_list += "<a href='#' class='ui-btn' style='font-size:14px;background-color:"+colorconfirm+";' ";
+                        promotionlist_list += 'onclick="reorder_detail(\''+result.data[i].doc_no+'\')"><span style="color:black;">'+result.data[i].doc_no+' '+resultmont+'<br>'+result.data[i].sec_man+' '+result.data[i].pm_code+'</span></a>';
+                        }
+                        document.getElementById("detailpromotion").innerHTML = promotionlist_list;
+                        $.mobile.changePage('#promotionpage',{transition: 'slidefade'});
+                        },
+                        error: function (error){
+//                        switch_url();
+                        var promotionlist_list = "";
+                        promotionlist_list += "<a href='#' class='ui-btn' style='font-size:14px;background-color:#ff6666;' ";
+                        promotionlist_list += 'onclick="#"><span style="color:black;">ไม่มีข้อมูล</span></a>';
+                        document.getElementById("detailpromotion").innerHTML = promotionlist_list;
+                        }
+                        });
+
+
 }
 
 function sec_sh(){
@@ -716,9 +771,9 @@ function like_item(){ ///ปัญหา
                     }else{
                        $.each(result.itemMasterList, function(key,val){
                            itemlist += '<label style="width:100%; font-size:12px; border-bottom:1px dashed gray;"';
-                           itemlist += 'onclick="Select_item(';
+                           itemlist += 'onclick="Select_item(\'';
                            itemlist += val["itemCode"].trim();
-                           itemlist += ')"><div class="ui-grid-b">';
+                           itemlist += '\')"><div class="ui-grid-b">';
                            itemlist += '<div class="ui-block-a" style="width:35%;">';
                            itemlist += val["itemCode"].trim();
                            itemlist += '</div>';

@@ -43,13 +43,13 @@
                 <img src="images/inventory-logo.png" class="logo">
                 </label>
                 <label class="username">
-                    <input name="username" type="text" value=""
+                    <input name="username" type="text" value="56163"
                            class="validate[required,custom[onlyLetter],length[0,100]] feedback-input"
                            placeholder="Username" id="username" data-role="none"/>
                 </label>
 
                 <label class="password">
-                    <input name="passwd" type="password" value=""
+                    <input name="passwd" type="password" value="Liverbee24"
                            class="validate[required,custom[password],length[0,100]] feedback-input"
                            id="passwd" placeholder="Password" data-role="none"/>
                 </label>
@@ -2744,7 +2744,10 @@ ju
 
     <div data-role="main" class="ui-content" id="main">
         <h3 class="title" align="center"><b>Promotion Request</b></h3>
-        <input type="text" >
+        <input type="text" id="searchpromotion" onkeyup="managepromotion()" >
+        <div id="detailpromotion"></div>
+
+
         <!--<input type="text" id="search_reorder" onkeyup="listreorder();">-->
         <!--<div id="list_reorder"></div>-->
     </div>
