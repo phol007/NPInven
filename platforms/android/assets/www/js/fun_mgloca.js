@@ -46,7 +46,8 @@ function searchMGItem(barcode){
                cache: false,
                success: function(result){
                      loading();
-                     console.log(JSON.stringify(result.itemCode));
+                     console.log(JSON.stringify(result));
+//                     console.log(JSON.stringify(result.itemCode));
                      //console.log(localStorage.api_url_server+""+localStorage.api_url_search_item_pr);
 
                      if(JSON.stringify(result.itemCode)===""||JSON.stringify(result.itemCode)==="null"){
@@ -67,17 +68,23 @@ function searchMGItem(barcode){
                                     var scanDateTime = date[2]+"/"+date[1]+"/"+(parseInt(date[0])+543);
                                     console.log(scanDateTime)
 
-                                        locadata += '<input type="checkbox" name="del" class="del" value="'+val['rowOrder']+'" data-role="none">';
-                                        locadata += +"      "+val['whCode']+"       ";
-                                        locadata += val['userScanName']+'  ';
-                                        locadata += val['scanDateTime']+'  ';
 
-                                        locadata += '<div onclick="new_loca("'+val['shelfCode']+'',''+val['rowOrder']+'")">';
+                                        locadata += '<div class="ui-grid-d" style="padding-bottom:4%; padding-top:1%">';
+                                        locadata += '<div class="ui-block-a" style="text-align:center; width:5%; text-align:center;">';
+                                        locadata += '<input type="checkbox" name="del" class="del" value="'+val['rowOrder']+'" data-role="none">'+'</div>';
+                                        locadata += '<div class="ui-block-b" style="word-wrap:break-word; width:20%; text-align:center;"   >';
+                                        locadata += val['whCode']+'</div>';
+                                        locadata += '<div class="ui-block-c" style="word-wrap:break-word; width:30%; text-align:center;" >';
                                         locadata += val['shelfCode']+'</div>';
-                                        locadata += '<div onclick="new_loca("'+val['shelfCode']+'',''+val['rowOrder']+'")">';
+                                        locadata += '<div class="ui-block-d" style="word-wrap:break-word; width:30%; text-align:center;" >';
+                                        locadata += val['scanDateTime']+'</div>';
+                                        locadata += '<div class="ui-block-e" style="text-align:center; width:15%;word-wrap:break-word;text-decoration: underline;color:blue;"  ><div style="color:blue;font-weight: bold;" onclick="new_loca(\''+val['shelfCode']+'\',\''+val['rowOrder']+'\')">';
+                                        locadata += val['shelfCode']+'</div></div>';
+                                        locadata += '</div>';
 
 
-                                        locadata += '<img src="images/bin_loca.png" onclick="delete_location('+val["rowOrder"]+',"'+val["shelfCode"]+'")">';
+
+//                                        locadata += '<img src="images/bin_loca.png" onclick="delete_location(\''+val["rowOrder"]+'\',\''+val["shelfCode"]+'\'")">';
                                 }
                               });
 

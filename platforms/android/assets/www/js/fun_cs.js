@@ -325,6 +325,7 @@ alertify.error('กรุณากรอกข้อมูลให้ครบ'
 }
 
 function managepromotion(){
+loading();
 var searchpromo = document.getElementById("searchpromotion").value;
 $.ajax({
                         url: "http://venus.nopadol.com:9002/"+"requests?access_token=aaa&keyword="+searchpromo,
@@ -368,24 +369,26 @@ $.ajax({
                         }
                         document.getElementById("detailpromotion").innerHTML = promotionlist_list;
                         $.mobile.changePage('#promotionpage',{transition: 'slidefade'});
+                        closeload();
                         },
                         error: function (error){
-//                        switch_url();
                         var promotionlist_list = "";
                         promotionlist_list += "<a href='#' class='ui-btn' style='font-size:14px;background-color:#ff6666;' ";
                         promotionlist_list += 'onclick="#"><span style="color:black;">ไม่มีข้อมูล</span></a>';
                         document.getElementById("detailpromotion").innerHTML = promotionlist_list;
+                        closeload();
                         }
                         });
 }
 function detail_promotion(docno){
+loading();
 $.ajax({
-                              url: "http://venus.nopadol.com:9002/"+"requests?access_token=aaa&keyword="+docno,
-                              contentType: "application/json; charset=utf-8",
-                              dataType: "json",
-                              type: "GET",
-                              cache: false,
-                              success: function(result){
+                         url: "http://venus.nopadol.com:9002/"+"requests?access_token=aaa&keyword="+docno,
+                         contentType: "application/json; charset=utf-8",
+                         dataType: "json",
+                         type: "GET",
+                         cache: false,
+                         success: function(result){
 //                       console.log(JSON.stringify(result));
                          var docdate = result.data[0].doc_date;
                          var x = docdate.substring(0,10);
@@ -486,32 +489,28 @@ $.ajax({
                               tabledetail  += '<div class="ui-block-d" style="font-size: 12px;color: blue;font-weight:bold;width:16%" align="center"><b>โปร</b></div>';
                               tabledetail  += '</div>';
                               for(var i = 0; i < result.data[0].subs.length; i++){
-//                               tabledetail  += '<h3>'+result.data[0].subs[i].item_name+'</h3>';
-                                        tabledetail += '<label>';
-                                        tabledetail += '<div class="ui-grid-c" style="padding-bottom:4%; padding-top:1%">';
-                                        tabledetail += '<div class="ui-block-a" style="font-size:12px;word-wrap:break-word;width:16%" align="center" >';
-                                        tabledetail += (i+1)+'</div>';
-                                        tabledetail += '<div class="ui-block-b" style="font-size: 12px;width:50%"  >';
-                                        tabledetail += result.data[0].subs[i].item_name+'</div>';
-                                        tabledetail += '<div class="ui-block-c" style="font-size: 12px;word-wrap:break-word;width:16%" align="center">';
-                                        tabledetail += result.data[0].subs[i].price+'</div>';
-                                        tabledetail += '<div class="ui-block-d" style="font-size: 12px;width:16%" align="center" >';
-                                        tabledetail += result.data[0].subs[i].promo_price+'</div>';
-                                        tabledetail += '</div></label>';
+//                            tabledetail  += '<h3>'+result.data[0].subs[i].item_name+'</h3>';
+                              tabledetail += '<label>';
+                              tabledetail += '<div class="ui-grid-c" style="padding-bottom:4%; padding-top:1%">';
+                              tabledetail += '<div class="ui-block-a" style="font-size:12px;word-wrap:break-word;width:16%" align="center" >';
+                              tabledetail += (i+1)+'</div>';
+                              tabledetail += '<div class="ui-block-b" style="font-size: 12px;width:50%"  >';
+                              tabledetail += result.data[0].subs[i].item_name+'</div>';
+                              tabledetail += '<div class="ui-block-c" style="font-size: 12px;word-wrap:break-word;width:16%" align="center">';
+                              tabledetail += result.data[0].subs[i].price+'</div>';
+                              tabledetail += '<div class="ui-block-d" style="font-size: 12px;width:16%" align="center" >';
+                              tabledetail += result.data[0].subs[i].promo_price+'</div>';
+                              tabledetail += '</div></label>';
                               }
-
                               document.getElementById('detailtable').innerHTML = tabledetail;
                               ////table///
-
-
                               $.mobile.changePage('#detailpromotion',{transition: 'slidefade'});
+                              closeload();
                               },
                               error: function (err){
                               closeload();
-                                  console.log(JSON.stringify(err));
-
+                              console.log(JSON.stringify(err));
                               }
-
                       });
 
 }

@@ -12,10 +12,12 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/taskHistory/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/4.1/taskHistory/fileSnapshots.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/taskHistory/taskHistory.bin" afterPath="$PROJECT_DIR$/.gradle/4.1/taskHistory/taskHistory.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/taskHistory/taskHistory.lock" afterPath="$PROJECT_DIR$/.gradle/4.1/taskHistory/taskHistory.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../.idea/workspace.xml" afterPath="$PROJECT_DIR$/../../.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/www/index.html" afterPath="$PROJECT_DIR$/assets/www/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/www/js/back_bt.js" afterPath="$PROJECT_DIR$/assets/www/js/back_bt.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/www/js/fun_cs.js" afterPath="$PROJECT_DIR$/assets/www/js/fun_cs.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/www/js/fun_searchitem.js" afterPath="$PROJECT_DIR$/assets/www/js/fun_searchitem.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/www/js/fun_mgloca.js" afterPath="$PROJECT_DIR$/assets/www/js/fun_mgloca.js" />
     </list>
     <ignored path="android.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -64,11 +66,31 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="fun_cs.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/assets/www/js/fun_cs.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-20041">
+              <caret line="518" column="0" lean-forward="true" selection-start-line="518" selection-start-column="0" selection-end-line="518" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="back_bt.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/assets/www/js/back_bt.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="440">
+              <caret line="124" column="47" lean-forward="false" selection-start-line="124" selection-start-column="47" selection-end-line="124" selection-end-column="47" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/www/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="260">
-              <caret line="2824" column="0" lean-forward="true" selection-start-line="2824" selection-start-column="0" selection-end-line="2824" selection-end-column="0" />
+            <state relative-caret-position="520">
+              <caret line="2855" column="43" lean-forward="false" selection-start-line="2855" selection-start-column="43" selection-end-line="2855" selection-end-column="43" />
               <folding>
                 <element signature="e#1482#1521#0" expanded="true" />
                 <element signature="e#1584#1609#0" expanded="true" />
@@ -79,6 +101,17 @@
                 <element signature="e#69057#69137#0" expanded="true" />
                 <element signature="e#88390#88523#0" expanded="true" />
                 <element signature="e#92706#92752#0" expanded="true" />
+                <element signature="e#97203#97295#0" expanded="true" />
+                <element signature="e#97341#97396#0" expanded="true" />
+                <element signature="e#97470#97529#0" expanded="true" />
+                <element signature="e#97638#97697#0" expanded="true" />
+                <element signature="e#97813#97872#0" expanded="true" />
+                <element signature="e#97988#98025#0" expanded="true" />
+                <element signature="e#100712#100845#0" expanded="true" />
+                <element signature="e#100870#100936#0" expanded="true" />
+                <element signature="e#100963#101024#0" expanded="true" />
+                <element signature="e#101068#101129#0" expanded="true" />
+                <element signature="e#101172#101191#0" expanded="true" />
                 <element signature="e#124331#124367#0" expanded="true" />
                 <element signature="e#124445#124477#0" expanded="true" />
                 <element signature="e#124706#124758#0" expanded="true" />
@@ -108,25 +141,25 @@
                 <element signature="e#134344#134399#0" expanded="true" />
                 <element signature="e#134744#134808#0" expanded="true" />
                 <element signature="e#134941#134958#0" expanded="true" />
-                <element signature="e#135114#135178#0" expanded="true" />
-                <element signature="e#135302#135320#0" expanded="true" />
-                <element signature="e#135438#135459#0" expanded="true" />
-                <element signature="e#135553#135617#0" expanded="true" />
-                <element signature="e#135726#135743#0" expanded="true" />
-                <element signature="e#135909#135973#0" expanded="true" />
-                <element signature="e#136080#136097#0" expanded="true" />
-                <element signature="e#136269#136333#0" expanded="true" />
-                <element signature="e#136431#136448#0" expanded="true" />
+                <element signature="e#135113#135177#0" expanded="true" />
+                <element signature="e#135301#135319#0" expanded="true" />
+                <element signature="e#135415#135436#0" expanded="true" />
+                <element signature="e#135530#135594#0" expanded="true" />
+                <element signature="e#135703#135720#0" expanded="true" />
+                <element signature="e#135886#135950#0" expanded="true" />
+                <element signature="e#136057#136074#0" expanded="true" />
+                <element signature="e#136246#136310#0" expanded="true" />
+                <element signature="e#136408#136425#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="fun_cs.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assets/www/js/fun_cs.js">
+      <file leaf-file-name="fun_mgloca.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/assets/www/js/fun_mgloca.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1891">
-              <caret line="496" column="48" lean-forward="false" selection-start-line="496" selection-start-column="48" selection-end-line="496" selection-end-column="48" />
+            <state relative-caret-position="360">
+              <caret line="60" column="23" lean-forward="false" selection-start-line="60" selection-start-column="23" selection-end-line="60" selection-end-column="23" />
               <folding />
             </state>
           </provider>
@@ -135,7 +168,7 @@
       <file leaf-file-name="fun_searchitem.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/www/js/fun_searchitem.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="246">
+            <state relative-caret-position="11540">
               <caret line="577" column="50" lean-forward="false" selection-start-line="577" selection-start-column="50" selection-end-line="577" selection-end-column="50" />
               <folding />
             </state>
@@ -145,7 +178,7 @@
       <file leaf-file-name="reorder.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/www/js/reorder.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
+            <state relative-caret-position="420">
               <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="27" selection-end-column="86" />
               <folding />
             </state>
@@ -155,7 +188,7 @@
       <file leaf-file-name="main.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/www/css/main.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="549">
+            <state relative-caret-position="1100">
               <caret line="55" column="9" lean-forward="false" selection-start-line="55" selection-start-column="9" selection-end-line="55" selection-end-column="9" />
               <folding />
             </state>
@@ -172,27 +205,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="back_bt.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assets/www/js/back_bt.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2320">
-              <caret line="116" column="25" lean-forward="false" selection-start-line="116" selection-start-column="25" selection-end-line="116" selection-end-column="25" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>onitemProfile</find>
-      <find>oncitemProfile</find>
-      <find>onclitemProfile</find>
-      <find>oncliitemProfile</find>
-      <find>onclickitemProfile</find>
-      <find>onclick=itemProfile</find>
-      <find>onclick=&quot;itemProfile</find>
       <find>itemProfile</find>
       <find>managepromotion</find>
       <find>word</find>
@@ -216,6 +232,13 @@
       <find>venus.nopadol.com:9002/label</find>
       <find>รหัสสินค้า</find>
       <find>for(var i = 0; i &lt;</find>
+      <find>back</find>
+      <find>mg_locationist</find>
+      <find>delete_location</find>
+      <find>ระบบจัดการที่เก็บ</find>
+      <find>backbutton</find>
+      <find>close</find>
+      <find>รายละเอียด</find>
     </findStrings>
     <replaceStrings>
       <replace>'</replace>
@@ -2054,14 +2077,14 @@
         <option value="$PROJECT_DIR$/assets/www/js/login.js" />
         <option value="$PROJECT_DIR$/assets/www/js/function_transfer.js" />
         <option value="$PROJECT_DIR$/assets/www/js/function_transfer_n.js" />
-        <option value="$PROJECT_DIR$/assets/www/js/fun_mgloca.js" />
         <option value="$PROJECT_DIR$/assets/www/js/fun_dpitem.js" />
-        <option value="$PROJECT_DIR$/assets/www/js/back_bt.js" />
         <option value="$PROJECT_DIR$/assets/www/css/main.css" />
         <option value="$PROJECT_DIR$/assets/www/js/menutree.js" />
         <option value="$PROJECT_DIR$/assets/www/js/fun_searchitem.js" />
-        <option value="$PROJECT_DIR$/assets/www/js/fun_cs.js" />
+        <option value="$PROJECT_DIR$/assets/www/js/fun_mgloca.js" />
+        <option value="$PROJECT_DIR$/assets/www/js/back_bt.js" />
         <option value="$PROJECT_DIR$/assets/www/index.html" />
+        <option value="$PROJECT_DIR$/assets/www/js/fun_cs.js" />
       </list>
     </option>
   </component>
@@ -2089,7 +2112,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="AndroidView">
         <subPane>
           <PATH>
@@ -2100,8 +2122,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -2150,12 +2170,15 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="images" />
+              <option name="myItemId" value="js" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -2252,8 +2275,7 @@
       <option name="DEEP_LINK" value="" />
       <option name="ACTIVITY_CLASS" value="" />
       <method>
-        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1524303475816" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1524534318640" />
       </method>
     </configuration>
     <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Instrumented Tests">
@@ -2300,8 +2322,7 @@
         <option name="ADVANCED_PROFILING_ENABLED" value="false" />
       </Profilers>
       <method>
-        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1524303475816" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1524534318640" />
       </method>
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -2333,27 +2354,6 @@
         </option>
         <option name="vmOptions" />
       </ExternalSystemSettings>
-      <method />
-    </configuration>
-    <configuration default="true" type="JUnit" factoryName="JUnit">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
       <method />
     </configuration>
     <configuration default="true" type="JarApplication" factoryName="JAR Application">
@@ -2483,8 +2483,7 @@
       <option name="DEEP_LINK" value="" />
       <option name="ACTIVITY_CLASS" value="" />
       <method>
-        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1524303475820" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1524534318643" />
       </method>
     </configuration>
     <list size="1">
@@ -2641,7 +2640,7 @@
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32626426" sideWeight="0.509178" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.0" sideWeight="0.49082202" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.0" sideWeight="0.49082202" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32817337" sideWeight="0.4969743" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32817337" sideWeight="0.4969743" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Logcat" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.15634675" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -2649,7 +2648,7 @@
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19282869" sideWeight="0.4915254" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.263745" sideWeight="0.4915254" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32988048" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24940239" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -3014,21 +3013,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/www/js/fun_mgloca.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2860">
-          <caret line="143" column="50" lean-forward="false" selection-start-line="143" selection-start-column="50" selection-end-line="143" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/www/js/back_bt.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2320">
-          <caret line="116" column="25" lean-forward="false" selection-start-line="116" selection-start-column="25" selection-end-line="116" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/www/js/menutree.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="440">
@@ -3039,7 +3023,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/www/css/main.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="549">
+        <state relative-caret-position="1100">
           <caret line="55" column="9" lean-forward="false" selection-start-line="55" selection-start-column="9" selection-end-line="55" selection-end-column="9" />
           <folding />
         </state>
@@ -3047,7 +3031,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/www/js/reorder.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
+        <state relative-caret-position="420">
           <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="27" selection-end-column="86" />
           <folding />
         </state>
@@ -3055,24 +3039,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/www/js/fun_searchitem.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="246">
+        <state relative-caret-position="11540">
           <caret line="577" column="50" lean-forward="false" selection-start-line="577" selection-start-column="50" selection-end-line="577" selection-end-column="50" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/www/js/fun_cs.js">
+    <entry file="file://$PROJECT_DIR$/assets/www/js/fun_mgloca.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1891">
-          <caret line="496" column="48" lean-forward="false" selection-start-line="496" selection-start-column="48" selection-end-line="496" selection-end-column="48" />
+        <state relative-caret-position="360">
+          <caret line="60" column="23" lean-forward="false" selection-start-line="60" selection-start-column="23" selection-end-line="60" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/www/js/back_bt.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="124" column="47" lean-forward="false" selection-start-line="124" selection-start-column="47" selection-end-line="124" selection-end-column="47" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/www/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="2824" column="0" lean-forward="true" selection-start-line="2824" selection-start-column="0" selection-end-line="2824" selection-end-column="0" />
+        <state relative-caret-position="520">
+          <caret line="2855" column="43" lean-forward="false" selection-start-line="2855" selection-start-column="43" selection-end-line="2855" selection-end-column="43" />
           <folding>
             <element signature="e#1482#1521#0" expanded="true" />
             <element signature="e#1584#1609#0" expanded="true" />
@@ -3083,6 +3075,17 @@
             <element signature="e#69057#69137#0" expanded="true" />
             <element signature="e#88390#88523#0" expanded="true" />
             <element signature="e#92706#92752#0" expanded="true" />
+            <element signature="e#97203#97295#0" expanded="true" />
+            <element signature="e#97341#97396#0" expanded="true" />
+            <element signature="e#97470#97529#0" expanded="true" />
+            <element signature="e#97638#97697#0" expanded="true" />
+            <element signature="e#97813#97872#0" expanded="true" />
+            <element signature="e#97988#98025#0" expanded="true" />
+            <element signature="e#100712#100845#0" expanded="true" />
+            <element signature="e#100870#100936#0" expanded="true" />
+            <element signature="e#100963#101024#0" expanded="true" />
+            <element signature="e#101068#101129#0" expanded="true" />
+            <element signature="e#101172#101191#0" expanded="true" />
             <element signature="e#124331#124367#0" expanded="true" />
             <element signature="e#124445#124477#0" expanded="true" />
             <element signature="e#124706#124758#0" expanded="true" />
@@ -3112,16 +3115,24 @@
             <element signature="e#134344#134399#0" expanded="true" />
             <element signature="e#134744#134808#0" expanded="true" />
             <element signature="e#134941#134958#0" expanded="true" />
-            <element signature="e#135114#135178#0" expanded="true" />
-            <element signature="e#135302#135320#0" expanded="true" />
-            <element signature="e#135438#135459#0" expanded="true" />
-            <element signature="e#135553#135617#0" expanded="true" />
-            <element signature="e#135726#135743#0" expanded="true" />
-            <element signature="e#135909#135973#0" expanded="true" />
-            <element signature="e#136080#136097#0" expanded="true" />
-            <element signature="e#136269#136333#0" expanded="true" />
-            <element signature="e#136431#136448#0" expanded="true" />
+            <element signature="e#135113#135177#0" expanded="true" />
+            <element signature="e#135301#135319#0" expanded="true" />
+            <element signature="e#135415#135436#0" expanded="true" />
+            <element signature="e#135530#135594#0" expanded="true" />
+            <element signature="e#135703#135720#0" expanded="true" />
+            <element signature="e#135886#135950#0" expanded="true" />
+            <element signature="e#136057#136074#0" expanded="true" />
+            <element signature="e#136246#136310#0" expanded="true" />
+            <element signature="e#136408#136425#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/www/js/fun_cs.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-20041">
+          <caret line="518" column="0" lean-forward="true" selection-start-line="518" selection-start-column="0" selection-end-line="518" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>

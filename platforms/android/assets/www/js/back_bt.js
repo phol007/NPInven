@@ -118,6 +118,12 @@ document.addEventListener("keydown", function(event) {
        }else if($.mobile.activePage.is('#pagepr')){
             $.mobile.changePage('#pagetwo',{transition: 'slidefade',reverse: true});
             return false;
+       }else if($.mobile.activePage.is('#promotionpage')){
+            $.mobile.changePage('#pagetwo',{transition: 'slidefade',reverse: true});
+            return false;
+       }else if($.mobile.activePage.is('#detailpromotion')){
+            $.mobile.changePage('#promotionpage',{transition: 'slidefade',reverse: true});
+            return false;
        }else if($.mobile.activePage.is('#receive')){
             $.mobile.changePage('#pagetwo',{transition: 'slidefade',reverse: true});
             return false;
