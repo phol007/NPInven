@@ -43,13 +43,13 @@
                 <img src="images/inventory-logo.png" class="logo">
                 </label>
                 <label class="username">
-                    <input name="username" type="text" value="56163"
+                    <input name="username" type="text" value=""
                            class="validate[required,custom[onlyLetter],length[0,100]] feedback-input"
                            placeholder="Username" id="username" data-role="none"/>
                 </label>
 
                 <label class="password">
-                    <input name="passwd" type="password" value="Liverbee24"
+                    <input name="passwd" type="password" value=""
                            class="validate[required,custom[password],length[0,100]] feedback-input"
                            id="passwd" placeholder="Password" data-role="none"/>
                 </label>
@@ -2756,7 +2756,7 @@ ju
         <div data-role="navbar">
             <ul>
                 <li><a href="#pagetwo" class="ui-btn-active ui-state-persist" data-icon="home" id="footer-nav" data-transition="slidefade" data-direction="reverse">หน้าหลัก</a></li>
-                <li><a href="#newreorder" class="ui-btn-active ui-state-persist" data-icon="plus" id="footer-nav" data-transition="slidefade" data-direction="reverse">เพิ่ม</a></li>
+                <li><a href="javascript:showpromotion()" class="ui-btn-active ui-state-persist" data-icon="plus" id="footer-nav" data-transition="slidefade" data-direction="reverse">เพิ่ม</a></li>
             </ul>
         </div>
     </div>
@@ -2854,7 +2854,7 @@ ju
         <div data-role="navbar">
             <ul>
                 <li><a href="#promotionpage" class="ui-btn-active ui-state-persist" data-icon="back" id="footer-nav" data-transition="slidefade" data-direction="reverse">back</a></li>
-                <li><a href="#newreorder" class="ui-btn-active ui-state-persist" data-icon="plus" id="footer-nav" data-transition="slidefade" data-direction="reverse">เพิ่ม</a></li>
+                <li><a href="javascript:alertify.alert('ยังไม่เปิดใช้บริการ');" class="ui-btn-active ui-state-persist" data-icon="plus" id="footer-nav" data-transition="slidefade" data-direction="reverse">เพิ่ม</a></li>
             </ul>
         </div>
     </div>
@@ -2863,6 +2863,78 @@ ju
     </div>
 </div>
 <!--//////////////////////////////////////////////////////////// detail promotion ////////////////////////////////////////////////////////////////-->
+
+<!--//////////////////////////////////////////////////////////// Add Promotion ////////////////////////////////////////////////////////////////-->
+<div data-role="page" id="addpromotion">
+    <div data-role="none" class="header" >
+        <a href="#myPanel_addpromotion"  data-role="none"><img src="images/grid.png" class="open_panel"></a>
+    </div>
+    <div  data-role="main" class="ui-content" id="main">
+        <label style="font-size:24px; margin-bottom:0;"><img src="images/Promotion.png" width="32"><b> เลือกโปรโมชั่น </b></label><hr>
+
+        <label>
+            <div class="ui-grid-a">
+                <div class="ui-block-a" style="width:100%;padding-left:3%; text-align:left; padding-top: 2.5%;">
+                    <b>แสดงรายการโปรโมชั่น </b>
+                </div>
+            </div>
+            <div class="ui-grid-a">
+                <div class="ui-block-a" style="width:100%; padding-left:3%; text-align:left; padding-top: 2.5%;">
+                   <select name="promotion" id="promotionlist" class="bt-cmp" style="width:100%; height:50px;" data-role="none">
+                    <!--<option value="P1">\</option>-->
+                    <!--<option value="P2">PM6101-0001/E-C0 Fair 2018</option>-->
+                    </select>
+                </div>
+            </div>
+        </label>
+
+        <label>
+            <div class="ui-grid-a">
+                <div class="ui-block-a" style="width:100%;padding-left:3%; text-align:left; padding-top: 2.5%;">
+                    <b>เลือกประเภทโปรโมชั่น </b>
+                </div>
+            </div>
+            <div class="ui-grid-a">
+                <div class="ui-block-a" style="width:100%; padding-left:3%; text-align:left; padding-top: 2.5%;">
+                    <select name="promotion" id="typepromotion" class="bt-cmp" style="width:100%; height:50px;" data-role="none">
+                        <!--<option value="P1">01/New/ใหม่!!!</option>-->
+                        <!--<option value="P2">02/Shock Price/ช๊อค!!..ราคาถูกสุดๆ</option>-->
+                    </select>
+                </div>
+            </div>
+        </label>
+
+        <label>
+            <div class="ui-grid-a">
+                <div class="ui-block-a" style="width:100%;padding-left:3%; text-align:left; padding-top: 2.5%;">
+                    <b>เลือก Section</b>
+                </div>
+            </div>
+            <div class="ui-grid-a">
+                <div class="ui-block-a" style="width:100%; padding-left:3%; text-align:left; padding-top: 2.5%;">
+                    <select name="promotion" id="sectionpromotion" class="bt-cmp" style="width:100%; height:50px;" data-role="none">
+                        <!--<option value="P1">20012/ธีรยุทธ วรผล</option>-->
+                        <!--<option value="P2">35028/วรามาศ   สัณฐิติเจริญวง</option>-->
+                    </select>
+                </div>
+            </div>
+        </label>
+
+    </div>
+    <div data-role="footer" class="footer">
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#promotionpage" class="ui-btn-active ui-state-persist" data-icon="back" id="footer-nav" data-transition="slidefade" data-direction="reverse">back</a></li>
+                <li><a href="javascript:alertify.alert('ยังไม่เปิดใช้บริการ');" class="ui-btn-active ui-state-persist" data-icon="action" id="footer-nav">ถัดไป</a></li>
+            </ul>
+        </div>
+    </div>
+    <div data-role="panel" id="myPanel_addpromotion" data-display="overlay">
+        <h2>Overlay Panel</h2><hr>
+        <div id="tree" class="tree"></div>
+    </div>
+</div>
+<!--//////////////////////////////////////////////////////////// Add Promotion ////////////////////////////////////////////////////////////////-->
 
 
 <!--//////////////////////////////////////////////////////////////// setting ////////////////////////////////////////////////////////////////-->

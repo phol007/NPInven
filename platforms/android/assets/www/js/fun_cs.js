@@ -360,9 +360,11 @@ $.ajax({
                         var colorconfirm = result.data[i].is_con_firm;
                         if(colorconfirm == 2){
                         var colorconfirm = '#88ff4d';
+
                         }
                         if(colorconfirm == 0){
                         var colorconfirm = '#5ea9ff';
+
                         }
                         promotionlist_list += "<a href='#' class='ui-btn' style='font-size:13px;background-color:"+colorconfirm+";' ";
                         promotionlist_list += 'onclick="detail_promotion(\''+result.data[i].doc_no+'\')"><span style="color:black;">'+result.data[i].doc_no+' '+resultmont+'<br>'+result.data[i].sec_man+' '+result.data[i].pm_code+'</span></a>';
@@ -518,6 +520,77 @@ $.ajax({
 function toggledetail(){
 
         $("#toggledetailpro").slideToggle("slow");
+
+}
+
+function showpromotion(){
+loading();
+
+    $.ajax({
+                          url: "http://venus.nopadol.com:9002/"+"promotionmaster",
+                          contentType: "application/json; charset=utf-8",
+                          dataType: "json",
+                          type: "GET",
+                          cache: false,
+                          success: function(result){
+                          var select = document.getElementById("promotionlist");
+                              for(var i = 0; i < result.data.length; i++){
+                                select.options[select.options.length] = new Option(result.data[i].name_full,result.data[i].pm_code);//show,value
+                              }
+                               closeload();
+                          },
+                          error: function (err){
+                              console.log(JSON.stringify(err));
+                              alertify.error("การเชื่อมต่อฐานข้อมูลของรายการโปรโมชั่น");
+
+                          }
+                  });
+loading();
+    $.ajax({
+                          url: "http://venus.nopadol.com:9002/"+"promotiontype",
+                          contentType: "application/json; charset=utf-8",
+                          dataType: "json",
+                          type: "GET",
+                          cache: false,
+                          success: function(result){
+
+                          var select = document.getElementById("typepromotion");
+                              for(var i = 0; i < result.data.length; i++){
+                                select.options[select.options.length] = new Option(result.data[i].name_full,result.data[i].code);//show,value
+                              }
+                             closeload();
+                          },
+                          error: function (err){
+                              console.log(JSON.stringify(err));
+                              alertify.error("การเชื่อมต่อฐานข้อมูลของประเภทโปรโมชั่น");
+
+                          }
+                  });
+loading();
+    $.ajax({
+                          url: "http://venus.nopadol.com:9002/"+"sectionman",
+                          contentType: "application/json; charset=utf-8",
+                          dataType: "json",
+                          type: "GET",
+                          cache: false,
+                          success: function(result){
+
+                          var select = document.getElementById("sectionpromotion");
+                              for(var i = 0; i < result.data.length; i++){
+                                select.options[select.options.length] = new Option(result.data[i].name_full,result.data[i].user_id);//show,value
+                              }
+                              closeload();
+                          },
+                          error: function (err){
+                              console.log(JSON.stringify(err));
+                              alertify.error("การเชื่อมต่อฐานข้อมูลของSectionโปรโมชั่น");
+
+                          }
+                  });
+
+
+$.mobile.changePage('#addpromotion',{transition : 'slidefade'});
+
 
 }
 
