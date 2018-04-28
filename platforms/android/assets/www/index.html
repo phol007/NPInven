@@ -2787,7 +2787,7 @@ ju
                     <input type="image" onclick="toggledetail()" style="border-radius: 10px; border: 1px solid #F25F5C;" src="images/showmorepromotion.png" alt="Submit" width="25" height="25">
                 </div>
                 <div class="ui-block-d"  style="word-wrap:break-word;width:20%;">
-                    <input type="image" style="border-radius: 10px; border: 1px solid #FFE066;" src="images/editpromotion.png" alt="Submit" width="25" height="25">
+                    <div id="editpromotions"></div>
                     <!--<label style="background-color:#F25F5C;"><img src="images/editpromotion.png" width="32"></label>-->
                 </div>
             </div>
@@ -2870,12 +2870,12 @@ ju
         <a href="#myPanel_addpromotion"  data-role="none"><img src="images/grid.png" class="open_panel"></a>
     </div>
     <div  data-role="main" class="ui-content" id="main">
-        <label style="font-size:24px; margin-bottom:0;"><img src="images/Promotion.png" width="32"><b> เลือกโปรโมชั่น </b></label><hr>
+        <label style="font-size:24px; margin-bottom:0;" align="center"><img src="images/Promotion.png" width="32"><b> เพิ่มโปรโมชั่น </b></label>
 
         <label>
             <div class="ui-grid-a">
-                <div class="ui-block-a" style="width:100%;padding-left:3%; text-align:left; padding-top: 2.5%;">
-                    <b>แสดงรายการโปรโมชั่น </b>
+                <div class="ui-block-a" style="width:100%;padding-left:3%; text-align:left; padding-top: 4%;">
+                    <b>เลือกรายการโปรโมชั่น </b>
                 </div>
             </div>
             <div class="ui-grid-a">
@@ -2935,6 +2935,78 @@ ju
     </div>
 </div>
 <!--//////////////////////////////////////////////////////////// Add Promotion ////////////////////////////////////////////////////////////////-->
+
+<!--//////////////////////////////////////////////////////////// Edit Promotion ////////////////////////////////////////////////////////////////-->
+<div data-role="page" id="editpromotion">
+    <div data-role="none" class="header" >
+        <a href="#myPanel_addpromotion"  data-role="none"><img src="images/grid.png" class="open_panel"></a>
+    </div>
+    <div  data-role="main" class="ui-content" id="main">
+        <div id="headeditpromotion"></div>
+
+        <label>
+            <div class="ui-grid-a">
+                <div class="ui-block-a" style="width:100%;padding-left:3%; text-align:left; padding-top: 4%;">
+                    <b>เลือกรายการโปรโมชั่น </b>
+                </div>
+            </div>
+            <div class="ui-grid-a">
+                <div class="ui-block-a" style="width:100%; padding-left:3%; text-align:left; padding-top: 2.5%;">
+                    <select name="promotion" id="edit_promotionlist" class="bt-cmp" style="width:100%; height:50px;" data-role="none">
+                        <!--<option value="P1">\</option>-->
+                        <!--<option value="P2">PM6101-0001/E-C0 Fair 2018</option>-->
+                    </select>
+                </div>
+            </div>
+        </label>
+
+        <label>
+            <div class="ui-grid-a">
+                <div class="ui-block-a" style="width:100%;padding-left:3%; text-align:left; padding-top: 2.5%;">
+                    <b>เลือกประเภทโปรโมชั่น </b>
+                </div>
+            </div>
+            <div class="ui-grid-a">
+                <div class="ui-block-a" style="width:100%; padding-left:3%; text-align:left; padding-top: 2.5%;">
+                    <select name="promotion" id="edit_typepromotion" class="bt-cmp" style="width:100%; height:50px;" data-role="none">
+                        <!--<option value="P1">01/New/ใหม่!!!</option>-->
+                        <!--<option value="P2">02/Shock Price/ช๊อค!!..ราคาถูกสุดๆ</option>-->
+                    </select>
+                </div>
+            </div>
+        </label>
+
+        <label>
+            <div class="ui-grid-a">
+                <div class="ui-block-a" style="width:100%;padding-left:3%; text-align:left; padding-top: 2.5%;">
+                    <b>เลือก Section</b>
+                </div>
+            </div>
+            <div class="ui-grid-a">
+                <div class="ui-block-a" style="width:100%; padding-left:3%; text-align:left; padding-top: 2.5%;">
+                    <select name="promotion" id="edit_sectionpromotion" class="bt-cmp" style="width:100%; height:50px;" data-role="none">
+                        <!--<option value="P1">20012/ธีรยุทธ วรผล</option>-->
+                        <!--<option value="P2">35028/วรามาศ   สัณฐิติเจริญวง</option>-->
+                    </select>
+                </div>
+            </div>
+        </label>
+
+    </div>
+    <div data-role="footer" class="footer">
+        <div data-role="navbar">
+            <ul>
+                <li><a href="javascript:backfromedit();" class="ui-btn-active ui-state-persist" data-icon="back" id="footer-nav" data-transition="slidefade" data-direction="reverse">back</a></li>
+                <li><a href="javascript:alertify.alert('ยังไม่เปิดใช้บริการ');" class="ui-btn-active ui-state-persist" data-icon="action" id="footer-nav">ถัดไป</a></li>
+            </ul>
+        </div>
+    </div>
+    <div data-role="panel" id="myPanel_addpromotion" data-display="overlay">
+        <h2>Overlay Panel</h2><hr>
+        <div id="tree" class="tree"></div>
+    </div>
+</div>
+<!--//////////////////////////////////////////////////////////// Edit Promotion ////////////////////////////////////////////////////////////////-->
 
 
 <!--//////////////////////////////////////////////////////////////// setting ////////////////////////////////////////////////////////////////-->

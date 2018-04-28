@@ -59,7 +59,7 @@ function style_page(company){
             document.head.appendChild(b);
 
             for(var i = 0; i < fot.length; i++){
-                fot[i].innerHTML = "<i style='color:#fff;'>NOPADOL Inventory V0.4  BY IT nopadol</i>";
+                fot[i].innerHTML = "<i style='color:#fff;'>NOPADOL Inventory V0.5  BY IT nopadol</i>";
             }
 
         }else if(company=="2"){
