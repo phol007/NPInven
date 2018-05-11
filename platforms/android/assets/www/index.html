@@ -43,13 +43,13 @@
                 <img src="images/inventory-logo.png" class="logo">
                 </label>
                 <label class="username">
-                    <input name="username" type="text" value=""
+                    <input name="username" type="text" value="56163"
                            class="validate[required,custom[onlyLetter],length[0,100]] feedback-input"
                            placeholder="Username" id="username" data-role="none"/>
                 </label>
 
                 <label class="password">
-                    <input name="passwd" type="password" value=""
+                    <input name="passwd" type="password" value="Liverbee24"
                            class="validate[required,custom[password],length[0,100]] feedback-input"
                            id="passwd" placeholder="Password" data-role="none"/>
                 </label>
@@ -2870,7 +2870,7 @@ ju
         <a href="#myPanel_addpromotion"  data-role="none"><img src="images/grid.png" class="open_panel"></a>
     </div>
     <div  data-role="main" class="ui-content" id="main">
-        <label style="font-size:24px; margin-bottom:0;" align="center"><img src="images/Promotion.png" width="32"><b> เพิ่มโปรโมชั่น </b></label>
+        <label style="font-size:18px; margin-bottom:0;" align="center"><img src="images/Promotion.png" width="32"><b> เพิ่มโปรโมชั่น </b></label>
 
         <label>
             <div class="ui-grid-a">
@@ -2880,7 +2880,8 @@ ju
             </div>
             <div class="ui-grid-a">
                 <div class="ui-block-a" style="width:100%; padding-left:3%; text-align:left; padding-top: 2.5%;">
-                   <select name="promotion" id="promotionlist" class="bt-cmp" style="width:100%; height:50px;" data-role="none">
+                   <select name="promotion" onchange="showdatepromo_startend()" id="promotionlist" class="bt-cmp" style="width:100%; height:50px;" data-role="none">
+                       <option value='0'>กรุณาเลือกรายการโปรโมชั่น</option>
                     <!--<option value="P1">\</option>-->
                     <!--<option value="P2">PM6101-0001/E-C0 Fair 2018</option>-->
                     </select>
@@ -2897,6 +2898,7 @@ ju
             <div class="ui-grid-a">
                 <div class="ui-block-a" style="width:100%; padding-left:3%; text-align:left; padding-top: 2.5%;">
                     <select name="promotion" id="typepromotion" class="bt-cmp" style="width:100%; height:50px;" data-role="none">
+                        <option value='0'>กรุณาเลือกประเภทโปรโมชั่น</option>
                         <!--<option value="P1">01/New/ใหม่!!!</option>-->
                         <!--<option value="P2">02/Shock Price/ช๊อค!!..ราคาถูกสุดๆ</option>-->
                     </select>
@@ -2913,6 +2915,7 @@ ju
             <div class="ui-grid-a">
                 <div class="ui-block-a" style="width:100%; padding-left:3%; text-align:left; padding-top: 2.5%;">
                     <select name="promotion" id="sectionpromotion" class="bt-cmp" style="width:100%; height:50px;" data-role="none">
+                        <option value='0'>กรุณาเลือก Section</option>
                         <!--<option value="P1">20012/ธีรยุทธ วรผล</option>-->
                         <!--<option value="P2">35028/วรามาศ   สัณฐิติเจริญวง</option>-->
                     </select>
@@ -2925,7 +2928,7 @@ ju
         <div data-role="navbar">
             <ul>
                 <li><a href="#promotionpage" class="ui-btn-active ui-state-persist" data-icon="back" id="footer-nav" data-transition="slidefade" data-direction="reverse">back</a></li>
-                <li><a href="javascript:alertify.alert('ยังไม่เปิดใช้บริการ');" class="ui-btn-active ui-state-persist" data-icon="action" id="footer-nav">ถัดไป</a></li>
+                <li><a href="javascript:addpromotionpage2();" class="ui-btn-active ui-state-persist" data-icon="action" id="footer-nav">ถัดไป</a></li>
             </ul>
         </div>
     </div>
@@ -3008,6 +3011,176 @@ ju
 </div>
 <!--//////////////////////////////////////////////////////////// Edit Promotion ////////////////////////////////////////////////////////////////-->
 
+
+<!--//////////////////////////////////////////////////////////// Add promotion page2 ////////////////////////////////////////////////////////////////-->
+<div data-role="page" id="addpromotionpage2">
+    <div data-role="none" class="header" >
+        <a href="#myPanel_addpromotionpage2"  data-role="none"><img src="images/grid.png" class="open_panel"></a>
+    </div>
+    <div  data-role="main" class="ui-content" id="main">
+        <!--้ข้อมูลก่อนส่ง api insert-->
+        <input type="hidden" id="promotion_p2">
+        <input type="hidden" id="typepromotion_p2">
+        <input type="hidden" id="sectionpromotion_p2">
+        <!--sub item-->
+        <input type="hidden" id="name_product_p2">
+        <input type="hidden" id="unit_code_p2">
+        <input type="hidden" id="item_price_p2">
+        <input type="hidden" id="discount">
+        <input type="hidden" id="discount_type">
+        <input type="hidden" id="promo_price_p2">
+
+        <!--sub item-->
+        <!--้ข้อมูลก่อนส่ง api insert-->
+
+
+
+        <!-- เก็บราคาสินค้า-->
+        <input type="hidden" id="price_product2" >
+        <!-- เก็บราคาสินค้า-->
+        <label>
+            <div class="ui-grid-b">
+                <div class="ui-block-a" style="width:25%; text-align:right; padding-top: 5%;">
+                    <b>รหัสสินค้า </b>
+                </div>
+                <div class="ui-block-b" style="width:50%; padding-left:3%; text-align:left;">
+                    <input type="text" readonly name="idproduct" id="idproduct_promotion2" class="form-control" placeholder="">
+                </div>
+                <div class="ui-block-c" style="width:25%; padding-left:5%;padding-top:5%;">
+                    <input type="image" onclick="gopage_searchpromotionpage2()" style="border-radius: 10px; border: 1px solid #F25F5C;" src="images/showmorepromotion.png" alt="Submit" width="25" height="25">
+                </div>
+            </div>
+            <div id="detailproduct2" style="border-style: ridge;">
+            <span style="font-size:15px;display:block;word-wrap:break-word;font-weight:bold;padding-left:28%;padding-bottom:3%;text-decoration: underline;">รายละเอียดสินค้า</span>
+            <span style="padding-left:3%;font-size:12px;display:block;word-wrap:break-word;">ชื่อสินค้า : - </span>
+            <span style="padding-left:3%;font-size:12px;display:inline-block;word-wrap:break-word;">ราคาปกติ : - </span>
+            <span style="padding-left:8%;font-size:12px;display:inline-block;word-wrap:break-word;">หน่วยนับ : - </span>
+            </div>
+        </label>
+
+        <label>
+            <div class="ui-grid-c" style="margin:0">
+                <div class="ui-block-a" style="width:25%; text-align:right; padding-top: 5%;">
+                    <b>ส่วนลด</b>
+                </div>
+                <div class="ui-block-b" style="width:27%; padding-left:3%; text-align:left; padding-right:3%;">
+                    <input type="number" name="nameprice" onkeyup="cal_discount(value)" id="caldiscount" class="form-control" placeholder="">
+                </div>
+                <div style="padding-top:5%" id="priceresult">
+                </div>
+                <!--<div class="ui-block-c" style="width:25%; text-align:right; padding-top: 5%;">-->
+                    <!--<b>ส่วนลด</b>-->
+                <!--</div>-->
+                <!--<div class="ui-block-d" style="width:25%; padding-left:3%; text-align:left;">-->
+                    <!--<input type="text" name="nameprice"  id="nameproduct" class="form-control" placeholder="ส่วนลด">-->
+                <!--</div>-->
+            </div>
+        </label>
+
+        <label>
+            <div class="ui-grid-a">
+                <div class="ui-block-a" style="width:25%; text-align:right; padding-top: 5%;">
+                   <b>หมายเหตุ</b>
+                </div>
+                <div class="ui-block-b" style="width:75%; padding-left:3%; text-align:left;">
+                    <input type="text"  name="idprice" id="because_promo"  class="form-control" placeholder="">
+                </div>
+            </div>
+
+            <!--<div id="choice">-->
+                <!--<input type="checkbox" id="myCheck"  onclick="myFunction()"> <span style="font-size:12px;padding-left:3%;display:inline-block;word-wrap:break-word;">สมาชิก (ลด 3%)</span>-->
+                <!--<input type="checkbox" id="myCheck"  onclick="myFunction()"> <span style="font-size:12px;padding-left:3%;display:inline-block;word-wrap:break-word;">isBrochure</span>-->
+            <!--</div>-->
+        </label>
+
+        <div class="ui-grid-c" style="border-style:ridge;padding-top:2.5%;padding-bottom:2.5%;">
+            <div class="ui-block-a" style="width:15%;">
+                <input type="checkbox" id="discountmember"  onclick="discount_member()">
+            </div>
+            <div class="ui-block-b" style="width:35%;text-align:left;">
+               <span style="font-size:12px;"><b>สมาชิก (ลด 3%)</b></span>
+            </div>
+            <div class="ui-block-d" style="width:15%;">
+                <input type="checkbox" id="isBrochure" >
+            </div>
+            <div class="ui-block-e" style="width:35%;text-align:left;">
+                <span style="font-size:12px"><b>isBrochure</b></span>
+            </div>
+
+        </div>
+            <div id="detailproduct">
+           <div  style="border-style: ridge;margin-top:2.5%">
+            <div style="padding-top:2.5%;padding-bottom:2.5%;">
+                <div id="com_money">
+                    <span style="padding-left:3%;font-size:12px;display:inline-block;word-wrap:break-word;"><b>ค่าคอมเงินสด :</b> -</span>
+                    <span style="padding-left:8%;font-size:12px;display:inline-block;word-wrap:break-word;"><b>ค่าคอมเงินเชื่อ :</b> -</span></div>
+                <div id="com_campaign">
+            <span style="padding-left:3%;font-size:12px;display:block;word-wrap:break-word;"><b>แคมเปญ : </b> -</span>
+            <span style="padding-left:3%;font-size:12px;display:block;word-wrap:break-word;"><b>เริ่ม : </b> -</span>
+            <span style="padding-left:3%;font-size:12px;display:block;word-wrap:break-word;"><b>จบ : </b> -</span></div>
+            </div>
+             </div>
+            </div>
+
+
+         </div>
+
+    <div data-role="footer" class="footer">
+        <div data-role="navbar">
+            <ul>
+                <li><a href="javascript:backpromotionpage2()" class="ui-btn-active ui-state-persist" data-icon="back" id="footer-nav" data-transition="slidefade" data-direction="reverse">back</a></li>
+                <li><a href="javascript:confirmaddpromo()" class="ui-btn-active ui-state-persist" data-icon="plus" id="footer-nav" data-transition="slidefade">ตกลง</a></li>
+            </ul>
+        </div>
+    </div>
+    <div data-role="panel" id="myPanel_addpromotionpage2" data-display="overlay">
+        <h2>Overlay Panel</h2><hr>
+        <div id="tree" class="tree"></div>
+    </div>
+</div>
+<!--//////////////////////////////////////////////////////////// Addpromotion page2 ////////////////////////////////////////////////////////////////-->
+
+<!--//////////////////////////////////////////////////////////// Add Promotion Page2 Search ////////////////////////////////////////////////////////////////-->
+<div data-role="page" id="promotion2_search">
+    <div data-role="none" class="header">
+        <a href="#myPanel_promotion2_search"  data-role="none"><img src="images/grid.png" class="open_panel"></a>
+    </div>
+
+    <div  data-role="main" class="ui-content" id="main">
+        <label style="font-size:24px;"><img src="images/Promotion.png" width="32"><b> ค้นหาสินค้า</b></label>
+        <label id="shelves1" style="padding:2%; width:100%; margin-left:0;">
+            <!--<img src="images/barcoder-icon.png" width="60%" style="margin:0% 0% 0% 5%;">-->
+            <input type="text" id="promotion_search" placeholder="กรอกรหัสสินค้าหรือชื่อสินค้า.." onkeyup="search_product()" style="margin:2% 5% 2% 5%;">
+            <div style="width:100%; height:250px; border:1px solid #dddcd1; background-color:#fff; border-radius:10px; margin-bottom:3%; padding: 1%;">
+                <label style='width:100%; border-bottom:1px black solid; font-size:12px;'>
+                    <div style="width:35%; padding:1%; float:left;"><b>รหัส</b></div>
+                    <div style="width:40%; padding:1%; float:left;"><b>ชื่อ</b></div>
+                    <div style="width:25%; padding:1%; float:left;"><b>หน่วยนับ</b></div>
+                    <br style="clear:both;">
+                </label>
+                <div style="overflow: auto; width:100%; height:200px; text-align:left;">
+                    <div id="promotion_item2">
+                        <label style='width:100%; color:red; text-align:center;'> ** ไม่มีการค้นหา ** </label>
+                    </div>
+                </div>
+
+            </div>
+        </label>
+    </div>
+
+    <div data-role="footer" class="footer">
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#addpromotionpage2" class="ui-btn-active ui-state-persist" data-icon="delete" id="footer-nav" data-transition="slidefade" data-direction="reverse">ยกเลิก</a></li>
+            </ul>
+        </div>
+    </div>
+    <div data-role="panel" id="myPanel_promotion2_search" style="padding:0;" data-display="overlay">
+        <div id="tree" class="tree"></div>
+    </div>
+</div>
+
+<!--//////////////////////////////////////////////////////////// Add Promotion Page2 Search ////////////////////////////////////////////////////////////////-->
 
 <!--//////////////////////////////////////////////////////////////// setting ////////////////////////////////////////////////////////////////-->
 <div data-role="page" id="setting">

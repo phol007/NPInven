@@ -115,6 +115,9 @@ document.addEventListener("keydown", function(event) {
        }else if($.mobile.activePage.is('#printpage')){
             $.mobile.changePage('#pagetwo',{transition: 'slidefade',reverse: true});
             return false;
+       else if($.mobile.activePage.is('#addpromotionpage2')){
+            $.mobile.changePage('#addpromotion',{transition: 'slidefade',reverse: true});
+            return false;
        }else if($.mobile.activePage.is('#pagepr')){
             $.mobile.changePage('#pagetwo',{transition: 'slidefade',reverse: true});
             return false;

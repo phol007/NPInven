@@ -1,9 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AndroidLayouts">
+    <shared>
+      <config />
+    </shared>
+  </component>
   <component name="AndroidLogFilters">
     <option name="TOOL_WINDOW_CUSTOM_FILTER" value="DEBUG" />
     <option name="TOOL_WINDOW_LOG_LEVEL" value="debug" />
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
+  </component>
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/assets/www/js/fun_searchitem.js" line="0" mnemonic="7" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="43971b06-a339-41b4-96fa-898a969182ae" name="Default" comment="">
@@ -12,6 +20,7 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/taskHistory/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/4.1/taskHistory/fileSnapshots.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/taskHistory/taskHistory.bin" afterPath="$PROJECT_DIR$/.gradle/4.1/taskHistory/taskHistory.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/taskHistory/taskHistory.lock" afterPath="$PROJECT_DIR$/.gradle/4.1/taskHistory/taskHistory.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/www/index.html" afterPath="$PROJECT_DIR$/assets/www/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/www/js/back_bt.js" afterPath="$PROJECT_DIR$/assets/www/js/back_bt.js" />
@@ -65,128 +74,153 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/www/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="58" column="23" lean-forward="true" selection-start-line="58" selection-start-column="23" selection-end-line="58" selection-end-column="23" />
+            <state relative-caret-position="57640">
+              <caret line="2882" column="76" lean-forward="false" selection-start-line="2882" selection-start-column="54" selection-end-line="2882" selection-end-column="76" />
               <folding>
                 <element signature="e#1482#1521#0" expanded="true" />
                 <element signature="e#1584#1609#0" expanded="true" />
                 <element signature="e#1634#1672#0" expanded="true" />
-                <element signature="e#66614#66633#0" expanded="true" />
-                <element signature="e#66733#66754#0" expanded="true" />
-                <element signature="e#66830#66852#0" expanded="true" />
-                <element signature="e#69042#69122#0" expanded="true" />
-                <element signature="e#88375#88508#0" expanded="true" />
-                <element signature="e#92691#92737#0" expanded="true" />
-                <element signature="e#97188#97280#0" expanded="true" />
-                <element signature="e#97326#97381#0" expanded="true" />
-                <element signature="e#97455#97514#0" expanded="true" />
-                <element signature="e#97623#97682#0" expanded="true" />
-                <element signature="e#97798#97857#0" expanded="true" />
-                <element signature="e#97973#98010#0" expanded="true" />
-                <element signature="e#100697#100830#0" expanded="true" />
-                <element signature="e#100855#100921#0" expanded="true" />
-                <element signature="e#100948#101009#0" expanded="true" />
-                <element signature="e#101053#101114#0" expanded="true" />
-                <element signature="e#101157#101176#0" expanded="true" />
-                <element signature="e#124316#124352#0" expanded="true" />
-                <element signature="e#124430#124462#0" expanded="true" />
-                <element signature="e#124691#124743#0" expanded="true" />
-                <element signature="e#124817#124849#0" expanded="true" />
-                <element signature="e#125307#125360#0" expanded="true" />
-                <element signature="e#125464#125516#0" expanded="true" />
-                <element signature="e#125795#125848#0" expanded="true" />
-                <element signature="e#125952#126004#0" expanded="true" />
-                <element signature="e#126281#126334#0" expanded="true" />
-                <element signature="e#126433#126485#0" expanded="true" />
-                <element signature="e#126770#126808#0" expanded="true" />
-                <element signature="e#129440#129463#0" expanded="true" />
-                <element signature="e#129570#129616#0" expanded="true" />
-                <element signature="e#129876#130009#0" expanded="true" />
-                <element signature="e#130034#130100#0" expanded="true" />
-                <element signature="e#130127#130169#0" expanded="true" />
-                <element signature="e#130213#130255#0" expanded="true" />
-                <element signature="e#130299#130341#0" expanded="true" />
-                <element signature="e#130388#130407#0" expanded="true" />
-                <element signature="e#130456#130522#0" expanded="true" />
-                <element signature="e#130594#130643#0" expanded="true" />
-                <element signature="e#133661#133725#0" expanded="true" />
-                <element signature="e#133841#133880#0" expanded="true" />
-                <element signature="e#133946#134004#0" expanded="true" />
-                <element signature="e#134071#134126#0" expanded="true" />
-                <element signature="e#134263#134302#0" expanded="true" />
-                <element signature="e#134632#134696#0" expanded="true" />
-                <element signature="e#134829#134846#0" expanded="true" />
-                <element signature="e#135001#135065#0" expanded="true" />
-                <element signature="e#135189#135207#0" expanded="true" />
-                <element signature="e#135303#135324#0" expanded="true" />
-                <element signature="e#135418#135482#0" expanded="true" />
-                <element signature="e#135591#135608#0" expanded="true" />
-                <element signature="e#135774#135838#0" expanded="true" />
-                <element signature="e#135945#135962#0" expanded="true" />
-                <element signature="e#136134#136198#0" expanded="true" />
-                <element signature="e#136296#136313#0" expanded="true" />
-                <element signature="e#137766#137806#0" expanded="true" />
-                <element signature="e#137990#138059#0" expanded="true" />
-                <element signature="e#138228#138300#0" expanded="true" />
-                <element signature="e#138380#138412#0" expanded="true" />
-                <element signature="e#138752#138823#0" expanded="true" />
-                <element signature="e#138992#139064#0" expanded="true" />
-                <element signature="e#139145#139177#0" expanded="true" />
-                <element signature="e#139546#139617#0" expanded="true" />
-                <element signature="e#139778#139850#0" expanded="true" />
-                <element signature="e#139934#139966#0" expanded="true" />
-                <element signature="e#141611#141680#0" expanded="true" />
-                <element signature="e#141849#141921#0" expanded="true" />
-                <element signature="e#142007#142039#0" expanded="true" />
-                <element signature="e#142387#142458#0" expanded="true" />
-                <element signature="e#142627#142699#0" expanded="true" />
-                <element signature="e#142785#142817#0" expanded="true" />
-                <element signature="e#143186#143257#0" expanded="true" />
-                <element signature="e#143418#143490#0" expanded="true" />
-                <element signature="e#143579#143611#0" expanded="true" />
+                <element signature="e#66629#66648#0" expanded="true" />
+                <element signature="e#66748#66769#0" expanded="true" />
+                <element signature="e#66845#66867#0" expanded="true" />
+                <element signature="e#69057#69137#0" expanded="true" />
+                <element signature="e#88390#88523#0" expanded="true" />
+                <element signature="e#92706#92752#0" expanded="true" />
+                <element signature="e#97203#97295#0" expanded="true" />
+                <element signature="e#97341#97396#0" expanded="true" />
+                <element signature="e#97470#97529#0" expanded="true" />
+                <element signature="e#97638#97697#0" expanded="true" />
+                <element signature="e#97813#97872#0" expanded="true" />
+                <element signature="e#97988#98025#0" expanded="true" />
+                <element signature="e#100712#100845#0" expanded="true" />
+                <element signature="e#100870#100936#0" expanded="true" />
+                <element signature="e#100963#101024#0" expanded="true" />
+                <element signature="e#101068#101129#0" expanded="true" />
+                <element signature="e#101172#101191#0" expanded="true" />
+                <element signature="e#124331#124367#0" expanded="true" />
+                <element signature="e#124445#124477#0" expanded="true" />
+                <element signature="e#124706#124758#0" expanded="true" />
+                <element signature="e#124832#124864#0" expanded="true" />
+                <element signature="e#125322#125375#0" expanded="true" />
+                <element signature="e#125479#125531#0" expanded="true" />
+                <element signature="e#125810#125863#0" expanded="true" />
+                <element signature="e#125967#126019#0" expanded="true" />
+                <element signature="e#126296#126349#0" expanded="true" />
+                <element signature="e#126448#126500#0" expanded="true" />
+                <element signature="e#126785#126823#0" expanded="true" />
+                <element signature="e#129455#129478#0" expanded="true" />
+                <element signature="e#129585#129631#0" expanded="true" />
+                <element signature="e#129891#130024#0" expanded="true" />
+                <element signature="e#130049#130115#0" expanded="true" />
+                <element signature="e#130142#130184#0" expanded="true" />
+                <element signature="e#130228#130270#0" expanded="true" />
+                <element signature="e#130314#130356#0" expanded="true" />
+                <element signature="e#130403#130422#0" expanded="true" />
+                <element signature="e#130471#130537#0" expanded="true" />
+                <element signature="e#130609#130658#0" expanded="true" />
+                <element signature="e#133676#133740#0" expanded="true" />
+                <element signature="e#133856#133895#0" expanded="true" />
+                <element signature="e#133961#134019#0" expanded="true" />
+                <element signature="e#134086#134141#0" expanded="true" />
+                <element signature="e#134278#134317#0" expanded="true" />
+                <element signature="e#134647#134711#0" expanded="true" />
+                <element signature="e#134844#134861#0" expanded="true" />
+                <element signature="e#135016#135080#0" expanded="true" />
+                <element signature="e#135204#135222#0" expanded="true" />
+                <element signature="e#135318#135339#0" expanded="true" />
+                <element signature="e#135433#135497#0" expanded="true" />
+                <element signature="e#135606#135623#0" expanded="true" />
+                <element signature="e#135789#135853#0" expanded="true" />
+                <element signature="e#135960#135977#0" expanded="true" />
+                <element signature="e#136149#136213#0" expanded="true" />
+                <element signature="e#136311#136328#0" expanded="true" />
+                <element signature="e#137103#137121#0" expanded="true" />
+                <element signature="e#137781#137821#0" expanded="true" />
+                <element signature="e#138005#138074#0" expanded="true" />
+                <element signature="e#138243#138315#0" expanded="true" />
+                <element signature="e#138431#138463#0" expanded="true" />
+                <element signature="e#138879#138950#0" expanded="true" />
+                <element signature="e#139119#139191#0" expanded="true" />
+                <element signature="e#139272#139304#0" expanded="true" />
+                <element signature="e#139750#139821#0" expanded="true" />
+                <element signature="e#139982#140054#0" expanded="true" />
+                <element signature="e#140138#140170#0" expanded="true" />
+                <element signature="e#141867#141936#0" expanded="true" />
+                <element signature="e#142105#142177#0" expanded="true" />
+                <element signature="e#142263#142295#0" expanded="true" />
+                <element signature="e#142643#142714#0" expanded="true" />
+                <element signature="e#142883#142955#0" expanded="true" />
+                <element signature="e#143041#143073#0" expanded="true" />
+                <element signature="e#143442#143513#0" expanded="true" />
+                <element signature="e#143674#143746#0" expanded="true" />
+                <element signature="e#143835#143867#0" expanded="true" />
+                <element signature="e#146189#146242#0" expanded="true" />
+                <element signature="e#146346#146398#0" expanded="true" />
+                <element signature="e#146591#146641#0" expanded="true" />
+                <element signature="e#146723#146778#0" expanded="true" />
+                <element signature="e#146930#146958#0" expanded="true" />
+                <element signature="e#146978#147115#0" expanded="true" />
+                <element signature="e#147158#147232#0" expanded="true" />
+                <element signature="e#147274#147355#0" expanded="true" />
+                <element signature="e#147395#147476#0" expanded="true" />
+                <element signature="e#147586#147602#0" expanded="true" />
+                <element signature="e#147644#147697#0" expanded="true" />
+                <element signature="e#147796#147866#0" expanded="true" />
+                <element signature="e#148054#148076#0" expanded="true" />
+                <element signature="e#148675#148728#0" expanded="true" />
+                <element signature="e#148828#148880#0" expanded="true" />
+                <element signature="e#149533#149597#0" expanded="true" />
+                <element signature="e#149635#149653#0" expanded="true" />
+                <element signature="e#149799#149833#0" expanded="true" />
+                <element signature="e#149856#149879#0" expanded="true" />
+                <element signature="e#150154#150176#0" expanded="true" />
+                <element signature="e#150291#150334#0" expanded="true" />
+                <element signature="e#150353#150398#0" expanded="true" />
+                <element signature="e#150463#150544#0" expanded="true" />
+                <element signature="e#150602#150683#0" expanded="true" />
+                <element signature="e#150782#150856#0" expanded="true" />
+                <element signature="e#150901#150975#0" expanded="true" />
+                <element signature="e#151019#151093#0" expanded="true" />
+                <element signature="e#152612#152658#0" expanded="true" />
+                <element signature="e#152927#153060#0" expanded="true" />
+                <element signature="e#153085#153151#0" expanded="true" />
+                <element signature="e#153178#153220#0" expanded="true" />
+                <element signature="e#153264#153306#0" expanded="true" />
+                <element signature="e#153350#153392#0" expanded="true" />
+                <element signature="e#153439#153458#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="function_transfer.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assets/www/js/function_transfer.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="406">
-              <caret line="224" column="29" lean-forward="true" selection-start-line="224" selection-start-column="29" selection-end-line="224" selection-end-column="29" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="fun_cs.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="fun_cs.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/assets/www/js/fun_cs.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="600" column="21" lean-forward="false" selection-start-line="600" selection-start-column="21" selection-end-line="600" selection-end-column="21" />
+            <state relative-caret-position="1720">
+              <caret line="1052" column="66" lean-forward="false" selection-start-line="1052" selection-start-column="66" selection-end-line="1052" selection-end-column="66" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="back_bt.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assets/www/js/back_bt.js">
+      <file leaf-file-name="fun_pr.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/assets/www/js/fun_pr.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="303">
-              <caret line="127" column="92" lean-forward="false" selection-start-line="127" selection-start-column="12" selection-end-line="127" selection-end-column="92" />
+            <state relative-caret-position="8780">
+              <caret line="439" column="25" lean-forward="false" selection-start-line="439" selection-start-column="25" selection-end-line="442" selection-end-column="33" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="company.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assets/www/js/company.js">
+      <file leaf-file-name="menutree.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/assets/www/js/menutree.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="206">
-              <caret line="61" column="80" lean-forward="false" selection-start-line="61" selection-start-column="80" selection-end-line="61" selection-end-column="80" />
+            <state relative-caret-position="220">
+              <caret line="11" column="45" lean-forward="false" selection-start-line="11" selection-start-column="45" selection-end-line="11" selection-end-column="45" />
               <folding />
             </state>
           </provider>
@@ -196,36 +230,36 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>n</find>
-      <find>nopadol</find>
-      <find>nopadol i</find>
-      <find>nopadol in</find>
-      <find>nopadol inven</find>
-      <find>nopadol</find>
-      <find>รายละเอียดโปร</find>
-      <find>javascript</find>
-      <find>c_s</find>
-      <find>นับสต๊อก</find>
-      <find>alertify.alert</find>
-      <find>l</find>
-      <find>loca</find>
-      <find>local</find>
-      <find>localstrong</find>
-      <find>localstron</find>
-      <find>localstro</find>
-      <find>localstr</find>
-      <find>localst</find>
-      <find>localsto</find>
-      <find>localstor</find>
-      <find>localstorage</find>
-      <find>รายละเอียดโ</find>
-      <find>api_url_server</find>
-      <find>0</find>
-      <find>0.4</find>
-      <find>0.</find>
+      <find>isBrochure</find>
+      <find>localStorage.api_url_server</find>
+      <find>server</find>
+      <find>รายละเอียดโปรโมชั่น</find>
+      <find>รายละเอียด</find>
+      <find>ส่วนลด</find>
+      <find>insert</find>
+      <find>หมาย</find>
       <find>v</find>
-      <find>v0</find>
-      <find>v0.4</find>
+      <find>detailpromotion</find>
+      <find>managepromotion</find>
+      <find>section</find>
+      <find>sectionpromotion_p2</find>
+      <find>sectionpromotion</find>
+      <find>รายละเอียดสินค้า</find>
+      <find>เลือก section</find>
+      <find>เลือกรายการโปรโม</find>
+      <find>caldiscount</find>
+      <find>หมายเหตุ</find>
+      <find>confirmaddpromo</find>
+      <find>showdate</find>
+      <find>showdateprom</find>
+      <find>เลือกรายการโปรโมชั่น</find>
+      <find>showdatepromo_startend</find>
+      <find>promotionlist</find>
+      <find>myFunction</find>
+      <find>promotion request</find>
+      <find>showpromotion</find>
+      <find>addpromotionpage2</find>
+      <find>select</find>
     </findStrings>
     <replaceStrings>
       <replace>'</replace>
@@ -2066,13 +2100,13 @@
         <option value="$PROJECT_DIR$/assets/www/js/function_transfer_n.js" />
         <option value="$PROJECT_DIR$/assets/www/js/fun_dpitem.js" />
         <option value="$PROJECT_DIR$/assets/www/css/main.css" />
-        <option value="$PROJECT_DIR$/assets/www/js/menutree.js" />
-        <option value="$PROJECT_DIR$/assets/www/js/fun_searchitem.js" />
         <option value="$PROJECT_DIR$/assets/www/js/fun_mgloca.js" />
         <option value="$PROJECT_DIR$/assets/www/js/company.js" />
         <option value="$PROJECT_DIR$/assets/www/js/back_bt.js" />
-        <option value="$PROJECT_DIR$/assets/www/js/fun_cs.js" />
+        <option value="$PROJECT_DIR$/assets/www/js/fun_searchitem.js" />
+        <option value="$PROJECT_DIR$/assets/www/js/menutree.js" />
         <option value="$PROJECT_DIR$/assets/www/index.html" />
+        <option value="$PROJECT_DIR$/assets/www/js/fun_cs.js" />
       </list>
     </option>
   </component>
@@ -2100,7 +2134,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="AndroidView">
         <subPane>
           <PATH>
@@ -2111,6 +2144,8 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -2165,18 +2200,18 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
     <property name="settings.editor.selected.configurable" value="instant.run" />
-    <property name="device.picker.selection" value="810717032902" />
+    <property name="device.picker.selection" value="Q4NFKZHQMN6TVSU4" />
     <property name="android.project.structure.last.selected" value="android" />
     <property name="android.project.structure.proportion" value="0.15" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="android.profiler.active" value="true" />
+    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file:///home/it10n/backupnut/INVEN/NPInven/platforms/android/assets/www/js/fun_cs.js" />
   </component>
   <component name="ReadonlyStatusHandler">
     <option name="SHOW_DIALOG" value="false" />
@@ -2263,7 +2298,8 @@
       <option name="DEEP_LINK" value="" />
       <option name="ACTIVITY_CLASS" value="" />
       <method>
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1524900453320" />
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1526045034345" />
       </method>
     </configuration>
     <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Instrumented Tests">
@@ -2310,7 +2346,8 @@
         <option name="ADVANCED_PROFILING_ENABLED" value="false" />
       </Profilers>
       <method>
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1524900453320" />
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1526045034345" />
       </method>
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -2342,27 +2379,6 @@
         </option>
         <option name="vmOptions" />
       </ExternalSystemSettings>
-      <method />
-    </configuration>
-    <configuration default="true" type="JUnit" factoryName="JUnit">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
       <method />
     </configuration>
     <configuration default="true" type="JarApplication" factoryName="JAR Application">
@@ -2492,7 +2508,8 @@
       <option name="DEEP_LINK" value="" />
       <option name="ACTIVITY_CLASS" value="" />
       <method>
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1524900453323" />
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1526045034348" />
       </method>
     </configuration>
     <list size="1">
@@ -2641,75 +2658,40 @@
     <frame x="64" y="-11" width="1303" height="780" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Android Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32935154" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Android Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.32935154" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32789558" sideWeight="0.4969743" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32626426" sideWeight="0.4969743" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25219473" sideWeight="0.5084746" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25219473" sideWeight="0.5084746" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32626426" sideWeight="0.509178" order="9" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.0" sideWeight="0.49082202" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.083591335" sideWeight="0.49082202" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32817337" sideWeight="0.4969743" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32817337" sideWeight="0.4969743" order="15" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.0" sideWeight="0.4969743" order="15" side_tool="false" content_ui="tabs" />
       <window_info id="Logcat" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.15634675" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24940239" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="true" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29083666" sideWeight="0.4915254" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32988048" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24940239" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Device File Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.0" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3993174" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22696246" sideWeight="0.49394855" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32935154" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-    </layout>
-    <layout-to-restore>
-      <window_info id="Android Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32935154" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25219473" sideWeight="0.5084746" order="4" side_tool="true" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32626426" sideWeight="0.509178" order="9" side_tool="true" content_ui="tabs" />
-      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22696246" sideWeight="0.49394855" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Logcat" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.15634675" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32935154" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24940239" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Device File Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3993174" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32789558" sideWeight="0.4969743" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32626426" sideWeight="0.4969743" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.0" sideWeight="0.49082202" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32817337" sideWeight="0.4969743" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32817337" sideWeight="0.4969743" order="15" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24940239" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21832669" sideWeight="0.4915254" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18964143" sideWeight="0.4915254" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32988048" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24940239" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Device File Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.11314741" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3993174" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22696246" sideWeight="0.49394855" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32935154" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32626426" sideWeight="0.4969743" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32988048" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-    </layout-to-restore>
+    </layout>
   </component>
   <component name="UnknownFeatures">
     <option featureType="com.intellij.fileTypeFactory" implementationName="*.js" />
@@ -2730,52 +2712,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" />
-    <entry file="file://$PROJECT_DIR$/CordovaLib/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="463">
-          <caret line="35" column="32" lean-forward="false" selection-start-line="35" selection-start-column="32" selection-end-line="35" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/values/arrays.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="253" column="6" lean-forward="false" selection-start-line="253" selection-start-column="6" selection-end-line="253" selection-end-column="6" />
-          <folding>
-            <element signature="e#0#858#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/www/js/permission.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1022">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/io/ionic/keyboard/IonicKeyboard.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="195" column="0" lean-forward="false" selection-start-line="195" selection-start-column="0" selection-end-line="195" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cordova/lib/AndroidProject.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-480">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/cordova/lib/AndroidManifest.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -2846,13 +2782,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/www/js/alertify.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="20">
-          <caret line="11" column="31" lean-forward="true" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/www/js/angular.min.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -2903,13 +2832,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/www/js/menutree.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="22" column="20" lean-forward="false" selection-start-line="22" selection-start-column="20" selection-end-line="22" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/www/css/main.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1100">
@@ -2921,14 +2843,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
           <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="27" selection-end-column="86" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/www/js/ng-cordova.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2979">
-          <caret line="516" column="43" lean-forward="true" selection-start-line="516" selection-start-column="43" selection-end-line="516" selection-end-column="43" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2957,7 +2871,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="176">
           <caret line="247" column="22" lean-forward="false" selection-start-line="247" selection-start-column="22" selection-end-line="247" selection-end-column="22" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2965,23 +2878,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="579">
           <caret line="60" column="23" lean-forward="false" selection-start-line="60" selection-start-column="23" selection-end-line="60" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/www/js/fun_pr.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/www/js/fun_searchitem.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="11540">
-          <caret line="577" column="50" lean-forward="false" selection-start-line="577" selection-start-column="50" selection-end-line="577" selection-end-column="50" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2989,23 +2885,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="6560">
           <caret line="328" column="22" lean-forward="false" selection-start-line="328" selection-start-column="22" selection-end-line="328" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/www/js/function_transfer_n.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15700">
-          <caret line="785" column="42" lean-forward="false" selection-start-line="785" selection-start-column="22" selection-end-line="785" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/www/js/global.class.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3013,7 +2892,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1040">
           <caret line="52" column="11" lean-forward="false" selection-start-line="52" selection-start-column="11" selection-end-line="52" selection-end-column="11" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3021,7 +2899,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="7420">
           <caret line="371" column="95" lean-forward="false" selection-start-line="371" selection-start-column="79" selection-end-line="371" selection-end-column="95" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3029,15 +2906,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/www/js/jquery.scannerdetection.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3045,7 +2913,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="341">
           <caret line="127" column="37" lean-forward="false" selection-start-line="127" selection-start-column="37" selection-end-line="127" selection-end-column="37" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3053,124 +2920,267 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-304">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/www/js/company.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="206">
-          <caret line="61" column="80" lean-forward="false" selection-start-line="61" selection-start-column="80" selection-end-line="61" selection-end-column="80" />
+        <state relative-caret-position="140">
+          <caret line="7" column="22" lean-forward="false" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/www/js/global.class.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1400">
+          <caret line="70" column="53" lean-forward="false" selection-start-line="70" selection-start-column="40" selection-end-line="70" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/www/cordova.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-31">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/www/js/jquery.scannerdetection.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-31">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/www/js/ng-cordova.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-31">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/www/js/alertify.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="11" column="31" lean-forward="false" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/www/js/function_transfer_n.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1060">
+          <caret line="53" column="37" lean-forward="false" selection-start-line="53" selection-start-column="37" selection-end-line="53" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/www/js/ng-cordova.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="20">
+          <caret line="472" column="43" lean-forward="false" selection-start-line="472" selection-start-column="43" selection-end-line="472" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/www/cordova_plugins.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="551">
+          <caret line="466" column="21" lean-forward="false" selection-start-line="466" selection-start-column="21" selection-end-line="466" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/www/plugins/phonegap-plugin-barcodescanner/www/barcodescanner.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="17" column="23" lean-forward="false" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/www/js/function_transfer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="7" column="45" lean-forward="false" selection-start-line="7" selection-start-column="32" selection-end-line="7" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="460">
+          <caret line="23" column="8" lean-forward="false" selection-start-line="23" selection-start-column="8" selection-end-line="23" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-manifest">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/www/js/fun_searchitem.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1066">
+          <caret line="371" column="89" lean-forward="false" selection-start-line="371" selection-start-column="89" selection-end-line="371" selection-end-column="89" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/www/js/back_bt.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="303">
-          <caret line="127" column="92" lean-forward="false" selection-start-line="127" selection-start-column="12" selection-end-line="127" selection-end-column="92" />
+        <state relative-caret-position="20">
+          <caret line="153" column="29" lean-forward="false" selection-start-line="153" selection-start-column="29" selection-end-line="153" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/android.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/idea.jar!/resources/html5-schema/html5/common.rnc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="124" column="25" lean-forward="true" selection-start-line="124" selection-start-column="25" selection-end-line="124" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/www/js/menutree.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="11" column="45" lean-forward="false" selection-start-line="11" selection-start-column="45" selection-end-line="11" selection-end-column="45" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/www/js/fun_cs.js">
+    <entry file="file://$PROJECT_DIR$/assets/www/js/fun_pr.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="600" column="21" lean-forward="false" selection-start-line="600" selection-start-column="21" selection-end-line="600" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/www/js/function_transfer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="406">
-          <caret line="224" column="29" lean-forward="true" selection-start-line="224" selection-start-column="29" selection-end-line="224" selection-end-column="29" />
+        <state relative-caret-position="8780">
+          <caret line="439" column="25" lean-forward="false" selection-start-line="439" selection-start-column="25" selection-end-line="442" selection-end-column="33" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/www/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="58" column="23" lean-forward="true" selection-start-line="58" selection-start-column="23" selection-end-line="58" selection-end-column="23" />
+        <state relative-caret-position="57640">
+          <caret line="2882" column="76" lean-forward="false" selection-start-line="2882" selection-start-column="54" selection-end-line="2882" selection-end-column="76" />
           <folding>
             <element signature="e#1482#1521#0" expanded="true" />
             <element signature="e#1584#1609#0" expanded="true" />
             <element signature="e#1634#1672#0" expanded="true" />
-            <element signature="e#66614#66633#0" expanded="true" />
-            <element signature="e#66733#66754#0" expanded="true" />
-            <element signature="e#66830#66852#0" expanded="true" />
-            <element signature="e#69042#69122#0" expanded="true" />
-            <element signature="e#88375#88508#0" expanded="true" />
-            <element signature="e#92691#92737#0" expanded="true" />
-            <element signature="e#97188#97280#0" expanded="true" />
-            <element signature="e#97326#97381#0" expanded="true" />
-            <element signature="e#97455#97514#0" expanded="true" />
-            <element signature="e#97623#97682#0" expanded="true" />
-            <element signature="e#97798#97857#0" expanded="true" />
-            <element signature="e#97973#98010#0" expanded="true" />
-            <element signature="e#100697#100830#0" expanded="true" />
-            <element signature="e#100855#100921#0" expanded="true" />
-            <element signature="e#100948#101009#0" expanded="true" />
-            <element signature="e#101053#101114#0" expanded="true" />
-            <element signature="e#101157#101176#0" expanded="true" />
-            <element signature="e#124316#124352#0" expanded="true" />
-            <element signature="e#124430#124462#0" expanded="true" />
-            <element signature="e#124691#124743#0" expanded="true" />
-            <element signature="e#124817#124849#0" expanded="true" />
-            <element signature="e#125307#125360#0" expanded="true" />
-            <element signature="e#125464#125516#0" expanded="true" />
-            <element signature="e#125795#125848#0" expanded="true" />
-            <element signature="e#125952#126004#0" expanded="true" />
-            <element signature="e#126281#126334#0" expanded="true" />
-            <element signature="e#126433#126485#0" expanded="true" />
-            <element signature="e#126770#126808#0" expanded="true" />
-            <element signature="e#129440#129463#0" expanded="true" />
-            <element signature="e#129570#129616#0" expanded="true" />
-            <element signature="e#129876#130009#0" expanded="true" />
-            <element signature="e#130034#130100#0" expanded="true" />
-            <element signature="e#130127#130169#0" expanded="true" />
-            <element signature="e#130213#130255#0" expanded="true" />
-            <element signature="e#130299#130341#0" expanded="true" />
-            <element signature="e#130388#130407#0" expanded="true" />
-            <element signature="e#130456#130522#0" expanded="true" />
-            <element signature="e#130594#130643#0" expanded="true" />
-            <element signature="e#133661#133725#0" expanded="true" />
-            <element signature="e#133841#133880#0" expanded="true" />
-            <element signature="e#133946#134004#0" expanded="true" />
-            <element signature="e#134071#134126#0" expanded="true" />
-            <element signature="e#134263#134302#0" expanded="true" />
-            <element signature="e#134632#134696#0" expanded="true" />
-            <element signature="e#134829#134846#0" expanded="true" />
-            <element signature="e#135001#135065#0" expanded="true" />
-            <element signature="e#135189#135207#0" expanded="true" />
-            <element signature="e#135303#135324#0" expanded="true" />
-            <element signature="e#135418#135482#0" expanded="true" />
-            <element signature="e#135591#135608#0" expanded="true" />
-            <element signature="e#135774#135838#0" expanded="true" />
-            <element signature="e#135945#135962#0" expanded="true" />
-            <element signature="e#136134#136198#0" expanded="true" />
-            <element signature="e#136296#136313#0" expanded="true" />
-            <element signature="e#137766#137806#0" expanded="true" />
-            <element signature="e#137990#138059#0" expanded="true" />
-            <element signature="e#138228#138300#0" expanded="true" />
-            <element signature="e#138380#138412#0" expanded="true" />
-            <element signature="e#138752#138823#0" expanded="true" />
-            <element signature="e#138992#139064#0" expanded="true" />
-            <element signature="e#139145#139177#0" expanded="true" />
-            <element signature="e#139546#139617#0" expanded="true" />
-            <element signature="e#139778#139850#0" expanded="true" />
-            <element signature="e#139934#139966#0" expanded="true" />
-            <element signature="e#141611#141680#0" expanded="true" />
-            <element signature="e#141849#141921#0" expanded="true" />
-            <element signature="e#142007#142039#0" expanded="true" />
-            <element signature="e#142387#142458#0" expanded="true" />
-            <element signature="e#142627#142699#0" expanded="true" />
-            <element signature="e#142785#142817#0" expanded="true" />
-            <element signature="e#143186#143257#0" expanded="true" />
-            <element signature="e#143418#143490#0" expanded="true" />
-            <element signature="e#143579#143611#0" expanded="true" />
+            <element signature="e#66629#66648#0" expanded="true" />
+            <element signature="e#66748#66769#0" expanded="true" />
+            <element signature="e#66845#66867#0" expanded="true" />
+            <element signature="e#69057#69137#0" expanded="true" />
+            <element signature="e#88390#88523#0" expanded="true" />
+            <element signature="e#92706#92752#0" expanded="true" />
+            <element signature="e#97203#97295#0" expanded="true" />
+            <element signature="e#97341#97396#0" expanded="true" />
+            <element signature="e#97470#97529#0" expanded="true" />
+            <element signature="e#97638#97697#0" expanded="true" />
+            <element signature="e#97813#97872#0" expanded="true" />
+            <element signature="e#97988#98025#0" expanded="true" />
+            <element signature="e#100712#100845#0" expanded="true" />
+            <element signature="e#100870#100936#0" expanded="true" />
+            <element signature="e#100963#101024#0" expanded="true" />
+            <element signature="e#101068#101129#0" expanded="true" />
+            <element signature="e#101172#101191#0" expanded="true" />
+            <element signature="e#124331#124367#0" expanded="true" />
+            <element signature="e#124445#124477#0" expanded="true" />
+            <element signature="e#124706#124758#0" expanded="true" />
+            <element signature="e#124832#124864#0" expanded="true" />
+            <element signature="e#125322#125375#0" expanded="true" />
+            <element signature="e#125479#125531#0" expanded="true" />
+            <element signature="e#125810#125863#0" expanded="true" />
+            <element signature="e#125967#126019#0" expanded="true" />
+            <element signature="e#126296#126349#0" expanded="true" />
+            <element signature="e#126448#126500#0" expanded="true" />
+            <element signature="e#126785#126823#0" expanded="true" />
+            <element signature="e#129455#129478#0" expanded="true" />
+            <element signature="e#129585#129631#0" expanded="true" />
+            <element signature="e#129891#130024#0" expanded="true" />
+            <element signature="e#130049#130115#0" expanded="true" />
+            <element signature="e#130142#130184#0" expanded="true" />
+            <element signature="e#130228#130270#0" expanded="true" />
+            <element signature="e#130314#130356#0" expanded="true" />
+            <element signature="e#130403#130422#0" expanded="true" />
+            <element signature="e#130471#130537#0" expanded="true" />
+            <element signature="e#130609#130658#0" expanded="true" />
+            <element signature="e#133676#133740#0" expanded="true" />
+            <element signature="e#133856#133895#0" expanded="true" />
+            <element signature="e#133961#134019#0" expanded="true" />
+            <element signature="e#134086#134141#0" expanded="true" />
+            <element signature="e#134278#134317#0" expanded="true" />
+            <element signature="e#134647#134711#0" expanded="true" />
+            <element signature="e#134844#134861#0" expanded="true" />
+            <element signature="e#135016#135080#0" expanded="true" />
+            <element signature="e#135204#135222#0" expanded="true" />
+            <element signature="e#135318#135339#0" expanded="true" />
+            <element signature="e#135433#135497#0" expanded="true" />
+            <element signature="e#135606#135623#0" expanded="true" />
+            <element signature="e#135789#135853#0" expanded="true" />
+            <element signature="e#135960#135977#0" expanded="true" />
+            <element signature="e#136149#136213#0" expanded="true" />
+            <element signature="e#136311#136328#0" expanded="true" />
+            <element signature="e#137103#137121#0" expanded="true" />
+            <element signature="e#137781#137821#0" expanded="true" />
+            <element signature="e#138005#138074#0" expanded="true" />
+            <element signature="e#138243#138315#0" expanded="true" />
+            <element signature="e#138431#138463#0" expanded="true" />
+            <element signature="e#138879#138950#0" expanded="true" />
+            <element signature="e#139119#139191#0" expanded="true" />
+            <element signature="e#139272#139304#0" expanded="true" />
+            <element signature="e#139750#139821#0" expanded="true" />
+            <element signature="e#139982#140054#0" expanded="true" />
+            <element signature="e#140138#140170#0" expanded="true" />
+            <element signature="e#141867#141936#0" expanded="true" />
+            <element signature="e#142105#142177#0" expanded="true" />
+            <element signature="e#142263#142295#0" expanded="true" />
+            <element signature="e#142643#142714#0" expanded="true" />
+            <element signature="e#142883#142955#0" expanded="true" />
+            <element signature="e#143041#143073#0" expanded="true" />
+            <element signature="e#143442#143513#0" expanded="true" />
+            <element signature="e#143674#143746#0" expanded="true" />
+            <element signature="e#143835#143867#0" expanded="true" />
+            <element signature="e#146189#146242#0" expanded="true" />
+            <element signature="e#146346#146398#0" expanded="true" />
+            <element signature="e#146591#146641#0" expanded="true" />
+            <element signature="e#146723#146778#0" expanded="true" />
+            <element signature="e#146930#146958#0" expanded="true" />
+            <element signature="e#146978#147115#0" expanded="true" />
+            <element signature="e#147158#147232#0" expanded="true" />
+            <element signature="e#147274#147355#0" expanded="true" />
+            <element signature="e#147395#147476#0" expanded="true" />
+            <element signature="e#147586#147602#0" expanded="true" />
+            <element signature="e#147644#147697#0" expanded="true" />
+            <element signature="e#147796#147866#0" expanded="true" />
+            <element signature="e#148054#148076#0" expanded="true" />
+            <element signature="e#148675#148728#0" expanded="true" />
+            <element signature="e#148828#148880#0" expanded="true" />
+            <element signature="e#149533#149597#0" expanded="true" />
+            <element signature="e#149635#149653#0" expanded="true" />
+            <element signature="e#149799#149833#0" expanded="true" />
+            <element signature="e#149856#149879#0" expanded="true" />
+            <element signature="e#150154#150176#0" expanded="true" />
+            <element signature="e#150291#150334#0" expanded="true" />
+            <element signature="e#150353#150398#0" expanded="true" />
+            <element signature="e#150463#150544#0" expanded="true" />
+            <element signature="e#150602#150683#0" expanded="true" />
+            <element signature="e#150782#150856#0" expanded="true" />
+            <element signature="e#150901#150975#0" expanded="true" />
+            <element signature="e#151019#151093#0" expanded="true" />
+            <element signature="e#152612#152658#0" expanded="true" />
+            <element signature="e#152927#153060#0" expanded="true" />
+            <element signature="e#153085#153151#0" expanded="true" />
+            <element signature="e#153178#153220#0" expanded="true" />
+            <element signature="e#153264#153306#0" expanded="true" />
+            <element signature="e#153350#153392#0" expanded="true" />
+            <element signature="e#153439#153458#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/www/js/fun_cs.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1720">
+          <caret line="1052" column="66" lean-forward="false" selection-start-line="1052" selection-start-column="66" selection-end-line="1052" selection-end-column="66" />
+          <folding />
         </state>
       </provider>
     </entry>
