@@ -325,7 +325,7 @@ alertify.error('กรุณากรอกข้อมูลให้ครบ'
 }
 
 function managepromotion(){
-loading();
+
 var searchpromo = document.getElementById("searchpromotion").value;
 $.ajax({
                         url: "http://venus.nopadol.com:9002/"+"requests?access_token=aaa&keyword="+searchpromo,
@@ -366,8 +366,8 @@ $.ajax({
                         var colorconfirm = '#5ea9ff';
 
                         }
-                        promotionlist_list += "<a href='#' class='ui-btn' style='font-size:13px;background-color:"+colorconfirm+";' ";
-                        promotionlist_list += 'onclick="detail_promotion(\''+result.data[i].doc_no+'\')"><span style="color:black;">'+result.data[i].doc_no+' '+resultmont+'<br>'+result.data[i].sec_man+' '+result.data[i].pm_code+'</span></a>';
+                        promotionlist_list += "<a href='#' class='ui-btn todo-ccpro' data-cancelprolist='cp"+result.data[i].doc_no+"' data-cancelprocode='"+result.data[i].doc_no+"' id='cp"+result.data[i].doc_no+"' style='font-size:13px;background-color:"+colorconfirm+";' ";
+                        promotionlist_list += 'onclick="detail_promotion(\''+result.data[i].doc_no+'\')"><span style="color:black;">'+result.data[i].doc_no+' '+resultmont+'<br>'+result.data[i].sec_man+' '+result.data[i].pm_code+'</span></a></button>';
                         }
                         document.getElementById("detailpromotion").innerHTML = promotionlist_list;
                         $.mobile.changePage('#promotionpage',{transition: 'slidefade'});
@@ -395,6 +395,19 @@ $.ajax({
                          type: "GET",
                          cache: false,
                          success: function(result){
+//                         localStorage.doc_no = result.data[0].doc_no;
+
+
+                         if(result.data[0].subs != null){
+                         localStorage.promotion_type_first = result.data[0].subs[0].promotion_type;
+                         localStorage.line_number_edit = result.data[0].subs.length;
+                         }else{
+                         localStorage.promotion_type_first = 00;
+                         localStorage.line_number_edit = 0;
+                         }
+
+
+
                          console.log('12 '+JSON.stringify(result));
                          var docdate = result.data[0].doc_date;
                          var x = docdate.substring(0,10);
@@ -417,6 +430,9 @@ $.ajax({
                          case '12': var mon = "ธันวาคม";
                          }
                          var resultmont = res[2]+' '+mon+' '+yearfin;
+                              document.getElementById('docno_detail').value = result.data[0].doc_no;
+                              document.getElementById('section_edit').value = result.data[0].sec_man;
+                              document.getElementById('pmcode_edit').value = result.data[0].pm_code;
 
                                var docno = "";
                                docno += "<span style='font-size:12px;'>"+result.data[0].doc_no+"</span>"
@@ -430,6 +446,7 @@ $.ajax({
                               pm_code += "<span style='font-size:12px;'>"+result.data[0].pm_code+"</span>"
                               document.getElementById('pmcode').innerHTML = pm_code;
 
+
                               var sec_man = "";
                               sec_man += "<span style='font-size:12px;'>"+result.data[0].sec_man+"</span>"
                               document.getElementById('secman').innerHTML = sec_man;
@@ -438,6 +455,7 @@ $.ajax({
                               creator_code += "<span style='font-size:12px;'>"+result.data[0].creator_code+"</span>"
                               document.getElementById('creator_code').innerHTML = creator_code;
 
+                              if(result.data[0].subs != null){
                               var date2 = result.data[0].subs[0].date_start;
                               var x = date2.substring(0,10);
                               var res = x.split("-");
@@ -481,6 +499,10 @@ $.ajax({
                               case '12': var mon = "ธันวาคม";
                               }
                               var docend = res[2]+' '+mon+' '+yearfin;
+                                }else{
+                                var docstar = '';
+                                var docend = '';
+                                }
 
                               var datestartend = "";
                               datestartend += "<span style='font-size:12px;'>"+docstar+" ถึง "+docend+"</span>"
@@ -494,6 +516,7 @@ $.ajax({
                               tabledetail  += '<div class="ui-block-c" style="font-size: 12px;color: blue;font-weight:bold;width:16%" align="center"><b>ปกติ</b></div>';
                               tabledetail  += '<div class="ui-block-d" style="font-size: 12px;color: blue;font-weight:bold;width:16%" align="center"><b>โปร</b></div>';
                               tabledetail  += '</div>';
+                              if(result.data[0].subs != null){
                               for(var i = 0; i < result.data[0].subs.length; i++){
 //                            tabledetail  += '<h3>'+result.data[0].subs[i].item_name+'</h3>';
                               tabledetail += '<label>';
@@ -507,6 +530,9 @@ $.ajax({
                               tabledetail += '<div class="ui-block-d" style="font-size: 12px;width:16%" align="center" >';
                               tabledetail += result.data[0].subs[i].promo_price+'</div>';
                               tabledetail += '</div></label>';
+                              }
+                              }else{
+                              tabledetail = '';
                               }
                               document.getElementById('detailtable').innerHTML = tabledetail;
                               ////table///
@@ -599,6 +625,8 @@ function backfromedit(){
 $.mobile.changePage('#detailpromotion',{transition: 'slidefade',reverse: true});
 }
 function editpromotion(docno){
+    document.getElementById('docno_editP').value = docno
+
 var headpromotion = '';
     headpromotion += '<label style="font-size:18px; margin-bottom:0;" align="center"><img src="images/Promotion.png" width="32"><b> แก้ไข โปรโมชั่น <span style="color:blue;">'+docno+'</span></b></label>';
     document.getElementById('headeditpromotion').innerHTML = headpromotion;
@@ -644,7 +672,7 @@ loading();
 
                           }
                   });
-loading();
+    loading();
     $.ajax({
                           url: "http://venus.nopadol.com:9002/"+"sectionman",
                           contentType: "application/json; charset=utf-8",
@@ -655,7 +683,7 @@ loading();
 
                           var select = document.getElementById("edit_sectionpromotion");
                               for(var i = 0; i < result.data.length; i++){
-                                select.options[select.options.length] = new Option(result.data[i].name_full,result.data[i].user_id);//show,value
+                                select.options[select.options.length] = new Option(result.data[i].name_full,result.data[i].sale_code);//show,value
                               }
                               closeload();
                           },
@@ -666,6 +694,131 @@ loading();
                           }
                   });
 $.mobile.changePage('#editpromotion',{transition : 'slidefade'});
+
+}
+function editpromotionc(){
+   namepromotion = document.getElementById('edit_promotionlist').value
+   console.log(namepromotion)
+//            alertify.success(namepromotion)
+    if(namepromotion != 0){
+                     $.ajax({
+                              url: "http://venus.nopadol.com:9002/promotionmasterbycode?pmcode="+namepromotion+"",
+                              contentType: "application/json; charset=utf-8",
+                              dataType: "json",
+                              type: "GET",
+                              cache: false,
+                              success: function(result){
+                                  var str = result.data.date_start;
+                                  var res = str.substring(0, 10);
+                                  var c = res.split("-");
+                                  var b = parseInt(c[0])
+                                  var x = b + 543
+                                  var resultstart = c[2] + '/' +c[1]+'/'+ x;
+
+                                  var x = result.data.date_end;
+                                  var w = x.substring(0, 10);
+                                  var r = w.split("-");
+                                  var n = parseInt(r[0])
+                                  var x = n + 543
+                                  var resultend = r[2] + '/' +r[1]+'/'+ x
+                                  console.log(resultstart+' '+resultend)
+
+                                  cleardetailcom = '';
+                                  cleardetailcom += '<label><b>เริ่ม</b> '+resultstart+' <b>ถึง</b> '+resultend+'</label>';
+                                  document.getElementById('showdateedit').innerHTML = cleardetailcom;
+
+                              },
+                              error: function (err){
+                                  alertify.error('fail load API date promotion')
+
+                                  //alertify.alert("การเชื่อมต่อฐานข้อมูลมีปัญหา กรุณาตรวจสอบการเชื่อมต่ออินเตอร์เน็ตของท่าน");
+                                //  $load.popup("close");
+                              }
+                      });
+   }else{
+    document.getElementById('showdateedit').innerHTML = ''
+   }
+
+}
+function editheader(){
+    var docno = document.getElementById('docno_editP').value
+
+                $.ajax({
+                          url: "http://venus.nopadol.com:9002/requests?access_token=aaa&keyword="+docno,
+                          contentType: "application/json; charset=utf-8",
+                          dataType: "json",
+                          type: "GET",
+                          cache: false,
+                          success: function(result){
+
+                          var str = result.data[0].doc_date;
+                          var res = str.substring(0, 10);
+                          var cut = res.split("-");
+                          var resultdate = cut[2] +'/'+cut[1]+'/'+cut[0]
+
+                          var docno_get = result.data[0].doc_no
+                          var doc_date_get = resultdate
+
+                          var sec_man_get = document.getElementById('edit_sectionpromotion').value
+                          var pm_code_get = document.getElementById('edit_promotionlist').value
+                          var type_promo_get = document.getElementById('edit_typepromotion').value
+                          var editor_code_get = localStorage.username
+
+//                        console.log(type_promo_get);
+//                        console.log((result.data[0].subs.length)-1)
+//                        console.log(result.data[0].subs[0].item_code)
+
+                          var subsx;
+                          var mainsub;
+                          var i;
+                          for (i = 0; i < result.data[0].subs.length; i++) {
+//                        console.log('{"item_code":"'+result.data[0].subs[i].item_code+'", "item_name":"'+result.data[0].subs[i].item_name+'", "unit_code":"'+result.data[0].subs[i].unit_code+'", "price":'+result.data[0].subs[i].price+', "discount":'+result.data[0].subs[i].discount+', "discount_type":'+result.data[0].subs[i].discount_type+', "discount_word":"'+result.data[0].subs[i].discount_word+'", "promo_price":'+result.data[0].subs[i].promo_price+', "mydescription":"'+result.data[0].subs[i].mydescription+'", "line_number":'+result.data[0].subs[i].line_number+', "is_brochure":'+result.data[0].subs[i].is_brochure+', "promo_member":'+result.data[0].subs[i].promo_member+', "promotion_type":"'+type_promo_get+'" },')
+                          subsx += '{"item_code":"'+result.data[0].subs[i].item_code+'","item_name":"'+result.data[0].subs[i].item_name+'", "unit_code":"'+result.data[0].subs[i].unit_code+'", "price":'+result.data[0].subs[i].price+', "discount":'+result.data[0].subs[i].discount+', "discount_type":'+result.data[0].subs[i].discount_type+', "discount_word":"'+result.data[0].subs[i].discount_word+'", "promo_price":'+result.data[0].subs[i].promo_price+', "mydescription":"'+result.data[0].subs[i].mydescription+'", "line_number":'+result.data[0].subs[i].line_number+', "is_brochure":'+result.data[0].subs[i].is_brochure+', "promo_member":'+result.data[0].subs[i].promo_member+', "promotion_type":"'+type_promo_get+'" }'
+                          if(i < result.data[0].subs.length-1){
+                             subsx += ',';
+                          }
+                          }
+                          var resultsub = subsx.substr(9);
+                          console.log(resultsub);
+                          var mainsub = '"subs":['+resultsub+']}'
+                          console.log(mainsub)
+
+//                          var subs = '"subs":[ {"item_code":"8852401406460", "item_name":"[P]ซรม. Europa มุมไบ บราวน์ (น้ำตาล) 12*12 A ( 11 แผ่น/กล่อง, 1ตรม/กล่อง )", "unit_code":"กล่อง", "price":139, "discount":60, "discount_type":0, "discount_word":"60", "promo_price":79, "mydescription":"Test", "line_number":0, "is_brochure":0, "promo_member":0, "promotion_type":"03" }, { "item_code":"8855473038706", "item_name":"ก๊อกสนามคอสั้นออกกำแพง ก้านปัด BENN BN-9322", "unit_code":"ชุด", "price":150, "discount":5, "discount_type":0, "discount_word":"5", "promo_price":145, "mydescription":"Test", "line_number":1, "is_brochure":0, "promo_member":0, "promotion_type":"04" } ] }'
+//                          console.log('cut'+'{"check_job":1,"doc_no":"'+docno_get+'","doc_date":"'+doc_date_get+'","sec_man":"'+sec_man_get+'","pm_code":"'+pm_code_get+'","creator_code":"'+editor_code_get+'","is_complete_save":1,'+subs+'cut')
+//                          console.log('full '+'{"check_job":1,"doc_no":"'+docno_get+'","doc_date":"'+doc_date_get+'","sec_man":"'+sec_man_get+'","pm_code":"'+pm_code_get+'","creator_code":"'+editor_code_get+'","is_complete_save":1,"subs":[ {"item_code":"8852401406460", "item_name":"[P]ซรม. Europa มุมไบ บราวน์ (น้ำตาล) 12*12 A ( 11 แผ่น/กล่อง, 1ตรม/กล่อง )", "unit_code":"กล่อง", "price":139, "discount":60, "discount_type":0, "discount_word":"60", "promo_price":79, "mydescription":"Test", "line_number":0, "is_brochure":0, "promo_member":0, "promotion_type":"03" }, { "item_code":"8855473038706", "item_name":"ก๊อกสนามคอสั้นออกกำแพง ก้านปัด BENN BN-9322", "unit_code":"ชุด", "price":150, "discount":5, "discount_type":0, "discount_word":"5", "promo_price":145, "mydescription":"Test", "line_number":1, "is_brochure":0, "promo_member":0, "promotion_type":"04" } ] }'+'full')
+                                            console.log('{"check_job":1,"doc_no":"'+docno_get+'","doc_date":"'+doc_date_get+'","sec_man":"'+sec_man_get+'","pm_code":"'+pm_code_get+'","creator_code":"'+editor_code_get+'","is_complete_save":1,'+mainsub+'');
+                                            $.ajax({
+                                                        url: "http://venus.nopadol.com:9002/promotion",
+                                                        data: '{"check_job":1,"doc_no":"'+docno_get+'","doc_date":"'+doc_date_get+'","sec_man":"'+sec_man_get+'","pm_code":"'+pm_code_get+'","creator_code":"'+editor_code_get+'","is_complete_save":1,'+mainsub+'',
+                                                        contentType: "application/json; charset=utf-8",
+                                                        dataType: "json",
+                                                        type: "POST",
+                                                        cache: false,
+                                                        success: function(result){
+                                                           alertify.success('บันทึกสำเร็จ')
+
+                                                           $.mobile.changePage('#promotionpage',{transition: 'slidefade',reverse: true});
+
+                                                              },
+                                                        error: function(err){
+                                                           alertify.error('API แก้ไขสินค้า');
+                                                         }
+                                                       });
+
+
+                          },
+                          error: function (err){
+                              console.log(JSON.stringify(err));
+                              alertify.error("การเชื่อมต่อฐานข้อมูลของ API แก้ไขไม่ได้");
+
+                          }
+                  });
+
+
+
+
+
+
 }
 function addpromotionpage2(){
             if(document.getElementById('promotionlist').value == 0){
@@ -737,7 +890,7 @@ function search_promotion(itemcode){
     document.getElementById('caldiscount').value = '';
     document.getElementById('priceresult').innerHTML = '';
     document.getElementById('idproduct_promotion2').value = itemcode;
-   enterproduct_search(itemcode);
+    enterproduct_search(itemcode);
 }
 function enterproduct_search(itemcode){
        $.ajax({
@@ -848,7 +1001,6 @@ function enterproduct_search(itemcode){
 }
 
 function cal_discount(value){
-
     document.getElementById("caldiscount").style.backgroundColor = "";
     document.getElementById("discountmember").checked = false;
     var price_product = document.getElementById('price_product2').value;
@@ -888,7 +1040,7 @@ function result_discount2(){
  document.getElementById('priceresult').innerHTML = priceresult;
 }
 function confirmaddpromo(){
-var id_product = document.getElementById('idproduct_promotion2').value ;
+var id_product = document.getElementById('idproduct_promotion2').value;
 var discount = document.getElementById('caldiscount').value;
 alertify.set({ labels: {
                                 ok     : "บันทึก",
@@ -918,7 +1070,7 @@ alertify.confirm("ท่านต้องการจะเพิ่มโป�
                                 success: function(result){
                                 console.log(result);
 //                                docno = result.data.Request_docno;
-                                docno = 'testt1 ';
+                                docno = 'test11';
                                 var d = new Date();
                                 var date = d.getDate();
                                 var Month = d.getMonth();
@@ -953,7 +1105,7 @@ alertify.confirm("ท่านต้องการจะเพิ่มโป�
                                     }else{
                                      var promo_member = 0 ;
                                     }
-                                    alertify.success(discount_r)
+//                                    alertify.success(discount_r)
                                 console.log('{"check_job":0,"doc_no":"'+docno+'","doc_date":"'+datemonth+'","sec_man":"'+section+'","pm_code":"'+namepromotion+'","creator_code":"'+localStorage.username+'","is_complete_save":1,"subs":[{"item_code":"'+itemcode+'","item_name":"'+item_name+'","unit_code":"'+unit_code+'","price":'+price+',"discount":'+discount_r+',"discount_type":'+discount_type+',"discount_word":"'+discount+'","promo_price":'+promo_price+',"mydescription":"'+mydescription+'","line_number":0,"is_brochure":'+is_brochure+',"promo_member":'+promo_member+',"promotion_type":"'+typepromotion+'"}]}')
                                                     $.ajax({
                                                     url: "http://venus.nopadol.com:9002/promotion",
@@ -1034,28 +1186,47 @@ function backpromotionpage2(){
             return false;
 }}
 function showdatepromo_startend(){
-//            alertify.success(document.getElementById('promotionlist').value);
             namepromotion = document.getElementById('promotionlist').value
-         $.ajax({
-                              url: localStorage.api_url_server+"NPInventoryWs/V2/is/searchShelf",
-                              data: '{"accessToken":"'+localStorage.token+'","searchWH":"'+stockWH+'","searchShelf":""}',
+//            alertify.success(namepromotion)
+    if(namepromotion != 0){
+                     $.ajax({
+                              url: "http://venus.nopadol.com:9002/promotionmasterbycode?pmcode="+namepromotion+"",
                               contentType: "application/json; charset=utf-8",
                               dataType: "json",
-                              type: "POST",
+                              type: "GET",
                               cache: false,
                               success: function(result){
-                                console.log(result)
+
+                                  var str = result.data.date_start;
+                                  var res = str.substring(0, 10);
+                                  var c = res.split("-");
+                                  var b = parseInt(c[0])
+                                  var x = b + 543
+                                  var resultstart = c[2] + '/' +c[1]+'/'+ x;
+
+                                  var x = result.data.date_end;
+                                  var w = x.substring(0, 10);
+                                  var r = w.split("-");
+                                  var n = parseInt(r[0])
+                                  var x = n + 543
+                                  var resultend = r[2] + '/' +r[1]+'/'+ x
+                                  console.log(resultstart+' '+resultend)
+
+                                  cleardetailcom = '';
+                                  cleardetailcom += '<label><b>เริ่ม</b> '+resultstart+' <b>ถึง</b> '+resultend+'</label>';
+                                  document.getElementById('showdate').innerHTML = cleardetailcom;
 
                               },
                               error: function (err){
-                                  console.log(JSON.stringify(err));
+                                  alertify.error('fail load API date promotion')
 
                                   //alertify.alert("การเชื่อมต่อฐานข้อมูลมีปัญหา กรุณาตรวจสอบการเชื่อมต่ออินเตอร์เน็ตของท่าน");
                                 //  $load.popup("close");
                               }
                       });
-
-
+   }else{
+    document.getElementById('showdate').innerHTML = ''
+   }
 
 }
 function sec_sh(){
@@ -1739,6 +1910,387 @@ function savedata(){
          alertify.alert("ไม่มีรายการสินค้า ไม่สามารถบันทึกได้ กรุณาเพิ่มรายการสินค้า");
          localStorage.enter = null;
     }
+}
+function addpromo_c(){
+    $.mobile.changePage("#edit_addsub_promotion",{transition: 'slidefade'});
+    var docno = document.getElementById('docno_editP').value
+    document.getElementById('edit_docno_addsub').value = document.getElementById('docno_detail').value
+    document.getElementById('edit_section_addsub').value = document.getElementById('section_edit').value
+    document.getElementById('edit_pmcode_addsub').value = document.getElementById('pmcode_edit').value
+
+
+}
+function backedit_addsub_promotion(){
+                    if($.mobile.activePage.is('#edit_addsub_promotion')){
+                    $.mobile.changePage('#detailpromotion',{transition: 'slidefade',reverse: true});
+                    return false;
+}
+}
+
+function go_search_editpromotion(){
+    $.mobile.changePage("#edit_search_promotion",{transition: 'slidefade'});
+}
+function search_product_edit(){
+var searchitem = document.getElementById('edit_promotion').value
+    $.ajax({
+            url: localStorage.api_url_server+"NPInventoryWs/V2/inven/searchLikeItem",
+            data: '{"accessToken":"'+localStorage.token+'","searchItem":"'+searchitem+'"}',
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            type: "POST",
+            cache: false,
+            success: function(result){
+            console.log('data '+JSON.stringify(result));
+                     itemlist_edit = '';
+                     $.each(result.listLikeItem, function(key,val){
+//                     itemlist2 += '<h1>ทดสอบ</h1>';
+                     itemlist_edit += '<label style="width:100%; font-size:14px; border-bottom:1px dashed gray;"';
+                     itemlist_edit += 'onclick="search_promotion_edit(\''+val["itemCode"]+'\')"><div class="ui-grid-b">';
+                     itemlist_edit += '<div class="ui-block-a" style="width:35%; padding:2%; word-wrap:break-word;">';
+                     itemlist_edit += val['itemCode']+'</div>';
+                     itemlist_edit += '<div class="ui-block-b" style="width:40%; word-wrap:break-word;">';
+                     itemlist_edit += val['itemName']+'</div>';
+                     itemlist_edit += '<div class="ui-block-c" style="width:25%; text-align:center; word-wrap:break-word;">';
+                     itemlist_edit += val['unitCode']+'</div></div></label>';
+                      });
+                     document.getElementById("promotion_search_edit").innerHTML = itemlist_edit;
+                  },
+            error: function(err){
+               alertify.error('ข้อมูลผิดพลาด');
+             }
+           });
+}
+function search_promotion_edit(val){
+    $.mobile.changePage("#edit_addsub_promotion",{transition: 'slidefade'});
+    document.getElementById('idproduct_promotion2_edit').value = val;
+    showdetail_all_edit(val);
+}
+function showdetail_all_edit(val){
+    $.ajax({
+        url: localStorage.api_url_server+"ReOrderWS/reorder/itemdetails",
+        data: '{"access_token":"'+localStorage.token+'","profit_code":"'+localStorage.branch+'","search":"'+val+'"}',
+        contentType: "application/json; charset=utf-8",
+        dataType: "json",
+        type: "POST",
+        cache: false,
+        success: function(result){
+            document.getElementById('price_product2_edit').value = result.item_price;
+            document.getElementById('edit_name_product_p2').value = result.item_name;
+            document.getElementById('edit_unit_code_p2').value = result.item_unit_code;
+            document.getElementById('edit_item_price_p2').value = result.item_price;
+
+        console.log('enterproduct_search'+JSON.stringify(result));
+        showdetail = '';
+        showdetail += '<span style="font-size:15px;display:block;word-wrap:break-word;font-weight:bold;padding-left:28%;padding-bottom:3%;text-decoration: underline;">รายละเอียดสินค้า</span>';
+        showdetail += '<span style="padding-left:3%;font-size:12px;display:block;word-wrap:break-word;"><b>ชื่อสินค้า : </b>'+result.item_name+'</span>';
+        showdetail += '<span style="padding-left:3%;font-size:12px;display:inline-block;word-wrap:break-word;"><b>ราคาปกติ : </b>'+result.item_price+'</span>';
+        showdetail += '<span style="padding-left:8%;font-size:12px;display:inline-block;word-wrap:break-word;"><b>หน่วยนับ : </b>'+result.item_unit_code+'</span>';
+        document.getElementById('detailproduct2_edit').innerHTML = showdetail;
+
+        },
+        error: function(err){
+           alertify.error('ข้อมูลผิดพลาด');
+         }
+        });
+    $.ajax({
+            url: "http://app.nopadol.com:8080/NPExtentionWS/promotion/v1/itembarcode",
+            data: '{"access_token":"'+localStorage.token+'","search":"'+val+'"}',
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            type: "POST",
+            cache: false,
+            success: function(result){
+
+                           var date2 = result.comm_begindate;
+                           var x = date2.substring(0,10);
+                           var res = x.split("-");
+                           var year = res[0];
+                           var yearfin = parseInt(year) + 543;
+                           var mon = res[1];
+                           switch (mon) {
+                           case '01': var mon = "มกราคม"; break;
+                           case '02': var mon = "กุมภาพันธ์"; break
+                           case '03': var mon = "มีนาคม"; break;
+                           case '04': var mon = "เมษายน"; break;
+                           case '05': var mon = "พฤษภาคม"; break;
+                           case '06': var mon = "มิถุนายน"; break;
+                           case '07': var mon = "กรกฎาคม"; break;
+                           case '08': var mon = "สิงหาคม"; break;
+                           case '09': var mon = "กันยายน"; break;
+                           case '10': var mon = "ตุลาคม"; break;
+                           case '11': var mon = "พฤศจิกายน"; break;
+                           case '12': var mon = "ธันวาคม";
+                           }
+                           var promo_start = res[2]+' '+mon+' '+yearfin;
+
+                           var date3 = result.comm_enddate;
+                           var x = date3.substring(0,10);
+                           var res = x.split("-");
+                           var year = res[0];
+                           var yearfin = parseInt(year) + 543;
+                           var mon = res[1];
+                           switch (mon) {
+                           case '01': var mon = "มกราคม"; break;
+                           case '02': var mon = "กุมภาพันธ์"; break
+                           case '03': var mon = "มีนาคม"; break;
+                           case '04': var mon = "เมษายน"; break;
+                           case '05': var mon = "พฤษภาคม"; break;
+                           case '06': var mon = "มิถุนายน"; break;
+                           case '07': var mon = "กรกฎาคม"; break;
+                           case '08': var mon = "สิงหาคม"; break;
+                           case '09': var mon = "กันยายน"; break;
+                           case '10': var mon = "ตุลาคม"; break;
+                           case '11': var mon = "พฤศจิกายน"; break;
+                           case '12': var mon = "ธันวาคม";
+                           }
+                           var promo_end = res[2]+' '+mon+' '+yearfin;
+
+
+//               console.log('con_money '+JSON.stringify(result));
+
+            comdetail = '';
+             if(result.comm_retail != 0 && result.comm_wholesale != 0){
+               comdetail +=  '<div  style="border-style: ridge;margin-top:2.5%">';
+               comdetail +=  '<div style="padding-top:2.5%;padding-bottom:2.5%;">';
+               comdetail +=  '<div id="com_money">';
+               comdetail +=  '<span style="padding-left:3%;font-size:12px;display:inline-block;word-wrap:break-word;"><b>ค่าคอมเงินสด : </b> '+result.comm_retail+'</span>';
+               comdetail +=  '<span style="padding-left:8%;font-size:12px;display:inline-block;word-wrap:break-word;"><b>ค่าคอมเงินเชื่อ : </b> '+result.comm_wholesale+'</span></div>';
+               comdetail +=   '<div id="com_campaign">';
+               comdetail +=   '<span style="padding-left:3%;font-size:12px;display:block;word-wrap:break-word;"><b>แคมเปญ : </b> '+result.comm_name+'</span>';
+               comdetail +=  '<span style="padding-left:3%;font-size:12px;display:block;word-wrap:break-word;"><b>เริ่ม : </b> '+promo_start+'</span>';
+               comdetail +=  '<span style="padding-left:3%;font-size:12px;display:block;word-wrap:break-word;"><b>จบ : </b> '+promo_end+'</span></div>';
+               comdetail +=  '</div></div>';
+               document.getElementById('edit_detailproduct').innerHTML = comdetail;
+               }else{
+                 document.getElementById('edit_detailproduct').innerHTML = '';
+               }
+            },
+            error: function(err){
+               alertify.error('ข้อมูลผิดพลาด com_money');
+             }
+            });
+}
+function edit_caldiscount(value){
+    document.getElementById("edit_discountmember").checked = false;
+    var price_product = document.getElementById('price_product2_edit').value;
+    document.getElementById('edit_promo_price_p2').value = price_product - value ;
+    result = price_product - value;
+    edit_priceresult = '';
+    edit_priceresult += '<span style="font-size:12px;">ราคาโปรโมชั่น : <b>'+result+'</b>  บาท</span>';
+    document.getElementById('edit_priceresult').innerHTML = edit_priceresult;
+}
+function edit_discount_member(){
+    var price_product = document.getElementById('price_product2_edit').value;
+    var checkbox = document.getElementById("edit_discountmember");
+    if (checkbox.checked == true){
+        document.getElementById('edit_discount_type').value = 1
+        document.getElementById("edit_cal2").style.backgroundColor = "";
+        document.getElementById("edit_cal2").readOnly = true;
+        var result = price_product * (3/100);
+        var discount = document.getElementById('edit_cal2').value
+        document.getElementById('edit_cal2').value = result;
+        edit_result_discount2()
+    } else {
+    document.getElementById('edit_discount_type').value = 0
+    document.getElementById("edit_cal2").readOnly = false;
+    document.getElementById('edit_cal2').value = '';
+    document.getElementById('edit_priceresult').innerHTML = '';
+    }
+}
+function edit_result_discount2(){
+    var price_product = document.getElementById('price_product2_edit').value;
+    var discount = document.getElementById('edit_cal2').value;
+    document.getElementById('edit_promo_price_p2').value = price_product - discount;
+    var result = price_product - discount;
+    priceresult = '';
+    priceresult += '<span style="font-size:12px;">ราคาโปรโมชั่น : <b>'+result+'</b>  บาท</span>';
+    document.getElementById('edit_priceresult').innerHTML = priceresult;
+
+}
+function edit_confirmaddpromo(){
+    var id_product = document.getElementById('idproduct_promotion2_edit').value;
+    var discount = document.getElementById('edit_cal2').value;
+    alertify.set({ labels: {
+        ok     : "บันทึก",
+        cancel : "ยกเลิก"
+    } });
+  
+    alertify.confirm("ท่านต้องการจะเพิ่มโปรโมชั่น ?", function (e){
+        if(e){
+        document.getElementById("idproduct_promotion2_edit").style.backgroundColor = "";
+        document.getElementById("edit_cal2").style.backgroundColor = "";
+
+        if(id_product == ''){
+          document.getElementById("idproduct_promotion2_edit").style.backgroundColor = "#ff6666";
+          alertify.error('กรุณา ระบุรหัสสินค้า')
+        }
+        if(discount == ''){
+          document.getElementById("edit_cal2").style.backgroundColor = "#ff6666";
+          alertify.error('กรุณา ระบุส่วนลด')
+        }
+        if(id_product != '' && discount != ''){
+
+
+            var docno = document.getElementById('edit_docno_addsub').value;
+            var section = document.getElementById('edit_section_addsub').value;
+            var namepromotion = document.getElementById('edit_pmcode_addsub').value;
+            var typepromotion = localStorage.promotion_type_first
+//            alertify.success(typepromotion)
+
+            var d = new Date();
+            var date = d.getDate();
+            var Month = d.getMonth();
+            var Year = d.getFullYear();
+            var datemonth = date+'/'+(Month+1)+'/'+Year;
+            
+            var itemcode = document.getElementById('idproduct_promotion2_edit').value;
+            var item_name = document.getElementById('edit_name_product_p2').value;
+            var unit_code = document.getElementById('edit_unit_code_p2').value;
+            var price = document.getElementById('edit_item_price_p2').value;
+
+            var discount_r = document.getElementById('edit_cal2').value;
+            if(document.getElementById("edit_discountmember").checked == true){
+                var discount = '3%' ;
+             }else{
+                 var discount = document.getElementById('edit_cal2').value;
+             }
+
+             var discount_type = document.getElementById('edit_discount_type').value;
+             var promo_price = document.getElementById('edit_promo_price_p2').value;
+             var mydescription = document.getElementById('edit_because_promo').value;
+             if(document.getElementById("edit_isBrochure").checked == true){
+                var is_brochure = 1 ;
+               }else{
+                var is_brochure = 0 ;
+               }
+             if(document.getElementById("edit_discountmember").checked == true){
+                var promo_member = 1 ;
+               }else{
+                var promo_member = 0 ;
+               }
+               var line_number_edit = (localStorage.line_number_edit)-1
+
+//               console.log('{"check_job":1,"doc_no":"'+docno+'","doc_date":"'+datemonth+'","sec_man":"'+section+'","pm_code":"'+namepromotion+'","creator_code":"'+localStorage.username+'","is_complete_save":1,"subs":[{"item_code":"'+itemcode+'","item_name":"'+item_name+'","unit_code":"'+unit_code+'","price":'+price+',"discount":'+discount_r+',"discount_type":'+discount_type+',"discount_word":"'+discount+'","promo_price":'+promo_price+',"mydescription":"'+mydescription+'","line_number":0,"is_brochure":'+is_brochure+',"promo_member":'+promo_member+',"promotion_type":"'+typepromotion+'"}]}')
+
+               $.ajax({
+                url: "http://venus.nopadol.com:9002/promotion",
+                contentType: "application/json; charset=utf-8",
+                data: '{"check_job":0,"doc_no":"'+docno+'","doc_date":"'+datemonth+'","sec_man":"'+section+'","pm_code":"'+namepromotion+'","editor_code":"'+localStorage.username+'","is_complete_save":1,"subs":[{"item_code":"'+itemcode+'","item_name":"'+item_name+'","unit_code":"'+unit_code+'","price":'+price+',"discount":'+discount_r+',"discount_type":'+discount_type+',"discount_word":"'+discount+'","promo_price":'+promo_price+',"mydescription":"'+mydescription+'","line_number":'+line_number_edit+',"is_brochure":'+is_brochure+',"promo_member":'+promo_member+',"promotion_type":"'+typepromotion+'"}]}',
+                dataType: "json",
+                type: "POST",
+                cache: false,
+                success: function(result){
+                nodetail = ''
+                nodetail += '<span style="font-size:15px;display:block;word-wrap:break-word;font-weight:bold;padding-left:28%;padding-bottom:3%;text-decoration: underline;">รายละเอียดสินค้า</span>';
+                nodetail += '<span style="padding-left:3%;font-size:12px;display:block;word-wrap:break-word;">ชื่อสินค้า : - </span>';
+                nodetail += '<span style="padding-left:3%;font-size:12px;display:inline-block;word-wrap:break-word;">ราคาปกติ : - </span>';
+                nodetail += '<span style="padding-left:8%;font-size:12px;display:inline-block;word-wrap:break-word;">หน่วยนับ : - </span>';
+                document.getElementById('detailproduct2_edit').innerHTML = nodetail;
+                cleardetailcom = '';
+                cleardetailcom += '<div  style="border-style: ridge;margin-top:2.5%">';
+                cleardetailcom += '<div style="padding-top:2.5%;padding-bottom:2.5%;">';
+                cleardetailcom += '<div id="com_money">';
+                cleardetailcom += '<span style="padding-left:3%;font-size:12px;display:inline-block;word-wrap:break-word;"><b>ค่าคอมเงินสด :</b> -</span>';
+                cleardetailcom += '<span style="padding-left:8%;font-size:12px;display:inline-block;word-wrap:break-word;"><b>ค่าคอมเงินเชื่อ :</b> -</span></div>';
+                cleardetailcom += '<div id="com_campaign">';
+                cleardetailcom += '<span style="padding-left:3%;font-size:12px;display:block;word-wrap:break-word;"><b>แคมเปญ : </b> -</span>';
+                cleardetailcom += '<span style="padding-left:3%;font-size:12px;display:block;word-wrap:break-word;"><b>เริ่ม : </b> -</span>';
+                cleardetailcom += '<span style="padding-left:3%;font-size:12px;display:block;word-wrap:break-word;"><b>จบ : </b> -</span></div>';
+                cleardetailcom +=  '</div></div>'
+                document.getElementById('edit_detailproduct').innerHTML = cleardetailcom;
+
+
+
+
+                document.getElementById('idproduct_promotion2_edit').value = '';
+                document.getElementById('edit_cal2').value = '';
+                document.getElementById('edit_because_promo').value = '';
+                document.getElementById("edit_discountmember").checked = false;
+                document.getElementById("edit_isBrochure").checked = false;
+
+                alertify.success('บันทึกเรียบร้อย')
+
+
+                managepromotion()
+                },
+                error: function (err){
+                  console.log(err);
+
+                if(err.status.message != ''){
+                 alertify.error('สินค้านี้มีโปรโมชั่นแล้ว')
+                }else{
+                alertify.error('API Insert fail')
+                }
+
+
+
+                }
+             });
+            
+
+                             }//if
+                                   }else{
+                                      closeload();
+                                   }
+                                   });
+   
+}
+
+$(document).on('taphold', '.todo-ccpro', function() {
+       // console.log("DEBUG - Go popup");
+      var cp_code = $(this).attr('data-cancelprocode');
+      var cp_list = $(this).attr('data-cancelprolist');
+      var $popUp = $("<div/>").popup({
+        dismissible: true,
+        //theme: "a",
+        transition: "pop",
+        arrow: "b",
+        positionTo: '#'+cp_list
+        }).on("popupafterclose", function () {
+    //remove the popup when closing
+    $(this).remove();
+    }).css({
+   'padding': '15%',
+   'color': '#fff',
+   'background': 'red'
+   });
+    console.log(cp_code);
+    console.log('#'+cp_list);
+    $("<a>", {
+    text: "Cancel",
+    href: "#",
+    onclick: 'cancelPro('+"'"+cp_code+"'"+');'
+    }).appendTo($popUp);
+
+    $popUp.popup('open').enhanceWithin();
+
+    });
+
+function cancelPro(ccdcNo){
+	alertify.confirm( "คุณต้องการยกเลิกเอกสารนี้ใช่หรือไม่ ??", function (e) {
+    if (e) {
+        console.log('{"doc_no":"'+ccdcNo+'"}');
+        $.ajax({
+                        url: "http://venus.nopadol.com:9002/promotioncancel",
+                        data: '{"doc_no":"'+ccdcNo+'"}',
+                        contentType: "application/json; charset=utf-8",
+                        dataType: "json",
+                        type: "PUT",
+                        cache: false,
+                        success: function(result){
+                        console.log(result);
+                        alertify.error('ยกเลิกเอกสารเรียบร้อยแล้ว');
+                        managepromotion();
+
+                        },
+                        error: function (error){
+                        alertify.alert('Api error delete');
+                        }
+                        });
+    } else {
+        //after clicking Cancel
+    }
+	},'popup1');
 }
 
 function isList(){
