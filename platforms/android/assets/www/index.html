@@ -3365,6 +3365,132 @@ ju
 
 <!--//////////////////////////////////////////////////////////// edit Promotion Page2 Search ////////////////////////////////////////////////////////////////-->
 
+<!--//////////////////////////////////////////////////////////// edit_sub_product ////////////////////////////////////////////////////////////////-->
+<div data-role="page" id="editsubproduct">
+    <div data-role="none" class="header">
+        <a href="#myPanel_editsubproduct"  data-role="none"><img src="images/grid.png" class="open_panel"></a>
+    </div>
+    <div  data-role="main" class="ui-content" id="main">
+
+        <!--้ข้อมูลก่อนส่ง api insert-->
+        <input type="hidden" id="promotion_p2">
+        <input type="hidden" id="typepromotion_p2">
+        <input type="hidden" id="sectionpromotion_p2">
+
+        <!--sub item-->
+        <input type="hidden" id="name_product_p2_sub">
+        <input type="hidden" id="unit_code_p2_sub">
+        <input type="hidden" id="item_price_p2_sub">
+        <input type="hidden" id="discount_sub">
+        <input type="hidden" id="discount_type_sub">
+        <input type="hidden" id="promo_price_p2_sub">
+
+        <!--sub item-->
+        <!--้ข้อมูลก่อนส่ง api insert-->
+
+        <!-- เก็บราคาสินค้า-->
+        <input type="hidden" id="price_product2_sub" >
+        <!-- เก็บราคาสินค้า-->
+        <label>
+            <div class="ui-grid-b">
+                <div class="ui-block-a" style="width:25%; text-align:right; padding-top: 5%;">
+                    <b>รหัสสินค้า </b>
+                </div>
+                <div class="ui-block-b" style="width:50%; padding-left:3%; text-align:left;">
+                    <input type="text" readonly name="idproduct" id="idproduct_promotion2_sub" class="form-control" placeholder="">
+                </div>
+
+            </div>
+            <div id="detailproduct2sub_edit" style="border-style:ridge;">
+                <span style="font-size:15px;display:block;word-wrap:break-word;font-weight:bold;padding-left:28%;padding-bottom:3%;text-decoration: underline;">รายละเอียดสินค้า</span>
+                <span style="padding-left:3%;font-size:12px;display:block;word-wrap:break-word;">ชื่อสินค้า : - </span>
+                <span style="padding-left:3%;font-size:12px;display:inline-block;word-wrap:break-word;">ราคาปกติ : - </span>
+                <span style="padding-left:8%;font-size:12px;display:inline-block;word-wrap:break-word;">หน่วยนับ : - </span>
+            </div>
+        </label>
+
+        <label>
+            <div class="ui-grid-c" style="margin:0">
+                <div class="ui-block-a" style="width:25%; text-align:right; padding-top: 5%;">
+                    <b>ส่วนลด</b>
+                </div>
+                <div class="ui-block-b" style="width:27%; padding-left:3%; text-align:left; padding-right:3%;">
+                    <input type="number" name="nameprice" onkeyup="cal_discount_sub(value)" id="caldiscount_sub" class="form-control" placeholder="">
+                </div>
+                <div style="padding-top:5%" id="sub_priceresult">
+                </div>
+                <!--<div class="ui-block-c" style="width:25%; text-align:right; padding-top: 5%;">-->
+                <!--<b>ส่วนลด</b>-->
+                <!--</div>-->
+                <!--<div class="ui-block-d" style="width:25%; padding-left:3%; text-align:left;">-->
+                <!--<input type="text" name="nameprice"  id="nameproduct" class="form-control" placeholder="ส่วนลด">-->
+                <!--</div>-->
+            </div>
+        </label>
+
+        <label>
+            <div class="ui-grid-a">
+                <div class="ui-block-a" style="width:25%; text-align:right; padding-top: 5%;">
+                    <b>หมายเหตุ</b>
+                </div>
+                <div class="ui-block-b" style="width:75%; padding-left:3%; text-align:left;">
+                    <input type="text"  name="idprice" id="sub_because_promo"  class="form-control" placeholder="">
+                </div>
+            </div>
+
+            <!--<div id="choice">-->
+            <!--<input type="checkbox" id="myCheck"  onclick="myFunction()"> <span style="font-size:12px;padding-left:3%;display:inline-block;word-wrap:break-word;">สมาชิก (ลด 3%)</span>-->
+            <!--<input type="checkbox" id="myCheck"  onclick="myFunction()"> <span style="font-size:12px;padding-left:3%;display:inline-block;word-wrap:break-word;">isBrochure</span>-->
+            <!--</div>-->
+        </label>
+
+        <div class="ui-grid-c" style="border-style:ridge;padding-top:2.5%;padding-bottom:2.5%;">
+            <div class="ui-block-a" style="width:15%;">
+                <input type="checkbox" id="discountmember_sub"  onclick="discount_member_sub()">
+            </div>
+            <div class="ui-block-b" style="width:35%;text-align:left;">
+                <span style="font-size:12px;"><b>สมาชิก (ลด 3%)</b></span>
+            </div>
+            <div class="ui-block-d" style="width:15%;">
+                <input type="checkbox" id="isBrochure_sub" >
+            </div>
+            <div class="ui-block-e" style="width:35%;text-align:left;">
+                <span style="font-size:12px"><b>isBrochure</b></span>
+            </div>
+
+        </div>
+        <div id="detailproductsub_edit">
+            <div  style="border-style: ridge;margin-top:2.5%">
+                <div style="padding-top:2.5%;padding-bottom:2.5%;">
+                    <div id="com_money">
+                        <span style="padding-left:3%;font-size:12px;display:inline-block;word-wrap:break-word;"><b>ค่าคอมเงินสด :</b> -</span>
+                        <span style="padding-left:8%;font-size:12px;display:inline-block;word-wrap:break-word;"><b>ค่าคอมเงินเชื่อ :</b> -</span></div>
+                    <div id="com_campaign">
+                        <span style="padding-left:3%;font-size:12px;display:block;word-wrap:break-word;"><b>แคมเปญ : </b> -</span>
+                        <span style="padding-left:3%;font-size:12px;display:block;word-wrap:break-word;"><b>เริ่ม : </b> -</span>
+                        <span style="padding-left:3%;font-size:12px;display:block;word-wrap:break-word;"><b>จบ : </b> -</span></div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+    <div data-role="footer" class="footer">
+        <div data-role="navbar">
+            <ul>
+                <li><a href="javascript:back_edit_sub()" class="ui-btn-active ui-state-persist" data-icon="back" id="footer-nav" data-transition="slidefade" data-direction="reverse">back</a></li>
+                <li><a href="javascript:confirm_sub_edit()" class="ui-btn-active ui-state-persist" data-icon="plus" id="footer-nav" data-transition="slidefade">ตกลง</a></li>
+            </ul>
+        </div>
+    </div>
+    <div data-role="panel" id="myPanel_editsubproduct" data-display="overlay">
+        <h2>Overlay Panel</h2><hr>
+        <div id="tree" class="tree"></div>
+    </div>
+</div>
+<!--//////////////////////////////////////////////////////////// edit_sub_product  ////////////////////////////////////////////////////////////////-->
+
 <!--//////////////////////////////////////////////////////////////// setting ////////////////////////////////////////////////////////////////-->
 <div data-role="page" id="setting">
     <div data-role="none" class="header">
