@@ -383,6 +383,7 @@ $.ajax({
                         });
 }
 function detail_promotion(docno){
+document.getElementById('searchpromotion').value = '';
 loading();
 var imageedit = '';
 var imageedit = '<input type="image" onclick="editpromotion(\''+docno+'\')" style="border-radius: 10px; border: 1px solid #FFE066;" src="images/editpromotion.png" alt="Submit" width="25" height="25">';
@@ -520,7 +521,7 @@ $.ajax({
                               for(var i = 0; i < result.data[0].subs.length; i++){
 //                            tabledetail  += '<h3>'+result.data[0].subs[i].item_name+'</h3>';
                               tabledetail += '<label>';
-                              tabledetail += '<div class="ui-grid-c" style="padding-bottom:4%; padding-top:1%">';
+                              tabledetail += '<div class="ui-grid-c todo-cancelitem"  data-canceldocno='+result.data[0].doc_no+' data-itemcode='+result.data[0].subs[i].item_code+' data-unitcode='+result.data[0].subs[i].unit_code+' style="padding-bottom:4%; padding-top:1%">';
                               tabledetail += '<div class="ui-block-a" style="font-size:12px;word-wrap:break-word;width:16%" align="center" >';
                               tabledetail += (i+1)+'</div>';
                               tabledetail += '<div class="ui-block-b" style="font-size: 12px;width:50%"  >';
@@ -554,7 +555,9 @@ function toggledetail(){
 }
 
 function showpromotion(){
+
 loading();
+    document.getElementById('searchpromotion').value = '';
 
     $.ajax({
                           url: "http://venus.nopadol.com:9002/"+"promotionmaster",
@@ -797,11 +800,11 @@ function editheader(){
                                                         success: function(result){
                                                            alertify.success('บันทึกสำเร็จ')
 
-                                                           $.mobile.changePage('#promotionpage',{transition: 'slidefade',reverse: true});
+                                                             $.mobile.changePage('#promotionpage',{transition: 'slidefade',reverse: true});
 
                                                               },
                                                         error: function(err){
-                                                           alertify.error('API แก้ไขสินค้า');
+                                                           alertify.error('error api')
                                                          }
                                                        });
 
@@ -1070,7 +1073,7 @@ alertify.confirm("ท่านต้องการจะเพิ่มโป�
                                 success: function(result){
                                 console.log(result);
 //                                docno = result.data.Request_docno;
-                                docno = 'test11';
+                                docno = 'test12';
                                 var d = new Date();
                                 var date = d.getDate();
                                 var Month = d.getMonth();
@@ -1144,7 +1147,7 @@ alertify.confirm("ท่านต้องการจะเพิ่มโป�
                                                     document.getElementById("isBrochure").checked = false;
 
                                                     alertify.success('บันทึกเรียบร้อย')
-                                                    $.mobile.changePage('#promotionpage',{transition: 'slidefade',reverse: true});
+
 
                                                     managepromotion()
                                                     },
@@ -1281,7 +1284,7 @@ switch(page){
 
              case "stock"   :  loading();
                                searchWHis(localStorage.barcode);
-                            break;
+                               break;
              case "addpromotionpage2"   :  document.getElementById("caldiscount").style.backgroundColor = "";
                                            document.getElementById("idproduct_promotion2").style.backgroundColor = "";
                                            document.getElementById('idproduct_promotion2').value = localStorage.barcode;
@@ -1300,6 +1303,25 @@ switch(page){
                                            document.getElementById('caldiscount').value = '';
                                            document.getElementById('priceresult').innerHTML = '';
                                            enterproduct_search(localStorage.barcode);
+                                           break;
+          case "edit_addsub_promotion"   :
+                                           document.getElementById("idproduct_promotion2_edit").style.backgroundColor = "";
+                                           document.getElementById('idproduct_promotion2_edit').value = localStorage.barcode;
+
+                                           document.getElementById("edit_discountmember").checked = false;
+
+                                           document.getElementById('edit_priceresult').innerHTML = '';
+                                           showdetail_all_edit(localStorage.barcode);
+                                           break;
+         case "edit_search_promotion"   :  document.getElementById('idproduct_promotion2').value = localStorage.barcode;
+                                           $.mobile.changePage('#edit_addsub_promotion',{transition: 'slidefade',reverse: true});
+
+                                           document.getElementById("idproduct_promotion2_edit").style.backgroundColor = "";
+
+                                           document.getElementById("edit_discountmember").checked = false;
+
+                                           document.getElementById('edit_priceresult').innerHTML = '';
+                                           showdetail_all_edit(localStorage.barcode);
                                            break;
              case "shelves" : loading();
                               searchSHis(localStorage.barcode);
@@ -2170,6 +2192,7 @@ function edit_confirmaddpromo(){
                }
                var line_number_edit = (localStorage.line_number_edit)-1
 
+               console.log('{"check_job":0,"doc_no":"'+docno+'","doc_date":"'+datemonth+'","sec_man":"'+section+'","pm_code":"'+namepromotion+'","editor_code":"'+localStorage.username+'","is_complete_save":1,"subs":[{"item_code":"'+itemcode+'","item_name":"'+item_name+'","unit_code":"'+unit_code+'","price":'+price+',"discount":'+discount_r+',"discount_type":'+discount_type+',"discount_word":"'+discount+'","promo_price":'+promo_price+',"mydescription":"'+mydescription+'","line_number":'+line_number_edit+',"is_brochure":'+is_brochure+',"promo_member":'+promo_member+',"promotion_type":"'+typepromotion+'"}]}');
 //               console.log('{"check_job":1,"doc_no":"'+docno+'","doc_date":"'+datemonth+'","sec_man":"'+section+'","pm_code":"'+namepromotion+'","creator_code":"'+localStorage.username+'","is_complete_save":1,"subs":[{"item_code":"'+itemcode+'","item_name":"'+item_name+'","unit_code":"'+unit_code+'","price":'+price+',"discount":'+discount_r+',"discount_type":'+discount_type+',"discount_word":"'+discount+'","promo_price":'+promo_price+',"mydescription":"'+mydescription+'","line_number":0,"is_brochure":'+is_brochure+',"promo_member":'+promo_member+',"promotion_type":"'+typepromotion+'"}]}')
 
                $.ajax({
@@ -2285,6 +2308,64 @@ function cancelPro(ccdcNo){
                         },
                         error: function (error){
                         alertify.alert('Api error delete');
+                        }
+                        });
+    } else {
+        //after clicking Cancel
+    }
+	},'popup1');
+}
+
+$(document).on('taphold', '.todo-cancelitem', function() {
+       // console.log("DEBUG - Go popup");
+      var canceldocno = $(this).attr('data-canceldocno');
+      var itemcode = $(this).attr('data-itemcode');
+      var unitcode = $(this).attr('data-unitcode');
+      var $popUp = $("<div/>").popup({
+        dismissible: true,
+        //theme: "a",
+        transition: "pop",
+        arrow: "b",
+        positionTo: '#'+canceldocno
+        }).on("popupafterclose", function () {
+    //remove the popup when closing
+    $(this).remove();
+    }).css({
+   'padding': '15%',
+   'color': '#fff',
+   'background': 'red'
+   });
+//    console.log(cp_code);
+//    console.log('#'+cp_list);
+    $("<a>", {
+    text: "Cancel",
+    href: "#",
+    onclick: 'cancelitem(\''+canceldocno+'\',\''+itemcode+'\',\''+unitcode+'\');'
+    }).appendTo($popUp);
+
+    $popUp.popup('open').enhanceWithin();
+
+    });
+
+function cancelitem(canceldocno,itemcode,unitcode){
+	alertify.confirm( "คุณต้องการยกเลิกสินค้านี้ใช่หรือไม่ ??", function (e) {
+    if (e) {
+        console.log("test"+canceldocno+' '+itemcode+' '+unitcode);
+        $.ajax({
+                        url: "http://venus.nopadol.com:9002/promotioncancelitem",
+                        data: '{"doc_no":"'+canceldocno+'","subs":[{"item_code":"'+itemcode+'","unit_code":"'+unitcode+'"}]}',
+                        contentType: "application/json; charset=utf-8",
+                        dataType: "json",
+                        type: "PUT",
+                        cache: false,
+                        success: function(result){
+                        console.log(result);
+                        alertify.error('ลบสินค้าเรียบร้อย');
+                        detail_promotion(canceldocno);
+
+                        },
+                        error: function (error){
+                        alertify.alert('Api error delete สินค้า');
                         }
                         });
     } else {
