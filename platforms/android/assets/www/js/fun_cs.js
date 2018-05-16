@@ -366,7 +366,7 @@ $.ajax({
                         var colorconfirm = '#5ea9ff';
 
                         }
-                        promotionlist_list += "<a href='#' class='ui-btn todo-ccpro' data-cancelprolist='cp"+result.data[i].doc_no+"' data-cancelprocode='"+result.data[i].doc_no+"' id='cp"+result.data[i].doc_no+"' style='font-size:13px;background-color:"+colorconfirm+";' ";
+                        promotionlist_list += "<a href='#' class='ui-btn todo-ccpro' data-cancelprolist='cp"+result.data[i].doc_no+"' data-confirm='"+result.data[i].is_con_firm+"' data-cancelprocode='"+result.data[i].doc_no+"' id='cp"+result.data[i].doc_no+"' style='font-size:13px;background-color:"+colorconfirm+";' ";
                         promotionlist_list += 'onclick="detail_promotion(\''+result.data[i].doc_no+'\')"><span style="color:black;">'+result.data[i].doc_no+' '+resultmont+'<br>'+result.data[i].sec_man+' '+result.data[i].pm_code+'</span></a></button>';
                         }
                         document.getElementById("detailpromotion").innerHTML = promotionlist_list;
@@ -385,9 +385,10 @@ $.ajax({
 function detail_promotion(docno){
 document.getElementById('searchpromotion').value = '';
 loading();
-var imageedit = '';
-var imageedit = '<input type="image" onclick="editpromotion(\''+docno+'\')" style="border-radius: 10px; border: 1px solid #FFE066;" src="images/editpromotion.png" alt="Submit" width="25" height="25">';
-document.getElementById('editpromotions').innerHTML = imageedit;
+
+                         var imageedit = '';
+                         var imageedit = '<input type="image" id="imangehide" onclick="editpromotion(\''+docno+'\')" style="border-radius: 10px; border: 1px solid #FFE066;" src="images/editpromotion.png" alt="Submit" width="25" height="25">';
+                         document.getElementById('editpromotions').innerHTML = imageedit;
 
 $.ajax({
                          url: "http://venus.nopadol.com:9002/"+"requests?access_token=aaa&keyword="+docno,
@@ -397,6 +398,10 @@ $.ajax({
                          cache: false,
                          success: function(result){
 //                         localStorage.doc_no = result.data[0].doc_no;
+                         if(result.data[0].is_con_firm == 2){
+                         document.getElementById("imangehide").style.display = "none";
+                         document.getElementById("notshow").style.display = "none";
+                         }
 
 
                          if(result.data[0].subs != null){
@@ -550,6 +555,9 @@ $.ajax({
                       });
 
 }
+function backshowdetail(){
+managepromotion()
+}
 
 function toggledetail(){
 
@@ -624,12 +632,20 @@ loading();
                           }
                   });
 
-
+document.getElementById('promotionlist').value = 0
+document.getElementById('typepromotion').value = 0
+document.getElementById('sectionpromotion').value = 0
+document.getElementById('showdate').innerHTML = ''
 $.mobile.changePage('#addpromotion',{transition : 'slidefade'});
+
 }
 function backfromedit(){
+// clear history
 document.getElementById('edit_promotionlist').value = 0
+document.getElementById('showdateedit').innerHTML = ''
+// clear history
 $.mobile.changePage('#detailpromotion',{transition: 'slidefade',reverse: true});
+
 }
 function editpromotion(docno){
     document.getElementById('docno_editP').value = docno
@@ -690,7 +706,7 @@ loading();
 
                           var select = document.getElementById("edit_sectionpromotion");
                               for(var i = 0; i < result.data.length; i++){
-                                select.options[select.options.length] = new Option(result.data[i].name_full,result.data[i].sale_code);//show,value
+                                select.options[select.options.length] = new Option(result.data[i].name_full,result.data[i].name_full);//show,value
                               }
                               closeload();
                           },
@@ -751,6 +767,12 @@ function editheader(){
 var edit_promotionlist = document.getElementById('edit_promotionlist').value
 var edit_typepromotion = document.getElementById('edit_typepromotion').value
 var edit_sectionpromotion =document.getElementById('edit_sectionpromotion').value
+alertify.set({ labels: {
+                                        ok     : "บันทึก",
+                                        cancel : "ยกเลิก"
+                                    } });
+                                    alertify.confirm("ท่านต้องการแก้ไขโปรโมชั่น ?", function (e){
+                                        if(e){
 if(edit_promotionlist != 0 && edit_typepromotion != 0 && edit_sectionpromotion != 0){
 
     var docno = document.getElementById('docno_editP').value
@@ -795,27 +817,28 @@ if(edit_promotionlist != 0 && edit_typepromotion != 0 && edit_sectionpromotion !
                           var mainsub = '"subs":['+resultsub+']}'
                           console.log(mainsub)
 
-//                          var subs = '"subs":[ {"item_code":"8852401406460", "item_name":"[P]ซรม. Europa มุมไบ บราวน์ (น้ำตาล) 12*12 A ( 11 แผ่น/กล่อง, 1ตรม/กล่อง )", "unit_code":"กล่อง", "price":139, "discount":60, "discount_type":0, "discount_word":"60", "promo_price":79, "mydescription":"Test", "line_number":0, "is_brochure":0, "promo_member":0, "promotion_type":"03" }, { "item_code":"8855473038706", "item_name":"ก๊อกสนามคอสั้นออกกำแพง ก้านปัด BENN BN-9322", "unit_code":"ชุด", "price":150, "discount":5, "discount_type":0, "discount_word":"5", "promo_price":145, "mydescription":"Test", "line_number":1, "is_brochure":0, "promo_member":0, "promotion_type":"04" } ] }'
-//                          console.log('cut'+'{"check_job":1,"doc_no":"'+docno_get+'","doc_date":"'+doc_date_get+'","sec_man":"'+sec_man_get+'","pm_code":"'+pm_code_get+'","creator_code":"'+editor_code_get+'","is_complete_save":1,'+subs+'cut')
-//                          console.log('full '+'{"check_job":1,"doc_no":"'+docno_get+'","doc_date":"'+doc_date_get+'","sec_man":"'+sec_man_get+'","pm_code":"'+pm_code_get+'","creator_code":"'+editor_code_get+'","is_complete_save":1,"subs":[ {"item_code":"8852401406460", "item_name":"[P]ซรม. Europa มุมไบ บราวน์ (น้ำตาล) 12*12 A ( 11 แผ่น/กล่อง, 1ตรม/กล่อง )", "unit_code":"กล่อง", "price":139, "discount":60, "discount_type":0, "discount_word":"60", "promo_price":79, "mydescription":"Test", "line_number":0, "is_brochure":0, "promo_member":0, "promotion_type":"03" }, { "item_code":"8855473038706", "item_name":"ก๊อกสนามคอสั้นออกกำแพง ก้านปัด BENN BN-9322", "unit_code":"ชุด", "price":150, "discount":5, "discount_type":0, "discount_word":"5", "promo_price":145, "mydescription":"Test", "line_number":1, "is_brochure":0, "promo_member":0, "promotion_type":"04" } ] }'+'full')
                                             console.log('{"check_job":1,"doc_no":"'+docno_get+'","doc_date":"'+doc_date_get+'","sec_man":"'+sec_man_get+'","pm_code":"'+pm_code_get+'","creator_code":"'+editor_code_get+'","is_complete_save":1,'+mainsub+'');
-                                            $.ajax({
-                                                        url: "http://venus.nopadol.com:9002/promotion",
-                                                        data: '{"check_job":1,"doc_no":"'+docno_get+'","doc_date":"'+doc_date_get+'","sec_man":"'+sec_man_get+'","pm_code":"'+pm_code_get+'","creator_code":"'+editor_code_get+'","is_complete_save":1,'+mainsub+'',
-                                                        contentType: "application/json; charset=utf-8",
-                                                        dataType: "json",
-                                                        type: "POST",
-                                                        cache: false,
-                                                        success: function(result){
-                                                           alertify.success('บันทึกสำเร็จ')
-                                                            document.getElementById('edit_promotionlist').value = 0
-//                                                             $.mobile.changePage('#promotionpage',{transition: 'slidefade',reverse: true});
-                                                                detail_promotion(docno_get)
-                                                              },
-                                                        error: function(err){
-                                                           alertify.error('error api')
-                                                         }
-                                                       });
+//                                            $.ajax({
+//                                                        url: "http://venus.nopadol.com:9002/promotion",
+//                                                        data: '{"check_job":1,"doc_no":"'+docno_get+'","doc_date":"'+doc_date_get+'","sec_man":"'+sec_man_get+'","pm_code":"'+pm_code_get+'","creator_code":"'+editor_code_get+'","is_complete_save":1,'+mainsub+'',
+//                                                        contentType: "application/json; charset=utf-8",
+//                                                        dataType: "json",
+//                                                        type: "POST",
+//                                                        cache: false,
+//                                                        success: function(result){
+//                                                           alertify.success('บันทึกสำเร็จ')
+//                                                            // clear history
+//                                                            document.getElementById('edit_promotionlist').value = 0
+//                                                            document.getElementById('showdateedit').innerHTML = ''
+//                                                            // clear history
+//
+////                                                             $.mobile.changePage('#promotionpage',{transition: 'slidefade',reverse: true});
+//                                                                detail_promotion(docno_get)
+//                                                              },
+//                                                        error: function(err){
+//                                                           alertify.error('error api')
+//                                                         }
+//                                                       });
 
 
                           },
@@ -829,6 +852,11 @@ if(edit_promotionlist != 0 && edit_typepromotion != 0 && edit_sectionpromotion !
 }else{
 alertify.error('กรุณาเลือกข้อมูลให้ครบ')
 }
+                                        }else{
+                                            closeload();
+                                        }
+                                    });
+
 
 
 
@@ -846,6 +874,28 @@ function addpromotionpage2(){
             }
 if(document.getElementById('promotionlist').value != 0 && document.getElementById('typepromotion').value != 0 && document.getElementById('sectionpromotion').value != 0){
 $.mobile.changePage('#addpromotionpage2',{transition : 'slidefade'});
+//clear history
+document.getElementById('idproduct_promotion2').value = ''
+       clear = '';
+       clear  += '<span style="font-size:15px;display:block;word-wrap:break-word;font-weight:bold;padding-left:28%;padding-bottom:3%;text-decoration: underline;">รายละเอียดสินค้า</span>';
+       clear += '<span style="padding-left:3%;font-size:12px;display:block;word-wrap:break-word;">ชื่อสินค้า : - </span>';
+       clear += '<span style="padding-left:3%;font-size:12px;display:inline-block;word-wrap:break-word;">ราคาปกติ : - </span>';
+       clear += '<span style="padding-left:8%;font-size:12px;display:inline-block;word-wrap:break-word;">หน่วยนับ : - </span>';
+       document.getElementById('detailproduct2').innerHTML = clear;
+       document.getElementById('caldiscount').value = '';
+       document.getElementById("caldiscount").readOnly = false;
+       document.getElementById('priceresult').innerHTML = '';
+       document.getElementById('because_promo').value = '';
+       document.getElementById("discountmember").checked = false;
+       document.getElementById("isBrochure").checked = false;
+       clearc = '';
+       clearc +=  '<div  style="border-style: ridge;margin-top:2.5%">';
+       clearc += '<div style="padding-top:2.5%;padding-bottom:2.5%;">';
+       clearc += '<div id="com_money"><span style="padding-left:3%;font-size:12px;display:inline-block;word-wrap:break-word;"><b>ค่าคอมเงินสด :</b> -</span><span style="padding-left:8%;font-size:12px;display:inline-block;word-wrap:break-word;"><b>ค่าคอมเงินเชื่อ :</b> -</span></div><div id="com_campaign"><span style="padding-left:3%;font-size:12px;display:block;word-wrap:break-word;"><b>แคมเปญ : </b> -</span><span style="padding-left:3%;font-size:12px;display:block;word-wrap:break-word;"><b>เริ่ม : </b> -</span><span style="padding-left:3%;font-size:12px;display:block;word-wrap:break-word;"><b>จบ : </b> -</span></div></div></div>'
+        document.getElementById('detailproduct').innerHTML = clearc;
+//clear history
+
+
 var promotion = document.getElementById('promotionlist').value
 var type_promotion = document.getElementById('typepromotion').value
 var section_promotion = document.getElementById('sectionpromotion').value
@@ -1084,7 +1134,7 @@ alertify.confirm("ท่านต้องการจะเพิ่มโป�
                                 success: function(result){
                                 console.log(result);
 //                                docno = result.data.Request_docno;
-                                docno = 'test12';
+                                docno = 'test15';
                                 var d = new Date();
                                 var date = d.getDate();
                                 var Month = d.getMonth();
@@ -2273,6 +2323,13 @@ function editsubproduct (idproduct,itemname,unitcode,price,promotion_type,line_n
 //alertify.success(idproduct)
 console.log(idproduct)
 $.mobile.changePage("#editsubproduct",{transition: 'slidefade'});
+//clear history
+document.getElementById('edit_cal2').value = '';
+document.getElementById('edit_because_promo').value = '';
+document.getElementById("edit_discountmember").checked = false;
+document.getElementById("edit_isBrochure").checked = false;
+document.getElementById('edit_priceresult').innerHTML = '';
+//clear history
 localStorage.docnodetailsub = document.getElementById('docno_detail').value
 localStorage.itemnamesub = itemname
 localStorage.unitcodesub = unitcode
@@ -2514,6 +2571,7 @@ $(document).on('taphold', '.todo-ccpro', function() {
        // console.log("DEBUG - Go popup");
       var cp_code = $(this).attr('data-cancelprocode');
       var cp_list = $(this).attr('data-cancelprolist');
+      var cp_confirm = $(this).attr('data-confirm');
       var $popUp = $("<div/>").popup({
         dismissible: true,
         //theme: "a",
@@ -2533,17 +2591,19 @@ $(document).on('taphold', '.todo-ccpro', function() {
     $("<a>", {
     text: "Cancel",
     href: "#",
-    onclick: 'cancelPro('+"'"+cp_code+"'"+');'
+    onclick: 'cancelPro('+"'"+cp_code+"'"+',\''+cp_confirm+'\');'
     }).appendTo($popUp);
 
     $popUp.popup('open').enhanceWithin();
 
     });
 
-function cancelPro(ccdcNo){
-	alertify.confirm( "คุณต้องการยกเลิกเอกสารนี้ใช่หรือไม่ ??", function (e) {
+function cancelPro(ccdcNo,confirm){
+
+	alertify.confirm( "คุณต้องการยกเลิกเอกสาร "+ccdcNo+" ใช่หรือไม่ ??", function (e) {
     if (e) {
         console.log('{"doc_no":"'+ccdcNo+'"}');
+        if(confirm != 2){
         $.ajax({
                         url: "http://venus.nopadol.com:9002/promotioncancel",
                         data: '{"doc_no":"'+ccdcNo+'"}',
@@ -2561,6 +2621,9 @@ function cancelPro(ccdcNo){
                         alertify.alert('Api error delete');
                         }
                         });
+                        }else{
+                        alertify.error('เอกสารนี้อนุมัติแล้วไม่สามารถยกเลิกได้')
+                        }
     } else {
         //after clicking Cancel
     }
