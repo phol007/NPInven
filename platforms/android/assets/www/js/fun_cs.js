@@ -529,7 +529,7 @@ $.ajax({
                               for(var i = 0; i < result.data[0].subs.length; i++){
 //                            tabledetail  += '<h3>'+result.data[0].subs[i].item_name+'</h3>';
                               tabledetail += '<label>';
-                              tabledetail += '<div class="ui-grid-c todo-cancelitem" onclick="editsubproduct(\''+result.data[0].subs[i].item_code+'\',\''+result.data[0].subs[i].item_name+'\',\''+result.data[0].subs[i].unit_code+'\',\''+result.data[0].subs[i].price+'\',\''+result.data[0].subs[i].promotion_type+'\',\''+result.data[0].subs[i].line_number+'\')"  data-canceldocno='+result.data[0].doc_no+' data-itemcode='+result.data[0].subs[i].item_code+' data-unitcode='+result.data[0].subs[i].unit_code+' style="padding-bottom:4%; padding-top:1%">';
+                              tabledetail += '<div class="ui-grid-c todo-cancelitem" onclick="editsubproduct(\''+result.data[0].subs[i].item_code+'\',\''+result.data[0].subs[i].item_name+'\',\''+result.data[0].subs[i].unit_code+'\',\''+result.data[0].subs[i].price+'\',\''+result.data[0].subs[i].promotion_type+'\',\''+result.data[0].subs[i].line_number+'\')" data-confirmp='+result.data[0].is_con_firm+'  data-canceldocno='+result.data[0].doc_no+' data-itemcode='+result.data[0].subs[i].item_code+' data-unitcode='+result.data[0].subs[i].unit_code+' style="padding-bottom:4%; padding-top:1%">';
                               tabledetail += '<div class="ui-block-a" style="font-size:12px;word-wrap:break-word;width:16%" align="center" >';
                               tabledetail += (i+1)+'</div>';
                               tabledetail += '<div class="ui-block-b" style="font-size: 12px;width:50%"  >';
@@ -818,27 +818,27 @@ if(edit_promotionlist != 0 && edit_typepromotion != 0 && edit_sectionpromotion !
                           console.log(mainsub)
 
                                             console.log('{"check_job":1,"doc_no":"'+docno_get+'","doc_date":"'+doc_date_get+'","sec_man":"'+sec_man_get+'","pm_code":"'+pm_code_get+'","creator_code":"'+editor_code_get+'","is_complete_save":1,'+mainsub+'');
-//                                            $.ajax({
-//                                                        url: "http://venus.nopadol.com:9002/promotion",
-//                                                        data: '{"check_job":1,"doc_no":"'+docno_get+'","doc_date":"'+doc_date_get+'","sec_man":"'+sec_man_get+'","pm_code":"'+pm_code_get+'","creator_code":"'+editor_code_get+'","is_complete_save":1,'+mainsub+'',
-//                                                        contentType: "application/json; charset=utf-8",
-//                                                        dataType: "json",
-//                                                        type: "POST",
-//                                                        cache: false,
-//                                                        success: function(result){
-//                                                           alertify.success('บันทึกสำเร็จ')
-//                                                            // clear history
-//                                                            document.getElementById('edit_promotionlist').value = 0
-//                                                            document.getElementById('showdateedit').innerHTML = ''
-//                                                            // clear history
-//
-////                                                             $.mobile.changePage('#promotionpage',{transition: 'slidefade',reverse: true});
-//                                                                detail_promotion(docno_get)
-//                                                              },
-//                                                        error: function(err){
-//                                                           alertify.error('error api')
-//                                                         }
-//                                                       });
+                                            $.ajax({
+                                                        url: "http://venus.nopadol.com:9002/promotion",
+                                                        data: '{"check_job":1,"doc_no":"'+docno_get+'","doc_date":"'+doc_date_get+'","sec_man":"'+sec_man_get+'","pm_code":"'+pm_code_get+'","creator_code":"'+editor_code_get+'","is_complete_save":1,'+mainsub+'',
+                                                        contentType: "application/json; charset=utf-8",
+                                                        dataType: "json",
+                                                        type: "POST",
+                                                        cache: false,
+                                                        success: function(result){
+                                                           alertify.success('บันทึกสำเร็จ')
+                                                            // clear history
+                                                            document.getElementById('edit_promotionlist').value = 0
+                                                            document.getElementById('showdateedit').innerHTML = ''
+                                                            // clear history
+
+//                                                             $.mobile.changePage('#promotionpage',{transition: 'slidefade',reverse: true});
+                                                                detail_promotion(docno_get)
+                                                              },
+                                                        error: function(err){
+                                                           alertify.error('error api')
+                                                         }
+                                                       });
 
 
                           },
@@ -2635,6 +2635,7 @@ $(document).on('taphold', '.todo-cancelitem', function() {
       var canceldocno = $(this).attr('data-canceldocno');
       var itemcode = $(this).attr('data-itemcode');
       var unitcode = $(this).attr('data-unitcode');
+      var confirmp = $(this).attr('data-confirmp');
       var $popUp = $("<div/>").popup({
         dismissible: true,
         //theme: "a",
@@ -2654,17 +2655,18 @@ $(document).on('taphold', '.todo-cancelitem', function() {
     $("<a>", {
     text: "Cancel",
     href: "#",
-    onclick: 'cancelitem(\''+canceldocno+'\',\''+itemcode+'\',\''+unitcode+'\');'
+    onclick: 'cancelitem(\''+canceldocno+'\',\''+itemcode+'\',\''+unitcode+'\',\''+confirmp+'\');'
     }).appendTo($popUp);
 
     $popUp.popup('open').enhanceWithin();
 
     });
 
-function cancelitem(canceldocno,itemcode,unitcode){
+function cancelitem(canceldocno,itemcode,unitcode,confirmp){
 	alertify.confirm( "คุณต้องการยกเลิกสินค้านี้ใช่หรือไม่ ??", function (e) {
     if (e) {
-        console.log("test"+canceldocno+' '+itemcode+' '+unitcode);
+//        console.log("test"+canceldocno+' '+itemcode+' '+unitcode);
+                if(confirmp != 2){
         $.ajax({
                         url: "http://venus.nopadol.com:9002/promotioncancelitem",
                         data: '{"doc_no":"'+canceldocno+'","subs":[{"item_code":"'+itemcode+'","unit_code":"'+unitcode+'"}]}',
@@ -2682,6 +2684,10 @@ function cancelitem(canceldocno,itemcode,unitcode){
                         alertify.alert('Api error delete สินค้า');
                         }
                         });
+                        }else{
+                        alertify.error('เอกสารนี้้อนุมัติแล้วไม่สามารถยกเลิกสินค้าได้')
+                        }
+
     } else {
         //after clicking Cancel
     }
