@@ -20,9 +20,7 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/taskHistory/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/4.1/taskHistory/fileSnapshots.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/taskHistory/taskHistory.bin" afterPath="$PROJECT_DIR$/.gradle/4.1/taskHistory/taskHistory.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/taskHistory/taskHistory.lock" afterPath="$PROJECT_DIR$/.gradle/4.1/taskHistory/taskHistory.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/www/index.html" afterPath="$PROJECT_DIR$/assets/www/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/www/js/fun_cs.js" afterPath="$PROJECT_DIR$/assets/www/js/fun_cs.js" />
     </list>
     <ignored path="android.iws" />
@@ -72,11 +70,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/www/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="260">
-              <caret line="49" column="0" lean-forward="true" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
+            <state relative-caret-position="206">
+              <caret line="2851" column="24" lean-forward="false" selection-start-line="2851" selection-start-column="13" selection-end-line="2851" selection-end-column="24" />
               <folding>
                 <element signature="e#1482#1521#0" expanded="true" />
                 <element signature="e#1584#1609#0" expanded="true" />
@@ -240,11 +238,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="fun_cs.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="fun_cs.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/assets/www/js/fun_cs.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="736">
-              <caret line="2676" column="50" lean-forward="false" selection-start-line="2676" selection-start-column="50" selection-end-line="2676" selection-end-column="50" />
+            <state relative-caret-position="316">
+              <caret line="816" column="49" lean-forward="false" selection-start-line="816" selection-start-column="49" selection-end-line="816" selection-end-column="49" />
               <folding />
             </state>
           </provider>
@@ -254,36 +252,36 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>edit_confirmaddpromo</find>
-      <find>sectionpromotion</find>
-      <find>showpromotion</find>
-      <find>เพิ่มโปรโมชั่น</find>
-      <find>promotionlist</find>
-      <find>ส่วนลด</find>
-      <find>edit_cal2</find>
-      <find>edit_discountmember</find>
-      <find>detailproduct2</find>
-      <find>priceresult</find>
-      <find>because_promo</find>
-      <find>discountmember</find>
-      <find>addpromotionpage2</find>
-      <find>detailproduct</find>
       <find>รายละเอียดโป</find>
       <find>toggledetail</find>
       <find>show_confirm_i</find>
       <find>is_con_firm</find>
       <find>show_confirmpromo</find>
       <find>notshow</find>
-      <find>editpromotions</find>
       <find>data-itemcode</find>
       <find>todo-ccpro</find>
       <find>data-confirm</find>
       <find>cancelPro</find>
       <find>promotion request</find>
-      <find>รายละเอียดโปรโมชั่น</find>
-      <find>detailtable</find>
       <find>editsubproduct</find>
       <find>data-canceldocno</find>
+      <find>detailtable</find>
+      <find>none</find>
+      <find>todo-cancelitem</find>
+      <find>head</find>
+      <find>test</find>
+      <find>รายละเอียดโปร</find>
+      <find>edit_addsub_promotion</find>
+      <find>addpromo_c</find>
+      <find>รายละเอียด</find>
+      <find>.subs.</find>
+      <find>โปรโมชั่น</find>
+      <find>แก้ไขโปรโมชั่น</find>
+      <find>editpromotions</find>
+      <find>editpromotion</find>
+      <find>ยกเลิกสินค้า</find>
+      <find>รายละเอียดโปรโมชั่น</find>
+      <find>alertify.success</find>
     </findStrings>
     <replaceStrings>
       <replace>'</replace>
@@ -2130,8 +2128,8 @@
         <option value="$PROJECT_DIR$/assets/www/js/fun_searchitem.js" />
         <option value="$PROJECT_DIR$/assets/www/js/menutree.js" />
         <option value="$PROJECT_DIR$/assets/www/js/fun_pr.js" />
-        <option value="$PROJECT_DIR$/assets/www/js/fun_cs.js" />
         <option value="$PROJECT_DIR$/assets/www/index.html" />
+        <option value="$PROJECT_DIR$/assets/www/js/fun_cs.js" />
       </list>
     </option>
   </component>
@@ -2324,7 +2322,7 @@
       <option name="ACTIVITY_CLASS" value="" />
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1526518459172" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1526531635181" />
       </method>
     </configuration>
     <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Instrumented Tests">
@@ -2372,7 +2370,7 @@
       </Profilers>
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1526518459172" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1526531635181" />
       </method>
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -2404,6 +2402,27 @@
         </option>
         <option name="vmOptions" />
       </ExternalSystemSettings>
+      <method />
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
       <method />
     </configuration>
     <configuration default="true" type="JarApplication" factoryName="JAR Application">
@@ -2534,7 +2553,7 @@
       <option name="ACTIVITY_CLASS" value="" />
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1526518459175" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1526531635184" />
       </method>
     </configuration>
     <list size="1">
@@ -3079,18 +3098,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/www/js/fun_cs.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="736">
-          <caret line="2676" column="50" lean-forward="false" selection-start-line="2676" selection-start-column="50" selection-end-line="2676" selection-end-column="50" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/www/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="49" column="0" lean-forward="true" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
+        <state relative-caret-position="206">
+          <caret line="2851" column="24" lean-forward="false" selection-start-line="2851" selection-start-column="13" selection-end-line="2851" selection-end-column="24" />
           <folding>
             <element signature="e#1482#1521#0" expanded="true" />
             <element signature="e#1584#1609#0" expanded="true" />
@@ -3250,6 +3261,14 @@
             <element signature="e#163655#163697#0" expanded="true" />
             <element signature="e#163744#163763#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/www/js/fun_cs.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="316">
+          <caret line="816" column="49" lean-forward="false" selection-start-line="816" selection-start-column="49" selection-end-line="816" selection-end-column="49" />
+          <folding />
         </state>
       </provider>
     </entry>

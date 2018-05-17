@@ -401,6 +401,9 @@ $.ajax({
                          if(result.data[0].is_con_firm == 2){
                          document.getElementById("imangehide").style.display = "none";
                          document.getElementById("notshow").style.display = "none";
+                         }else{
+                         document.getElementById("imangehide").style.display = "block";
+                         document.getElementById("notshow").style.display = "block";
                          }
 
 
@@ -529,7 +532,7 @@ $.ajax({
                               for(var i = 0; i < result.data[0].subs.length; i++){
 //                            tabledetail  += '<h3>'+result.data[0].subs[i].item_name+'</h3>';
                               tabledetail += '<label>';
-                              tabledetail += '<div class="ui-grid-c todo-cancelitem" onclick="editsubproduct(\''+result.data[0].subs[i].item_code+'\',\''+result.data[0].subs[i].item_name+'\',\''+result.data[0].subs[i].unit_code+'\',\''+result.data[0].subs[i].price+'\',\''+result.data[0].subs[i].promotion_type+'\',\''+result.data[0].subs[i].line_number+'\')" data-confirmp='+result.data[0].is_con_firm+'  data-canceldocno='+result.data[0].doc_no+' data-itemcode='+result.data[0].subs[i].item_code+' data-unitcode='+result.data[0].subs[i].unit_code+' style="padding-bottom:4%; padding-top:1%">';
+                              tabledetail += '<div class="ui-grid-c todo-cancelitem" onclick="editsubproduct(\''+result.data[0].subs[i].item_code+'\',\''+result.data[0].subs[i].item_name+'\',\''+result.data[0].subs[i].unit_code+'\',\''+result.data[0].subs[i].price+'\',\''+result.data[0].subs[i].promotion_type+'\',\''+result.data[0].subs[i].line_number+'\')" data-nameproduct='+result.data[0].subs[i].item_name+' data-confirmp='+result.data[0].is_con_firm+'  data-canceldocno='+result.data[0].doc_no+' data-itemcode='+result.data[0].subs[i].item_code+' data-unitcode='+result.data[0].subs[i].unit_code+' style="padding-bottom:4%; padding-top:1%">';
                               tabledetail += '<div class="ui-block-a" style="font-size:12px;word-wrap:break-word;width:16%" align="center" >';
                               tabledetail += (i+1)+'</div>';
                               tabledetail += '<div class="ui-block-b" style="font-size: 12px;width:50%"  >';
@@ -717,7 +720,8 @@ loading();
                           }
                   });
 $.mobile.changePage('#editpromotion',{transition : 'slidefade'});
-
+document.getElementById('edit_typepromotion').value = 0
+document.getElementById('edit_sectionpromotion').value = 0
 }
 function editpromotionc(){
    namepromotion = document.getElementById('edit_promotionlist').value
@@ -802,6 +806,9 @@ if(edit_promotionlist != 0 && edit_typepromotion != 0 && edit_sectionpromotion !
 //                        console.log((result.data[0].subs.length)-1)
 //                        console.log(result.data[0].subs[0].item_code)
 
+
+                          if(result.data[0].subs != null){
+//                          alertify.success('1');
                           var subsx;
                           var mainsub;
                           var i;
@@ -839,7 +846,9 @@ if(edit_promotionlist != 0 && edit_typepromotion != 0 && edit_sectionpromotion !
                                                            alertify.error('error api')
                                                          }
                                                        });
-
+                                }else{
+                                 alertify.error('ต้องมีสินค้าก่อน จึงสามารแก้ไขหัวโปรโมชั่นได้')
+                                }
 
                           },
                           error: function (err){
@@ -1133,8 +1142,8 @@ alertify.confirm("ท่านต้องการจะเพิ่มโป�
                                 cache: false,
                                 success: function(result){
                                 console.log(result);
-//                                docno = result.data.Request_docno;
-                                docno = 'test15';
+                                docno = result.data.Request_docno;
+//                                docno = 'test15';
                                 var d = new Date();
                                 var date = d.getDate();
                                 var Month = d.getMonth();
@@ -1996,11 +2005,35 @@ function savedata(){
 }
 function addpromo_c(){
     $.mobile.changePage("#edit_addsub_promotion",{transition: 'slidefade'});
+    document.getElementById('idproduct_promotion2_edit').value = '';
+    clearhistory = '';
+    clearhistory += '<span style="font-size:15px;display:block;word-wrap:break-word;font-weight:bold;padding-left:28%;padding-bottom:3%;text-decoration: underline;">รายละเอียดสินค้า</span>';
+    clearhistory += '<span style="padding-left:3%;font-size:12px;display:block;word-wrap:break-word;">ชื่อสินค้า : - </span>';
+    clearhistory += '<span style="padding-left:3%;font-size:12px;display:inline-block;word-wrap:break-word;">ราคาปกติ : - </span>';
+    clearhistory += '<span style="padding-left:8%;font-size:12px;display:inline-block;word-wrap:break-word;">หน่วยนับ : - </span>';
+    document.getElementById('detailproduct2_edit').innerHTML = clearhistory
+    document.getElementById('edit_cal2').value = '';
+    document.getElementById("edit_cal2").readOnly = false;
+    document.getElementById('edit_priceresult').innerHTML = '';
+    document.getElementById('edit_because_promo').value = '';
+    document.getElementById("edit_discountmember").checked = false;
+    document.getElementById("edit_isBrochure").checked = false;
+    clearhistory2 = '';
+    clearhistory2 += '<div  style="border-style: ridge;margin-top:2.5%">';
+    clearhistory2 += '<div style="padding-top:2.5%;padding-bottom:2.5%;">';
+    clearhistory2 += '<div id="com_money">';
+    clearhistory2 += '<span style="padding-left:3%;font-size:12px;display:inline-block;word-wrap:break-word;"><b>ค่าคอมเงินสด :</b> -</span>';
+    clearhistory2 += '<span style="padding-left:8%;font-size:12px;display:inline-block;word-wrap:break-word;"><b>ค่าคอมเงินเชื่อ :</b> -</span></div>';
+    clearhistory2 += '<div id="com_campaign">';
+    clearhistory2 += '<span style="padding-left:3%;font-size:12px;display:block;word-wrap:break-word;"><b>แคมเปญ : </b> -</span>';
+    clearhistory2 += '<span style="padding-left:3%;font-size:12px;display:block;word-wrap:break-word;"><b>เริ่ม : </b> -</span>';
+    clearhistory2 += '<span style="padding-left:3%;font-size:12px;display:block;word-wrap:break-word;"><b>จบ : </b> -</span></div>';
+    clearhistory2 += '</div></div>';
+    document.getElementById('edit_detailproduct').innerHTML = clearhistory2;
     var docno = document.getElementById('docno_editP').value
     document.getElementById('edit_docno_addsub').value = document.getElementById('docno_detail').value
     document.getElementById('edit_section_addsub').value = document.getElementById('section_edit').value
     document.getElementById('edit_pmcode_addsub').value = document.getElementById('pmcode_edit').value
-
 
 }
 function backedit_addsub_promotion(){
@@ -2636,6 +2669,7 @@ $(document).on('taphold', '.todo-cancelitem', function() {
       var itemcode = $(this).attr('data-itemcode');
       var unitcode = $(this).attr('data-unitcode');
       var confirmp = $(this).attr('data-confirmp');
+      var nameproduct = $(this).attr('data-nameproduct');
       var $popUp = $("<div/>").popup({
         dismissible: true,
         //theme: "a",
@@ -2655,15 +2689,15 @@ $(document).on('taphold', '.todo-cancelitem', function() {
     $("<a>", {
     text: "Cancel",
     href: "#",
-    onclick: 'cancelitem(\''+canceldocno+'\',\''+itemcode+'\',\''+unitcode+'\',\''+confirmp+'\');'
+    onclick: 'cancelitem(\''+canceldocno+'\',\''+itemcode+'\',\''+unitcode+'\',\''+confirmp+'\',\''+nameproduct+'\');'
     }).appendTo($popUp);
 
     $popUp.popup('open').enhanceWithin();
 
     });
 
-function cancelitem(canceldocno,itemcode,unitcode,confirmp){
-	alertify.confirm( "คุณต้องการยกเลิกสินค้านี้ใช่หรือไม่ ??", function (e) {
+function cancelitem(canceldocno,itemcode,unitcode,confirmp,nameproduct){
+	alertify.confirm( "คุณต้องการยกเลิกสินค้า "+nameproduct+" นี้ใช่หรือไม่ ??", function (e) {
     if (e) {
 //        console.log("test"+canceldocno+' '+itemcode+' '+unitcode);
                 if(confirmp != 2){
