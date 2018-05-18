@@ -532,7 +532,7 @@ $.ajax({
                               for(var i = 0; i < result.data[0].subs.length; i++){
 //                            tabledetail  += '<h3>'+result.data[0].subs[i].item_name+'</h3>';
                               tabledetail += '<label>';
-                              tabledetail += '<div class="ui-grid-c todo-cancelitem" onclick="editsubproduct(\''+result.data[0].subs[i].item_code+'\',\''+result.data[0].subs[i].item_name+'\',\''+result.data[0].subs[i].unit_code+'\',\''+result.data[0].subs[i].price+'\',\''+result.data[0].subs[i].promotion_type+'\',\''+result.data[0].subs[i].line_number+'\')" data-nameproduct='+result.data[0].subs[i].item_name+' data-confirmp='+result.data[0].is_con_firm+'  data-canceldocno='+result.data[0].doc_no+' data-itemcode='+result.data[0].subs[i].item_code+' data-unitcode='+result.data[0].subs[i].unit_code+' style="padding-bottom:4%; padding-top:1%">';
+                              tabledetail += '<div class="ui-grid-c todo-cancelitem" onclick="editsubproduct(\''+result.data[0].subs[i].item_code+'\',\''+result.data[0].subs[i].item_name+'\',\''+result.data[0].subs[i].unit_code+'\',\''+result.data[0].subs[i].price+'\',\''+result.data[0].subs[i].promotion_type+'\',\''+result.data[0].subs[i].line_number+'\',\''+result.data[0].is_con_firm+'\')" data-nameproduct='+result.data[0].subs[i].item_name+' data-confirmp='+result.data[0].is_con_firm+'  data-canceldocno='+result.data[0].doc_no+' data-itemcode='+result.data[0].subs[i].item_code+' data-unitcode='+result.data[0].subs[i].unit_code+' style="padding-bottom:4%; padding-top:1%">';
                               tabledetail += '<div class="ui-block-a" style="font-size:12px;word-wrap:break-word;width:16%" align="center" >';
                               tabledetail += (i+1)+'</div>';
                               tabledetail += '<div class="ui-block-b" style="font-size: 12px;width:50%"  >';
@@ -2351,9 +2351,10 @@ function edit_confirmaddpromo(){
 
 
 }
-function editsubproduct (idproduct,itemname,unitcode,price,promotion_type,line_number){
+function editsubproduct (idproduct,itemname,unitcode,price,promotion_type,line_number,isconfirm){
 //alertify.success(idproduct)
 console.log(idproduct)
+if(isconfirm != 2){
 $.mobile.changePage("#editsubproduct",{transition: 'slidefade'});
 //clear history
 //alertify.success('1')
@@ -2473,6 +2474,10 @@ $.ajax({
                   alertify.error('ข้อมูลผิดพลาด com_money');
                 }
                });
+
+               }else{
+               alertify.error('เอกสารนี้อนุมัติแล้วไม่สามารถแก้ไขสินค้าได้')
+               }
 }
 function back_edit_sub(){
                     $.mobile.changePage('#detailpromotion',{transition: 'slidefade',reverse: true});
