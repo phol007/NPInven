@@ -291,7 +291,7 @@ if(amount&&BarCode&&nameproduct != ''){
     } });
 
 //alert(outputselect);
-//alert('hidden'+itemcode+' '+itembarcode+' '+itemprice+' '+itemunitcode+'    value'+' n'+nameproduct+' '+extranormal+' '+typesize+' '+BarCode+' '+amount);
+console.log('{"ItemCode":"'+itemcode+'","BarCode":"'+BarCode+'","Qty":'+amount+',"Price":'+itemprice+',"LabelType":"'+outputselect+'","CreatorCode":"'+localStorage.username+'","unitcode":"'+itemunitcode+'","Branch":"'+localStorage.branch+'"}');
 alertify.confirm("ต้องการขอพิมป้าย รหัส "+BarCode+"  หรือไม่ ?", function (e) {
                                                 if (e) {
                                                   loading();
@@ -385,11 +385,9 @@ $.ajax({
 function detail_promotion(docno){
 document.getElementById('searchpromotion').value = '';
 loading();
-
                          var imageedit = '';
                          var imageedit = '<input type="image" id="imangehide" onclick="editpromotion(\''+docno+'\')" style="border-radius: 10px; border: 1px solid #FFE066;" src="images/editpromotion.png" alt="Submit" width="25" height="25">';
                          document.getElementById('editpromotions').innerHTML = imageedit;
-
 $.ajax({
                          url: "http://venus.nopadol.com:9002/"+"requests?access_token=aaa&keyword="+docno,
                          contentType: "application/json; charset=utf-8",

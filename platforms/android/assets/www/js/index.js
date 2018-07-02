@@ -55,12 +55,13 @@ var app = {
                     cache: false,
                     success: function(result){
                         console.log(JSON.stringify(result.listData));
-                             selected1 += '<select name="company1" class="bt-cmp" style="width:100%; height:50px;" data-role="none">';
+                             selected1 += '<select name="company1" id="selectbranchz" onchange="checkbranch()" class="bt-cmp" style="width:100%; height:50px;" data-role="none">';
                             // selected2 += `<select name="company2" class="bt-cmp" style="width:100%; height:50px;" data-role="none">`;
                              $.each(result.listData, function(key, val) {
+//                             console.log(val['code']);
 //                                var str = val['code'];
 //                                var n = str.inclueds("nava");
-                                if(val['code']!="nava" && val['code']!="navatest"){
+                                if(val['code']!="nava" && val['code']!="navatest" && val['code']!="np" ){
                                 //if(n < 0){
                                     selected1 += '<option value="'+val['code']+'">'+val['name']+'</option>';
                                 }
@@ -84,7 +85,9 @@ var app = {
         style_page();
     }
 };
-
+function checkbranch(){
+console.log(document.getElementById('selectbranchz').value)
+}
 function switch_url(){
     switch (localStorage.api_url_server){
         case "http://api.nopadol.com:8080/" :
